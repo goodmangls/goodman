@@ -156,7 +156,8 @@ body {
   font-family: var(--font-sans);
   color: var(--foreground);
   background-color: var(--background);
-  line-height: 1.6;
+  line-height: 1.8;
+  letter-spacing: 0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -170,8 +171,8 @@ h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
 }
 
 h1 {
@@ -191,9 +192,10 @@ h3 {
 /* Layout Utilities */
 .container {
   width: 100%;
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
 .container-wide {
@@ -460,21 +462,22 @@ h3 {
 }
 
 /* Section Spacing */
+/* Section Spacing - Expansive */
 .section {
-  padding: 6rem 0;
+  padding: 8rem 0;
 }
 
 .section-large {
-  padding: 8rem 0;
+  padding: 12rem 0;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 3rem 0;
+    padding: 5rem 0;
   }
 
   .section-large {
-    padding: 5rem 0;
+    padding: 8rem 0;
   }
 
   .container,
