@@ -7,7 +7,6 @@ export default function TrustBadges() {
   const t = useTranslations('trust');
 
   const memberships = [
-    { name: 'WCA', desc: t('wca') },
     { name: 'MPL', desc: t('mpl') },
     { name: 'EAN', desc: t('ean') },
     { name: 'IATA', desc: t('iata') },

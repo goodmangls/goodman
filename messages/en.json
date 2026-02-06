@@ -8,9 +8,16 @@
     "contact": "Contact"
   },
   "company": {
-    "title": "Small Giant. Big Impact.",
-    "subtitle": "Leading Global Trade Since 2004",
-    "description": "Connecting global trade with velocity, trust, and expertise. We deliver mission-critical logistics solutions across air, ocean, and project cargo.",
+    "title": "Combining Tradition & Innovation",
+    "subtitle": "Leading Global Trade Since 2014",
+    "description": "A specialized GSSA leading the Korean air cargo market since 2014. We provide data-driven logistics solutions through our strategic partnership with global giant ECS Group.",
+    "identity": "Est. 2014 GSSA Specialist | ECS Group Strategic Partner | Strong Commercial & Operational Capabilities",
+    "strengths": {
+      "local": "Strong local dominance at Incheon/Busan hubs",
+      "market": "Optimal route proposals by expert groups",
+      "relationship": "Trust-based relationships maximizing partner revenue",
+      "operational": "24/7 Flawless Operational System"
+    },
     "values": {
       "trust": "Trust",
       "trustDesc": "The foundation of every partnership",
@@ -25,12 +32,12 @@
   },
   "hero": {
     "badge": "Your Strategic Logistics Partner",
-    "headlineLine1": "Unlock the Power of Goodman Solutions",
-    "headlineLine2": "for Your",
-    "headlineLine3": "Business.",
-    "subheadline": "Connecting Global Trade with Velocity, Trust, and Expertise",
-    "description": "As members of WCA, MPL, and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
-    "ctaPrimary": "Book A Free Call",
+    "headlineLine1": "Better Future with Goodman GLS",
+    "headlineLine2": "Your Trusted Global",
+    "headlineLine3": "Logistics Platform",
+    "subheadline": "Combining 27 years of air cargo expertise with AI technology. Beyond a GSSA, we are the 'Eye of the Storm' in digital logistics connecting the world in real-time.",
+    "description": "As members of MPL and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
+    "ctaPrimary": "15s Real-time Rate Check",
     "ctaSecondary": "Learn now",
     "stats": {
       "years": "Years Experience",
@@ -64,18 +71,23 @@
       "tagline": "Complex Solutions Made Simple",
       "description": "Specialized handling for oversized, heavy, and high-value project shipments."
     },
+    "mro": {
+      "name": "Goodman Aero Solutions (MRO)",
+      "tagline": "Completing Expertise",
+      "description": "Total solutions supporting safe aircraft operations including AOG support, parts sale/exchange, and consignment."
+    },
     "learnMore": "Learn More"
   },
   "gsa": {
-    "title": "GSA/CSA Expertise",
-    "subtitle": "Your Gateway to the Korean Market",
-    "description": "As General Sales Agent and Cargo Sales Agent for multiple airlines, we provide unparalleled access to capacity and competitive rates on key routes connecting Korea to the world.",
-    "routes": {
-      "la": "Seoul-LA",
-      "nyc": "Seoul-NYC",
-      "frankfurt": "Seoul-Frankfurt",
-      "singapore": "Seoul-Singapore",
-      "dailyService": "Daily Service"
+    "title": "Airline Business (GSA & CSA)",
+    "subtitle": "Exclusive Network & Proven Track Record",
+    "description": "We represent the best to deliver the best results.",
+    "partners": {
+      "ws": "WestJet (WS) - North America/Europe",
+      "bi": "Royal Brunei (BI) - Dubai/London/Melbourne",
+      "bx": "Air Busan (BX) - Asia Network",
+      "mo": "Aero Mongolia (MO) - Mongolia/Central Asia",
+      "su": "Aeroflot (SU) - Russia/CIS"
     },
     "cta": "View Our Airline Partners"
   },
@@ -92,7 +104,8 @@
     "subtitle": "24/7 Support for Your Logistics Needs",
     "getInTouch": "Get in Touch",
     "office": "Office Location",
-    "officeAddress": "Seoul, Republic of Korea",
+    "officeAddress": "Gangseo IT Valley (HQ)",
+    "operationHubs": "Hubs: Incheon, Busan, Guangzhou",
     "email": "Email",
     "emailAddress": "contact@goodmangls.com",
     "officeHours": "Office Hours",

@@ -7,12 +7,7 @@ import { motion } from 'framer-motion';
 export default function GSASection() {
   const t = useTranslations('gsa');
 
-  const routes = [
-    { key: 'la', label: 'Seoul-LA' },
-    { key: 'nyc', label: 'Seoul-NYC' },
-    { key: 'frankfurt', label: 'Seoul-Frankfurt' },
-    { key: 'singapore', label: 'Seoul-Singapore' },
-  ];
+  const partnerKeys = ['ws', 'bi', 'bx', 'mo', 'su'];
 
   return (
     <section id="network" className="min-h-screen flex items-center section-md bg-[#070612] relative overflow-hidden py-32">
@@ -43,23 +38,22 @@ export default function GSASection() {
             </div>
           </motion.div>
 
-          {/* Minimalist Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-20 md:mb-28">
-            {routes.map((route, index) => (
+          {/* Airline Partners Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-20 md:mb-28">
+            {partnerKeys.map((key, index) => (
               <motion.div
-                key={route.key}
+                key={key}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="glass-panel glass-panel-hover rounded-3xl p-8 md:p-10 flex flex-col justify-between items-start h-[180px] md:h-[220px]"
+                className="glass-panel glass-panel-hover rounded-2xl p-6 flex flex-col justify-center items-center text-center h-[140px]"
               >
-                <div className="text-white font-serif font-bold text-lg md:text-xl mb-3 tracking-wide">
-                  {t(`routes.${route.key}`) || route.label}
+                <div className="text-white font-bold text-lg mb-2">
+                  {key.toUpperCase()}
                 </div>
-                <div className="h-0.5 w-8 bg-[#FF6B35]/50 mb-3" />
-                <div className="text-xs md:text-sm text-white/30 uppercase tracking-widest">
-                  {t('routes.dailyService') || 'Daily'}
+                <div className="text-xs text-white/50 leading-tight">
+                  {t(`partners.${key}`)}
                 </div>
               </motion.div>
             ))}

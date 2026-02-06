@@ -8,9 +8,16 @@
     "contact": "연락처"
   },
   "company": {
-    "title": "작은 거인. 큰 영향력.",
-    "subtitle": "2004년부터 글로벌 무역을 선도합니다",
-    "description": "신속성, 신뢰, 전문성으로 글로벌 무역을 연결합니다. 항공, 해상, 프로젝트 화물 전반에 걸쳐 임무 수행에 필수적인 물류 솔루션을 제공합니다.",
+    "title": "전통과 혁신의 결합",
+    "subtitle": "2014년부터 글로벌 무역을 선도합니다",
+    "description": "2014년 설립 이래 대한민국 항공 화물 시장을 선도해 온 전문 GSSA 기업입니다. 글로벌 물류 거물 ECS Group과의 전략적 파트너십을 통해 데이터 기반의 물류 솔루션을 제공합니다.",
+    "identity": "2014년 설립된 전문 GSSA | ECS Group 전략적 파트너 | 강력한 영업 및 운영 역량",
+    "strengths": {
+      "local": "인천/부산 공항 거점의 강력한 현지 지배력",
+      "market": "숙련된 전문가 그룹의 최적 운송 경로 제안",
+      "relationship": "파트너사 수익 극대화를 위한 신뢰 관계",
+      "operational": "24/7 무결점 물류 운영 체계"
+    },
     "values": {
       "trust": "신뢰",
       "trustDesc": "모든 파트너십의 근간",
@@ -25,12 +32,12 @@
   },
   "hero": {
     "badge": "귀하의 전략적 물류 파트너",
-    "headlineLine1": "Goodman Solutions의 힘을",
-    "headlineLine2": "귀하의 비즈니스에",
-    "headlineLine3": "더하세요.",
-    "subheadline": "신속성, 신뢰, 전문성으로 글로벌 무역을 연결합니다",
+    "headlineLine1": "Better Future with Goodman GLS",
+    "headlineLine2": "Your Trusted Global",
+    "headlineLine3": "Logistics Platform",
+    "subheadline": "27년의 항공 물류 노하우와 AI 기술의 결합. 우리는 단순한 GSSA를 넘어, 전 세계를 실시간으로 연결하는 '디지털 물류의 태풍의 눈'입니다.",
     "description": "WCA, MPL, EAN 네트워크의 회원사로서, GOODMAN GLS는 항공, 해상, 프로젝트 화물 전반에 걸쳐 타의 추종을 불허하는 신뢰성으로 시간에 민감한 물류 솔루션을 제공합니다.",
-    "ctaPrimary": "무료 상담 예약",
+    "ctaPrimary": "15초 실시간 운임 조회 및 예약",
     "ctaSecondary": "지금 알아보기",
     "stats": {
       "years": "년 경력",
@@ -64,18 +71,23 @@
       "tagline": "복잡한 솔루션을 간단하게",
       "description": "초대형, 중량물 및 고가 프로젝트 화물을 위한 전문 핸들링."
     },
+    "mro": {
+      "name": "굿맨 에어로 솔루션 (MRO)",
+      "tagline": "항공 기술력의 완성",
+      "description": "AOG 지원, 부품 판매/교환, 위탁 판매 등 항공기 안전 운영을 지원하는 토탈 솔루션."
+    },
     "learnMore": "자세히 보기"
   },
   "gsa": {
-    "title": "GSA/CSA 전문성",
-    "subtitle": "한국 시장으로의 관문",
-    "description": "여러 항공사의 총판 대리점 및 화물 판매 대리점으로서, 주요 노선에서 탁월한 캐파시티 접근성과 경쟁력 있는 요금을 제공합니다.",
-    "routes": {
-      "la": "서울-LA",
-      "nyc": "서울-뉴욕",
-      "frankfurt": "서울-프랑크푸르트",
-      "singapore": "서울-싱가포르",
-      "dailyService": "매일 운항"
+    "title": "항공사 비즈니스 (GSA & CSA)",
+    "subtitle": "독점적 네트워크와 검증된 실적",
+    "description": "우리는 최고를 대변하여 최선의 결과를 배달합니다.",
+    "partners": {
+      "ws": "WestJet (WS) - 북미/유럽",
+      "bi": "Royal Brunei (BI) - 두바이/런던/멜버른",
+      "bx": "Air Busan (BX) - 아시아 네트워크",
+      "mo": "Aero Mongolia (MO) - 몽골/중앙아시아",
+      "su": "Aeroflot (SU) - 러시아/CIS"
     },
     "cta": "항공사 파트너 보기"
   },
@@ -92,7 +104,8 @@
     "subtitle": "24시간 물류 지원",
     "getInTouch": "문의하기",
     "office": "오피스 위치",
-    "officeAddress": "대한민국 서울",
+    "officeAddress": "강서 IT 밸리 (본사)",
+    "operationHubs": "운영 허브: 인천 공항, 부산, 광저우",
     "email": "이메일",
     "emailAddress": "contact@goodmangls.com",
     "officeHours": "영업 시간",

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -9,7 +10,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white font-serif">GOODMAN GLS</h3>
+              <div className="relative h-10 w-48 mb-6">
+                <Image 
+                  src="/images/logo/logo-white.svg" 
+                  alt="GOODMAN GLS" 
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
               <p className="text-lg md:text-xl text-[#FF6B35] font-semibold mb-6">
                 Your Strategic Partner in Korea & Beyond
               </p>
@@ -104,7 +112,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm">
             <span className="font-semibold text-white/40">Proud Member of:</span>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              {['WCA', 'MPL', 'EAN', 'IATA Certified'].map((item) => (
+              {['MPL', 'EAN', 'IATA Certified'].map((item) => (
                 <span key={item} className="px-5 py-2.5 bg-white/5 backdrop-blur-sm border border-white/5 hover:bg-white/10 transition-all rounded-full font-semibold text-xs md:text-sm text-white/70">
                   {item}
                 </span>

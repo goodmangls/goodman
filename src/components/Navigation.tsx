@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations } from '@/contexts/LanguageContext';
 import LanguageToggle from './LanguageToggle';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -48,13 +49,14 @@ export default function Navigation() {
         >
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group z-20">
-            <div className="flex items-baseline gap-1">
-              <span className={`text-2xl font-black tracking-tight transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>
-                GOODMAN
-              </span>
-              <span className="text-xl font-bold text-[#FF6B35]">
-                GLS
-              </span>
+            <div className="relative h-8 w-40">
+              <Image 
+                src="/images/logo/logo-white.svg" 
+                alt="GOODMAN GLS" 
+                fill
+                className="object-contain object-left"
+                priority
+              />
             </div>
           </Link>
 

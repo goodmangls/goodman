@@ -1,5 +1,7 @@
 # GOODMAN GLS - User Personas
 
+> Last updated: January 2025
+
 ## Primary Personas
 
 ### Persona 1: International Freight Forwarder Partner
@@ -34,16 +36,21 @@
 - Dedicated account management
 
 **Key Features Needed**:
-- Partner registration portal
-- Rate sheet access
-- Quote request system
-- Shipment tracking
+- Partner registration portal (Available)
+- Rate sheet access (Planned - Phase 2)
+- Quote request system (Next Priority)
+- Shipment tracking (Planned - Phase 3)
+
+**Portal Journey**:
+```
+Register → Verify Email → Login → Dashboard → Request Quote → Track Shipments
+```
 
 ---
 
 ### Persona 2: Korean Exporter (Direct Customer)
 
-**Name**: Park Soo-young (박수영)
+**Name**: Park Soo-young
 **Role**: Logistics Manager at Korean electronics manufacturer
 **Age**: 35
 **Location**: Seoul, Korea
@@ -73,10 +80,10 @@
 - Competitive rates through network
 
 **Key Features Needed**:
-- Korean language interface
-- Quick quote requests
-- Shipment tracking
-- WhatsApp/KakaoTalk support
+- Korean language interface (Available)
+- Quick quote requests (Next Priority)
+- Shipment tracking (Planned)
+- WhatsApp/KakaoTalk support (Available via FloatingConnect)
 
 ---
 
@@ -112,15 +119,16 @@
 - Professional sales representation
 
 **Key Features Needed**:
-- Company information/credentials
-- Contact for partnership discussions
-- Case studies of GSA success
+- Company information/credentials (Available)
+- Contact for partnership discussions (Available)
+- Case studies of GSA success (Planned)
+- AIRLINE role portal access (Auth ready)
 
 ---
 
 ### Persona 4: Job Seeker
 
-**Name**: Lee Jimin (이지민)
+**Name**: Lee Jimin
 **Role**: Logistics Coordinator (3 years experience)
 **Age**: 28
 **Location**: Incheon, Korea
@@ -137,12 +145,6 @@
 - Develop GSA/CSA expertise
 - Better work-life balance
 
-**Pain Points**:
-- Limited growth at current company
-- Routine work, wants more challenge
-- Wants more customer-facing role
-- Interested in airline partnerships
-
 **How GOODMAN GLS Helps**:
 - Smaller company = more responsibility
 - International network exposure
@@ -150,9 +152,9 @@
 - Direct partner relationships
 
 **Key Features Needed**:
-- Company culture information
-- Career opportunities section
-- Contact for applications
+- Company culture information (Available on Company page)
+- Career opportunities section (Planned)
+- Contact for applications (Available)
 
 ---
 
@@ -168,41 +170,33 @@
 
 **Background**: Met at logistics trade show (WCA conference, etc.)
 **Key Need**: Quick company overview and contact
-**Features**: Mobile-friendly site, easy contact access
-
----
-
-## Persona Journey Mapping
-
-### Freight Forwarder Partner Journey
-
-```
-Awareness → Discovery → Evaluation → Registration → First Shipment → Ongoing Partnership
-    ↓           ↓           ↓            ↓              ↓               ↓
-  WCA conf    Website     Network     Partner      Quote request    Regular
-  Referral    visit       verify      portal       Tracking         business
-```
-
-### Direct Customer Journey
-
-```
-Need → Search → Compare → Contact → Quote → Ship → Track → Repeat
-  ↓      ↓        ↓         ↓        ↓      ↓      ↓       ↓
- Urgent  Google   Services  Form/    Rate   Book   Portal  Account
- cargo   search   page      KakaoTalk quote        Track   manager
-```
+**Features**: Mobile-friendly site, easy contact access (FloatingConnect)
 
 ---
 
 ## Feature Priority by Persona
 
-| Feature | Forwarder | Shipper | Airline | Job Seeker |
-|---------|-----------|---------|---------|------------|
-| Partner Portal | ⭐⭐⭐ | ⭐ | ⭐ | - |
-| Quote System | ⭐⭐⭐ | ⭐⭐⭐ | - | - |
-| Tracking | ⭐⭐⭐ | ⭐⭐⭐ | - | - |
-| Rate Calculator | ⭐⭐ | ⭐⭐⭐ | - | - |
-| Contact Form | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| Bilingual | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| Case Studies | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐ |
-| Careers Page | - | - | - | ⭐⭐⭐ |
+| Feature | Forwarder | Shipper | Airline | Job Seeker | Status |
+|---------|-----------|---------|---------|------------|--------|
+| Marketing Site | Required | Required | Required | Required | Done |
+| Partner Portal Auth | Required | Required | Required | - | Done |
+| Quote System | Critical | Critical | - | - | Next |
+| Tracking | Critical | Critical | - | - | Phase 3 |
+| Rate Calculator | High | Critical | - | - | Phase 2 |
+| Contact Form | High | High | Critical | Critical | Done |
+| Bilingual | Critical | Critical | High | Critical | Done |
+| Floating Connect | High | High | Medium | Medium | Done |
+| Case Studies | High | High | Critical | Medium | Phase 4 |
+| Careers Page | - | - | - | Critical | Phase 4 |
+
+## Portal Access by Role
+
+| Feature | PARTNER | AIRLINE | ADMIN | SUPER_ADMIN |
+|---------|---------|---------|-------|-------------|
+| Dashboard | Yes | Yes | Yes | Yes |
+| Quote Request | Yes | No | View All | View All |
+| Quote Response | No | No | Yes | Yes |
+| Rate Sheets | Yes | No | Manage | Manage |
+| Tracking | Yes | No | View All | View All |
+| User Management | No | No | Limited | Full |
+| Analytics | No | No | Yes | Yes |

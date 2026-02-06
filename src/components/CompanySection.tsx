@@ -9,6 +9,11 @@ export default function CompanySection() {
 
   // Using default English values for now if translation keys are missing, 
   // ensuring the logic works even without full ko/en JSON updates immediately.
+  // New structure uses 'strengths' object in JSON
+  const strengths = ['local', 'market', 'relationship', 'operational'];
+  
+  // Keep values for backward compatibility or design choice if needed, 
+  // but the prompt emphasized the new "Core Strengths"
   const values = [
     { icon: <FaHandshakeSimple />, titleKey: 'values.trust', descKey: 'values.trustDesc' },
     { icon: <FaBolt />, titleKey: 'values.velocity', descKey: 'values.velocityDesc' },
@@ -43,6 +48,11 @@ export default function CompanySection() {
                         <p className="text-xl text-white/60 font-light leading-relaxed">
                             {t('description')}
                         </p>
+                        <div className="mt-8 pt-6 border-t border-white/10">
+                            <p className="text-white/80 font-medium italic">
+                                {t('identity')}
+                            </p>
+                        </div>
                     </div>
                 </motion.div>
             </div>
@@ -68,6 +78,22 @@ export default function CompanySection() {
                          </p>
                     </motion.div>
                 ))}
+            </div>
+
+            {/* Core Strengths Grid */}
+            <div className="mb-20">
+                <h3 className="text-2xl font-serif text-white mb-8">Core Strengths</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {strengths.map((key) => (
+                        <div key={key} className="bg-white/5 border border-white/10 p-6 rounded-2xl flex items-start gap-4">
+                            <div className="w-2 h-2 mt-2.5 rounded-full bg-[#FF6B35]" />
+                            <div>
+                                <h4 className="text-lg font-bold text-white capitalize mb-1">{key} Presence</h4>
+                                <p className="text-white/60 text-sm">{t(`strengths.${key}`)}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             {/* CEO Message / Highlight */}
