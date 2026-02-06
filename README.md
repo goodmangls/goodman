@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Goodman GLS Global Logistics Platform
 
-## Getting Started
+![Goodman GLS Banner](/public/images/logo/logo-white.svg)
 
-First, run the development server:
+> **Better Future with Goodman GLS: Your Trusted Global Logistics Platform**
+> _27 Years of Air Cargo Expertise Meets AI Technology._
+
+## 📌 Introduction
+
+**GOODMAN GLS** is a specialized GSSA (General Sales & Service Agent) and logistics platform founded in 2014. We connect the world in real-time through our strategic partnership with **ECS Group** and our membership in **MPL** and **EAN** networks.
+
+This repository contains the source code for the official Goodman GLS website, rebuilt with **Next.js 16** to reflect our **2026 Strategy**.
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Localization**: [next-intl](https://next-intl-docs.vercel.app/) (English & Korean)
+- **Icons**: [FontAwesome 6](https://fontawesome.com/) & Local SVG Assets
+- **Database**: PostgreSQL (via [Prisma ORM](https://www.prisma.io/))
+- **Auth**: [NextAuth.js v5](https://authjs.dev/)
+
+---
+
+## 🌟 Key Features
+
+### 1. 2026 Strategy Content
+
+- **Hero Section**: "Eye of the Storm" concept with full-screen video background.
+- **Company Identity**: Highlighting our role as an **ECS Group Strategic Partner**.
+- **Services**:
+  - **GSA/CSA**: Airline partnerships with **WestJet, Royal Brunei, Air Busan, Aero Mongolia, Aeroflot**.
+  - **MRO**: Newly added **Goodman Aero Solutions**.
+  - **Logistics**: Air, Ocean, Project Cargo.
+
+### 2. Modern UI/UX
+
+- **Dark Theme**: Premium "Space/Midnight" aesthetic (`bg-[#070612]`).
+- **Glassmorphism**: Translucent cards and navigation with backdrop blur.
+- **One-Page Navigation**: Smooth scrolling to `#network`, `#services`, `#partner-hub` etc.
+- **SVG Logos**: Crisp, scalable vector assets for all devices.
+
+### 3. Partner Portal (Beta)
+
+- Dedicated zone for partners to check rates and track shipments.
+- Authentication via NextAuth.
+- Protected routes under `/portal`.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/jlinsights/goodman.git
+
+# Install dependencies
+npm install
+
+# Setup Environment Variables
+cp .env.local.example .env.local
+# Update .env.local with your credentials (DATABASE_URL, AUTH_SECRET, etc.)
+
+# Run Development Server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Project Structure
 
-## Learn More
+```
+├── messages/            # Localization files (en.json, ko.json)
+├── public/
+│   ├── images/          # Static assets (logos, icons)
+│   └── videos/          # Hero background videos
+├── src/
+│   ├── app/             # App Router pages and API routes
+│   ├── components/      # React components (Hero, Footer, Navigation, etc.)
+│   ├── lib/             # Utility functions and Prisma client
+│   └── styles/          # Global styles (globals.css)
+└── next.config.ts       # Next.js configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚢 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project is deployed on **Vercel**.
 
-## Deploy on Vercel
+```bash
+# Production Build
+npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Deploy via Vercel CLI
+vercel deploy --prod
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> **Note**: For Vercel deployment, ensure `eslint.config.mjs` allows build by ignoring lint errors if necessary, as distinct environment checks may apply.
+
+---
+
+## 📝 License
+
+© 2026 **Goodman Global Logistics Service**. All Rights Reserved.
