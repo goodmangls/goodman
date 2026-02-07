@@ -84,7 +84,7 @@ export default function CompanySection() {
                         viewport={{ once: true, margin: "-50px" }}
                         transition={{ delay: index * 0.1, duration: 0.6, type: "spring", stiffness: 50 }}
                         whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                        className="glass-panel p-10 rounded-4xl group hover:bg-white/5 transition-colors duration-500 text-left border border-white/5 hover:border-white/10"
+                        className="glass-panel p-10 rounded-3xl group hover:bg-white/5 transition-colors duration-500 text-left border border-white/5 hover:border-white/10"
                     >
                         <div className="text-5xl mb-6 group-hover:scale-110 group-hover:text-[#FF6B35] transition-all duration-500">
                             {item.icon}
@@ -131,7 +131,7 @@ export default function CompanySection() {
                 transition={{ duration: 0.8 }}
                 className="max-w-6xl mx-auto"
             >
-                <div className="glass-panel p-12 md:p-16 rounded-[3rem] relative overflow-hidden group">
+                <div className="glass-panel p-12 md:p-16 rounded-3xl relative overflow-hidden group">
                      {/* Interactive Shine Effect */}
                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none" />
                     
