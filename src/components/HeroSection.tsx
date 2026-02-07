@@ -113,7 +113,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="container relative z-20 h-full flex items-center">
-        <div className="w-full max-w-5xl mx-auto flex flex-col justify-center items-center text-center">
+        <div className="w-full max-w-5xl mx-auto flex flex-col justify-center items-start">
           
           {/* Badge */}
           <BlurIn delay={0} duration={0.6}>
