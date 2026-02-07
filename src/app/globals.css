@@ -190,6 +190,7 @@ h3 {
 }
 
 /* Layout Utilities */
+.container {
   width: 100%;
   max-width: 1280px; /* Standardize to match typical "contained" look, aligning closer to header */
   margin: 0 auto;
