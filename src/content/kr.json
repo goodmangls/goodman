@@ -2,7 +2,7 @@
   "hero": {
     "headline": "대한민국을 넘어, 전 세계를 연결하는 전략적 파트너",
     "subheadline": "신속성, 신뢰, 전문성으로 글로벌 무역을 연결합니다",
-    "description": "WCA, MPL, EAN 네트워크의 회원사로서, GOODMAN GLS는 항공, 해상, 프로젝트 화물 전반에 걸쳐 타의 추종을 불허하는 신뢰성으로 시간에 민감한 물류 솔루션을 제공합니다.",
+    "description": "MPL, EAN 네트워크의 회원사로서, GOODMAN GLS는 항공, 해상, 프로젝트 화물 전반에 걸쳐 타의 추종을 불허하는 신뢰성으로 시간에 민감한 물류 솔루션을 제공합니다.",
     "ctaPrimary": "견적 요청",
     "ctaSecondary": "파트너 되기",
     "stats": {
@@ -17,9 +17,8 @@
   "trust": {
     "title": "신뢰할 수 있는 글로벌 네트워크",
     "memberships": {
-      "wca": "WCA 회원 - 세계 최고의 네트워크",
-      "mpl": "MPL 회원 - 프리미엄 파트너",
-      "ean": "EAN 회원 - 우수 네트워크",
+      "mpl": "MPL 회원 - MarcoPoloLine Group",
+      "ean": "EAN 회원 - Exclusive Air Network",
       "iata": "IATA 공인 포워더"
     }
   },

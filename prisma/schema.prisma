@@ -123,6 +123,13 @@ model QuoteRequest {
   userId        String
   companyId     String?
 
+  // Guest fields (for unauthenticated public requests)
+  isGuest       Boolean     @default(false)
+  guestName     String?
+  guestEmail    String?
+  guestCompany  String?
+  guestPhone    String?
+
   // Shipment details
   serviceType   ServiceType
   shipmentType  ShipmentType

@@ -1,6 +1,6 @@
 # GOODMAN GLS - Technology Stack
 
-> Last updated: January 2025
+> Last updated: February 2026
 
 ## Core Framework
 
@@ -26,7 +26,7 @@
 **Design System:**
 - Dark background: `oklch(0.12 0.04 275)` (~#070612)
 - Orange accent: `oklch(0.7 0.2 35)` (~#FF6B35)
-- Fonts: Inter (sans), Playfair Display (serif)
+- Fonts: Inter (sans), Outfit (headings) via next/font
 - Glassmorphism effects with `glass-panel` utility class
 - Custom animations: fadeInUp, pulse-slow, shimmer, slideRight
 

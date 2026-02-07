@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaStar } from 'react-icons/fa6';
 import Hls from 'hls.js';
 import { cn } from '@/lib/utils';
+import QuoteForm from '@/components/quotes/QuoteForm';
 
 interface SplitTextProps {
   text: string;
@@ -225,72 +226,14 @@ export default function HeroSection() {
             
             <h3 className="text-3xl font-bold mb-2 text-[#070612]">Request a Rate Quote</h3>
             <p className="text-gray-600 mb-8">Get competitive rates for your shipment within 24 hours</p>
-            
-            <form className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Service Type</label>
-                  <select className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50">
-                    <option>Air Freight</option>
-                    <option>Ocean Freight</option>
-                    <option>Project Cargo</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Shipment Type</label>
-                  <select className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50">
-                    <option>Import</option>
-                    <option>Export</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Origin</label>
-                  <input type="text" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" placeholder="City, Country" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Destination</label>
-                  <input type="text" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" placeholder="City, Country" />
-                </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-semibold mb-2 text-gray-700">Cargo Details</label>
-                <textarea className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" rows={3} placeholder="Weight, dimensions, commodity..."></textarea>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Your Name</label>
-                  <input type="text" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Company</label>
-                  <input type="text" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Email</label>
-                  <input type="email" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-semibold mb-2 text-gray-700">Phone</label>
-                  <input type="tel" className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent transition-all bg-gray-50" />
-                </div>
-              </div>
-              
-              <button type="submit" className="w-full py-4 mt-6 bg-[#FF6B35] text-white font-bold rounded-xl hover:bg-[#E05A2B] transition-colors shadow-lg shadow-orange-500/20">
-                Submit Inquiry
-              </button>
-            </form>
+
+            <QuoteForm
+              mode="public"
+              onSuccess={() => {
+                setTimeout(() => setShowRateInquiry(false), 3000);
+              }}
+              onCancel={() => setShowRateInquiry(false)}
+            />
           </motion.div>
         </div>
       )}

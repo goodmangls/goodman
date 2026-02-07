@@ -2,7 +2,7 @@
   "hero": {
     "headline": "Your Strategic Partner in Korea & Beyond",
     "subheadline": "Connecting Global Trade with Velocity, Trust, and Expertise",
-    "description": "As members of WCA, MPL, and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
+    "description": "As members of MPL and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
     "ctaPrimary": "Get a Quote",
     "ctaSecondary": "Become a Partner",
     "stats": {
@@ -17,9 +17,8 @@
   "trust": {
     "title": "Trusted Global Networks",
     "memberships": {
-      "wca": "WCA Member - World's Leading Network",
-      "mpl": "MPL Member - Premium Partners",
-      "ean": "EAN Member - Excellence Network",
+      "mpl": "MPL Member - MarcoPoloLine Group",
+      "ean": "EAN Member - Exclusive Air Network",
       "iata": "IATA Certified Forwarder"
     }
   },

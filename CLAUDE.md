@@ -5,7 +5,7 @@
 **GOODMAN GLS** - B2B logistics company website for a Korean freight forwarding company specializing in:
 - Freight Forwarding Services (Air, Ocean, Project Cargo)
 - GSA/CSA (General Sales Agency / Cargo Sales Agency) for airlines
-- Global network partnerships (WCA, MPL, EAN)
+- Global network partnerships (MPL, EAN)
 
 **Tagline**: "Small Giant. Big Impact." - Your Strategic Partner in Korea & Beyond
 

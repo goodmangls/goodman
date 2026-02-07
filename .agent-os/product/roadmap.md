@@ -1,13 +1,13 @@
 # GOODMAN GLS - Product Roadmap
 
-> Last updated: January 2025
+> Last updated: February 2026
 
 ## Phase 0: Already Completed
 
 ### Marketing Website
 - [x] **Homepage** - Hero section, trust badges, company intro, services showcase, GSA section, partner hub preview, contact section
 - [x] **Services Page** - Detailed Air Freight, Ocean Freight, Project Cargo with case studies
-- [x] **Network & Solutions Page** - WCA/MPL/EAN memberships, GSA/CSA airline partnerships, global coverage
+- [x] **Network & Solutions Page** - MPL/EAN memberships, GSA/CSA airline partnerships, global coverage
 - [x] **Partner Hub Page** - Agent zone, market insights, partnership benefits
 - [x] **Company/About Page** - CEO message, company timeline, team, values
 
@@ -145,10 +145,11 @@
 | Feature | Impact | Effort | Priority | Status |
 |---------|--------|--------|----------|--------|
 | Marketing Site | High | Medium | P0 | Done |
-| Partner Auth | High | Medium | P1 | Done |
+| Partner Auth | High | Medium | P0 | Done |
 | Portal Dashboard | High | Low | P1 | In Progress |
-| Quote System | High | Medium | P1 | Next |
-| Shipment Tracking | High | High | P2 | Planned |
+| Quote System | High | Medium | P1 | Next (Priority) |
+| Shipment Tracking | High | High | P1 | Next (Priority) |
+| Admin Dashboard | High | High | P1 | Next (Priority) |
+| SEO & Marketing | Medium | Medium | P1 | Next (Priority) |
 | Rate Calculator | Medium | Medium | P2 | Planned |
-| Admin Portal | Medium | High | P3 | Planned |
-| Blog/News | Low | Low | P4 | Planned |
+| Blog/News | Medium | Low | P2 | Planned |

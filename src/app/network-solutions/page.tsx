@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Global Network & GSA/CSA Solutions | GOODMAN GLS",
-  description: "WCA, MPL, EAN member with GSA/CSA airline partnerships serving 50+ countries worldwide.",
+  description: "MPL and EAN member with GSA/CSA airline partnerships serving 50+ countries worldwide.",
 };
 
 export default function NetworkSolutionsPage() {
@@ -35,23 +35,10 @@ export default function NetworkSolutionsPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="card">
-              <div className="text-4xl font-black mb-4" style={{ color: 'var(--color-primary-700)' }}>WCA</div>
-              <h3 className="text-xl font-bold mb-3">World Cargo Alliance</h3>
-              <p className="text-gray-700 mb-4">
-                Global network of independent freight forwarders with over 7,000 member offices worldwide.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>✓ Vetted, financially stable partners</li>
-                <li>✓ Annual conferences & networking</li>
-                <li>✓ Joint marketing initiatives</li>
-              </ul>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="card">
               <div className="text-4xl font-black mb-4" style={{ color: 'var(--color-primary-700)' }}>MPL</div>
-              <h3 className="text-xl font-bold mb-3">MPL Network</h3>
+              <h3 className="text-xl font-bold mb-3">MarcoPoloLine Group</h3>
               <p className="text-gray-700 mb-4">
                 Premium logistics network focused on quality service and innovation across Asia-Pacific.
               </p>
@@ -64,9 +51,9 @@ export default function NetworkSolutionsPage() {
 
             <div className="card">
               <div className="text-4xl font-black mb-4" style={{ color: 'var(--color-primary-700)' }}>EAN</div>
-              <h3 className="text-xl font-bold mb-3">Excellence Alliance Network</h3>
+              <h3 className="text-xl font-bold mb-3">Exclusive Air Network</h3>
               <p className="text-gray-700 mb-4">
-                Elite network of logistics providers committed to service excellence and innovation.
+                Elite network of air cargo logistics providers committed to service excellence and innovation.
               </p>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li>✓ Best-in-class service standards</li>

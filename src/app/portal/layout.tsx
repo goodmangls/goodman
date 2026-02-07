@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation';
 import { auth } from '@/lib/auth';
+import PortalShell from './PortalShell';
 
 export default async function PortalLayout({
   children,
@@ -12,5 +13,5 @@ export default async function PortalLayout({
     redirect('/auth/login?callbackUrl=/portal');
   }
 
-  return <>{children}</>;
+  return <PortalShell>{children}</PortalShell>;
 }

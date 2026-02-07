@@ -64,7 +64,7 @@ export default function CompanyPage() {
                       Welcome to GOODMAN GLS. Since our founding in 2004, we&apos;ve built our reputation on a simple principle: <strong>trust through action</strong>.
                     </p>
                     <p>
-                      While we may not be the largest forwarder, we are strategically positioned as Korea&apos;s gateway to global logistics. Our membership in WCA, MPL, and EAN networks, combined with our GSA/CSA airline partnerships, gives us capabilities that rival companies many times our size.
+                      While we may not be the largest forwarder, we are strategically positioned as Korea&apos;s gateway to global logistics. Our membership in MPL (MarcoPoloLine Group) and EAN (Exclusive Air Network) networks, combined with our GSA/CSA airline partnerships, gives us capabilities that rival companies many times our size.
                     </p>
                     <p>
                       Our team of logistics professionals brings decades of combined experience in time-critical air freight, complex ocean shipments, and specialized project cargo. We understand that in logistics, every shipment carries not just cargo, but our clients&apos; trust and reputation.
@@ -91,9 +91,8 @@ export default function CompanyPage() {
             <div className="space-y-6">
               {[
                 { year: "2004", milestone: "GOODMAN GLS founded in Seoul", desc: "Started with a focus on Korea-US air freight" },
-                { year: "2010", milestone: "WCA Network Membership", desc: "Expanded global reach through premium partnership" },
                 { year: "2015", milestone: "First GSA Partnership", desc: "Became General Sales Agent for major airline" },
-                { year: "2018", milestone: "MPL & EAN Membership", desc: "Joined elite Asia-Pacific and excellence networks" },
+                { year: "2018", milestone: "MPL & EAN Membership", desc: "Joined MarcoPoloLine Group and Exclusive Air Network" },
                 { year: "2020", milestone: "Project Cargo Division Launch", desc: "Expanded into heavy-lift and specialized cargo" },
                 { year: "2025", milestone: "Digital Platform Renewal", desc: "Investing in technology for better partner experience" },
               ].map((item, index) => (

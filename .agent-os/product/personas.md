@@ -30,7 +30,7 @@
 - Slow quote responses
 
 **How GOODMAN GLS Helps**:
-- WCA/MPL/EAN membership provides trust
+- MPL/EAN membership provides trust
 - Bilingual communication (English proficient)
 - Quick quote turnaround
 - Dedicated account management

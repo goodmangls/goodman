@@ -1,6 +1,6 @@
 # GOODMAN GLS - Technical & Product Decisions
 
-> Last updated: January 2025
+> Last updated: February 2026
 
 ## Architecture Decisions
 

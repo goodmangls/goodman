@@ -19,7 +19,7 @@ The platform has two main pillars:
 
 - **Freight Forwarding Services**: Air, Ocean, and Project Cargo solutions with time-critical expertise
 - **GSA/CSA Expertise**: General Sales Agent and Cargo Sales Agent for multiple airlines, providing Korean market access
-- **Global Network**: WCA, MPL, and EAN network memberships connecting 50+ countries
+- **Global Network**: MPL and EAN network memberships connecting 50+ countries
 - **Partner Hub**: Authenticated portal for global logistics partners with quote system (next priority)
 
 ## Target Users
@@ -57,7 +57,7 @@ The platform has two main pillars:
 ## Key Differentiators
 
 1. **Korean Market Expertise**: Deep local knowledge and relationships
-2. **Network Memberships**: WCA, MPL, EAN certified partnerships
+2. **Network Memberships**: MPL (MarcoPoloLine Group), EAN (Exclusive Air Network) certified partnerships
 3. **GSA/CSA Relationships**: Direct airline partnerships for capacity access
 4. **Time-Critical Specialists**: Focus on urgent and mission-critical cargo
 5. **Bilingual Service**: Full English/Korean support

@@ -17,8 +17,8 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: "GOODMAN GLS - Your Strategic Partner in Korea & Beyond",
-  description: "As members of WCA, MPL, and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
-  keywords: "logistics, air freight, ocean freight, Korea forwarder, GSA, CSA, WCA, MPL, EAN, cargo",
+  description: "As members of MPL and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
+  keywords: "logistics, air freight, ocean freight, Korea forwarder, GSA, CSA, MPL, EAN, cargo",
 };
 
 export default function RootLayout({
