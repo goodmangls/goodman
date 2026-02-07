@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { useTranslations } from '@/contexts/LanguageContext';
-import { motion } from 'framer-motion';
-import { FaPlane, FaShip, FaBoxOpen, FaScrewdriverWrench } from 'react-icons/fa6';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { FaPlane, FaShip, FaBoxOpen, FaScrewdriverWrench, FaArrowRight } from 'react-icons/fa6';
+import { useRef } from 'react';
 
 interface Service {
   icon: React.ReactNode;
@@ -14,6 +15,13 @@ interface Service {
 
 export default function ServicesShowcase() {
   const t = useTranslations('services');
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const yParallax = useTransform(scrollYProgress, [0, 1], [50, -50]);
 
   const services: Service[] = [
     {
@@ -43,9 +51,15 @@ export default function ServicesShowcase() {
   ];
 
   return (
-    <section id="services" className="min-h-screen flex items-center section-md bg-[#070612] relative z-10 py-32">
-      <div className="container">
-        <div className="mb-20 md:mb-32 max-w-6xl mx-auto">
+    <section id="services" className="min-h-screen flex items-center section-md bg-[#070612] relative z-10 py-32 overflow-hidden">
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#070612] via-[#0A0A1F] to-[#070612] pointer-events-none" />
+      
+      <div className="container relative z-10" ref={containerRef}>
+        <motion.div 
+            style={{ y: yParallax }}
+            className="mb-24 md:mb-32 max-w-6xl mx-auto"
+        >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,39 +70,45 @@ export default function ServicesShowcase() {
             <h2 className="display-serif text-white text-5xl md:text-6xl lg:text-7xl tracking-tight flex-1">
               {t('title')}
             </h2>
-            <p className="text-lg md:text-xl text-white/50 font-light md:max-w-lg leading-relaxed flex-1">
+            <p className="text-lg md:text-xl text-white/50 font-light md:max-w-lg leading-relaxed flex-1 border-l border-white/10 pl-8">
               {t('subtitle')}
             </p>
           </motion.div>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
           {services.map((service, index) => (
             <motion.div 
               key={index} 
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.8 }}
-              className="glass-panel glass-panel-hover p-10 md:p-12 rounded-4xl group flex flex-col h-full"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: index * 0.1, duration: 0.6, type: "spring", stiffness: 40 }}
+              whileHover={{ y: -15 }}
+              className="glass-panel p-10 md:p-12 rounded-[2rem] group flex flex-col h-full relative overflow-hidden border border-white/5 hover:border-[#FF6B35]/30 transition-colors duration-500"
             >
-              <div className="text-4xl md:text-5xl mb-8 opacity-80 group-hover:scale-110 transition-transform duration-500 origin-left">
+              <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <FaArrowRight className="text-[#FF6B35] -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+              </div>
+
+              <div className="text-4xl md:text-5xl mb-12 opacity-80 text-white/80 group-hover:text-[#FF6B35] group-hover:scale-110 transition-all duration-500 origin-left">
                 {service.icon}
               </div>
-              <div className="mt-auto">
-                <h3 className="text-2xl md:text-3xl mb-3 text-white font-bold group-hover:text-[#FF6B35] transition-colors duration-300 font-serif">
+              
+              <div className="mt-auto relative z-10">
+                <h3 className="text-2xl md:text-3xl mb-3 text-white font-bold group-hover:text-white transition-colors duration-300 font-serif">
                   {t(service.nameKey)}
                 </h3>
-                <p className="text-[#FF6B35] font-medium mb-4 text-sm tracking-wide uppercase opacity-80">
+                <p className="text-[#FF6B35] font-medium mb-6 text-sm tracking-wide uppercase opacity-80">
                   {t(service.taglineKey)}
                 </p>
-                <p className="text-white/60 mb-8 text-base leading-relaxed font-light">
+                <p className="text-white/60 mb-8 text-base leading-relaxed font-light group-hover:text-white/80 transition-colors">
                   {t(service.descriptionKey)}
                 </p>
-                <Link href="/services" className="inline-flex items-center text-white/40 hover:text-white transition-colors group/link pb-1 border-b border-transparent hover:border-white/20">
-                  <span className="font-medium mr-2 text-sm uppercase tracking-wider">{t('learnMore') || 'Details'}</span>
-                </Link>
               </div>
+
+              {/* Hover Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#FF6B35]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </div>
