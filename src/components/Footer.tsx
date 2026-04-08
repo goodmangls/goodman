@@ -1,5 +1,30 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+
+function EanBadge() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const badgeDiv = document.createElement('div');
+    badgeDiv.id = 'ean-badge-10032';
+    el.appendChild(badgeDiv);
+
+    const script = document.createElement('script');
+    script.src = 'https://www.ean-network.com/api/widget/10032/embed.js';
+    script.async = true;
+    el.appendChild(script);
+
+    return () => { el.innerHTML = ''; };
+  }, []);
+
+  return <div ref={containerRef} className="inline-flex items-center" />;
+}
 
 export default function Footer() {
   return (
@@ -107,17 +132,19 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Memberships */}
+        {/* Memberships & Certifications */}
         <div className="border-t border-white/10 pt-10 mb-10">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm">
+          <div className="flex flex-col items-center gap-6 text-sm">
             <span className="font-semibold text-white/40">Proud Member of:</span>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              {['MPL', 'EAN', 'IATA Certified'].map((item) => (
+              {['MPL', 'IATA Certified'].map((item) => (
                 <span key={item} className="px-5 py-2.5 bg-white/5 backdrop-blur-sm border border-white/5 hover:bg-white/10 transition-all rounded-full font-semibold text-xs md:text-sm text-white/70">
                   {item}
                 </span>
               ))}
             </div>
+            {/* EAN Certification Badge (auto-updating widget) */}
+            <EanBadge />
           </div>
         </div>
 

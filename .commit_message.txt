@@ -1,1 +1,1 @@
-📝 docs: .agent-os/product/ 문서 GSSA 정체성 전면 반영
+🏅 feat: EAN 인증 배지 위젯을 Footer에 추가
