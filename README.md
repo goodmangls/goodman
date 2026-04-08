@@ -1,117 +1,143 @@
-# Goodman GLS Global Logistics Platform
+# GOODMAN GLS — Korea's Leading GSSA
 
-![Goodman GLS Banner](/public/images/logo/logo-white.svg)
+![GOODMAN GLS](/public/images/logo/logo-white.svg)
 
-> **Better Future with Goodman GLS: Your Trusted Global Logistics Platform**
-> _27 Years of Air Cargo Expertise Meets AI Technology._
+> **Small Giant. Big Impact.** — Your Strategic Partner in Korea & Beyond
 
-## 📌 Introduction
+## About
 
-**GOODMAN GLS** is a specialized GSSA (General Sales & Service Agent) and logistics platform founded in 2014. We connect the world in real-time through our strategic partnership with **ECS Group** and our membership in **MPL** and **EAN** networks.
+**GOODMAN GLS** is a leading Korean GSSA (General Sales & Service Agent) specializing in airline cargo sales representation. Founded in 2004, we represent 15+ airlines across 6 GSSA groups, connecting 50+ countries through our MPL and EAN network memberships.
 
-This repository contains the source code for the official Goodman GLS website, rebuilt with **Next.js 16** to reflect our **2026 Strategy**.
-
----
-
-## 🚀 Tech Stack
-
-- **Framework**: [Next.js 16 (App Router)](https://nextjs.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Localization**: [next-intl](https://next-intl-docs.vercel.app/) (English & Korean)
-- **Icons**: [FontAwesome 6](https://fontawesome.com/) & Local SVG Assets
-- **Database**: PostgreSQL (via [Prisma ORM](https://www.prisma.io/))
-- **Auth**: [NextAuth.js v5](https://authjs.dev/)
+This repository contains the marketing website, partner portal, and Rails API backend.
 
 ---
 
-## 🌟 Key Features
+## Tech Stack
 
-### 1. 2026 Strategy Content
+### Frontend
+| Technology | Purpose |
+|------------|---------|
+| Next.js 16 (App Router) | Framework |
+| React 19 + TypeScript 5 | UI + Type safety |
+| Tailwind CSS v4 | Styling |
+| Framer Motion | Animations |
+| react-hook-form + Zod | Form validation |
 
-- **Hero Section**: "Eye of the Storm" concept with full-screen video background.
-- **Company Identity**: Highlighting our role as an **ECS Group Strategic Partner**.
-- **Services**:
-  - **GSA/CSA**: Airline partnerships with **WestJet, Royal Brunei, Air Busan, Aero Mongolia, Aeroflot**.
-  - **MRO**: Newly added **Goodman Aero Solutions**.
-  - **Logistics**: Air, Ocean, Project Cargo.
-
-### 2. Modern UI/UX
-
-- **Dark Theme**: Premium "Space/Midnight" aesthetic (`bg-[#070612]`).
-- **Glassmorphism**: Translucent cards and navigation with backdrop blur.
-- **One-Page Navigation**: Smooth scrolling to `#network`, `#services`, `#partner-hub` etc.
-- **SVG Logos**: Crisp, scalable vector assets for all devices.
-
-### 3. Partner Portal (Beta)
-
-- Dedicated zone for partners to check rates and track shipments.
-- Authentication via NextAuth.
-- Protected routes under `/portal`.
+### Backend (`goodman-gls-api/`)
+| Technology | Purpose |
+|------------|---------|
+| Rails 8 API-only | REST API |
+| Ruby 3.4.5 | Runtime |
+| PostgreSQL | Database |
+| JWT (bcrypt + jwt) | Authentication |
+| rack-cors + rack-attack | CORS + Rate limiting |
+| Action Mailer + SendGrid | Email |
 
 ---
 
-## 🛠️ Getting Started
+## Features
+
+### Marketing Website
+- GSSA-first landing page with video hero
+- "Why GSSA?" value proposition + 4 service pillars
+- 15 airline partner showcase grid
+- Animated stats counters (20+ years, 15+ airlines, 50+ countries)
+- EAN certification widget + MPL badge
+- Bilingual (EN/KO)
+- Dark premium theme (`#070612` + `#FF6B35`)
+
+### Partner Portal
+- JWT authentication (register, login, email verification, password reset)
+- Quote request system (authenticated + guest)
+- Role-based access (Partner, Airline, Admin, Super Admin)
+
+### API Endpoints
+- Auth: login, register, refresh, verify-email, forgot/reset-password
+- Quotes: CRUD + public guest endpoint
+- Contact: form submission + email notification
+- Companies: partner company profile
+- Users: admin management
+
+---
+
+## Getting Started
 
 ### Prerequisites
-
 - Node.js 20+
-- npm or yarn
+- Ruby 3.4+
+- PostgreSQL
 
 ### Installation
 
 ```bash
-# Clone the repository
+# Clone
 git clone https://github.com/jlinsights/goodman.git
+cd goodman
 
-# Install dependencies
+# Frontend
 npm install
+npm run dev          # http://localhost:3000
 
-# Setup Environment Variables
-cp .env.local.example .env.local
-# Update .env.local with your credentials (DATABASE_URL, AUTH_SECRET, etc.)
-
-# Run Development Server
-npm run dev
+# Backend
+cd goodman-gls-api
+bundle install
+bin/rails db:prepare
+bin/rails server     # http://localhost:3000 (API)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser.
+### Environment Variables
 
----
-
-## 📦 Project Structure
-
+**Frontend** (`.env.local`):
+```env
+NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
-├── messages/            # Localization files (en.json, ko.json)
-├── public/
-│   ├── images/          # Static assets (logos, icons)
-│   └── videos/          # Hero background videos
-├── src/
-│   ├── app/             # App Router pages and API routes
-│   ├── components/      # React components (Hero, Footer, Navigation, etc.)
-│   ├── lib/             # Utility functions and Prisma client
-│   └── styles/          # Global styles (globals.css)
-└── next.config.ts       # Next.js configuration
+
+**Backend** (Render):
+```env
+DATABASE_URL=        # PostgreSQL
+SECRET_KEY_BASE=     # JWT secret
+CORS_ORIGINS=        # Allowed origins (required in production)
+FRONTEND_URL=        # For email links
+SENDGRID_API_KEY=    # Email service
 ```
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
-The project is deployed on **Vercel**.
+| Service | Platform | URL |
+|---------|----------|-----|
+| Frontend | Vercel | goodman-gls.vercel.app |
+| Backend | Render | goodman-gls-api.onrender.com |
 
 ```bash
-# Production Build
-npm run build
+# Frontend (auto-deploy on push, or manual)
+npx vercel --prod
 
-# Deploy via Vercel CLI
-vercel deploy --prod
+# Backend (auto-deploy via Render GitHub integration)
 ```
-
-> **Note**: For Vercel deployment, ensure `eslint.config.mjs` allows build by ignoring lint errors if necessary, as distinct environment checks may apply.
 
 ---
 
-## 📝 License
+## Project Structure
 
-© 2026 **Goodman Global Logistics Service**. All Rights Reserved.
+```
+/                              # Frontend (Next.js)
+  src/
+    app/                       # Pages (landing, auth, portal)
+    components/                # HeroSection, WhyGSSA, Stats, GSA, Footer
+    contexts/                  # AuthContext, LanguageContext
+    lib/                       # apiClient, authStorage, validations
+  messages/                    # i18n (en.json, ko.json)
+goodman-gls-api/               # Backend (Rails 8)
+  app/controllers/api/v1/      # Auth, Quotes, Contact, Companies, Users
+  app/models/                  # User, Company, QuoteRequest, ContactMessage
+  app/mailers/                 # UserMailer, ContactMailer
+  config/initializers/         # cors.rb, rack_attack.rb
+```
+
+---
+
+## License
+
+(c) 2026 GOODMAN Global Logistics Service. All Rights Reserved.
