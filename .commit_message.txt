@@ -1,1 +1,1 @@
-🏢 fix: GSSA 정체성 반영 — '포워더' 표현을 'GSSA/항공화물 대리점'으로 수정
+📝 docs: .agent-os/product/ 문서 GSSA 정체성 전면 반영

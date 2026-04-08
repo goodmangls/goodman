@@ -4,7 +4,7 @@
 
 ## Vision
 
-GOODMAN GLS is a B2B logistics company website and partner platform for a Korean freight forwarding company, serving as both a marketing presence and an operational hub for freight forwarding services and GSA (General Sales Agency) operations.
+GOODMAN GLS is a B2B logistics company website and partner platform for a leading Korean GSSA (General Sales Agent / Cargo Sales Agent). The core business is airline cargo sales representation in Korea, supplemented by freight forwarding services (Air, Ocean, Project Cargo). The platform serves as both a marketing presence and an operational hub for GSA/CSA operations and partner collaboration.
 
 **Tagline**: "Small Giant. Big Impact." - Your Strategic Partner in Korea & Beyond
 
@@ -17,8 +17,8 @@ The platform has two main pillars:
 
 ## Core Value Proposition
 
-- **Freight Forwarding Services**: Air, Ocean, and Project Cargo solutions with time-critical expertise
-- **GSA/CSA Expertise**: General Sales Agent and Cargo Sales Agent for multiple airlines, providing Korean market access
+- **GSA/CSA Expertise** (Core): General Sales Agent and Cargo Sales Agent for multiple airlines — Korean market cargo sales representation
+- **Freight Forwarding Services** (Supplementary): Air, Ocean, and Project Cargo solutions with time-critical expertise
 - **Global Network**: MPL and EAN network memberships connecting 50+ countries
 - **Partner Hub**: Authenticated portal for global logistics partners with quote system (next priority)
 
@@ -26,23 +26,23 @@ The platform has two main pillars:
 
 ### Primary Audiences
 
-1. **Freight Forwarders (B2B Partners)**
-   - Looking for reliable Korean partner for cross-border logistics
-   - Need access to Korean market capacity and competitive rates
-   - Seeking WCA/MPL/EAN network collaboration
+1. **Airlines & Carriers (GSA/CSA Clients)**
+   - Airlines seeking cargo sales representation in Korea
+   - Carriers looking for capacity management and sales partnerships
+   - Route development and Korean market expansion
+   - *Portal features*: Partnership info, capacity reports
+
+2. **Logistics Partners (B2B — via MPL/EAN)**
+   - Global logistics companies seeking Korean market access
+   - Need competitive air/ocean rates and reliable local handling
+   - MPL/EAN/WCA network collaboration
    - *Portal features*: Registration, quote requests, rate access
 
-2. **Shippers (Direct Customers)**
+3. **Shippers (Direct Customers)**
    - Companies needing logistics solutions (air, ocean, project cargo)
    - Time-sensitive and mission-critical shipment requirements
    - Korean import/export needs
    - *Portal features*: Quote requests, shipment tracking
-
-3. **Airlines Cargo Customers**
-   - Airlines seeking GSA/CSA representation in Korea
-   - Carriers looking for cargo sales partnerships
-   - Route development opportunities
-   - *Portal features*: Company credentials, partnership contact
 
 4. **Potential Employees**
    - Logistics professionals seeking career opportunities
@@ -50,8 +50,8 @@ The platform has two main pillars:
 
 ## Business Model
 
-- **Freight Forwarding Revenue**: Commission and margin on logistics services
-- **GSA/CSA Revenue**: Sales commissions from airline partnerships
+- **GSA/CSA Revenue** (Primary): Sales commissions from airline cargo representation
+- **Freight Forwarding Revenue** (Secondary): Commission and margin on logistics services
 - **Partner Network**: Collaborative revenue sharing with global network partners
 
 ## Key Differentiators

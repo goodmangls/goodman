@@ -2,15 +2,15 @@
 
 ## Pitch
 
-GOODMAN GLS is a B2B logistics company website and partner portal that helps global freight forwarders, Korean exporters/importers, and airline cargo teams access Korea's logistics market by providing streamlined rate inquiries, shipment management, and GSA/CSA airline partnerships through a single digital platform.
+GOODMAN GLS is a B2B logistics platform operated by a leading Korean GSSA (General Sales Agent / Cargo Sales Agent). It helps airlines access the Korean cargo market, connects global logistics partners with reliable Korean handling, and provides streamlined rate inquiries and capacity management through a single digital platform.
 
 ## Users
 
 ### Primary Customers
 
-- **Global Freight Forwarders:** International logistics companies seeking a reliable Korean partner for air/ocean/project cargo shipments via MPL and EAN network connections
+- **Airlines & Carriers (GSA/CSA Clients):** Airlines seeking cargo sales representation and capacity management in the Korean market — this is GOODMAN GLS's core business
+- **Global Logistics Partners:** International logistics companies (via MPL/EAN networks) seeking Korean market access for air/ocean/project cargo
 - **Korean Exporters/Importers:** Domestic businesses needing competitive international shipping solutions with local expertise
-- **Airline Cargo Teams:** Airlines looking for GSA/CSA (General Sales Agent / Cargo Sales Agent) representation in the Korean market
 
 ### User Personas
 
@@ -29,14 +29,14 @@ GOODMAN GLS is a B2B logistics company website and partner portal that helps glo
 **David, Cargo Sales Director** (40-55 years old)
 - **Role:** Regional Cargo Sales Director at an international airline
 - **Context:** Looking to expand cargo capacity utilization in Korea market
-- **Pain Points:** Lack of local market knowledge, difficulty building forwarder relationships, low fill rates
-- **Goals:** Increase cargo revenue in Korea, build sustainable forwarder partnerships, optimize capacity
+- **Pain Points:** Lack of local market knowledge, difficulty building logistics partnerships, low fill rates
+- **Goals:** Increase cargo revenue in Korea, build sustainable partnerships with a trusted GSSA, optimize capacity
 
 ## The Problem
 
 ### Fragmented Korea Logistics Access
 
-International freight forwarders struggle to find reliable Korean logistics partners. The process of requesting rates, managing shipments, and maintaining partner relationships relies on email and phone, causing delays of 48-72 hours for simple rate inquiries.
+International logistics companies and airlines struggle to find reliable Korean market partners for cargo sales and forwarding. The process of requesting rates, managing capacity, and maintaining partnerships relies on email and phone, causing delays of 48-72 hours for simple rate inquiries.
 
 **Our Solution:** A digital platform that provides instant access to GOODMAN GLS services, enabling rate requests with 24-hour response times and real-time shipment visibility.
 
@@ -56,15 +56,15 @@ Cross-border logistics communication suffers from language barriers, timezone di
 
 ### Dual Network Membership (MPL + EAN)
 
-Unlike most Korean freight forwarders who belong to a single network, GOODMAN GLS maintains active membership in two elite logistics networks — MPL (MarcoPoloLine Group) and EAN (Exclusive Air Network) — providing access to 50+ countries through vetted, financially stable partners. This results in broader global coverage and more competitive routing options for clients.
+Unlike most Korean logistics companies who belong to a single network, GOODMAN GLS maintains active membership in two elite logistics networks — MPL (MarcoPoloLine Group) and EAN (Exclusive Air Network) — providing access to 50+ countries through vetted, financially stable partners. This results in broader global coverage and more competitive routing options for clients.
 
 ### Korean Market Specialization with Digital-First Approach
 
-Unlike traditional Korean forwarders that rely on manual email/phone workflows, GOODMAN GLS combines deep local market expertise with a modern digital partner portal. This results in faster response times (24-hour rate quotes vs. industry average of 48-72 hours) and 24/7 self-service access for partners.
+Unlike traditional Korean GSSAs and forwarders that rely on manual email/phone workflows, GOODMAN GLS combines deep airline partnerships and local market expertise with a modern digital partner portal. This results in faster response times (24-hour rate quotes vs. industry average of 48-72 hours) and 24/7 self-service access for partners.
 
 ### GSA/CSA Airline Expertise
 
-Unlike general freight forwarders, GOODMAN GLS has established GSA/CSA relationships with major airlines (Korean Air Cargo, Asiana Cargo, Air China Cargo, Singapore Airlines Cargo), providing priority space allocation and preferential rates. This results in guaranteed capacity and cost advantages for partner shipments.
+As a dedicated GSSA, GOODMAN GLS has established deep GSA/CSA relationships with multiple airlines, providing priority space allocation and preferential rates. Unlike companies where GSA is a side business, airline cargo representation is GOODMAN's core identity. This results in guaranteed capacity, stronger airline trust, and cost advantages for partner shipments.
 
 ## Key Features
 
