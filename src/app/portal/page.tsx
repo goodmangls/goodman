@@ -1,6 +1,6 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
+import { useAuth } from '@/contexts/AuthContext';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -20,7 +20,7 @@ interface RecentQuote {
 }
 
 export default function PortalDashboard() {
-  const { data: session } = useSession();
+  const { user } = useAuth();
   const t = useTranslations('portal');
   const [recentQuotes, setRecentQuotes] = useState<RecentQuote[]>([]);
   const [quotesLoading, setQuotesLoading] = useState(true);
@@ -113,7 +113,7 @@ export default function PortalDashboard() {
         <FadeIn>
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
-              {t('welcome')}, {session?.user?.name?.split(' ')[0] || t('partner')}!
+              {t('welcome')}, {user?.name?.split(' ')[0] || t('partner')}!
             </h2>
             <p className="text-white/60">{t('dashboardSubtitle')}</p>
           </div>

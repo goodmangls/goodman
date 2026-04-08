@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useSession, signOut } from 'next-auth/react';
+import { useAuth } from '@/contexts/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslations } from '@/contexts/LanguageContext';
 import { cn } from '@/lib/utils';
@@ -16,14 +16,14 @@ interface NavItem {
 }
 
 export default function PortalSidebar() {
-  const { data: session } = useSession();
+  const { user, logout, isAdmin } = useAuth();
   const pathname = usePathname();
   const t = useTranslations('portal');
   const tAdmin = useTranslations('adminQuotes');
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const isAdmin = session?.user?.role === 'ADMIN' || session?.user?.role === 'SUPER_ADMIN';
+  // isAdmin is provided by useAuth()
 
   const navItems: NavItem[] = [
     {
@@ -185,7 +185,7 @@ export default function PortalSidebar() {
         <div className="flex items-center gap-3 px-2">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#FF6B35] to-orange-600 flex items-center justify-center flex-shrink-0">
             <span className="text-white text-xs font-bold">
-              {session?.user?.name?.charAt(0)?.toUpperCase() || 'U'}
+              {user?.name?.charAt(0)?.toUpperCase() || 'U'}
             </span>
           </div>
           <AnimatePresence>
@@ -196,8 +196,8 @@ export default function PortalSidebar() {
                 exit={{ opacity: 0, width: 0 }}
                 className="flex-1 overflow-hidden min-w-0"
               >
-                <p className="text-white text-sm font-medium truncate">{session?.user?.name}</p>
-                <p className="text-white/40 text-xs truncate">{session?.user?.email}</p>
+                <p className="text-white text-sm font-medium truncate">{user?.name}</p>
+                <p className="text-white/40 text-xs truncate">{user?.email}</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -207,7 +207,7 @@ export default function PortalSidebar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                onClick={() => signOut({ callbackUrl: '/' })}
+                onClick={() => { logout(); window.location.href = '/'; }}
                 className="flex-shrink-0 p-1.5 text-white/30 hover:text-white/70 transition-colors rounded-lg hover:bg-white/5"
                 title={t('signOut')}
               >

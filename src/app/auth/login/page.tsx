@@ -1,7 +1,7 @@
 'use client';
 
 import { Suspense, useState } from 'react';
-import { signIn } from 'next-auth/react';
+import { useAuth } from '@/contexts/AuthContext';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useForm } from 'react-hook-form';
@@ -14,6 +14,7 @@ function LoginForm() {
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/portal';
   const t = useTranslations('auth');
+  const { login } = useAuth();
 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -31,17 +32,12 @@ function LoginForm() {
     setError(null);
 
     try {
-      const result = await signIn('credentials', {
-        email: data.email,
-        password: data.password,
-        redirect: false,
-      });
+      const result = await login(data.email, data.password);
 
-      if (result?.error) {
-        setError(result.error);
+      if (!result.success) {
+        setError(result.error || 'Login failed');
       } else {
         router.push(callbackUrl);
-        router.refresh();
       }
     } catch {
       setError('An unexpected error occurred. Please try again.');

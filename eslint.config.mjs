@@ -8,6 +8,7 @@ const eslintConfig = defineConfig([
   globalIgnores([
     ".next/**",
     ".vercel/**",
+    "goodman-gls-api/**",
     "out/**",
     "build/**",
     "node_modules/**",

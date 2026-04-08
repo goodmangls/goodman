@@ -2,12 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useSession } from 'next-auth/react';
+import { useAuth } from '@/contexts/AuthContext';
 import { useTranslations } from '@/contexts/LanguageContext';
 
 export default function PortalHeader() {
   const pathname = usePathname();
-  const { data: session } = useSession();
+  const { user } = useAuth();
   const t = useTranslations('portal');
   const tq = useTranslations('quotes');
   const tAdmin = useTranslations('adminQuotes');
@@ -80,7 +80,7 @@ export default function PortalHeader() {
           <div className="lg:hidden flex items-center gap-2">
             <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#FF6B35] to-orange-600 flex items-center justify-center">
               <span className="text-white text-xs font-bold">
-                {session?.user?.name?.charAt(0)?.toUpperCase() || 'U'}
+                {user?.name?.charAt(0)?.toUpperCase() || 'U'}
               </span>
             </div>
           </div>
