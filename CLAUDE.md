@@ -46,6 +46,7 @@ npm run build
 | PostgreSQL | latest | Database |
 | bcrypt + jwt | latest | Authentication (JWT) |
 | rack-cors | latest | CORS handling |
+| rack-attack | latest | Rate limiting (auth, contact) |
 | Action Mailer + SendGrid | - | Email (verification, contact) |
 
 ## Development Commands
@@ -76,6 +77,11 @@ bundle exec rspec        # RSpec tests
       company/                 # About page
       services/                # Services page
     components/                # React components
+      HeroSection.tsx          # Landing hero with video background
+      WhyGSSASection.tsx       # GSSA value proposition + 4 service pillars
+      StatsSection.tsx         # Animated counter stats (20+yr, 15+ airlines, etc.)
+      GSASection.tsx           # 15 airline partner showcase grid
+      Footer.tsx               # EAN widget + MPL badge + IATA
     contexts/                  # AuthContext (JWT), LanguageContext, ToastContext
     lib/
       apiClient.ts             # Centralized API client (JWT auth, 401 refresh)
@@ -83,9 +89,13 @@ bundle exec rspec        # RSpec tests
 goodman-gls-api/               # Backend (Rails 8 API-only)
   app/
     controllers/api/v1/        # Auth, Quotes, Contact, Companies, Users
+    controllers/concerns/      # JwtAuthenticatable (JWT encode/decode/refresh)
     models/                    # User, Company, QuoteRequest, ContactMessage
     mailers/                   # UserMailer, ContactMailer
-  config/routes.rb             # API routes (/api/v1/*)
+  config/
+    routes.rb                  # API routes (/api/v1/*)
+    initializers/cors.rb       # Rack::Cors (CORS_ORIGINS env required in production)
+    initializers/rack_attack.rb # Rate limiting (login 5/min, register 3/min)
   render.yaml                  # Render deployment config
 ```
 
@@ -144,17 +154,23 @@ CONTACT_EMAIL_TO=         # Contact form recipient email
 ## Current Status
 
 ### Completed
-- Marketing website with all pages
+- Marketing website with GSSA-first landing page
+- WhyGSSA section (value proposition + 4 service pillars)
+- 15 airline partner showcase (6 GSSA groups)
+- Stats section with animated counters
+- EAN widget + MPL badge in footer
 - Bilingual support (EN/KO)
 - Responsive design with parallax animations
-- Vercel deployment
+- Vercel deployment (production)
 - Rails 8 API backend (JWT auth, quotes, contact, companies)
+- Security: rack-attack rate limiting, CORS hardening, role-based access
 - Partner portal (login, dashboard, quote request)
 
 ### In Progress / Planned
 - Render backend deployment
 - Shipment tracking
 - Admin portal enhancements
+- RSpec test suite
 
 ## Key Files
 
@@ -163,5 +179,9 @@ CONTACT_EMAIL_TO=         # Contact form recipient email
 | `src/app/layout.tsx` | Root layout with fonts and metadata |
 | `src/components/ClientLayout.tsx` | Client-side layout wrapper |
 | `src/contexts/LanguageContext.tsx` | i18n context provider |
+| `src/contexts/AuthContext.tsx` | JWT auth context (login/signup/logout/refresh) |
+| `src/lib/apiClient.ts` | Centralized fetch client with 401 auto-refresh |
+| `src/lib/authStorage.ts` | Token storage (access: memory, refresh: localStorage) |
 | `src/lib/validations/contact.ts` | Contact form Zod schema |
-| `src/app/api/contact/route.ts` | Contact form API endpoint |
+| `goodman-gls-api/app/controllers/concerns/jwt_authenticatable.rb` | JWT encode/decode/refresh concern |
+| `goodman-gls-api/config/initializers/rack_attack.rb` | Rate limiting rules |
