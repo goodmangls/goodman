@@ -58,7 +58,7 @@ module Api
         user = User.find_by(email_verification_token: params[:token])
 
         unless user
-          return render json: { error: "Invalid verification token" }, status: :unprocessable_entity
+          return render json: { error: { code: "INVALID_TOKEN", message: "Invalid verification token" } }, status: :unprocessable_entity
         end
 
         user.update!(status: "active", email_verified_at: Time.current, email_verification_token: nil)
@@ -84,11 +84,11 @@ module Api
         user = User.find_by(password_reset_token: params[:token])
 
         unless user && user.password_reset_sent_at > 2.hours.ago
-          return render json: { error: "Invalid or expired reset token" }, status: :unprocessable_entity
+          return render json: { error: { code: "INVALID_TOKEN", message: "Invalid or expired reset token" } }, status: :unprocessable_entity
         end
 
         if params[:password].blank? || params[:password] != params[:password_confirmation]
-          return render json: { error: "Password confirmation does not match" }, status: :unprocessable_entity
+          return render json: { error: { code: "VALIDATION_ERROR", message: "Password confirmation does not match" } }, status: :unprocessable_entity
         end
 
         user.update!(password: params[:password], password_reset_token: nil, password_reset_sent_at: nil)
