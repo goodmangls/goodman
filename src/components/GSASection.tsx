@@ -7,11 +7,10 @@ import { motion } from 'framer-motion';
 export default function GSASection() {
   const t = useTranslations('gsa');
 
-  const partnerKeys = ['ws', 'bi', 'bx', 'mo', 'su'];
+  const partnerKeys = ['ws', 'o3', 'bx', 'mo', 'yp', '2c', 'am', 'de', 'tw', 'we', 'jx', 'ke', 'ua', '5y', 'm7'];
 
   return (
     <section id="network" className="min-h-screen flex items-center section-md bg-[#070612] relative overflow-hidden py-32">
-      {/* Expansive Background Gradient Blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] bg-[#0A2463]/10 rounded-full blur-[180px] pointer-events-none opacity-50" />
 
       <div className="container relative z-10">
@@ -38,16 +37,15 @@ export default function GSASection() {
             </div>
           </motion.div>
 
-          {/* Airline Partners Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-20 md:mb-28">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-20 md:mb-28">
             {partnerKeys.map((key, index) => (
               <motion.div
                 key={key}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="glass-panel glass-panel-hover rounded-2xl p-6 flex flex-col justify-center items-center text-center h-[140px]"
+                transition={{ delay: index * 0.06, duration: 0.5 }}
+                className="glass-panel glass-panel-hover rounded-2xl p-5 flex flex-col justify-center items-center text-center h-[120px]"
               >
                 <div className="text-white font-bold text-lg mb-2">
                   {key.toUpperCase()}
@@ -67,10 +65,10 @@ export default function GSASection() {
           >
             <Link href="/network-solutions" className="group inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-[#070612] text-sm font-bold uppercase tracking-wider hover:bg-[#FF6B35] hover:text-white transition-all duration-300">
               <span>{t('cta')}</span>
-              <svg 
-                className="w-4 h-4 ml-3 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-4 h-4 ml-3 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

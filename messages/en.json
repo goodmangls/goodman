@@ -53,6 +53,13 @@
     "ean": "Excellence Alliance Network",
     "iata": "IATA Certified Agent"
   },
+  "stats": {
+    "subtitle": "Goodman GLS by the Numbers",
+    "years": "Years of Experience",
+    "airlines": "Airlines Represented",
+    "countries": "Countries Connected",
+    "response": "Quote Response Time"
+  },
   "services": {
     "title": "Specialized Logistics Solutions",
     "subtitle": "Time-Critical. Mission-Critical. Trust GOODMAN.",
@@ -81,13 +88,23 @@
   "gsa": {
     "title": "Airline Business (GSA & CSA)",
     "subtitle": "Exclusive Network & Proven Track Record",
-    "description": "We represent the best to deliver the best results.",
+    "description": "Representing 15+ airlines across 6 GSSA groups — we deliver results at scale.",
     "partners": {
-      "ws": "WestJet (WS) - North America/Europe",
-      "bi": "Royal Brunei (BI) - Dubai/London/Melbourne",
-      "bx": "Air Busan (BX) - Asia Network",
-      "mo": "Aero Mongolia (MO) - Mongolia/Central Asia",
-      "su": "Aeroflot (SU) - Russia/CIS"
+      "ws": "WestJet - North America/Europe",
+      "o3": "LATAM Cargo (O3) - Latin America",
+      "bx": "Air Busan - Asia Network",
+      "mo": "Aero Mongolia - Mongolia/Central Asia",
+      "yp": "Air Premia - Transpacific",
+      "2c": "SCAT Airlines - Central Asia",
+      "am": "Aeromexico Cargo - Americas",
+      "de": "Condor - Europe/Leisure",
+      "tw": "T'way Air - Asia Pacific",
+      "we": "Thai Vietjet - Southeast Asia",
+      "jx": "Starlux Airlines - Premium Asia",
+      "ke": "Korean Air Cargo - Global",
+      "ua": "United Cargo - Americas/Global",
+      "5y": "Atlas Air - Worldwide Charter",
+      "m7": "MasAir Cargo - Americas"
     },
     "cta": "View Our Airline Partners"
   },
@@ -117,8 +134,8 @@
     "messagePlaceholder": "Your Message",
     "sendMessage": "Send Message",
     "sending": "Sending...",
-    "successMessage": "✓ Message sent successfully! We'll get back to you soon.",
-    "errorMessage": "✗ Failed to send message. Please try again or contact us directly."
+    "successMessage": "Message sent successfully! We'll get back to you soon.",
+    "errorMessage": "Failed to send message. Please try again or contact us directly."
   },
   "footer": {
     "tagline": "GOODMAN GLS - Your Strategic Partner in Korea & Beyond",

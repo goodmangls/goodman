@@ -1,1 +1,1 @@
-🏅 feat: EAN 인증 배지 위젯을 Footer에 추가
+feat: GSSA 아이덴티티 강화 — StatsSection 추가, 섹션 순서 변경, 항공사 파트너 15개로 확장
