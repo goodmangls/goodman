@@ -1,1 +1,1 @@
-🔄 feat: Phase 4 — NextAuth → JWT 전환 완료, API routes/Prisma 제거
+🧹 chore: Phase 5 — Prisma/NextAuth/Resend 패키지 제거, CLAUDE.md 업데이트
