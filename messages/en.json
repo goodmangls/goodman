@@ -60,6 +60,35 @@
     "countries": "Countries Connected",
     "response": "Quote Response Time"
   },
+  "whyGssa": {
+    "badge": "Why Choose a GSSA?",
+    "title": "Your Airline's Dedicated Sales Force in Korea",
+    "description": "A GSSA is not a middleman — we are your in-market sales team, backed by 20 years of Korean market intelligence and airline partnerships.",
+    "definitionLabel": "What We Do",
+    "definitionTitle": "General Sales & Service Agent",
+    "definitionBody": "A GSSA represents airlines in markets where they don't have direct sales teams. We handle cargo sales, capacity management, and customer relationships — acting as a seamless extension of your airline's commercial operations in Korea.",
+    "whyLabel": "Why It Matters",
+    "whyTitle": "Results That Speak",
+    "whyBody": "Airlines partnering with GOODMAN GLS gain immediate access to Korea's freight market through our established network of 50+ countries, MPL and EAN connections, and two decades of local expertise — without the overhead of building a local team.",
+    "pillars": {
+      "sales": {
+        "title": "Sales Representation",
+        "description": "Dedicated cargo sales teams driving revenue growth through established relationships with Korean forwarders and shippers."
+      },
+      "capacity": {
+        "title": "Capacity Management",
+        "description": "Optimizing load factors through dynamic pricing, yield management, and strategic space allocation across routes."
+      },
+      "intelligence": {
+        "title": "Market Intelligence",
+        "description": "Deep Korean market insights — trade flows, seasonal patterns, regulatory changes, and competitive positioning."
+      },
+      "digital": {
+        "title": "Digital Solutions",
+        "description": "Modern booking systems, real-time reporting dashboards, and digital partner portals for seamless operations."
+      }
+    }
+  },
   "services": {
     "title": "Specialized Logistics Solutions",
     "subtitle": "Time-Critical. Mission-Critical. Trust GOODMAN.",

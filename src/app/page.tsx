@@ -1,9 +1,10 @@
 import HeroSection from "@/components/HeroSection";
 import TrustBadges from "@/components/TrustBadges";
 import StatsSection from "@/components/StatsSection";
-import CompanySection from "@/components/CompanySection";
-import ServicesShowcase from "@/components/ServicesShowcase";
+import WhyGSSASection from "@/components/WhyGSSASection";
 import GSASection from "@/components/GSASection";
+import ServicesShowcase from "@/components/ServicesShowcase";
+import CompanySection from "@/components/CompanySection";
 import PartnerHubSection from "@/components/PartnerHubSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <TrustBadges />
       <StatsSection />
+      <WhyGSSASection />
       <GSASection />
       <ServicesShowcase />
       <CompanySection />
