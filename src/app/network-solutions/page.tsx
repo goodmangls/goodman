@@ -88,7 +88,7 @@ export default function NetworkSolutionsPage() {
                 <div>
                   <h4 className="font-bold text-orange-400 mb-2">CSA (Cargo Sales Agent)</h4>
                   <p className="text-gray-200">
-                    Specialized cargo sales representation, providing capacity guarantees and preferential rates for freight forwarders.
+                    Specialized cargo sales representation, providing capacity guarantees and preferential rates for logistics partners.
                   </p>
                 </div>
               </div>

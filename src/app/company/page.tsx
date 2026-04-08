@@ -64,7 +64,7 @@ export default function CompanyPage() {
                       Welcome to GOODMAN GLS. Since our founding in 2004, we&apos;ve built our reputation on a simple principle: <strong>trust through action</strong>.
                     </p>
                     <p>
-                      While we may not be the largest forwarder, we are strategically positioned as Korea&apos;s gateway to global logistics. Our membership in MPL (MarcoPoloLine Group) and EAN (Exclusive Air Network) networks, combined with our GSA/CSA airline partnerships, gives us capabilities that rival companies many times our size.
+                      As a leading GSSA (General Sales Agent) in Korea, we are strategically positioned as the gateway between global airlines and Korea&apos;s logistics market. Our membership in MPL (MarcoPoloLine Group) and EAN (Exclusive Air Network) networks, combined with our airline cargo sales partnerships, gives us capabilities that rival companies many times our size.
                     </p>
                     <p>
                       Our team of logistics professionals brings decades of combined experience in time-critical air freight, complex ocean shipments, and specialized project cargo. We understand that in logistics, every shipment carries not just cargo, but our clients&apos; trust and reputation.

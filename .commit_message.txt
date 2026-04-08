@@ -1,1 +1,1 @@
-📋 docs: goodman-gls-api PDCA 완료 보고서
+🏢 fix: GSSA 정체성 반영 — '포워더' 표현을 'GSSA/항공화물 대리점'으로 수정
