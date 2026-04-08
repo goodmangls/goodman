@@ -101,7 +101,7 @@ export default function ContactSection() {
                   <div className="group">
                      <div className="flex items-center gap-4 mb-2">
                         <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#FF6B35]">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                           </svg>
@@ -114,7 +114,7 @@ export default function ContactSection() {
                   <div className="group">
                      <div className="flex items-center gap-4 mb-2">
                         <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#FF6B35]">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                           </svg>
                         </div>
@@ -126,7 +126,7 @@ export default function ContactSection() {
                   <div className="group">
                      <div className="flex items-center gap-4 mb-2">
                         <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#FF6B35]">
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </div>
@@ -154,39 +154,39 @@ export default function ContactSection() {
             >
               <form onSubmit={handleSubmit} className="space-y-8 p-4">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white/40 uppercase tracking-widest ml-1">{t('namePlaceholder')}</label>
+                  <label htmlFor="contact-name" className="text-sm font-medium text-white/40 uppercase tracking-widest ml-1">{t('namePlaceholder')}</label>
                   <input
                     type="text"
-                    name="name"
+                    id="contact-name" name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full px-6 py-5 bg-white/3 border-b ${errors.name ? 'border-red-500' : 'border-white/10'} text-white placeholder-transparent focus:outline-none focus:border-[#FF6B35] focus:bg-white/5 transition-all text-lg`}
+                    className={`w-full px-6 py-5 bg-white/3 border-b ${errors.name ? 'border-red-500' : 'border-white/10'} text-white placeholder-transparent focus-visible:outline-none focus:border-[#FF6B35] focus:bg-white/5 transition-all text-lg`}
                     placeholder={t('namePlaceholder')}
                   />
                   {errors.name && <p className="mt-2 text-sm text-red-400 pl-1">{errors.name}</p>}
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-white/40 uppercase tracking-widest ml-1">{t('emailPlaceholder')}</label>
+                  <label htmlFor="contact-email" className="text-sm font-medium text-white/40 uppercase tracking-widest ml-1">{t('emailPlaceholder')}</label>
                   <input
                     type="email"
-                    name="email"
+                    id="contact-email" name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full px-6 py-5 bg-white/3 border-b ${errors.email ? 'border-red-500' : 'border-white/10'} text-white placeholder-transparent focus:outline-none focus:border-[#FF6B35] focus:bg-white/5 transition-all text-lg`}
+                    className={`w-full px-6 py-5 bg-white/3 border-b ${errors.email ? 'border-red-500' : 'border-white/10'} text-white placeholder-transparent focus-visible:outline-none focus:border-[#FF6B35] focus:bg-white/5 transition-all text-lg`}
                     placeholder={t('emailPlaceholder')}
                   />
                   {errors.email && <p className="mt-2 text-sm text-red-400 pl-1">{errors.email}</p>}
                 </div>
 
                 <div className="space-y-2">
-                   <label className="text-sm font-medium text-white/40 uppercase tracking-widest ml-1">{t('messagePlaceholder')}</label>
+                   <label htmlFor="contact-message" className="text-sm font-medium text-white/40 uppercase tracking-widest ml-1">{t('messagePlaceholder')}</label>
                   <textarea
-                    name="message"
+                    id="contact-message" name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className={`w-full px-6 py-5 bg-white/3 border-b ${errors.message ? 'border-red-500' : 'border-white/10'} text-white placeholder-transparent focus:outline-none focus:border-[#FF6B35] focus:bg-white/5 transition-all text-lg resize-none`}
+                    className={`w-full px-6 py-5 bg-white/3 border-b ${errors.message ? 'border-red-500' : 'border-white/10'} text-white placeholder-transparent focus-visible:outline-none focus:border-[#FF6B35] focus:bg-white/5 transition-all text-lg resize-none`}
                     placeholder={t('messagePlaceholder')}
                   />
                   {errors.message && <p className="mt-2 text-sm text-red-400 pl-1">{errors.message}</p>}
@@ -211,7 +211,7 @@ export default function ContactSection() {
                     <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full btn btn-primary py-5 text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#FF6B35]/10 hover:shadow-[#FF6B35]/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                    className="w-full btn btn-primary py-5 text-lg font-bold uppercase tracking-wider shadow-xl shadow-[#FF6B35]/10 hover:shadow-[#FF6B35]/30 disabled:opacity-50 disabled:cursor-not-allowed transition-all focus-visible:ring-2 focus-visible:ring-[#FF6B35] focus-visible:outline-none"
                     >
                     <span className="flex items-center justify-center gap-3">
                         {isSubmitting ? t('sending') : t('sendMessage')}

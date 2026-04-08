@@ -1,1 +1,1 @@
-🔒 security: Critical 5건 수정 — CORS, nil crash, race condition, 권한 상승, rate limiting
+♿ 접근성 개선: 7개 컴포넌트에 aria-label, htmlFor, focus-visible ring, aria-hidden 추가

@@ -70,7 +70,7 @@ export default function Navigation() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="relative px-5 py-2.5 text-sm font-medium text-white/80 transition-all duration-300 rounded-full hover:text-[#FF6B35] hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] hover:border hover:border-white/10 border border-transparent"
+                  className="relative px-5 py-2.5 text-sm font-medium text-white/80 transition-all duration-300 rounded-full hover:text-[#FF6B35] hover:bg-white/10 hover:shadow-[0_0_20px_rgba(255,107,53,0.3)] hover:border hover:border-white/10 border border-transparent focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
                 >
                   {item.label}
                 </Link>
@@ -83,7 +83,7 @@ export default function Navigation() {
             <LanguageToggle />
             <Link 
               href="/partner-hub#login" 
-              className="px-5 py-2.5 bg-[#FF6B35] text-white text-sm font-semibold rounded-full hover:bg-[#E05A2B] hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-200 flex items-center gap-2"
+              className="px-5 py-2.5 bg-[#FF6B35] text-white text-sm font-semibold rounded-full hover:bg-[#E05A2B] hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-200 flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -95,7 +95,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-full transition-colors z-20"
+            aria-label="Toggle menu" className="lg:hidden p-2 text-white hover:bg-white/10 rounded-full transition-colors z-20 focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
           >
             <motion.div
               animate={isMenuOpen ? "open" : "closed"}
@@ -143,7 +143,7 @@ export default function Navigation() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="block px-4 py-3 text-lg font-medium text-white/90 hover:text-[#FF6B35] hover:bg-white/10 rounded-xl transition-colors"
+                    className="block px-4 py-3 text-lg font-medium text-white/90 hover:text-[#FF6B35] hover:bg-white/10 rounded-xl transition-colors focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
@@ -159,7 +159,7 @@ export default function Navigation() {
                 
                 <Link 
                   href="/partner-hub#login" 
-                  className="flex items-center justify-center gap-2 px-4 py-3 mt-2 bg-[#FF6B35] text-white font-semibold rounded-xl hover:bg-[#E05A2B] transition-colors"
+                  className="flex items-center justify-center gap-2 px-4 py-3 mt-2 bg-[#FF6B35] text-white font-semibold rounded-xl hover:bg-[#E05A2B] transition-colors focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

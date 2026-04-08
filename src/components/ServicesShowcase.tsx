@@ -84,7 +84,7 @@ export default function ServicesShowcase() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: index * 0.1, duration: 0.6, type: "spring", stiffness: 40 }}
               whileHover={{ y: -15 }}
-              className="glass-panel p-10 md:p-12 rounded-3xl group flex flex-col h-full relative overflow-hidden border border-white/5 hover:border-[#FF6B35]/30 transition-colors duration-500"
+              className="glass-panel p-10 md:p-12 rounded-3xl group flex flex-col h-full relative overflow-hidden border border-white/5 hover:border-[#FF6B35]/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
             >
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <FaArrowRight className="text-[#FF6B35] -rotate-45 group-hover:rotate-0 transition-transform duration-300" />

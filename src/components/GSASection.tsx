@@ -63,7 +63,7 @@ export default function GSASection() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            <Link href="/network-solutions" className="group inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-[#070612] text-sm font-bold uppercase tracking-wider hover:bg-[#FF6B35] hover:text-white transition-all duration-300">
+            <Link href="/network-solutions" className="group inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-[#070612] text-sm font-bold uppercase tracking-wider hover:bg-[#FF6B35] hover:text-white transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none">
               <span>{t('cta')}</span>
               <svg
                 className="w-4 h-4 ml-3 transition-transform group-hover:translate-x-1"

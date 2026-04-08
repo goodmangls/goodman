@@ -158,7 +158,7 @@ export default function HeroSection() {
             <div className="flex flex-wrap items-center gap-4">
               <Link 
                 href="/book-call" 
-                className="group relative inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-[#070612] font-medium transition-transform hover:scale-105"
+                className="group relative inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-[#070612] font-medium transition-transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none"
               >
                 {t('ctaPrimary')}
                 <FaArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -166,7 +166,7 @@ export default function HeroSection() {
               
               <Link 
                 href="/network-solutions" 
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white font-medium hover:bg-white/30 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white font-medium hover:bg-white/30 transition-colors focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none"
               >
                 {t('ctaSecondary')}
               </Link>
@@ -177,7 +177,7 @@ export default function HeroSection() {
           <BlurIn delay={0.8} duration={0.6} className="mt-8 pt-8 border-t border-white/10 w-full max-w-lg">
             <div className="flex items-center gap-8 text-white/80">
                 <button
-                    onClick={() => setShowRateInquiry(true)}
+                    aria-label="Rate Inquiry" onClick={() => setShowRateInquiry(true)}
                     className="flex items-center gap-3 hover:text-[#FF6B35] transition-colors group"
                 >
                     <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#FF6B35]/50 group-hover:bg-[#FF6B35]/10 transition-colors">
@@ -189,7 +189,7 @@ export default function HeroSection() {
                 </button>
 
                 <Link 
-                    href="#track-trace" 
+                    href="#track-trace" aria-label="Track & Trace" 
                     className="flex items-center gap-3 hover:text-[#FF6B35] transition-colors group"
                 >
                     <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#FF6B35]/50 group-hover:bg-[#FF6B35]/10 transition-colors">
@@ -216,8 +216,8 @@ export default function HeroSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={() => setShowRateInquiry(false)}
-              className="absolute top-6 right-6 text-gray-400 hover:text-gray-700 transition-colors"
+              aria-label="Close" onClick={() => setShowRateInquiry(false)}
+              className="absolute top-6 right-6 text-gray-400 hover:text-gray-700 transition-colors focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none rounded-lg"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

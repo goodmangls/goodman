@@ -44,9 +44,9 @@ export default function FloatingConnect() {
       {/* Main Button */}
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className={`${
+        aria-label="Contact us" className={`${
           isExpanded ? 'bg-gray-700' : 'bg-gradient-primary'
-        } text-white rounded-full p-5 shadow-2xl hover:scale-110 transition-all duration-300 flex items-center gap-2`}
+        } text-white rounded-full p-5 shadow-2xl hover:scale-110 transition-colors transition-transform duration-300 flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none`}
       >
         {isExpanded ? (
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
