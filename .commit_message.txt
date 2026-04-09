@@ -1,1 +1,1 @@
-♿ 접근성 개선: 7개 컴포넌트에 aria-label, htmlFor, focus-visible ring, aria-hidden 추가
+♿ prefers-reduced-motion 접근성 대응: globals.css 글로벌 규칙 + 5개 컴포넌트 motion-safe 프리픽스 적용

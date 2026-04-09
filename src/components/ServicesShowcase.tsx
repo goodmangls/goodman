@@ -87,10 +87,10 @@ export default function ServicesShowcase() {
               className="glass-panel p-10 md:p-12 rounded-3xl group flex flex-col h-full relative overflow-hidden border border-white/5 hover:border-[#FF6B35]/30 transition-colors duration-500 focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
             >
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <FaArrowRight className="text-[#FF6B35] -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                <FaArrowRight className="text-[#FF6B35] -rotate-45 motion-safe:group-hover:rotate-0 transition-transform duration-300" />
               </div>
 
-              <div className="text-4xl md:text-5xl mb-12 opacity-80 text-white/80 group-hover:text-[#FF6B35] group-hover:scale-110 transition-all duration-500 origin-left">
+              <div className="text-4xl md:text-5xl mb-12 opacity-80 text-white/80 group-hover:text-[#FF6B35] motion-safe:group-hover:scale-110 transition-all duration-500 origin-left">
                 {service.icon}
               </div>
               

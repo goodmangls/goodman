@@ -32,7 +32,7 @@ export default function TrustBadges() {
                 <div className="text-2xl md:text-3xl font-bold text-white/80 group-hover:text-white transition-colors duration-500 font-serif">
                   {member.name}
                 </div>
-                <div className="h-px w-0 bg-[#FF6B35] group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="h-px w-0 bg-[#FF6B35] motion-safe:group-hover:w-full transition-all duration-500 ease-out" />
               </div>
             </motion.div>
           ))}

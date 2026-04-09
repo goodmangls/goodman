@@ -147,7 +147,7 @@ export default function WhyGSSASection() {
 
               {/* Glow on hover */}
               <div
-                className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-radial ${pillar.gradient} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+                className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-radial ${pillar.gradient} rounded-full blur-3xl opacity-0 motion-safe:group-hover:opacity-100 transition-opacity duration-700`}
               />
 
               <div className="relative p-6 md:p-8">
@@ -175,7 +175,7 @@ export default function WhyGSSASection() {
 
                 {/* Bottom accent line */}
                 <div
-                  className="mt-6 h-px w-0 group-hover:w-full transition-all duration-700 ease-out"
+                  className="mt-6 h-px w-0 motion-safe:group-hover:w-full transition-all duration-700 ease-out"
                   style={{ backgroundColor: pillar.accent }}
                 />
               </div>
