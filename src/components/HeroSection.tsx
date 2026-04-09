@@ -102,15 +102,13 @@ export default function HeroSection() {
           playsInline
           muted
           loop
-          className="absolute inset-0 h-full w-full object-cover scale-110"
-          poster="https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=80&w=2128&auto=format&fit=crop"
+          className="absolute inset-0 h-full w-full object-cover object-[center_30%] scale-105"
+          poster="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=80&w=2940&auto=format&fit=crop"
         />
-        {/* Subtle overlay — let the aircraft image breathe */}
-        <div className="absolute inset-0 bg-[#070612]/40 z-[1] pointer-events-none" />
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-[#070612] to-transparent z-[2] pointer-events-none" />
-        {/* Left fade for text area */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070612]/70 via-transparent to-transparent z-[2] pointer-events-none" />
+        {/* Light overlay — aircraft image stays prominent */}
+        <div className="absolute inset-0 bg-[#070612]/30 z-[1] pointer-events-none" />
+        {/* Bottom fade for text area */}
+        <div className="absolute bottom-0 left-0 right-0 h-[60%] bg-gradient-to-t from-[#070612] via-[#070612]/80 to-transparent z-[2] pointer-events-none" />
       </div>
 
       {/* Content */}
