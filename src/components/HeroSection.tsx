@@ -102,13 +102,15 @@ export default function HeroSection() {
           playsInline
           muted
           loop
-          className="absolute inset-0 h-full w-full object-cover origin-left scale-125 ml-[200px]"
-          poster="https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop"
+          className="absolute inset-0 h-full w-full object-cover scale-110"
+          poster="https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=80&w=2128&auto=format&fit=crop"
         />
-        {/* Bottom Fade Gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#070612] to-transparent z-10 pointer-events-none" />
-        
-        {/* Global overlay for darkness if needed, but not requested. Leaving out as per spec "Video shifted... Bottom fade gradient...". */}
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-[#070612]/60 z-[1] pointer-events-none" />
+        {/* Bottom fade gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#070612] to-transparent z-[2] pointer-events-none" />
+        {/* Left fade for text area */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070612]/80 via-[#070612]/40 to-transparent z-[2] pointer-events-none" />
       </div>
 
       {/* Content */}

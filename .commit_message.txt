@@ -1,1 +1,1 @@
-♿ prefers-reduced-motion 접근성 대응: globals.css 글로벌 규칙 + 5개 컴포넌트 motion-safe 프리픽스 적용
+✈️ fix: 히어로 배경을 항공 화물기 이미지로 변경 (GSSA 정체성)
