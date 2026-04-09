@@ -105,17 +105,17 @@ export default function HeroSection() {
           className="absolute inset-0 h-full w-full object-cover scale-110"
           poster="https://images.unsplash.com/photo-1559268950-2d7ceb2efa3a?q=80&w=2128&auto=format&fit=crop"
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-[#070612]/60 z-[1] pointer-events-none" />
-        {/* Bottom fade gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-[#070612] to-transparent z-[2] pointer-events-none" />
+        {/* Subtle overlay — let the aircraft image breathe */}
+        <div className="absolute inset-0 bg-[#070612]/40 z-[1] pointer-events-none" />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-[#070612] to-transparent z-[2] pointer-events-none" />
         {/* Left fade for text area */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#070612]/80 via-[#070612]/40 to-transparent z-[2] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#070612]/70 via-transparent to-transparent z-[2] pointer-events-none" />
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 h-full flex items-center">
-        <div className="w-full max-w-5xl mx-auto flex flex-col justify-center items-start">
+      <div className="container relative z-20 h-full flex items-end pb-32 md:pb-40">
+        <div className="w-full max-w-3xl flex flex-col justify-end items-start">
           
           {/* Badge */}
           <BlurIn delay={0} duration={0.6}>
@@ -128,8 +128,8 @@ export default function HeroSection() {
           </BlurIn>
 
           {/* Main Heading */}
-          <div className="mb-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-tight lg:leading-[1.2]">
+          <div className="mb-5">
+            <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight">
               <div className="block">
                 <SplitText text={t('headlineLine1')} />
               </div>
@@ -148,59 +148,29 @@ export default function HeroSection() {
           </div>
 
           {/* Subtitle */}
-          <BlurIn delay={0.4} duration={0.6} className="mb-12">
-            <div className="max-w-xl text-lg font-normal text-white/80 leading-relaxed">
-              <p className="mb-4">{t('subheadline')}</p>
-              <p>{t('description')}</p>
-            </div>
+          <BlurIn delay={0.4} duration={0.6} className="mb-8">
+            <p className="max-w-lg text-base md:text-lg text-white/70 leading-relaxed">
+              {t('subheadline')}
+            </p>
           </BlurIn>
 
           {/* CTA Buttons */}
           <BlurIn delay={0.6} duration={0.6}>
             <div className="flex flex-wrap items-center gap-4">
-              <Link 
-                href="/book-call" 
-                className="group relative inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-[#070612] font-medium transition-transform hover:scale-105 focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none"
+              <button
+                onClick={() => setShowRateInquiry(true)}
+                className="group relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#FF6B35] text-white font-semibold motion-safe:hover:scale-105 transition-transform focus-visible:ring-2 focus-visible:ring-[#FF6B35]/50 focus-visible:outline-none"
               >
                 {t('ctaPrimary')}
                 <FaArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-              
-              <Link 
-                href="/network-solutions" 
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-white/20 backdrop-blur-sm text-white font-medium hover:bg-white/30 transition-colors focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none"
+              </button>
+
+              <Link
+                href="#network"
+                className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white/10 backdrop-blur-sm text-white font-medium hover:bg-white/20 transition-colors focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:outline-none"
               >
                 {t('ctaSecondary')}
               </Link>
-            </div>
-          </BlurIn>
-
-          {/* Quick Tools (Rate & Track) */}
-          <BlurIn delay={0.8} duration={0.6} className="mt-8 pt-8 border-t border-white/10 w-full max-w-lg">
-            <div className="flex items-center gap-8 text-white/80">
-                <button
-                    aria-label="Rate Inquiry" onClick={() => setShowRateInquiry(true)}
-                    className="flex items-center gap-3 hover:text-[#FF6B35] transition-colors group"
-                >
-                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#FF6B35]/50 group-hover:bg-[#FF6B35]/10 transition-colors">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                        </svg>
-                    </div>
-                    <span className="text-sm font-medium">Rate Inquiry</span>
-                </button>
-
-                <Link 
-                    href="#track-trace" aria-label="Track & Trace" 
-                    className="flex items-center gap-3 hover:text-[#FF6B35] transition-colors group"
-                >
-                    <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#FF6B35]/50 group-hover:bg-[#FF6B35]/10 transition-colors">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-                    <span className="text-sm font-medium">Track & Trace</span>
-                </Link>
             </div>
           </BlurIn>
 
