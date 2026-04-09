@@ -49,8 +49,8 @@ export default function Footer() {
               </p>
             </div>
             <p className="text-sm md:text-base text-white/50 leading-relaxed max-w-md">
-              Connecting global trade with velocity, trust, and expertise since 2004. 
-              We deliver mission-critical logistics solutions across air, ocean, and project cargo.
+              Connecting global trade with velocity, trust, and expertise since 2014.
+              Korea's dedicated cargo GSSA, backed by ECS Group's global network.
             </p>
             
             {/* Social/Contact Quick Actions */}
@@ -160,7 +160,7 @@ export default function Footer() {
                   <div>
                     <div className="text-white font-bold text-sm">GOODMAN GLS</div>
                     <div className="text-white/50 text-xs">Seoul, SOUTH KOREA</div>
-                    <div className="text-white/40 text-xs">Member since 2004</div>
+                    <div className="text-white/40 text-xs">Member since 2014</div>
                   </div>
                 </div>
                 {/* Right: MPL Logo */}

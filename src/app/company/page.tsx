@@ -1,6 +1,6 @@
 export const metadata = {
   title: "About GOODMAN GLS - Company & Team | GOODMAN GLS",
-  description: "Meet the GOODMAN GLS team committed to delivering excellence in global logistics since 2004.",
+  description: "Meet the GOODMAN GLS team committed to delivering excellence in air cargo GSSA services since 2014.",
 };
 
 export default function CompanyPage() {
@@ -61,7 +61,7 @@ export default function CompanyPage() {
                   </h2>
                   <div className="space-y-4 text-gray-700">
                     <p>
-                      Welcome to GOODMAN GLS. Since our founding in 2004, we&apos;ve built our reputation on a simple principle: <strong>trust through action</strong>.
+                      Welcome to GOODMAN GLS. Since our founding in 2014, we&apos;ve built our reputation on a simple principle: <strong>trust through action</strong>.
                     </p>
                     <p>
                       As a leading GSSA (General Sales Agent) in Korea, we are strategically positioned as the gateway between global airlines and Korea&apos;s logistics market. Our membership in MPL (MarcoPoloLine Group) and EAN (Exclusive Air Network) networks, combined with our airline cargo sales partnerships, gives us capabilities that rival companies many times our size.
@@ -90,7 +90,7 @@ export default function CompanyPage() {
             
             <div className="space-y-6">
               {[
-                { year: "2004", milestone: "GOODMAN GLS founded in Seoul", desc: "Started with a focus on Korea-US air freight" },
+                { year: "2014", milestone: "GOODMAN GLS founded in Seoul", desc: "Started as a cargo GSSA specializing in airline cargo sales" },
                 { year: "2015", milestone: "First GSA Partnership", desc: "Became General Sales Agent for major airline" },
                 { year: "2018", milestone: "MPL & EAN Membership", desc: "Joined MarcoPoloLine Group and Exclusive Air Network" },
                 { year: "2020", milestone: "Project Cargo Division Launch", desc: "Expanded into heavy-lift and specialized cargo" },

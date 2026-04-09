@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function GSASection() {
   const t = useTranslations('gsa');
 
-  const partnerKeys = ['ws', 'o3', 'bx', 'mo', 'yp', '2c', 'am', 'de', 'tw', 'we', 'jx', 'ke', 'ua', '5y', 'm7'];
+  const partnerKeys = ['ws', 'o3', 'bx', 'mo', 'su'];
 
   return (
     <section id="network" className="min-h-screen flex items-center section-md bg-[#070612] relative overflow-hidden py-32">

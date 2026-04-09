@@ -1,0 +1,19 @@
+{
+  "activeFeature": "website-cargo-gssa-update",
+  "phase": "archived",
+  "matchRate": 98,
+  "archivedTo": "docs/archive/2026-04/website-cargo-gssa-update/",
+  "startedAt": "2026-04-09",
+  "history": [
+    {
+      "phase": "plan",
+      "date": "2026-04-09",
+      "document": "docs/01-plan/features/website-cargo-gssa-update.plan.md"
+    },
+    {
+      "phase": "design",
+      "date": "2026-04-09",
+      "document": "docs/02-design/features/website-cargo-gssa-update.design.md"
+    }
+  ]
+}

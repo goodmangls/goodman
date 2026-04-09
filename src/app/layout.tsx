@@ -16,9 +16,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "GOODMAN GLS - Your Strategic Partner in Korea & Beyond",
-  description: "As members of MPL and EAN networks, GOODMAN GLS delivers time-critical logistics solutions with unmatched reliability across air, ocean, and project cargo.",
-  keywords: "GSSA, GSA, CSA, airline cargo sales agent, Korea logistics, air freight, ocean freight, MPL, EAN, cargo",
+  title: "GOODMAN GLS - Korea's Cargo GSSA | Airline Cargo Sales Agent",
+  description: "Founded in 2014, Goodman GLS is a leading cargo GSSA in Korea. Strategic partner of ECS Group — the world's largest GSSA network spanning 59 countries.",
+  keywords: "cargo GSSA, GSA, CSA, airline cargo sales agent, Korea GSSA, air cargo, ECS Group, MPL, EAN, WestJet Cargo, ShunFeng Airlines, Air Busan",
 };
 
 export default function RootLayout({

@@ -39,10 +39,10 @@ export default function StatsSection() {
   const t = useTranslations('stats');
 
   const stats = [
-    { value: 20, suffix: '+', label: t('years'), key: 'years' },
-    { value: 15, suffix: '+', label: t('airlines'), key: 'airlines' },
-    { value: 50, suffix: '+', label: t('countries'), key: 'countries' },
-    { value: 24, suffix: 'hr', label: t('response'), key: 'response' },
+    { value: 10, suffix: '+', label: t('years'), key: 'years' },
+    { value: 5, suffix: '', label: t('airlines'), key: 'airlines' },
+    { value: 59, suffix: '', label: t('countries'), key: 'countries' },
+    { value: 3, suffix: '', label: t('offices'), key: 'offices' },
   ];
 
   return (

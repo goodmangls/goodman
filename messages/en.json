@@ -9,9 +9,9 @@
   },
   "company": {
     "title": "Small Giant. Big Impact.",
-    "subtitle": "Korea's GSSA Specialist Since 2004",
+    "subtitle": "Korea's Cargo GSSA Specialist Since 2014",
     "description": "As a dedicated GSSA, airline cargo representation is our core identity — not a side business. Our MPL and EAN network memberships give us capabilities that rival companies many times our size.",
-    "identity": "Est. 2004 GSSA Specialist | MPL & EAN Member | Strong Commercial & Operational Capabilities",
+    "identity": "Est. 2014 Cargo GSSA | ECS Group Partner | MPL & EAN Member",
     "strengths": {
       "local": "Strong local dominance at Incheon/Busan hubs",
       "market": "Optimal route proposals by expert groups",
@@ -28,14 +28,14 @@
     },
     "ceoQuote": "\"In logistics, every shipment carries not just cargo, but our clients' trust and reputation.\"",
     "ceoRole": "CEO & Founder",
-    "since": "Since 2004"
+    "since": "Since 2014"
   },
   "hero": {
-    "badge": "GSSA Specialist Since 2004",
+    "badge": "Cargo GSSA Since 2014",
     "headlineLine1": "We Sell Your Cargo",
     "headlineLine2": "as If It Were",
     "headlineLine3": "Our Own",
-    "subheadline": "15+ airlines. 50+ countries. One dedicated team in Korea.",
+    "subheadline": "5 airlines. 59 countries via ECS Group. One dedicated cargo team in Korea.",
     "description": "",
     "ctaPrimary": "Request a Rate",
     "ctaSecondary": "Meet Our Airlines",
@@ -58,7 +58,7 @@
     "years": "Years of Experience",
     "airlines": "Airlines Represented",
     "countries": "Countries Connected",
-    "response": "Quote Response Time"
+    "offices": "Offices in Korea"
   },
   "whyGssa": {
     "badge": "Why Partner With Us?",
@@ -69,7 +69,7 @@
     "definitionBody": "We handle everything — from cargo sales and pricing to capacity management and customer relationships. Airlines gain a fully operational commercial team in Korea without the overhead of building one.",
     "whyLabel": "Why It Matters",
     "whyTitle": "Measurable Results",
-    "whyBody": "Our airline partners see immediate impact: increased load factors, stronger forwarder relationships, and real-time market intelligence that drives revenue growth. 20+ years of track record in Korea proves it.",
+    "whyBody": "Our airline partners see immediate impact: increased load factors, stronger forwarder relationships, and real-time market intelligence that drives revenue growth. 10+ years of track record in Korea, with leadership bringing 38+ years of airline cargo experience.",
     "pillars": {
       "sales": {
         "title": "In the Market",
@@ -119,21 +119,11 @@
     "subtitle": "Trusted by carriers worldwide to grow their Korean market presence",
     "description": "From flag carriers to specialty freighters, we deliver dedicated cargo sales representation across every segment.",
     "partners": {
-      "ws": "WestJet - North America/Europe",
-      "o3": "LATAM Cargo (O3) - Latin America",
-      "bx": "Air Busan - Asia Network",
-      "mo": "Aero Mongolia - Mongolia/Central Asia",
-      "yp": "Air Premia - Transpacific",
-      "2c": "SCAT Airlines - Central Asia",
-      "am": "Aeromexico Cargo - Americas",
-      "de": "Condor - Europe/Leisure",
-      "tw": "T'way Air - Asia Pacific",
-      "we": "Thai Vietjet - Southeast Asia",
-      "jx": "Starlux Airlines - Premium Asia",
-      "ke": "Korean Air Cargo - Global",
-      "ua": "United Cargo - Americas/Global",
-      "5y": "Atlas Air - Worldwide Charter",
-      "m7": "MasAir Cargo - Americas"
+      "ws": "WestJet Cargo (GSA) - Canada, USA, Mexico, Europe",
+      "o3": "ShunFeng Airlines (CSA) - China, SE Asia, Japan, Korea",
+      "bx": "Air Busan (GSA) - China, Japan, SE Asia",
+      "mo": "Aero Mongolia (GSA) - Mongolia",
+      "su": "Aeroflot (CSA) - Russia, CIS, Europe, USA"
     },
     "cta": "View Our Airline Partners"
   },
@@ -168,7 +158,7 @@
   },
   "footer": {
     "tagline": "GOODMAN GLS - Your Strategic Partner in Korea & Beyond",
-    "description": "Connecting global trade with velocity, trust, and expertise since 2004.",
+    "description": "Korea's dedicated cargo GSSA, backed by ECS Group's global network since 2014.",
     "quickLinks": "Quick Links",
     "memberOf": "Member of:",
     "copyright": "© 2025 GOODMAN Global Logistics Service. All rights reserved."
