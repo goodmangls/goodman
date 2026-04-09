@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from '@/contexts/LanguageContext';
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 
@@ -36,13 +35,11 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 }
 
 export default function StatsSection() {
-  const t = useTranslations('stats');
-
   const stats = [
-    { value: 10, suffix: '+', label: t('years'), key: 'years' },
-    { value: 5, suffix: '', label: t('airlines'), key: 'airlines' },
-    { value: 59, suffix: '', label: t('countries'), key: 'countries' },
-    { value: 3, suffix: '', label: t('offices'), key: 'offices' },
+    { value: 10, suffix: '+', label: 'Years of Experience', key: 'years' },
+    { value: 5, suffix: '', label: 'Airlines Represented', key: 'airlines' },
+    { value: 59, suffix: '', label: 'Countries Connected', key: 'countries' },
+    { value: 3, suffix: '', label: 'Offices in Korea', key: 'offices' },
   ];
 
   return (
@@ -58,7 +55,7 @@ export default function StatsSection() {
           className="text-center mb-16"
         >
           <p className="text-xs md:text-sm font-medium text-white/30 uppercase tracking-[0.2em]">
-            {t('subtitle')}
+            Goodman GLS by the Numbers
           </p>
         </motion.div>
 

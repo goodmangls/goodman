@@ -1,15 +1,7 @@
 'use client';
 
-import { LanguageProvider } from '@/contexts/LanguageContext';
-import { AuthProvider } from '@/contexts/AuthContext';
 import { ReactNode } from 'react';
 
 export default function Providers({ children }: { children: ReactNode }) {
-  return (
-    <AuthProvider>
-      <LanguageProvider>
-        {children}
-      </LanguageProvider>
-    </AuthProvider>
-  );
+  return <>{children}</>;
 }
