@@ -8,10 +8,10 @@
     "contact": "연락처"
   },
   "company": {
-    "title": "전통과 혁신의 결합",
-    "subtitle": "2004년부터 글로벌 무역을 선도합니다",
-    "description": "2004년 설립 이래 대한민국 항공 화물 시장을 선도해 온 전문 GSSA 기업입니다. 글로벌 물류 거물 ECS Group과의 전략적 파트너십을 통해 데이터 기반의 물류 솔루션을 제공합니다.",
-    "identity": "2004년 설립된 전문 GSSA | ECS Group 전략적 파트너 | 강력한 영업 및 운영 역량",
+    "title": "Small Giant. Big Impact.",
+    "subtitle": "2004년부터 한국의 GSSA 전문 기업",
+    "description": "항공화물 판매 대리가 우리의 본업입니다 — 부업이 아닙니다. MPL과 EAN 글로벌 네트워크 회원으로서 우리보다 몇 배 큰 기업에 필적하는 역량을 보유하고 있습니다.",
+    "identity": "2004년 설립 GSSA 전문 | MPL & EAN 회원 | 강력한 영업 및 운영 역량",
     "strengths": {
       "local": "인천/부산 공항 거점의 강력한 현지 지배력",
       "market": "숙련된 전문가 그룹의 최적 운송 경로 제안",
@@ -31,13 +31,13 @@
     "since": "Since 2004"
   },
   "hero": {
-    "badge": "한국 대표 GSSA",
-    "headlineLine1": "항공사의",
-    "headlineLine2": "한국 영업",
-    "headlineLine3": "파트너",
-    "subheadline": "15개 이상 항공사, 50개국 이상 네트워크. 2004년부터 이어온 GSSA 전문성.",
+    "badge": "2004년부터 GSSA 전문",
+    "headlineLine1": "항공사의 화물을",
+    "headlineLine2": "우리 화물처럼",
+    "headlineLine3": "판매합니다",
+    "subheadline": "15개 이상 항공사. 50개국 이상. 한국의 전담 팀.",
     "description": "",
-    "ctaPrimary": "견적 요청",
+    "ctaPrimary": "운임 문의",
     "ctaSecondary": "항공사 보기",
     "stats": {
       "years": "년 경력",
@@ -61,37 +61,37 @@
     "response": "견적 응답 시간"
   },
   "whyGssa": {
-    "badge": "왜 GSSA인가?",
-    "title": "한국 시장의 항공사 전담 영업 파트너",
-    "description": "GSSA는 중개인이 아닙니다 — 20년간의 한국 시장 인텔리전스와 항공사 파트너십을 바탕으로 한 현지 영업팀입니다.",
+    "badge": "왜 우리와 함께해야 하는가?",
+    "title": "항공사처럼 생각하고, 팀처럼 행동합니다.",
+    "description": "GSSA는 중개인이 아닙니다. 우리는 한국의 전담 영업팀입니다 — 항공사의 용량을 판매하고, 브랜드를 관리하며, 마치 우리 사업인 것처럼 수익을 성장시킵니다.",
     "definitionLabel": "우리의 역할",
-    "definitionTitle": "총판매대리점 (GSA/CSA)",
-    "definitionBody": "GSSA는 항공사가 직접 영업팀을 운영하지 않는 시장에서 항공사를 대리합니다. 화물 영업, 용량 관리, 고객 관계를 담당하며 — 한국에서의 항공사 상업 운영을 원활하게 연장합니다.",
+    "definitionTitle": "한국의 항공 화물 영업부",
+    "definitionBody": "화물 영업과 가격 책정부터 용량 관리와 고객 관계까지 모든 것을 담당합니다. 항공사는 직접 팀을 구축하는 부담 없이 한국에서 완전한 영업 조직을 얻습니다.",
     "whyLabel": "왜 중요한가",
-    "whyTitle": "결과로 증명합니다",
-    "whyBody": "GOODMAN GLS와 파트너십을 맺는 항공사는 50개국 이상의 네트워크, MPL과 EAN 연결, 그리고 20년 이상의 현지 전문성을 통해 한국 화물 시장에 즉시 접근할 수 있습니다.",
+    "whyTitle": "측정 가능한 성과",
+    "whyBody": "파트너 항공사들은 즉각적인 성과를 경험합니다: 탑재율 증가, 강화된 포워더 관계, 수익 성장을 이끄는 실시간 시장 인텔리전스. 한국에서의 20년 이상의 실적이 이를 증명합니다.",
     "pillars": {
       "sales": {
-        "title": "영업 대리",
-        "description": "한국 포워더 및 화주와의 관계를 기반으로 수익 성장을 이끄는 전담 화물 영업팀."
+        "title": "시장에서 (In the Market)",
+        "description": "빠르게 판매하고, 신속히 행동하며, 일관되게 성과를 냅니다. 한국의 모든 포워더, 노선, 기회를 파악하고 있습니다."
       },
       "capacity": {
-        "title": "용량 관리",
-        "description": "동적 가격 책정, 수익 관리 및 노선별 전략적 공간 배분을 통한 탑재율 최적화."
+        "title": "하늘에서 (In the Air)",
+        "description": "동적 가격 책정, 수익 최적화, 항공편당 매출을 극대화하는 전략적 공간 배분."
       },
       "intelligence": {
-        "title": "시장 인텔리전스",
-        "description": "한국 시장 심층 분석 — 무역 흐름, 계절 패턴, 규제 변화, 경쟁 포지셔닝."
+        "title": "현장에서 (On the Ground)",
+        "description": "무역 흐름 분석, 계절 예측, 경쟁 벤치마킹, 규제 동향 — 매주 업데이트."
       },
       "digital": {
-        "title": "디지털 솔루션",
-        "description": "현대적 예약 시스템, 실시간 리포팅 대시보드, 원활한 운영을 위한 디지털 파트너 포털."
+        "title": "클라우드에서 (In the Cloud)",
+        "description": "실시간 대시보드, API 연동, 디지털 예약 플랫폼, 손끝의 성과 분석."
       }
     }
   },
   "services": {
-    "title": "전문 물류 솔루션",
-    "subtitle": "시간이 중요한 화물, 미션 크리티컬한 프로젝트 - 굿맨과 함께",
+    "title": "GSSA를 넘어 — 종합 물류 역량",
+    "subtitle": "항공사 파트너십을 보완하는 항공, 해상, 프로젝트 카고 전문성.",
     "air": {
       "name": "항공 운송",
       "tagline": "1분 1초가 중요할 때",
@@ -115,9 +115,9 @@
     "learnMore": "자세히 보기"
   },
   "gsa": {
-    "title": "항공사 비즈니스 (GSA & CSA)",
-    "subtitle": "독점적 네트워크와 검증된 실적",
-    "description": "6개 GSSA 그룹, 15+ 항공사를 대리하며 대규모 성과를 창출합니다.",
+    "title": "대리 항공사",
+    "subtitle": "한국 시장 성장을 위해 전 세계 항공사가 신뢰하는 파트너",
+    "description": "국적 항공사부터 전문 화물기까지, 모든 세그먼트에서 전담 화물 영업을 제공합니다.",
     "partners": {
       "ws": "WestJet - 북미/유럽",
       "o3": "LATAM Cargo (O3) - 중남미",

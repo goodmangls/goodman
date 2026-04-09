@@ -8,10 +8,10 @@
     "contact": "Contact"
   },
   "company": {
-    "title": "Combining Tradition & Innovation",
-    "subtitle": "Leading Global Trade Since 2004",
-    "description": "A specialized GSSA leading the Korean air cargo market since 2004. We provide data-driven logistics solutions through our strategic partnership with global giant ECS Group.",
-    "identity": "Est. 2004 GSSA Specialist | ECS Group Strategic Partner | Strong Commercial & Operational Capabilities",
+    "title": "Small Giant. Big Impact.",
+    "subtitle": "Korea's GSSA Specialist Since 2004",
+    "description": "As a dedicated GSSA, airline cargo representation is our core identity — not a side business. Our MPL and EAN network memberships give us capabilities that rival companies many times our size.",
+    "identity": "Est. 2004 GSSA Specialist | MPL & EAN Member | Strong Commercial & Operational Capabilities",
     "strengths": {
       "local": "Strong local dominance at Incheon/Busan hubs",
       "market": "Optimal route proposals by expert groups",
@@ -31,14 +31,14 @@
     "since": "Since 2004"
   },
   "hero": {
-    "badge": "Korea's Leading GSSA",
-    "headlineLine1": "Your Airline's",
-    "headlineLine2": "Sales Force",
-    "headlineLine3": "in Korea",
-    "subheadline": "Representing 15+ airlines across 50+ countries. GSSA expertise since 2004.",
+    "badge": "GSSA Specialist Since 2004",
+    "headlineLine1": "We Sell Your Cargo",
+    "headlineLine2": "as If It Were",
+    "headlineLine3": "Our Own",
+    "subheadline": "15+ airlines. 50+ countries. One dedicated team in Korea.",
     "description": "",
-    "ctaPrimary": "Get a Quote",
-    "ctaSecondary": "Our Airlines",
+    "ctaPrimary": "Request a Rate",
+    "ctaSecondary": "Meet Our Airlines",
     "stats": {
       "years": "Years Experience",
       "countries": "Countries Served",
@@ -61,37 +61,37 @@
     "response": "Quote Response Time"
   },
   "whyGssa": {
-    "badge": "Why Choose a GSSA?",
-    "title": "Your Airline's Dedicated Sales Force in Korea",
-    "description": "A GSSA is not a middleman — we are your in-market sales team, backed by 20 years of Korean market intelligence and airline partnerships.",
+    "badge": "Why Partner With Us?",
+    "title": "We Think Like an Airline. We Act Like Your Team.",
+    "description": "A GSSA is not a middleman. We are your dedicated commercial team in Korea — selling your capacity, managing your brand, and growing your revenue as if it were our own business.",
     "definitionLabel": "What We Do",
-    "definitionTitle": "General Sales & Service Agent",
-    "definitionBody": "A GSSA represents airlines in markets where they don't have direct sales teams. We handle cargo sales, capacity management, and customer relationships — acting as a seamless extension of your airline's commercial operations in Korea.",
+    "definitionTitle": "Your Cargo Department in Korea",
+    "definitionBody": "We handle everything — from cargo sales and pricing to capacity management and customer relationships. Airlines gain a fully operational commercial team in Korea without the overhead of building one.",
     "whyLabel": "Why It Matters",
-    "whyTitle": "Results That Speak",
-    "whyBody": "Airlines partnering with GOODMAN GLS gain immediate access to Korea's freight market through our established network of 50+ countries, MPL and EAN connections, and two decades of local expertise — without the overhead of building a local team.",
+    "whyTitle": "Measurable Results",
+    "whyBody": "Our airline partners see immediate impact: increased load factors, stronger forwarder relationships, and real-time market intelligence that drives revenue growth. 20+ years of track record in Korea proves it.",
     "pillars": {
       "sales": {
-        "title": "Sales Representation",
-        "description": "Dedicated cargo sales teams driving revenue growth through established relationships with Korean forwarders and shippers."
+        "title": "In the Market",
+        "description": "We sell smart, act fast, and deliver consistently. Our local teams know every forwarder, every route, every opportunity in Korea."
       },
       "capacity": {
-        "title": "Capacity Management",
-        "description": "Optimizing load factors through dynamic pricing, yield management, and strategic space allocation across routes."
+        "title": "In the Air",
+        "description": "Dynamic pricing, yield optimization, and strategic space allocation that maximizes your revenue per flight."
       },
       "intelligence": {
-        "title": "Market Intelligence",
-        "description": "Deep Korean market insights — trade flows, seasonal patterns, regulatory changes, and competitive positioning."
+        "title": "On the Ground",
+        "description": "Trade flow analysis, seasonal forecasting, competitive benchmarking, and regulatory intelligence — updated weekly."
       },
       "digital": {
-        "title": "Digital Solutions",
-        "description": "Modern booking systems, real-time reporting dashboards, and digital partner portals for seamless operations."
+        "title": "In the Cloud",
+        "description": "Real-time dashboards, API connectivity, digital booking platforms, and performance analytics at your fingertips."
       }
     }
   },
   "services": {
-    "title": "Specialized Logistics Solutions",
-    "subtitle": "Time-Critical. Mission-Critical. Trust GOODMAN.",
+    "title": "Beyond GSSA — Full Logistics Capability",
+    "subtitle": "Air, ocean, and project cargo expertise to complement our airline partnerships.",
     "air": {
       "name": "Air Freight",
       "tagline": "When Every Minute Counts",
@@ -115,9 +115,9 @@
     "learnMore": "Learn More"
   },
   "gsa": {
-    "title": "Airline Business (GSA & CSA)",
-    "subtitle": "Exclusive Network & Proven Track Record",
-    "description": "Representing 15+ airlines across 6 GSSA groups — we deliver results at scale.",
+    "title": "Airlines We Represent",
+    "subtitle": "Trusted by carriers worldwide to grow their Korean market presence",
+    "description": "From flag carriers to specialty freighters, we deliver dedicated cargo sales representation across every segment.",
     "partners": {
       "ws": "WestJet - North America/Europe",
       "o3": "LATAM Cargo (O3) - Latin America",
