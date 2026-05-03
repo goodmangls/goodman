@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
@@ -16,6 +16,12 @@ const outfit = Outfit({
   display: "swap",
 });
 
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "GOODMAN GLS - Korea's Cargo GSSA | Airline Cargo Sales Agent",
   description: "Founded in 2014, Goodman GLS is a leading cargo GSSA in Korea. Strategic partner of ECS Group — the world's largest GSSA network spanning 59 countries.",
@@ -28,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable} ${mono.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <Suspense>
           <ClientLayout>{children}</ClientLayout>
