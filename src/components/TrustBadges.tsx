@@ -14,7 +14,7 @@ export default function TrustBadges() {
     <div className="bg-canvas py-16 border-b border-hairline">
       <div className="container-wide">
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-24">
-          <span className="eyebrow !text-ink/30 uppercase tracking-widest text-[10px]">
+          <span className="caption text-ink/50">
             Trusted Memberships
           </span>
           {memberships.map((member, index) => (
@@ -26,7 +26,7 @@ export default function TrustBadges() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group cursor-default"
             >
-              <span className="display-lg !text-2xl text-ink/40 group-hover:text-ink transition-colors">
+              <span className="card-title text-ink group-hover:opacity-60 transition-opacity">
                 {member.name}
               </span>
             </motion.div>

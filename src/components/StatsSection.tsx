@@ -28,7 +28,7 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
   }, [isInView, target]);
 
   return (
-    <span ref={ref} className="display-xl !text-6xl md:!text-7xl lg:!text-8xl text-ink tabular-nums tracking-tighter">
+    <span ref={ref} className="display-xl text-ink tabular-nums">
       {count}{suffix}
     </span>
   );

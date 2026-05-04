@@ -32,8 +32,8 @@ export default function GSASection() {
               key={partner.code} 
               className="bg-canvas p-8 flex flex-col justify-center items-center text-center h-[160px] group hover:bg-surface-soft transition-colors"
             >
-              <span className="display-lg !text-3xl mb-2 group-hover:scale-110 transition-transform">{partner.code}</span>
-              <span className="body-sm opacity-50 uppercase tracking-widest text-[10px]">{partner.name}</span>
+              <span className="card-title mb-2 group-hover:scale-110 transition-transform">{partner.code}</span>
+              <span className="caption opacity-50">{partner.name}</span>
             </div>
           ))}
         </div>

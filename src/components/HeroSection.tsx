@@ -38,7 +38,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="body-lg text-ink/60 max-w-xl mb-12"
             >
-              Figma-style logistics representation in Korea. 15+ airlines, 50+ countries via ECS Group, and one dedicated team representing your brand.
+              GSSA representation in Korea. 15+ airlines, 59 countries via ECS Group, and one dedicated team representing your brand.
             </motion.p>
 
             {/* CTAs */}

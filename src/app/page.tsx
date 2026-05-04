@@ -5,6 +5,7 @@ import WhyGSSASection from "@/components/WhyGSSASection";
 import GSASection from "@/components/GSASection";
 import ServicesShowcase from "@/components/ServicesShowcase";
 import CompanySection from "@/components/CompanySection";
+import NetworkManifesto from "@/components/NetworkManifesto";
 import PartnerHubSection from "@/components/PartnerHubSection";
 import ContactSection from "@/components/ContactSection";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <GSASection />
       <ServicesShowcase />
       <CompanySection />
+      <NetworkManifesto />
       <PartnerHubSection />
       <ContactSection />
     </main>

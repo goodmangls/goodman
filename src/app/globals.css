@@ -117,6 +117,13 @@ body {
   letter-spacing: -0.01em;
 }
 
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
 .subhead {
   font-size: 26px;
   font-weight: 340;
@@ -185,6 +192,14 @@ body {
   letter-spacing: -0.005em;
 }
 
+.btn-pill-sm {
+  @apply rounded-pill px-4 py-2 inline-flex items-center justify-center transition-all active:scale-95;
+  font-weight: 480;
+  font-size: 14px;
+  line-height: 1.40;
+  letter-spacing: -0.005em;
+}
+
 /* Layout Utilities */
 .container-wide {
   @apply max-w-[1280px] mx-auto px-6 md:px-12 lg:px-12;
@@ -200,7 +215,7 @@ body {
 
 /* Color Block Sections */
 .color-block {
-  @apply rounded-lg p-12 md:p-24 lg:p-12 w-full max-w-[1280px] mx-auto overflow-hidden;
+  @apply rounded-lg p-12 md:p-16 lg:p-24 w-full max-w-[1280px] mx-auto overflow-hidden;
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

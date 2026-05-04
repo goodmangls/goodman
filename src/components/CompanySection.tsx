@@ -30,7 +30,7 @@ export default function CompanySection() {
         </div>
 
         <div className="max-w-4xl mx-auto p-12 md:p-16 border border-hairline rounded-md text-center">
-          <blockquote className="display-lg !text-2xl md:!text-3xl italic mb-8">
+          <blockquote className="subhead italic mb-8">
             &quot;In logistics, every shipment carries not just cargo, but our clients&apos; trust and reputation.&quot;
           </blockquote>
           <cite className="eyebrow not-italic text-ink/50 block">CEO & Founder</cite>

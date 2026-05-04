@@ -61,15 +61,15 @@ export default function Navigation() {
           {/* CTAs & Toggle */}
           <div className="hidden lg:flex items-center gap-10">
             <div className="flex items-center gap-4">
-              <Link 
-                href="#contact" 
-                className="btn-pill-secondary !text-[14px] !px-4 !py-2"
+              <Link
+                href="#contact"
+                className="btn-pill-sm bg-canvas text-ink border border-hairline hover:bg-surface-soft"
               >
                 Contact sales
               </Link>
-              <Link 
-                href="#contact" 
-                className="btn-pill-primary !text-[14px] !px-5 !py-2.5"
+              <Link
+                href="#contact"
+                className="btn-pill-sm bg-primary text-on-primary hover:opacity-90"
               >
                 Get started
               </Link>
