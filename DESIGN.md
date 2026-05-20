@@ -1,616 +1,679 @@
----
-version: alpha
-name: Figma
-description: "A confident black-and-white editorial frame interrupted by oversized, hand-cut pastel color blocks. The marketing canvas is rigorously monochrome — figmaSans variable type, pure white surfaces, pure black ink, pill-shaped CTAs — while each story section drops the page into a saturated lime, lavender, cream, mint, or pink panel that reads like a sticky note placed on a clean desk. The result is a design system that feels both technical and joyful — a tool for serious work, made by people who like color."
+# Hyer Aviation — Style Reference
+> monochromatic luxury, sharp contrast
 
-colors:
-  primary: "#000000"
-  on-primary: "#ffffff"
-  ink: "#000000"
-  canvas: "#ffffff"
-  inverse-canvas: "#000000"
-  inverse-ink: "#ffffff"
-  on-inverse-soft: "#ffffff"
-  hairline: "#e6e6e6"
-  hairline-soft: "#f1f1f1"
-  surface-soft: "#f7f7f5"
-  block-lime: "#dceeb1"
-  block-lilac: "#c5b0f4"
-  block-cream: "#f4ecd6"
-  block-pink: "#efd4d4"
-  block-mint: "#c8e6cd"
-  block-coral: "#f3c9b6"
-  block-navy: "#1f1d3d"
-  accent-magenta: "#ff3d8b"
-  semantic-success: "#1ea64a"
-  overlay-scrim: "#000000"
+**Theme:** light
 
-typography:
-  display-xl:
-    fontFamily: figmaSans
-    fontSize: 86px
-    fontWeight: 340
-    lineHeight: 1.00
-    letterSpacing: -1.72px
-    fontFeature: kern
-  display-lg:
-    fontFamily: figmaSans
-    fontSize: 64px
-    fontWeight: 340
-    lineHeight: 1.10
-    letterSpacing: -0.96px
-    fontFeature: kern
-  headline:
-    fontFamily: figmaSans
-    fontSize: 26px
-    fontWeight: 540
-    lineHeight: 1.35
-    letterSpacing: -0.26px
-    fontFeature: kern
-  subhead:
-    fontFamily: figmaSans
-    fontSize: 26px
-    fontWeight: 340
-    lineHeight: 1.35
-    letterSpacing: -0.26px
-    fontFeature: kern
-  card-title:
-    fontFamily: figmaSans
-    fontSize: 24px
-    fontWeight: 700
-    lineHeight: 1.45
-    letterSpacing: 0
-    fontFeature: kern
-  body-lg:
-    fontFamily: figmaSans
-    fontSize: 20px
-    fontWeight: 330
-    lineHeight: 1.40
-    letterSpacing: -0.14px
-    fontFeature: kern
-  body:
-    fontFamily: figmaSans
-    fontSize: 18px
-    fontWeight: 320
-    lineHeight: 1.45
-    letterSpacing: -0.26px
-    fontFeature: kern
-  body-sm:
-    fontFamily: figmaSans
-    fontSize: 16px
-    fontWeight: 330
-    lineHeight: 1.45
-    letterSpacing: -0.14px
-    fontFeature: kern
-  link:
-    fontFamily: figmaSans
-    fontSize: 20px
-    fontWeight: 480
-    lineHeight: 1.40
-    letterSpacing: -0.10px
-    fontFeature: kern
-  button:
-    fontFamily: figmaSans
-    fontSize: 20px
-    fontWeight: 480
-    lineHeight: 1.40
-    letterSpacing: -0.10px
-    fontFeature: kern
-  eyebrow:
-    fontFamily: figmaMono
-    fontSize: 18px
-    fontWeight: 400
-    lineHeight: 1.30
-    letterSpacing: 0.54px
-    fontFeature: kern
-  caption:
-    fontFamily: figmaMono
-    fontSize: 12px
-    fontWeight: 400
-    lineHeight: 1.00
-    letterSpacing: 0.60px
-    fontFeature: kern
+Hyer Aviation employs a commanding, high-contrast aesthetic, juxtaposing crisp white surfaces with deep, almost-black elements. Bold, large-scale typography creates immediate impact, while subtle details like rounded pill shapes and a single warm accent color temper its power. The design feels grounded and luxurious, with ample whitespace and a restrained color palette that allows imagery to take center stage, communicating sophistication through assertive simplicity.
 
-rounded:
-  xs: 2px
-  sm: 6px
-  md: 8px
-  lg: 24px
-  xl: 32px
-  pill: 50px
-  full: 9999px
+## Tokens — Colors
 
-spacing:
-  hair: 1px
-  xxs: 4px
-  xs: 8px
-  sm: 12px
-  md: 16px
-  lg: 24px
-  xl: 32px
-  xxl: 48px
-  section: 96px
+| Name | Value | Token | Role |
+|------|-------|-------|------|
+| Obsidian | `#000d10` | `--color-obsidian` | Primary text, dark surface backgrounds, button backgrounds, interactive elements, nav text. Creates a dominant, authoritative presence |
+| Canvas White | `#ffffff` | `--color-canvas-white` | Page backgrounds, light surface backgrounds, secondary text, button text, icons. Provides a clean, expansive foundation |
+| Slate Mist | `#8e8e95` | `--color-slate-mist` | Muted body text, navigation dividers, subtle borders. Used for secondary information that lives harmoniously within the high-contrast system |
+| Desert Sienna | `#bc7155` | `--color-desert-sienna` | Accent for call-to-action buttons, prominent graphical elements. This warm, earthy tone provides the only saturated color highlight, drawing attention with understated luxury |
 
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: 10px 20px
-  button-primary-pressed:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-  button-secondary:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: 8px 18px 10px
-  button-tertiary-text:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.link}"
-    rounded: "{rounded.full}"
-    padding: 8px 12px
-  button-icon-circular:
-    backgroundColor: "{colors.surface-soft}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.full}"
-    size: 40px
-  button-icon-circular-inverse:
-    backgroundColor: "{colors.on-inverse-soft}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.full}"
-    size: 40px
-  button-magenta-promo:
-    backgroundColor: "{colors.accent-magenta}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: 10px 18px
-  pricing-tab-default:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: 8px 18px
-  pricing-tab-selected:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.on-primary}"
-    typography: "{typography.button}"
-    rounded: "{rounded.pill}"
-    padding: 8px 18px
-  text-input:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 12px 14px
-  text-input-focused:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.md}"
-    padding: 12px 14px
-  pricing-card:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
-    rounded: "{rounded.lg}"
-    padding: 24px
-  pricing-card-feature-row:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.xs}"
-  color-block-section:
-    backgroundColor: "{colors.block-lime}"
-    textColor: "{colors.ink}"
-    typography: "{typography.subhead}"
-    rounded: "{rounded.lg}"
-    padding: 48px
-  color-block-section-lilac:
-    backgroundColor: "{colors.block-lilac}"
-    textColor: "{colors.ink}"
-    typography: "{typography.subhead}"
-    rounded: "{rounded.lg}"
-    padding: 48px
-  color-block-section-navy:
-    backgroundColor: "{colors.block-navy}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.subhead}"
-    rounded: "{rounded.lg}"
-    padding: 48px
-  promo-banner-lilac:
-    backgroundColor: "{colors.block-lilac}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.md}"
-    padding: 16px 24px
-  template-card:
-    backgroundColor: "{colors.surface-soft}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.md}"
-    padding: 16px
-  feature-illustration-tile:
-    backgroundColor: "{colors.surface-soft}"
-    textColor: "{colors.ink}"
-    typography: "{typography.eyebrow}"
-    rounded: "{rounded.md}"
-    padding: 24px
-  top-nav:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.xs}"
-    height: 56px
-  marquee-strip:
-    backgroundColor: "{colors.inverse-canvas}"
-    textColor: "{colors.inverse-ink}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.xs}"
-    height: 36px
-  comparison-checkmark:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.semantic-success}"
-    typography: "{typography.body-sm}"
-    rounded: "{rounded.full}"
-    size: 16px
-  footer:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    typography: "{typography.caption}"
-    rounded: "{rounded.xs}"
-    padding: 64px 32px
----
+## Tokens — Typography
 
-## Overview
+### HelveticaNowDisplay — All primary textual content: headlines, body, buttons, navigation. Its large scale and slightly condensed forms deliver a modern, impactful voice. · `--font-helveticanowdisplay`
+- **Substitute:** system-ui
+- **Weights:** 400, 700
+- **Sizes:** 17px, 18px, 20px, 23px, 30px, 37px, 52px, 60px, 63px, 131px, 187px
+- **Line height:** 0.80, 0.91, 1.00, 1.09, 1.10, 1.20, 1.61
+- **Letter spacing:** -0.02em at largest sizes, -0.01em at medium, 0.01em at smallest
+- **Role:** All primary textual content: headlines, body, buttons, navigation. Its large scale and slightly condensed forms deliver a modern, impactful voice.
 
-Figma's marketing canvas is, at the system level, an editor-clean black-and-white frame. The chrome — top nav, body type, footer, primary CTA — is monochrome. Headlines are oversized `{typography.display-xl}` set in `figmaSans` with aggressive negative tracking, body copy hovers around weight 320–340 of the same variable family, and small mono `{typography.eyebrow}` and `{typography.caption}` labels (figmaMono, all-caps, positive tracking) act as section markers. Every CTA is a pill — `{rounded.pill}` — and the primary action across the entire site is the same black `{components.button-primary}` paired with the same white `{components.button-secondary}`.
+### sans-serif — Used sparingly for specific bold text, likely for icons or small utility elements where a system sans-serif is a fallback. · `--font-sans-serif`
+- **Substitute:** Arial
+- **Weights:** 700
+- **Sizes:** 17px
+- **Line height:** 1.00
+- **Letter spacing:** normal
+- **Role:** Used sparingly for specific bold text, likely for icons or small utility elements where a system sans-serif is a fallback.
 
-What makes the design unique is what happens **between** those monochrome bookends: the page repeatedly drops into oversized pastel **color-block sections** — lime, lavender, cream, mint, pink, coral, and a deep navy — that span the full content width with `{rounded.lg}` corners and `{spacing.xxl}` interior padding. These blocks are where the storytelling lives. They aren't accents tucked into a card; they take over a whole viewport's worth of vertical space, like a designer arranging giant sticky notes on a clean wall. FigJam is the most pastel-saturated, the home page rotates through the full set, and the pricing page ends with a lime FAQ panel — same vocabulary, different rhythm per route.
+### Type Scale
 
-This is a system built on contrast: the monochrome chrome makes the color blocks feel intentional rather than decorative, and the color blocks make the monochrome chrome feel like editorial paper rather than enterprise SaaS. Density is generous, line-heights are tight on display sizes, and the interface never reaches for shadows or gradients to do the work that color blocks and confident typography already do.
+| Role | Size | Line Height | Letter Spacing | Token |
+|------|------|-------------|----------------|-------|
+| body-sm | 17px | 1.61 | 0.17px | `--text-body-sm` |
+| subheading | 20px | 1.2 | 0.2px | `--text-subheading` |
+| heading-sm | 30px | 1.1 | -0.3px | `--text-heading-sm` |
+| heading | 52px | 1.09 | -0.52px | `--text-heading` |
+| heading-lg | 63px | 0.91 | -0.63px | `--text-heading-lg` |
+| display | 187px | 0.8 | -3.74px | `--text-display` |
 
-**Key Characteristics:**
-- Monochrome system core: `{colors.primary}` (black) and `{colors.canvas}` (white) carry every CTA, every body line, every footer link.
-- Oversized pastel **color-block sections** (`{colors.block-lime}`, `{colors.block-lilac}`, `{colors.block-cream}`, `{colors.block-mint}`, `{colors.block-pink}`, `{colors.block-coral}`, `{colors.block-navy}`) define the narrative rhythm of every long-form page.
-- Pill is the only button shape — `{rounded.pill}` for text CTAs, `{rounded.full}` for icon buttons. No square buttons anywhere.
-- `figmaSans` variable typeface used at unusually fine weight increments (320, 330, 340, 450, 480, 540) — the type system reads as a single voice that flexes rather than a multi-weight family.
-- Tight negative letter-spacing on display sizes (-1.72px at 86px, -0.96px at 64px) creates a confident editorial cadence.
-- `figmaMono` reserved for category labels, eyebrows, and captions — always uppercase, positive tracking — to flag taxonomy without competing with display type.
-- Color-block page rhythm (home): white hero → marquee strip → white feature → lime systems block → navy ship-products block → coral developer block → white template grid → white footer.
+## Tokens — Spacing & Shapes
 
-## Colors
+**Base unit:** 4px
 
-> Source pages: figma.com (home), /design/, /figjam/brainstorming-tool/, /pricing/, /contact/.
+**Density:** spacious
 
-### Brand & Accent
-- **Black** ({colors.primary}): The system primary. Every primary CTA, every headline, every body line, the marquee strip, the inverse canvas of dark sections.
-- **White** ({colors.on-primary}): Inverse text on black surfaces; also the canvas color used as the foreground of secondary pill buttons (`{components.button-secondary}`).
-- **Magenta Promo** ({colors.accent-magenta}): A single saturated CTA pink reserved for promotional inline buttons — appears, for example, on the lilac "Save your spot" Release Notes banner. Use scarcely; it is not a section color.
+### Spacing Scale
 
-### Surface
-- **Canvas** ({colors.canvas}): Default page background and the body of every white card.
-- **Inverse Canvas** ({colors.inverse-canvas}): Footer, marquee strip, and a subset of "ship products"-style story sections.
-- **Surface Soft** ({colors.surface-soft}): Off-white tile background used for icon buttons, template cards, and feature illustration tiles when they sit on the white canvas.
-- **Hairline** ({colors.hairline}): 1px borders on form inputs, pricing cards, and table dividers.
-- **Hairline Soft** ({colors.hairline-soft}): Even subtler dividers — comparison-table row separators and footer column rules.
-- **Block Lime** ({colors.block-lime}): The signature **systems / FAQ / contact-form** color block. Recurs across home, pricing, contact.
-- **Block Lilac** ({colors.block-lilac}): Hero block on `/design/`; also the inline Release Notes promo banner.
-- **Block Cream** ({colors.block-cream}): Soft warm background — FigJam hero strip, template-grid section.
-- **Block Mint** ({colors.block-mint}): FigJam pastel section.
-- **Block Pink** ({colors.block-pink}): FigJam pastel section.
-- **Block Coral** ({colors.block-coral}): "Ship products" coral story block on home.
-- **Block Navy** ({colors.block-navy}): Deep indigo story block — only place dark surfaces appear above the footer.
+| Name | Value | Token |
+|------|-------|-------|
+| 11 | 11px | `--spacing-11` |
+| 13 | 13px | `--spacing-13` |
+| 15 | 15px | `--spacing-15` |
+| 16 | 16px | `--spacing-16` |
+| 17 | 17px | `--spacing-17` |
+| 21 | 21px | `--spacing-21` |
+| 22 | 22px | `--spacing-22` |
+| 23 | 23px | `--spacing-23` |
+| 31 | 31px | `--spacing-31` |
+| 34 | 34px | `--spacing-34` |
+| 38 | 38px | `--spacing-38` |
+| 53 | 53px | `--spacing-53` |
+| 59 | 59px | `--spacing-59` |
+| 60 | 60px | `--spacing-60` |
+| 68 | 68px | `--spacing-68` |
+| 119 | 119px | `--spacing-119` |
 
-### Text
-- **Ink** ({colors.ink}): All headline, body, and caption type on light surfaces. There is no softer mid-gray text role on marketing — body copy is always black at weight 320–340, and weight (not opacity) carries the hierarchy.
-- **Inverse Ink** ({colors.inverse-ink}): Type on inverse-canvas surfaces (footer, marquee strip, navy color block).
-- **On-Inverse Soft** ({colors.on-inverse-soft}): White used at ~16% opacity for circular icon-button surfaces against dark sections (token captures the base color; the translucency is applied at render time).
+### Border Radius
 
-### Semantic
-- **Success Green** ({colors.semantic-success}): Comparison-table checkmarks on pricing. Used as a glyph fill, not a surface.
-- **Overlay Scrim** ({colors.overlay-scrim}): Black used at ~60% opacity behind modal / video-overlay surfaces (token captures the base; opacity applied at render time).
+| Element | Value |
+|---------|-------|
+| links | 1000px |
+| other | 45px |
+| buttons | 1000px |
 
-## Typography
+### Layout
 
-### Font Family
-
-- **figmaSans** — Figma's proprietary variable typeface; fallback stack `figmaSans Fallback, SF Pro Display, system-ui, helvetica`. Variable weight axis is exercised at unusually fine increments (320, 330, 340, 450, 480, 540, 700) — the design system reads as a single voice modulating rather than a stepped weight family.
-- **figmaMono** — Proprietary monospace; fallback `figmaMono Fallback, SF Mono, menlo`. Used exclusively for eyebrow labels and captions, always uppercase with positive letter-spacing.
-
-OpenType `kern` is enabled across every role.
-
-### Hierarchy
-
-| Token | Size | Weight | Line Height | Letter Spacing | Use |
-|---|---|---|---|---|---|
-| `{typography.display-xl}` | 86px | 340 | 1.00 | -1.72px | Hero headlines (home, FigJam) |
-| `{typography.display-lg}` | 64px | 340 | 1.10 | -0.96px | Section opener headlines |
-| `{typography.headline}` | 26px | 540 | 1.35 | -0.26px | Story-block titles inside color blocks |
-| `{typography.subhead}` | 26px | 340 | 1.35 | -0.26px | Long-form intro paragraphs that sit at near-headline scale |
-| `{typography.card-title}` | 24px | 700 | 1.45 | 0 | Pricing-tier titles, feature card titles |
-| `{typography.body-lg}` | 20px | 330 | 1.40 | -0.14px | Lead body copy on hero, contact form labels |
-| `{typography.body}` | 18px | 320 | 1.45 | -0.26px | Default body |
-| `{typography.body-sm}` | 16px | 330 | 1.45 | -0.14px | Card body, footer link list |
-| `{typography.link}` | 20px | 480 | 1.40 | -0.10px | Inline link emphasis |
-| `{typography.button}` | 20px | 480 | 1.40 | -0.10px | All pill buttons, primary and secondary |
-| `{typography.eyebrow}` | 18px | 400 | 1.30 | 0.54px | figmaMono uppercase section eyebrows |
-| `{typography.caption}` | 12px | 400 | 1.00 | 0.60px | figmaMono uppercase captions, footer column heads |
-
-### Principles
-
-- **Weight, not size, carries hierarchy on body copy.** A 20px paragraph at weight 330 sits next to a 20px link at weight 480 — the eye reads emphasis without scale change.
-- **Negative letter-spacing scales with size.** Display-xl pulls -1.72px; subhead pulls only -0.26px. Body copy stays near-zero. The result is editorial-feeling display type without sacrificing readability at body size.
-- **Mono is taxonomy, not body.** figmaMono is reserved for eyebrows and captions — never used to set a paragraph.
-- **Tight line-heights on display, generous on body.** Display sizes run 1.00–1.10; body runs 1.40–1.45. The contrast reinforces that headlines are graphics and body copy is for reading.
-
-### Note on Font Substitutes
-
-If implementing without access to figmaSans / figmaMono, suitable open-source substitutes are **Inter** (or **Geist**) for the sans, and **JetBrains Mono** (or **Geist Mono**) for the mono. Inter at variable weights closely matches the fine-grained weight axis figmaSans uses; expect to manually adjust line-heights down by ~0.02 to compensate for Inter's slightly taller x-height.
-
-## Layout
-
-### Spacing System
-
-- **Base unit**: 8px.
-- **Tokens (front matter)**: `{spacing.hair}` 1px · `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 96px.
-- Section interior padding: `{spacing.xxl}` (48px) on color-block sections.
-- Card interior padding: `{spacing.lg}` (24px) on pricing cards and template tiles.
-- Form input padding: `{spacing.sm}` 12px vertical · 14px horizontal.
-- Button padding: `{spacing.xs}` 8px vertical · `{spacing.lg}` 24px horizontal for pill buttons (the asymmetric `8px 18px 10px` extracted on `button-secondary` nudges the type optically inside the pill).
-- Universal rhythm constant: `{spacing.section}` (96px) — the vertical gap between major content sections holds across home, pricing, and FigJam pages.
-
-### Grid & Container
-
-- Max content width sits around 1280px (one of the explicit breakpoints), with side gutters that scale from `{spacing.xxl}` on desktop down to `{spacing.lg}` on mobile.
-- Three- and four-column grids on the desktop pricing comparison and FigJam template galleries.
-- Color-block sections break the column grid — they span content width with full bleed inside the rounded `{rounded.lg}` corners, then place a single editorial column of headline + body inside.
-
-### Whitespace Philosophy
-
-White space is used to make the color blocks feel deliberate. Between every colored panel and the next, the page returns to white canvas with `{spacing.section}` of breathing room. Inside a color block, the type itself is given generous side margins (often more than 1/4 of the block's width on each side) so the panel reads as a poster, not a wall of copy.
-
-## Elevation & Depth
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 (flat) | No shadow, no border | Default for color-block sections, inverse-canvas footer, hero |
-| 1 (hairline) | 1px `{colors.hairline}` border on `{colors.canvas}` | Pricing cards, form inputs, comparison table cells |
-| 2 (soft elevation) | Subtle drop shadow approx 0 4px 16px rgba(0,0,0,0.06) | Floating template tiles, dropdown menus |
-| 3 (modal) | Stronger shadow + `{colors.overlay-scrim}` behind | Video / image lightbox overlays |
-
-Figma's marketing system is shadow-light by design — the color blocks substitute for traditional elevation. Where most SaaS sites use a shadowed white card to draw attention, Figma uses a saturated background panel. This makes the rare actual shadow (e.g., a floating template card hovering over a cream section) feel like an exception worth noticing.
-
-### Decorative Depth
-
-- **Color-block sections** are the primary depth device. The change from white canvas to lime / lavender / cream is the section break.
-- **Sticky-note style component thumbnails** in FigJam — slightly off-axis pastel rectangles arranged like notes on a board — read as collage, not card-stack.
-- **Embedded product UI mocks** (Figma Design panels, FigJam canvas snippets) appear as flat compositions on color blocks; their internal shadows are subtle and stay within the mock.
-
-## Shapes
-
-### Border Radius Scale
-
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.xs}` | 2px | Anchor / link decoration corners |
-| `{rounded.sm}` | 6px | Small chips, sub-nav tabs |
-| `{rounded.md}` | 8px | Form inputs, list items, image frames |
-| `{rounded.lg}` | 24px | Pricing cards, color-block sections, large image containers |
-| `{rounded.xl}` | 32px | Hero feature panels, oversized callouts |
-| `{rounded.pill}` | 50px | All text CTAs (primary, secondary, tab toggles) |
-| `{rounded.full}` | 9999px | Circular icon buttons, comparison-table checkmark glyphs |
-
-### Photography & Illustration Geometry
-
-- Image frames use `{rounded.md}` (8px) — generous enough to feel friendly, conservative enough to read as editorial.
-- Template thumbnails on the home grid sit in `{rounded.md}` tiles with `{spacing.md}` interior padding around the embedded preview.
-- FigJam pastel sticky-note component thumbnails preserve a small `{rounded.sm}` corner that mimics actual sticky paper.
-- No avatar circles appear in marketing surfaces — Figma's marketing avoids personification.
+- **Section gap:** 68px
+- **Card padding:** 22px
+- **Element gap:** 23px
 
 ## Components
 
-### Buttons
+### Primary Filled Button
+**Role:** Main call-to-action button, promoting core actions.
 
-**`button-primary`** — The black "Get started for free" pill that appears in the top nav, every hero, and every closing CTA.
-- Background `{colors.primary}`, text `{colors.on-primary}`, type `{typography.button}`, padding 10px 20px, rounded `{rounded.pill}`.
-- Pressed state lives in `button-primary-pressed` (same surface; the live site relies on micro-scale rather than a darkened fill).
+Background: Desert Sienna (#bc7155), Text: Canvas White (#ffffff), Border: None, Border Radius: 1000px (pill shape), Padding: 15px top, 22px horizontal, 16px bottom. Font: HelveticaNowDisplay, 17px, bold (700).
 
-**`button-secondary`** — White pill with black text. Used for tertiary navigation actions ("Contact sales") and as the visual counterpart to the primary pill.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.button}`, padding 8px 18px 10px (asymmetric vertical to optically center the type), rounded `{rounded.pill}`. No border.
+### Obsidian Filled Button
+**Role:** Secondary call-to-action or general action buttons.
 
-**`button-tertiary-text`** — Plain text link styled as a button hit target inside top nav and footer.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.link}`, rounded `{rounded.full}` (hit target only), padding `{spacing.xs}` `{spacing.sm}`.
+Background: Obsidian (#000d10), Text: Canvas White (#ffffff), Border: 1px Canvas White (#ffffff) for hover/focus, Border Radius: 1000px (pill shape), Padding: 15px top, 22px horizontal, 16px bottom. Font: HelveticaNowDisplay, 17px, bold (700).
 
-**`button-icon-circular`** — 40px circular icon button used for carousel controls, social links, and inline actions on light surfaces.
-- Background `{colors.surface-soft}`, text `{colors.ink}`, rounded `{rounded.full}`, size 40px.
+### Obsidian Ghost Button
+**Role:** Alternative action buttons, appearing less prominent than filled variants.
 
-**`button-icon-circular-inverse`** — Same shape, used on inverse-canvas / dark color blocks.
-- Background `{colors.on-inverse-soft}` (translucent white), text `{colors.inverse-ink}`, rounded `{rounded.full}`, size 40px.
+Background: transparent, Text: Canvas White (#ffffff), Border: 1px Canvas White (#ffffff), Border Radius: 1000px (pill shape), Padding: 15px top, 22px horizontal, 16px bottom. Font: HelveticaNowDisplay, 17px, bold (700).
 
-**`button-magenta-promo`** — Saturated pink pill used only inside promotional surfaces such as the lilac "Save your spot" Release Notes banner. Reserved for moments where Figma's product team wants the CTA to pop against an already-colored panel.
-- Background `{colors.accent-magenta}`, text `{colors.on-primary}`, type `{typography.button}`, rounded `{rounded.pill}`, padding 10px 18px.
+### Navigation Link
+**Role:** Primary navigation items in the header and footer.
 
-### Pricing Tabs
+Text: Obsidian (#000d10) or Canvas White (#ffffff), active state may have a subtle underline. Font: HelveticaNowDisplay, 17px, 400 weight. Spacing: 13px top/bottom margin, 34px right margin.
 
-**`pricing-tab-default`** + **`pricing-tab-selected`** — The pill-toggle that switches between Starter / Professional / Organization / Enterprise on `/pricing/`.
-- Default: `{colors.canvas}` background, `{colors.ink}` text, rounded `{rounded.pill}`.
-- Selected: `{colors.primary}` background, `{colors.on-primary}` text — exactly the same surface as `button-primary`, which makes the selected tab feel like an active CTA, not a passive state.
+### Feature Card
+**Role:** Displays key features or offerings with associated text.
 
-### Inputs & Forms
-
-**`text-input`** + **`text-input-focused`** — Form fields on `/contact/` and pricing seat-count steppers.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.md}`, padding 12px 14px.
-- Focused state retains the same surface — focus is communicated via ring, not via fill change.
-
-### Cards & Containers
-
-**`pricing-card`** — Each tier on `/pricing/`.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.lg}`, padding `{spacing.lg}`. Stroked with `{colors.hairline}` rather than shadowed.
-
-**`pricing-card-feature-row`** — Single row inside the comparison table.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-sm}`. Row separator is `{colors.hairline-soft}`.
-
-**`template-card`** — Thumbnail tile in the home "Explore what people are making" grid and the FigJam template gallery.
-- Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.body-sm}`, rounded `{rounded.md}`, padding `{spacing.md}`.
-
-**`feature-illustration-tile`** — Larger composition tile that holds a product UI mock or pastel illustration.
-- Background `{colors.surface-soft}`, text `{colors.ink}`, type `{typography.eyebrow}`, rounded `{rounded.md}`, padding `{spacing.lg}`.
-
-### Color-Block Sections (signature)
-
-The defining surface of Figma's marketing. Each is a full-content-width panel with `{rounded.lg}` corners and `{spacing.xxl}` interior padding. Variants:
-
-**`color-block-section`** — lime ground for "systems" stories (home), pricing FAQ, and the contact form.
-- Background `{colors.block-lime}`, text `{colors.ink}`, type `{typography.subhead}`, rounded `{rounded.lg}`, padding `{spacing.xxl}`.
-
-**`color-block-section-lilac`** — lavender ground for `/design/` hero and FigJam highlight sections.
-- Background `{colors.block-lilac}`, otherwise identical structure.
-
-**`color-block-section-navy`** — deep indigo ground for the home "Ship products" story block. The only inverse color-block surface above the footer.
-- Background `{colors.block-navy}`, text `{colors.inverse-ink}`, otherwise identical structure.
-
-(Cream, mint, pink, and coral block variants follow the same shape with their respective `{colors.block-*}` surface.)
-
-### Promo Banner
-
-**`promo-banner-lilac`** — The Release Notes / "Save your spot" inline banner that floats above the contact form.
-- Background `{colors.block-lilac}`, text `{colors.ink}`, type `{typography.body-sm}`, rounded `{rounded.md}`, padding `{spacing.md}` `{spacing.lg}`. Carries a `button-magenta-promo` on the right edge.
-
-### Navigation
-
-**`top-nav`** — Sticky white bar with logo, primary nav links, sign-in link, and the right-anchored `button-secondary` ("Contact sales") + `button-primary` ("Get started for free") pair.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.body-sm}`, height 56px.
-- Mobile: collapses primary links into a hamburger that opens a full-canvas overlay; the two pill CTAs remain visible on the bar.
-
-**`marquee-strip`** — Thin black ribbon directly under the nav that scrolls through customer logos in white.
-- Background `{colors.inverse-canvas}`, text `{colors.inverse-ink}`, type `{typography.body-sm}`, height 36px.
-
-### Comparison Glyphs
-
-**`comparison-checkmark`** — Green check used in the pricing comparison matrix.
-- Background `{colors.canvas}`, glyph color `{colors.semantic-success}`, rounded `{rounded.full}`, size 16px.
-
-### Footer
-
-**`footer`** — Dense link grid on white canvas with the wordmark "Figma" set in display weight at the top-left.
-- Background `{colors.canvas}`, text `{colors.ink}`, type `{typography.caption}` for column headings and small links, padding `{spacing.section}` top/bottom · `{spacing.xl}` sides.
+Background: Canvas White (#ffffff), Text: Obsidian (#000d10) or Slate Mist (#8e8e95). Font: HelveticaNowDisplay, varying sizes. Likely has internal padding of 22px.
 
 ## Do's and Don'ts
 
 ### Do
-
-- Reserve `{colors.primary}` for genuine primary CTAs and selected states (e.g., `pricing-tab-selected`). Don't use it as a decorative accent.
-- When introducing a story section, choose **one** color block from the `{colors.block-*}` family and let it span full content width with `{rounded.lg}` corners and `{spacing.xxl}` interior padding.
-- Keep type in `figmaSans` at variable weights — pick from 320, 330, 340, 480, 540, 700 to express hierarchy. Avoid intermediate weights outside this set.
-- Use `figmaMono` only for eyebrows and captions, always uppercase, with the documented positive letter-spacing.
-- Compose every CTA as a pill (`{rounded.pill}`) and every icon button as a circle (`{rounded.full}`).
-- Allow the page to **return to white canvas** between every two color blocks so each block reads as deliberate.
-- Pair `button-primary` and `button-secondary` whenever a section needs both a primary action and a sales / secondary action — the black-and-white pair is the brand signature.
+- Prioritize Canvas White (#ffffff) for primary backgrounds and Obsidian (#000d10) for primary text to maintain high contrast (19.7:1 AAA).
+- Use HelveticaNowDisplay consistently across all text, emphasizing weight 700 for headings and weight 400 for body text.
+- Apply a 1000px border-radius to all buttons and prominent links to achieve the signature pill shape.
+- Reserve Desert Sienna (#bc7155) exclusively for primary action buttons to create a single, clear focal point.
+- Ensure generous spacing: utilize 23px for element gaps and 68px between major sections.
+- Employ negative letter-spacing for large headlines to condense text and enhance impact, specifically -0.02em at sizes like 187px.
+- Use Slate Mist (#8e8e95) for supporting text and subtle UI elements where less visual weight is desired, such as form helper text or secondary navigation.
 
 ### Don't
+- Avoid using multiple saturated colors; Desert Sienna (#bc7155) is the singular accent color.
+- Do not introduce complex gradients or shadows, as the system relies on flat surfaces and high contrast.
+- Refrain from using smaller body text sizes than 17px to maintain readability and design gravitas.
+- Do not deviate from the HelveticaNowDisplay font for any brand-related text.
+- Avoid tight spacing around interactive elements; maintain a minimum of 22px horizontal padding for buttons.
+- Do not use square or mildly rounded corners for buttons; the pill shape (1000px radius) is critical for brand identity.
+- Do not use generic gray tones for text; ensure body text aligns with Obsidian (#000d10) or Slate Mist (#8e8e95) to maintain the established hierarchy.
 
-- Don't introduce mid-gray text. Body hierarchy comes from `figmaSans` weight, not from opacity.
-- Don't add drop shadows to color-block sections — the color is the depth device.
-- Don't introduce new accent colors outside the documented `{colors.block-*}` palette and `{colors.accent-magenta}`. Adding, e.g., a saturated brand orange would break the system.
-- Don't combine more than one color block visible inside a single viewport — Figma's pacing always lets the white canvas separate them.
-- Don't square off CTAs. Square buttons read as a different brand.
-- Don't put `figmaMono` in body copy — it's a taxonomy tool, not a reading typeface.
-- Don't replace the `pricing-tab-selected` black fill with a colored tab; the brand pattern is "selected = primary surface".
+## Surfaces
 
-## Section 4: Document & Email Templates (SOP)
+| Level | Name | Value | Purpose |
+|-------|------|-------|---------|
+| 1 | Canvas White | `#ffffff` | Primary page background and default surface for content. |
+| 2 | Obsidian Surface | `#000d10` | Elevated dark surfaces, footer, and backgrounds for prominent sections. |
 
-This section defines the visual identity for external-facing documents generated by the **SOP-Template-Factory** skill and the **goodman-gls-partner-email** system. All generated materials must follow these rules to maintain the "Small Giant. Big Impact." brand.
+## Imagery
 
-### Visual Foundation
+The site uses a clean mix of professional product renders (specifically, a white private jet prominent against a subtly cloudy sky) and abstract, high-contrast imagery to convey luxury and precision. Photography is minimalist, focusing on the product itself with little extraneous context. Icons, where present, are likely minimal and monochromatic, adhering to the high-contrast aesthetic. Imagery plays a key role in setting the atmosphere without overwhelming the clean UI.
 
-- **Canvas**: Pure white background (`#ffffff`). Never use off-white or gray for the page surface.
-- **Typography**: 
-    - Body: `Inter` at 320/330 weight for maximum readability.
-    - Headers: `Inter` at 700 weight, sized 1.5x to 2x body text.
-    - Labels/Metadata: `JetBrains Mono` in uppercase with `+0.1em` letter spacing.
-- **Ink**: Pure black (`#000000`). No gray text levels.
+## Layout
 
-### SOP Document Layout
+The page primarily utilizes a full-bleed structure, especially for the hero section which extends across the viewport with central text and imagery. Content sections alternate between stark white full-width blocks and dark full-width blocks, creating a distinct visual rhythm. Text and imagery are often arranged in centered stacks or simple two-column layouts. The overall density is spacious, allowing elements to breathe. Navigation is a minimalist top bar with links aligned to the right, often disappearing into a hamburger menu on smaller screens, and a utility navigation in the footer.
 
-- **Header**: A full-width Lilac (`#E5E0FF`) or Mint (`#E0FFF2`) block at the top containing the Document Title and Version (in Mono).
-- **Sections**: Use generous vertical spacing. Each major section should start with a bold black header.
-- **Callouts**: Important instructions or "Key Steps" should be wrapped in a Mint or Lime (`#E2FFD1`) block with `{rounded.md}` corners.
-- **Steps**: Numbered lists should use bold black numbers.
+## Agent Prompt Guide
 
-### Partner Email Templates
+Quick Color Reference:
+text: #000d10
+background: #ffffff
+border: #8e8e95
+accent: #bc7155
+primary action: #bc7155 (filled action)
 
-- **Width**: Fixed at 600px, centered.
-- **Header**: Minimalist white background with the GOODMAN wordmark.
-- **CTA**: Primary buttons must be Pill-shaped (`{rounded.pill}`), black background with white text.
-- **Structure**:
-    - Eyebrow: `JetBrains Mono` uppercase text.
-    - Headline: Bold `Inter` black text.
-    - Body: Regular `Inter` black text.
-    - Block: Use a single pastel block (e.g., Pink `#FFE0F1`) for a summary or "Next Steps" area.
+Example Component Prompts:
+Create a hero section: full-bleed background set by an image of a private jet against a light blue sky. Overlay a large headline "Personalised Aviation" in Canvas White (#ffffff), HelveticaNowDisplay, 187px, weight 700, line height 0.8, letter-spacing -3.74px, aligned left. Below the headline, add a subtitle "More flexibility, freedom and choice!" in Canvas White (#ffffff), HelveticaNowDisplay, 23px, weight 400. In the bottom right corner, place two pill-shaped buttons with 1000px radius: 'All Solutions' (Obsidian Filled Button: #000d10 background, #ffffff text, HelveticaNowDisplay, 17px, bold, 15px top, 22px horizontal, 16px bottom padding) and 'Ownership' (Desert Sienna Filled Button: #bc7155 background, #ffffff text, HelveticaNowDisplay, 17px, bold, 15px top, 22px horizontal, 16px bottom padding).
 
-### Dark Mode (Digital-only)
+Create a feature panel: Canvas White (#ffffff) background. Headline 'Flexible Solutions' in Obsidian (#000d10), HelveticaNowDisplay, 30px, weight 700, line height 1.1, letter-spacing -0.3px. Below, body text 'Stop depending on airlines. Fly on your own terms or join our exclusive shared flights.' in Slate Mist (#8e8e95), HelveticaNowDisplay, 17px, weight 400, line height 1.61. Separate features with a 1px Slate Mist (#8e8e95) horizontal rule that extends the width of the content.
 
-- For email clients or digital document viewers supporting dark mode, use the inverted palette:
-    - Canvas: `#000000`
-    - Ink: `#ffffff`
-    - Pastel Blocks: Reduced saturation variants (documented in `globals.css`).
+Create a footer: Obsidian (#000d10) background, with all text in Canvas White (#ffffff). Navigation links 'On-demand', 'Private Charter', 'Aircraft Ownership' should use HelveticaNowDisplay, 17px, weight 400, with 13px top/bottom and 34px right margin between them. Include a minimal copyright text in Canvas White (#ffffff) at 17px.
 
-## Responsive Behavior
+## Similar Brands
 
-### Breakpoints
+- **NetJets** — Luxury aviation brand with high-quality product imagery and emphasis on exclusivity.
+- **Flexjet** — Focus on private jet services, using clean layouts and impactful visuals.
+- **Stripe** — Strong typographic hierarchy, large headlines, and a focus on essential UI elements over decorative embellishments.
+- **Apple** — Product-centric visuals against clean backgrounds, high contrast text, and a strong sense of modern minimalism.
 
-| Name | Width | Key Changes |
-|---|---|---|
-| 4k | 1920px | Max content width holds at 1280px; gutters expand |
-| Desktop-XL | 1440px | Default desktop layout |
-| Desktop | 1400px | Comparison table column widths normalize |
-| Desktop-S | 1280px | Pricing 4-up tier grid maintained |
-| Tablet | 960px | Pricing collapses 4-up → 2-up; nav becomes hamburger |
-| Mobile-L | 768px | Color-block sections become full-bleed (no rounded corners on edges) |
-| Mobile | 560px | Display-xl reduces from 86px to ~48px; pill CTAs go full-width |
-| Mobile-XS | 559px | Two-column footer collapses to single column |
+## Quick Start
 
-### Touch Targets
+### CSS Custom Properties
 
-- Pill buttons (`button-primary`, `button-secondary`) maintain a minimum 44px tap height across all viewports — achieved by combining `{typography.button}` 20px line-height with the documented vertical padding.
-- Circular icon buttons (`button-icon-circular`) are 40px on desktop and grow to 44px on touch viewports.
-- Form input minimum tap target on `/contact/` is 48px high.
+```css
+:root {
+  /* Colors */
+  --color-obsidian: #000d10;
+  --color-canvas-white: #ffffff;
+  --color-slate-mist: #8e8e95;
+  --color-desert-sienna: #bc7155;
 
-### Collapsing Strategy
+  /* Typography — Font Families */
+  --font-helveticanowdisplay: 'HelveticaNowDisplay', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans-serif: 'sans-serif', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-- **Nav**: desktop horizontal nav with two right-anchored pills collapses to a hamburger overlay below 960px. The two pills (`Contact sales`, `Get started for free`) stay visible on the bar above 560px and stack in the overlay below.
-- **Pricing tier grid**: 4-up → 2-up at 960px → 1-up below 768px. The pill toggle stays horizontal and scrolls horizontally if needed below 560px.
-- **Color-block sections**: above 768px the section keeps `{spacing.xxl}` of canvas around it so the rounded corners read; below 768px the corners are removed and the block bleeds to viewport edge for a poster effect.
-- **Comparison table**: below 960px the matrix collapses into per-tier accordions to avoid horizontal scroll.
+  /* Typography — Scale */
+  --text-body-sm: 17px;
+  --leading-body-sm: 1.61;
+  --tracking-body-sm: 0.17px;
+  --text-subheading: 20px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: 0.2px;
+  --text-heading-sm: 30px;
+  --leading-heading-sm: 1.1;
+  --tracking-heading-sm: -0.3px;
+  --text-heading: 52px;
+  --leading-heading: 1.09;
+  --tracking-heading: -0.52px;
+  --text-heading-lg: 63px;
+  --leading-heading-lg: 0.91;
+  --tracking-heading-lg: -0.63px;
+  --text-display: 187px;
+  --leading-display: 0.8;
+  --tracking-display: -3.74px;
 
-### Image Behavior
+  /* Typography — Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
 
-- Product UI mocks inside color blocks scale proportionally and never crop. Below 768px they shrink rather than reflow.
-- Template thumbnails in the home grid use lazy loading and animate in on scroll.
-- Sticky-note style FigJam thumbnails maintain their slight off-axis rotation across breakpoints — the rotation is a brand signal, not a desktop-only flourish.
+  /* Spacing */
+  --spacing-unit: 4px;
+  --spacing-11: 11px;
+  --spacing-13: 13px;
+  --spacing-15: 15px;
+  --spacing-16: 16px;
+  --spacing-17: 17px;
+  --spacing-21: 21px;
+  --spacing-22: 22px;
+  --spacing-23: 23px;
+  --spacing-31: 31px;
+  --spacing-34: 34px;
+  --spacing-38: 38px;
+  --spacing-53: 53px;
+  --spacing-59: 59px;
+  --spacing-60: 60px;
+  --spacing-68: 68px;
+  --spacing-119: 119px;
 
-## Iteration Guide
+  /* Layout */
+  --section-gap: 68px;
+  --card-padding: 22px;
+  --element-gap: 23px;
 
-1. Focus on ONE component at a time and reference it by its `components:` token name (e.g., `{components.button-primary}`, `{components.color-block-section}`).
-2. When introducing a new section, decide **first** which `{colors.block-*}` token it sits on; the surface choice is the most consequential decision.
-3. Default body type to `{typography.body}`; reach for `{typography.subhead}` or `{typography.headline}` only inside a color block.
-4. Run `npx @google/design.md lint DESIGN.md` after edits — `broken-ref`, `contrast-ratio`, and `orphaned-tokens` warnings flag issues automatically.
-5. Add new variants as separate component entries (`-pressed`, `-selected`) — do not bury them in prose.
-6. Keep `{colors.primary}` scarce. If two `button-primary` instances appear in the same viewport, the section is doing too much — neutralize one to `button-secondary`.
-7. Treat `{colors.accent-magenta}` as a single-shot color: one promo CTA per page, never two.
+  /* Border Radius */
+  --radius-3xl: 45px;
+  --radius-full: 1000px;
 
-## Known Gaps
+  /* Named Radii */
+  --radius-links: 1000px;
+  --radius-other: 45px;
+  --radius-buttons: 1000px;
 
-- The exact pastel hex values of `{colors.block-*}` are derived from screenshot pixels; the production source likely uses named tokens that aren't exposed via CSS variables. Treat the documented hex values as faithful approximations rather than exact brand specs.
-- Dark mode is not documented because the marketing site does not ship a dark theme — the closest analog is the navy color-block (`color-block-section-navy`) and the inverse-canvas footer.
-- Form-field error and validation styling is not visible on `/contact/` because no error states render in the static screenshot. Inputs have hairline borders and rounded `{rounded.md}` corners; error treatment is not documented.
-- The animated marquee-strip and color-block reveal animations are not documented (per the no-interaction policy).
+  /* Surfaces */
+  --surface-canvas-white: #ffffff;
+  --surface-obsidian-surface: #000d10;
+}
+```
+
+### Tailwind v4
+
+```css
+@theme {
+  /* Colors */
+  --color-obsidian: #000d10;
+  --color-canvas-white: #ffffff;
+  --color-slate-mist: #8e8e95;
+  --color-desert-sienna: #bc7155;
+
+  /* Typography */
+  --font-helveticanowdisplay: 'HelveticaNowDisplay', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans-serif: 'sans-serif', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale */
+  --text-body-sm: 17px;
+  --leading-body-sm: 1.61;
+  --tracking-body-sm: 0.17px;
+  --text-subheading: 20px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: 0.2px;
+  --text-heading-sm: 30px;
+  --leading-heading-sm: 1.1;
+  --tracking-heading-sm: -0.3px;
+  --text-heading: 52px;
+  --leading-heading: 1.09;
+  --tracking-heading: -0.52px;
+  --text-heading-lg: 63px;
+  --leading-heading-lg: 0.91;
+  --tracking-heading-lg: -0.63px;
+  --text-display: 187px;
+  --leading-display: 0.8;
+  --tracking-display: -3.74px;
+
+  /* Spacing */
+  --spacing-11: 11px;
+  --spacing-13: 13px;
+  --spacing-15: 15px;
+  --spacing-16: 16px;
+  --spacing-17: 17px;
+  --spacing-21: 21px;
+  --spacing-22: 22px;
+  --spacing-23: 23px;
+  --spacing-31: 31px;
+  --spacing-34: 34px;
+  --spacing-38: 38px;
+  --spacing-53: 53px;
+  --spacing-59: 59px;
+  --spacing-60: 60px;
+  --spacing-68: 68px;
+  --spacing-119: 119px;
+
+  /* Border Radius */
+  --radius-3xl: 45px;
+  --radius-full: 1000px;
+}
+```
+
+### Design Tokens
+
+```json
+{
+  "color": {
+    "obsidian": {
+      "$value": "#000d10",
+      "$type": "color",
+      "$description": "Obsidian — Primary text, dark surface backgrounds, button backgrounds, interactive elements, nav text. Creates a dominant, authoritative presence"
+    },
+    "canvas-white": {
+      "$value": "#ffffff",
+      "$type": "color",
+      "$description": "Canvas White — Page backgrounds, light surface backgrounds, secondary text, button text, icons. Provides a clean, expansive foundation"
+    },
+    "slate-mist": {
+      "$value": "#8e8e95",
+      "$type": "color",
+      "$description": "Slate Mist — Muted body text, navigation dividers, subtle borders. Used for secondary information that lives harmoniously within the high-contrast system"
+    },
+    "desert-sienna": {
+      "$value": "#bc7155",
+      "$type": "color",
+      "$description": "Desert Sienna — Accent for call-to-action buttons, prominent graphical elements. This warm, earthy tone provides the only saturated color highlight, drawing attention with understated luxury"
+    }
+  },
+  "font": {
+    "helveticanowdisplay": {
+      "$value": "HelveticaNowDisplay",
+      "$type": "fontFamily",
+      "$description": "All primary textual content: headlines, body, buttons, navigation. Its large scale and slightly condensed forms deliver a modern, impactful voice."
+    },
+    "sans-serif": {
+      "$value": "sans-serif",
+      "$type": "fontFamily",
+      "$description": "Used sparingly for specific bold text, likely for icons or small utility elements where a system sans-serif is a fallback."
+    }
+  },
+  "typography": {
+    "lg": {
+      "$value": {
+        "fontFamily": "sans-serif",
+        "fontSize": "17px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step lg at 17px"
+    },
+    "lg-2": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "17px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step lg-2 at 17px"
+    },
+    "lg-3": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "17px",
+        "fontWeight": 400,
+        "lineHeight": 1.2
+      },
+      "$type": "typography",
+      "$description": "Typography step lg-3 at 17px"
+    },
+    "lg-4": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.61
+      },
+      "$type": "typography",
+      "$description": "Typography step lg-4 at 18px"
+    },
+    "lg-5": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step lg-5 at 18px"
+    },
+    "lg-6": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "18px",
+        "fontWeight": 400,
+        "lineHeight": 1.09
+      },
+      "$type": "typography",
+      "$description": "Typography step lg-6 at 18px"
+    },
+    "xl": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.2
+      },
+      "$type": "typography",
+      "$description": "Typography step xl at 20px"
+    },
+    "xl-2": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1.1
+      },
+      "$type": "typography",
+      "$description": "Typography step xl-2 at 20px"
+    },
+    "xl-3": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "20px",
+        "fontWeight": 700,
+        "lineHeight": 1.1
+      },
+      "$type": "typography",
+      "$description": "Typography step xl-3 at 20px"
+    },
+    "xl-4": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step xl-4 at 20px"
+    },
+    "xl-5": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "23px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step xl-5 at 23px"
+    },
+    "xl-6": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "23px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step xl-6 at 23px"
+    },
+    "3xl": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "30px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step 3xl at 30px"
+    },
+    "3xl-2": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "30px",
+        "fontWeight": 400,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step 3xl-2 at 30px"
+    },
+    "3xl-3": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "30px",
+        "fontWeight": 700,
+        "lineHeight": 1.61
+      },
+      "$type": "typography",
+      "$description": "Typography step 3xl-3 at 30px"
+    },
+    "4xl": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "37px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step 4xl at 37px"
+    },
+    "5xl": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "52px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step 5xl at 52px"
+    },
+    "5xl-2": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "60px",
+        "fontWeight": 700,
+        "lineHeight": 0.91
+      },
+      "$type": "typography",
+      "$description": "Typography step 5xl-2 at 60px"
+    },
+    "5xl-3": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "63px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step 5xl-3 at 63px"
+    },
+    "5xl-4": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "131px",
+        "fontWeight": 700,
+        "lineHeight": 1
+      },
+      "$type": "typography",
+      "$description": "Typography step 5xl-4 at 131px"
+    },
+    "5xl-5": {
+      "$value": {
+        "fontFamily": "HelveticaNowDisplay",
+        "fontSize": "187px",
+        "fontWeight": 700,
+        "lineHeight": 0.8
+      },
+      "$type": "typography",
+      "$description": "Typography step 5xl-5 at 187px"
+    }
+  },
+  "spacing": {
+    "11": {
+      "$value": "11px",
+      "$type": "dimension",
+      "$description": "Spacing 11px"
+    },
+    "13": {
+      "$value": "13px",
+      "$type": "dimension",
+      "$description": "Spacing 13px"
+    },
+    "15": {
+      "$value": "15px",
+      "$type": "dimension",
+      "$description": "Spacing 15px"
+    },
+    "16": {
+      "$value": "16px",
+      "$type": "dimension",
+      "$description": "Spacing 16px"
+    },
+    "17": {
+      "$value": "17px",
+      "$type": "dimension",
+      "$description": "Spacing 17px"
+    },
+    "21": {
+      "$value": "21px",
+      "$type": "dimension",
+      "$description": "Spacing 21px"
+    },
+    "22": {
+      "$value": "22px",
+      "$type": "dimension",
+      "$description": "Spacing 22px"
+    },
+    "23": {
+      "$value": "23px",
+      "$type": "dimension",
+      "$description": "Spacing 23px"
+    },
+    "31": {
+      "$value": "31px",
+      "$type": "dimension",
+      "$description": "Spacing 31px"
+    },
+    "34": {
+      "$value": "34px",
+      "$type": "dimension",
+      "$description": "Spacing 34px"
+    },
+    "38": {
+      "$value": "38px",
+      "$type": "dimension",
+      "$description": "Spacing 38px"
+    },
+    "53": {
+      "$value": "53px",
+      "$type": "dimension",
+      "$description": "Spacing 53px"
+    },
+    "59": {
+      "$value": "59px",
+      "$type": "dimension",
+      "$description": "Spacing 59px"
+    },
+    "60": {
+      "$value": "60px",
+      "$type": "dimension",
+      "$description": "Spacing 60px"
+    },
+    "68": {
+      "$value": "68px",
+      "$type": "dimension",
+      "$description": "Spacing 68px"
+    },
+    "119": {
+      "$value": "119px",
+      "$type": "dimension",
+      "$description": "Spacing 119px"
+    },
+    "unit": {
+      "$value": "4px",
+      "$type": "dimension",
+      "$description": "Base spacing unit"
+    }
+  },
+  "radius": {
+    "3xl": {
+      "$value": "45px",
+      "$type": "dimension",
+      "$description": "Border radius 3xl"
+    },
+    "full": {
+      "$value": "1000px",
+      "$type": "dimension",
+      "$description": "Border radius full"
+    }
+  },
+  "surface": {
+    "canvas-white": {
+      "$value": "#ffffff",
+      "$type": "color",
+      "$description": "Surface level 1: Primary page background and default surface for content."
+    },
+    "obsidian-surface": {
+      "$value": "#000d10",
+      "$type": "color",
+      "$description": "Surface level 2: Elevated dark surfaces, footer, and backgrounds for prominent sections."
+    }
+  },
+  "$extensions": {
+    "com.refero.extraction": {
+      "url": "https://www.flyhyer.com",
+      "siteName": "Hyer Aviation",
+      "extractedAt": "2026-04-30T03:06:15.096Z",
+      "variant": "extended"
+    }
+  }
+}
+```
