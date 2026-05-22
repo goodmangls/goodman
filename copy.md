@@ -58,6 +58,7 @@
 | Role | Name | Experience |
 |------|------|-----------|
 | CEO | Hyeon-Eok SHIN | 38+ years in air cargo; former executive at Korean Air & Asiana Airlines Cargo |
+| Vice Chairman | Ken Jeon | Board of Directors & Managing Director; Strategic Governance |
 | COO | Jimmy LEE | Former executive at a leading Korean freight forwarder; Sales & Revenue management |
 | Director | Amy EUR | Operations & CS expert; 25+ years veteran executive in freight forwarding |
 | BD | Jaehong LIM | Business Development & Market Analysis |

@@ -1,8 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import DisplayLines from '@/components/DisplayLines';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function CompanyPage() {
+  const { t } = useLanguage();
+
   const team = [
     {
       name: "Lee Chang-hee (이창희)",
@@ -27,31 +31,25 @@ export default function CompanyPage() {
     },
   ];
 
-  const timeline = [
-    { year: "2014", milestone: "GOODMAN GLS founded in Seoul", desc: "Started as a cargo GSSA specializing in airline cargo sales with a vision to redefine the Korean market." },
-    { year: "2015", milestone: "First GSA Partnership", desc: "Became General Sales Agent for major airline, proving the 'Small Giant' model works." },
-    { year: "2018", milestone: "MPL & EAN Membership", desc: "Joined MarcoPoloLine Group and Exclusive Air Network to expand global reach." },
-    { year: "2020", milestone: "Project Cargo Division Launch", desc: "Expanded into heavy-lift and specialized cargo for industrial partners." },
-    { year: "2025", milestone: "Digital Platform Renewal", desc: "Investing in next-gen technology for real-time partner transparency." },
-  ];
+  const timelineYears = ['2014', '2015', '2018', '2020', '2025'] as const;
 
   return (
     <main className="bg-canvas min-h-screen">
       {/* Header */}
-      <section className="hero-spacing bg-canvas border-b border-hairline">
+      <section className="page-hero bg-canvas border-b border-hairline">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-5xl"
           >
-            <span className="figma-mono text-xs tracking-[0.3em] text-ink/40 block mb-6 uppercase">The Story</span>
-            <h1 className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter">
-              Trust Through<br />Action. Since 2014.
-            </h1>
-            <p className="body-lg text-ink/70 max-w-xl">
-              We aren&apos;t the biggest, but we aim to be the most impactful. Founded on the principle that logistics is a people business, we&apos;ve spent a decade proving that trust is earned, not given.
-            </p>
+            <span className="eyebrow mb-6">{t('pages.company.heroEyebrow')}</span>
+            <DisplayLines
+              as="h1"
+              lines={[t('pages.company.heroTitleLine1'), t('pages.company.heroTitleLine2')]}
+              className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter"
+            />
+            <p className="body-lg text-muted max-w-xl">{t('pages.company.heroLead')}</p>
           </motion.div>
         </div>
       </section>
@@ -108,51 +106,52 @@ export default function CompanyPage() {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-32">
-              <span className="figma-mono text-xs tracking-widest text-ink/40 block mb-6 uppercase font-bold">The Heritage</span>
-              <h2 className="display-lg text-ink tracking-tighter">A Decade of Excellence</h2>
+              <span className="eyebrow block mb-6">{t('pages.company.heritageEyebrow')}</span>
+              <h2 className="display-lg text-ink tracking-tighter">{t('pages.company.heritageTitle')}</h2>
             </div>
             
             <div className="relative">
-              <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-ink/10 hidden md:block" />
-              <div className="space-y-16 md:space-y-32">
-                {timeline.map((item, index) => (
-                  <motion.div 
-                    key={index} 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className={`relative flex flex-col md:flex-row gap-8 md:gap-24 items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                  >
-                    <div className="flex-1 md:text-right md:pr-12">
-                      {index % 2 === 0 && (
-                        <>
-                          <span className="display-md text-ink/10 block mb-4">{item.year}</span>
-                          <h4 className="headline text-ink mb-4">{item.milestone}</h4>
-                          <p className="body text-ink/50 max-w-md ml-auto leading-relaxed">{item.desc}</p>
-                        </>
-                      )}
-                    </div>
-                    
-                    <div className="w-4 h-4 rounded-full bg-ink border-4 border-canvas z-10 mt-6 hidden md:block" />
-                    
-                    <div className="flex-1 md:text-left md:pl-12">
-                      {index % 2 !== 0 && (
-                        <>
-                          <span className="display-md text-ink/10 block mb-4">{item.year}</span>
-                          <h4 className="headline text-ink mb-4">{item.milestone}</h4>
-                          <p className="body text-ink/50 max-w-md leading-relaxed">{item.desc}</p>
-                        </>
-                      )}
-                    </div>
-                    
-                    {/* Mobile Timeline View */}
-                    <div className="md:hidden">
-                       <span className="display-md text-ink/10 block mb-4">{item.year}</span>
-                       <h4 className="headline text-ink mb-4">{item.milestone}</h4>
-                       <p className="body text-ink/50 leading-relaxed">{item.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
+              <div className="absolute left-1/2 top-0 bottom-0 w-px bg-hairline -translate-x-1/2 hidden md:block" />
+              <div className="space-y-16 md:space-y-24">
+                {timelineYears.map((year, index) => {
+                  const isLeft = index % 2 === 0;
+                  return (
+                    <motion.div
+                      key={year}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      className="grid grid-cols-1 md:grid-cols-[1fr_16px_1fr] gap-6 md:gap-12 items-start"
+                    >
+                      <div className="md:hidden">
+                        <span className="display-md text-ink/10 block mb-4">{year}</span>
+                        <h4 className="headline text-ink mb-4">{t(`pages.company.timeline.${year}.milestone`)}</h4>
+                        <p className="body text-muted leading-relaxed">{t(`pages.company.timeline.${year}.desc`)}</p>
+                      </div>
+                      <div className={`hidden md:block ${isLeft ? 'md:text-right' : 'invisible'}`}>
+                        {isLeft && (
+                          <>
+                            <span className="display-md text-ink/10 block mb-4">{year}</span>
+                            <h4 className="headline text-ink mb-4">{t(`pages.company.timeline.${year}.milestone`)}</h4>
+                            <p className="body text-muted max-w-md md:ml-auto leading-relaxed">{t(`pages.company.timeline.${year}.desc`)}</p>
+                          </>
+                        )}
+                      </div>
+                      <div className="hidden md:flex justify-center pt-6">
+                        <div className="w-4 h-4 rounded-full bg-ink border-4 border-canvas z-10 shrink-0" />
+                      </div>
+                      <div className={`hidden md:block ${!isLeft ? 'md:text-left' : 'invisible'}`}>
+                        {!isLeft && (
+                          <>
+                            <span className="display-md text-ink/10 block mb-4">{year}</span>
+                            <h4 className="headline text-ink mb-4">{t(`pages.company.timeline.${year}.milestone`)}</h4>
+                            <p className="body text-muted max-w-md leading-relaxed">{t(`pages.company.timeline.${year}.desc`)}</p>
+                          </>
+                        )}
+                      </div>
+                    </motion.div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -164,8 +163,12 @@ export default function CompanyPage() {
         <div className="container-wide">
           <div className="max-w-4xl mb-24">
             <span className="figma-mono text-sm tracking-widest text-ink/40 block mb-6 uppercase font-bold">The Experts</span>
-            <h2 className="display-lg text-ink mb-10 tracking-tight leading-none">Logistics is a<br />People Business.</h2>
-            <p className="body-lg text-ink/70 max-w-2xl leading-relaxed">
+            <DisplayLines
+              as="h2"
+              lines={[t('pages.company.teamTitleLine1'), t('pages.company.teamTitleLine2')]}
+              className="display-lg text-ink mb-10 tracking-tight leading-none"
+            />
+            <p className="body-lg text-muted max-w-2xl leading-relaxed">
               Our advantage is our team. We&apos;ve brought together the sharpest minds in Korean air freight to ensure your cargo—and your reputation—is in the right hands.
             </p>
           </div>

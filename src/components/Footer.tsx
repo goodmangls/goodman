@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import DisplayLines from './DisplayLines';
 
 const footerLinks = {
   company: [
@@ -26,49 +27,54 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-canvas text-ink border-t border-hairline pt-48 pb-20">
+    <footer className="section-surface-obsidian pt-32 pb-20 md:pt-40">
       <div className="container-wide">
-        {/* Top Section with Large Branding */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 mb-40">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 lg:gap-32 mb-24">
           <div className="lg:col-span-6 flex flex-col justify-between">
             <div>
               <div className="relative h-10 w-48 mb-16">
-                <Image 
-                  src="/images/logo/logo-black.svg" 
-                  alt="GOODMAN GLS" 
+                <Image
+                  src="/images/logo/logo-black.svg"
+                  alt="GOODMAN GLS"
                   fill
-                  className="object-contain object-left dark:invert"
+                  className="object-contain object-left brightness-0 invert"
                 />
               </div>
-              <h2 className="display-lg mb-12 tracking-[calc(var(--letter-spacing-display-lg)*1.5)] leading-[0.9] max-w-lg">
-                The Small Giant.<br />
-                Global Impact.
-              </h2>
-              <p className="body-lg text-ink/50 mb-16 max-w-md leading-relaxed">
-                Elevating logistics representation since 2014. We provide the infrastructure for your global ambitions with localized Korean expertise.
+              <DisplayLines
+                as="h2"
+                lines={['The Small Giant.', 'Global Impact.']}
+                className="display-lg text-canvas-white mb-12 max-w-lg"
+              />
+              <p className="body-lg text-canvas-white/70 mb-16 max-w-md">
+                Elevating logistics representation since 2014. We provide the infrastructure
+                for your global ambitions with localized Korean expertise.
               </p>
             </div>
-            
+
             <div className="flex items-center gap-6 mt-12">
-               <Link href="/#contact" className="btn-pill-primary !px-8 !py-3">
-                 Start a Partnership
-               </Link>
-               <button 
-                 onClick={scrollToTop}
-                 className="w-12 h-12 rounded-full border border-hairline flex items-center justify-center hover:bg-surface-soft transition-colors text-ink/40 hover:text-ink"
-               >
-                 ↑
-               </button>
+              <Link href="/#contact" className="btn-pill-primary">
+                Start a Partnership
+              </Link>
+              <button
+                type="button"
+                onClick={scrollToTop}
+                className="w-12 h-12 rounded-full border border-canvas-white/30 flex items-center justify-center hover:bg-canvas-white/10 transition-colors text-canvas-white/60 hover:text-canvas-white"
+                aria-label="Scroll to top"
+              >
+                ↑
+              </button>
             </div>
           </div>
 
-          {/* Directory Links */}
           <div className="lg:col-span-3 lg:pt-4">
-            <span className="caption block mb-8 text-ink/40">Internal Directory</span>
+            <span className="caption block mb-8 text-canvas-white/50">Company</span>
             <ul className="space-y-4">
-              {footerLinks.company.map(link => (
+              {footerLinks.company.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="body-sm font-bold text-ink hover:text-ink/60 transition-colors">
+                  <Link
+                    href={link.href}
+                    className="body-sm font-bold text-canvas-white hover:text-canvas-white/70 transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -76,13 +82,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Expertise Links */}
           <div className="lg:col-span-3 lg:pt-4">
-            <span className="caption block mb-8 text-ink/40">Expertise & Solutions</span>
+            <span className="caption block mb-8 text-canvas-white/50">Services</span>
             <ul className="space-y-4">
-              {footerLinks.services.map(link => (
+              {footerLinks.services.map((link) => (
                 <li key={link.label}>
-                  <Link href={link.href} className="body-sm font-bold text-ink hover:text-ink/60 transition-colors">
+                  <Link
+                    href={link.href}
+                    className="body-sm font-bold text-canvas-white hover:text-canvas-white/70 transition-colors"
+                  >
                     {link.label}
                   </Link>
                 </li>
@@ -91,35 +99,38 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section - Legal & Badges */}
-        <div className="pt-20 border-t border-hairline-soft flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
+        <div className="pt-16 border-t border-canvas-white/20 flex flex-col md:flex-row justify-between items-start md:items-end gap-16">
           <div className="space-y-10">
-             <div className="flex flex-wrap gap-x-12 gap-y-6">
-                {footerLinks.legal.map(link => (
-                  <Link key={link.label} href={link.href} className="body-sm text-ink/40 hover:text-ink font-semibold transition-colors">
-                    {link.label}
-                  </Link>
-                ))}
-             </div>
-             <div className="space-y-2">
-                <p className="body-sm text-ink/30 font-medium tracking-tight">© 2026 GOODMAN Global Logistics Service. All rights reserved.</p>
-                <p className="figma-mono text-[9px] text-ink/20 uppercase tracking-[0.2em]">Designed for high-impact logistics representation.</p>
-             </div>
+            <div className="flex flex-wrap gap-x-12 gap-y-6">
+              {footerLinks.legal.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="body-sm text-canvas-white/50 hover:text-canvas-white font-semibold transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <div className="space-y-2">
+              <p className="body-sm text-canvas-white/40">
+                © 2026 GOODMAN Global Logistics Service. All rights reserved.
+              </p>
+              <p className="caption text-canvas-white/30">
+                Korea cargo GSSA · ECS Group partner
+              </p>
+            </div>
           </div>
-          
-          <div className="flex items-center gap-12 grayscale opacity-15 hover:opacity-40 transition-all duration-700">
-             <div className="flex flex-col items-center gap-3">
-                <span className="figma-mono text-[11px] font-black tracking-[0.3em]">IATA</span>
-                <div className="w-8 h-px bg-ink/20" />
-             </div>
-             <div className="flex flex-col items-center gap-3">
-                <span className="figma-mono text-[11px] font-black tracking-[0.3em]">MPL</span>
-                <div className="w-8 h-px bg-ink/20" />
-             </div>
-             <div className="flex flex-col items-center gap-3">
-                <span className="figma-mono text-[11px] font-black tracking-[0.3em]">EAN</span>
-                <div className="w-8 h-px bg-ink/20" />
-             </div>
+
+          <div className="flex items-center gap-12 opacity-40 hover:opacity-70 transition-opacity duration-700">
+            {['IATA', 'MPL', 'EAN'].map((badge) => (
+              <div key={badge} className="flex flex-col items-center gap-3">
+                <span className="caption text-canvas-white/80 tracking-[0.3em]">
+                  {badge}
+                </span>
+                <div className="w-8 h-px bg-canvas-white/30" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

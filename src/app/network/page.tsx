@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import DisplayLines from '@/components/DisplayLines';
 
 export default function NetworkPage() {
   const airlines = [
@@ -16,7 +17,6 @@ export default function NetworkPage() {
       id: "mpl",
       name: "MPL",
       fullName: "MarcoPoloLine Group",
-      color: "bg-color-block-lilac",
       desc: "Premium logistics network focused on quality service and innovation across Asia-Pacific.",
       features: ['Exclusive territory protection', 'Quality certification standards', 'Advanced IT integration']
     },
@@ -24,7 +24,6 @@ export default function NetworkPage() {
       id: "ean",
       name: "EAN",
       fullName: "Exclusive Air Network",
-      color: "bg-color-block-mint",
       desc: "Elite network of air cargo logistics providers committed to service excellence and innovation.",
       features: ['Best-in-class service standards', 'Collaborative partnerships', 'Continuous improvement focus']
     }
@@ -33,18 +32,20 @@ export default function NetworkPage() {
   return (
     <main className="bg-canvas min-h-screen">
       {/* Header */}
-      <section className="hero-spacing bg-canvas border-b border-hairline">
+      <section className="page-hero">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="max-w-5xl"
           >
-            <span className="figma-mono text-xs tracking-[0.3em] text-ink/40 block mb-6 uppercase">Global Footprint</span>
-            <h1 className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter">
-              World Reach.<br />Local Depth.
-            </h1>
-            <p className="body-lg text-ink/70 max-w-2xl">
+            <span className="eyebrow mb-6">Global footprint</span>
+            <DisplayLines
+              as="h1"
+              lines={['World Reach.', 'Local Depth.']}
+              className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter"
+            />
+            <p className="body-lg text-muted max-w-2xl">
               Connected to over 59 countries through elite logistics networks and strategic GSSA partnerships. We provide the infrastructure for global commerce.
             </p>
           </motion.div>
@@ -55,56 +56,59 @@ export default function NetworkPage() {
       <section className="section-spacing bg-canvas">
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {networks.map((net) => (
+            {networks.map((net) => {
+              const dark = net.id === "ean";
+              const main = dark ? "text-canvas-white" : "text-ink";
+              const sub = dark ? "text-canvas-white/75" : "text-muted";
+              return (
               <motion.div 
                 key={net.id}
                 whileHover={{ y: -4 }}
-                className={`${net.color} color-block border border-ink/10 flex flex-col justify-between min-h-[400px] md:min-h-[500px] shadow-sm`}
+                className={`panel-bordered p-10 md:p-14 flex flex-col justify-between min-h-[400px] ${dark ? "section-surface-obsidian" : "bg-canvas"}`}
               >
                 <div>
-                  <div className="flex justify-between items-start mb-16">
-                    <span className="figma-mono text-4xl font-black text-ink">{net.name}</span>
-                    <div className="px-4 py-1 rounded-full border border-ink/20 figma-mono text-[10px] uppercase font-bold text-ink/60">Registered Member</div>
+                  <div className="flex justify-between items-start mb-12">
+                    <span className={`display-md font-bold ${main}`}>{net.name}</span>
+                    <span className="eyebrow">Member</span>
                   </div>
-                  <h3 className="display-md text-ink mb-8 leading-tight">{net.fullName}</h3>
-                  <p className="body-lg text-ink/70 mb-12 max-w-sm">{net.desc}</p>
+                  <h3 className={`headline mb-6 ${main}`}>{net.fullName}</h3>
+                  <p className={`body-lg mb-10 max-w-sm ${sub}`}>{net.desc}</p>
                 </div>
                 
-                <div className="pt-10 border-t border-ink/10 space-y-4">
+                <ul className="feature-stack">
                   {net.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-4 text-ink/80">
-                      <div className="w-1 h-1 rounded-full bg-ink/30" />
-                      <span className="body-sm font-medium">{feature}</span>
-                    </div>
+                    <li key={feature} className="feature-stack-item">
+                      <span className={`body-default font-bold ${main}`}>{feature}</span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </motion.div>
-            ))}
+            );})}
           </div>
         </div>
       </section>
 
       {/* GSA Section - Bold Cream Block */}
-      <section className="section-spacing bg-color-block-cream border-y border-hairline">
+      <section className="section-spacing bg-canvas">
         <div className="container-wide">
           <div className="max-w-4xl mb-24">
-            <span className="figma-mono text-sm tracking-widest text-ink/40 block mb-6 uppercase font-bold">The GSSA Advantage</span>
+            <span className="eyebrow mb-6">The GSSA advantage</span>
             <h2 className="display-lg text-ink mb-10 leading-none">Your Gateway to the Korean Market</h2>
-            <p className="body-lg text-ink/70 max-w-2xl leading-relaxed">
+            <p className="body-lg text-muted max-w-2xl leading-relaxed">
               We represent airlines with an owner-operator mindset. From capacity guarantees to local route development, we ensure your airline&apos;s success in the Northeast Asian corridor.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            <div className="p-12 bg-canvas rounded-3xl border border-ink/10 shadow-sm">
+            <div className="p-12 bg-canvas rounded-3xl border border-hairline">
               <h4 className="headline text-ink mb-6">GSA (General Sales Agent)</h4>
-              <p className="body-lg text-ink/60 leading-relaxed">
+              <p className="body-lg text-muted leading-relaxed">
                 Exclusive representation of airlines in specific markets, handling all passenger and cargo sales activities with 100% focus and local expertise.
               </p>
             </div>
-            <div className="p-12 bg-canvas rounded-3xl border border-ink/10 shadow-sm">
+            <div className="p-12 bg-canvas rounded-3xl border border-hairline">
               <h4 className="headline text-ink mb-6">CSA (Cargo Sales Agent)</h4>
-              <p className="body-lg text-ink/60 leading-relaxed">
+              <p className="body-lg text-muted leading-relaxed">
                 Specialized cargo sales representation, providing capacity guarantees and preferential rates for logistics partners across our global network.
               </p>
             </div>
@@ -112,10 +116,10 @@ export default function NetworkPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {airlines.map((airline, index) => (
-              <div key={index} className="p-8 bg-canvas border border-ink/5 rounded-2xl hover:border-ink/30 transition-all group">
-                <span className="figma-mono text-[10px] tracking-widest text-ink/30 block mb-4 uppercase font-bold group-hover:text-ink/60">Partner Carrier</span>
+              <div key={index} className="p-8 bg-canvas border border-hairline rounded-2xl hover:border-desert-sienna/60 transition-all group">
+                <span className="eyebrow block mb-4">Partner carrier</span>
                 <h4 className="headline-sm text-ink mb-3">{airline.name}</h4>
-                <p className="text-xs text-ink/40 line-clamp-2 leading-loose figma-mono">{airline.routes}</p>
+                <p className="caption text-muted line-clamp-2 leading-relaxed">{airline.routes}</p>
               </div>
             ))}
           </div>
@@ -129,12 +133,12 @@ export default function NetworkPage() {
         </div>
       </section>
 
-      {/* Immersive Coverage Section - Lime Block */}
+      {/* Global ecosystem */}
       <section className="section-spacing bg-canvas">
         <div className="container-wide text-center">
           <h2 className="display-lg text-ink mb-20 tracking-tighter">Global Ecosystem</h2>
           <div className="max-w-6xl mx-auto">
-            <div className="aspect-auto md:aspect-[21/9] bg-color-block-lime color-block border border-ink/10 flex items-center justify-center relative shadow-sm group">
+            <div className="aspect-auto md:aspect-[21/9] section-surface-obsidian rounded-[var(--radius-feature)] p-12 md:p-16 flex items-center justify-center relative">
                {/* Background patterns */}
                <div className="absolute inset-0 opacity-10 pointer-events-none group-hover:opacity-15 transition-opacity" style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '48px 48px' }} />
                
@@ -143,10 +147,10 @@ export default function NetworkPage() {
                  whileInView={{ opacity: 1, scale: 1 }}
                  className="relative z-10 p-12"
                >
-                <span className="figma-mono text-sm tracking-[0.4em] text-ink/40 block mb-8 uppercase font-black">Strategic ECS Partnership</span>
-                <p className="display-xl text-ink leading-none mb-4">59</p>
-                <p className="display-sm text-ink tracking-tight font-black">NATIONS CONNECTED</p>
-                <p className="body-lg text-ink/60 mt-10 max-w-xl mx-auto leading-relaxed">Through our strategic partnership with ECS Group, we provide our partners with access to the world&apos;s largest GSSA infrastructure.</p>
+                <span className="eyebrow mb-6">Strategic ECS partnership</span>
+                <p className="display-xl text-canvas-white leading-none mb-4">59</p>
+                <p className="display-sm text-canvas-white tracking-tight font-bold">nations connected</p>
+                <p className="body-lg text-canvas-white/75 mt-8 max-w-xl mx-auto leading-relaxed">Through our strategic partnership with ECS Group, we provide our partners with access to the world&apos;s largest GSSA infrastructure.</p>
                </motion.div>
             </div>
           </div>

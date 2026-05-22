@@ -11,12 +11,10 @@ const memberships = [
 
 export default function TrustBadges() {
   return (
-    <div className="bg-canvas py-16 border-b border-hairline">
+    <div className="bg-canvas py-12 border-b border-hairline">
       <div className="container-wide">
-        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-24">
-          <span className="caption text-ink/50">
-            Trusted Memberships
-          </span>
+        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
+          <span className="eyebrow">Trusted memberships</span>
           {memberships.map((member, index) => (
             <motion.div
               key={member.name}
@@ -26,7 +24,7 @@ export default function TrustBadges() {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group cursor-default"
             >
-              <span className="card-title text-ink group-hover:opacity-60 transition-opacity">
+              <span className="card-title text-ink group-hover:text-muted transition-colors">
                 {member.name}
               </span>
             </motion.div>

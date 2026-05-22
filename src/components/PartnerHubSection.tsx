@@ -3,28 +3,27 @@
 import Link from 'next/link';
 
 const features = [
-  'Agent Zone - Partner Registration & Tariff Access',
-  'Market Insights - Korea Trade Intelligence Reports',
-  'Dedicated Account Management',
+  'Agent Zone — partner registration & tariff access',
+  'Market insights — Korea trade intelligence reports',
+  'Dedicated account management',
 ];
 
 export default function PartnerHubSection() {
   return (
-    <section id="partner-hub" className="bg-canvas py-24">
-      <div className="color-block color-block-pink">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 items-center">
+    <section id="partner-hub" className="bg-canvas section-spacing">
+      <div className="container-wide">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div>
-            <span className="eyebrow block mb-8">Exclusive</span>
-            <h2 className="display-lg mb-8">Partner Hub</h2>
-            <p className="body-lg text-ink/60 mb-12">
-              Exclusive resources for our global network. Access technical intelligence 
-              and strategic insights to grow your business in Korea.
+            <p className="eyebrow mb-6">Exclusive</p>
+            <h2 className="display-lg text-ink mb-8">Partner Hub</h2>
+            <p className="body-lg text-muted mb-12 max-w-xl">
+              Exclusive resources for our global network. Access technical intelligence and
+              strategic insights to grow your business in Korea.
             </p>
-            <ul className="space-y-6 mb-12">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-4">
-                  <span className="w-1.5 h-1.5 bg-ink rounded-full" />
-                  <span className="body-default font-medium">{feature}</span>
+            <ul className="feature-stack max-w-lg mb-12">
+              {features.map((feature) => (
+                <li key={feature} className="feature-stack-item">
+                  <span className="body-default text-ink font-bold">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -34,8 +33,8 @@ export default function PartnerHubSection() {
           </div>
 
           <div className="hidden md:flex justify-end">
-            <div className="w-full aspect-square max-w-sm bg-canvas rounded-md border border-hairline flex items-center justify-center p-12">
-              <div className="display-xl !text-9xl opacity-10">G</div>
+            <div className="panel-bordered w-full aspect-square max-w-sm flex items-center justify-center p-12 bg-surface-soft">
+              <span className="display-xl opacity-10 text-ink select-none">G</span>
             </div>
           </div>
         </div>

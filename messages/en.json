@@ -369,6 +369,91 @@
     "confirmCancelDesc": "This will cancel your quote request.",
     "goBack": "Go Back"
   },
+  "pages": {
+    "company": {
+      "heroEyebrow": "The Story",
+      "heroTitleLine1": "Trust Through",
+      "heroTitleLine2": "Action. Since 2014.",
+      "heroLead": "We aren't the biggest, but we aim to be the most impactful. Founded on the principle that logistics is a people business, we've spent a decade proving that trust is earned, not given.",
+      "ceoEyebrow": "Leadership Insight",
+      "ceoQuote": "Small Giant, Big Impact. That's our North Star.",
+      "ceoP1": "Welcome to GOODMAN GLS. Since our founding in 2014, we've built our reputation on a simple principle: trust through action.",
+      "ceoP2": "As a leading GSSA in Korea, we are strategically positioned as the gateway between global airlines and Korea's logistics market.",
+      "ceoP3": "Our team of logistics professionals brings decades of combined experience in time-critical air freight and complex project cargo. We understand that every shipment carries not just cargo, but our clients' reputation.",
+      "ceoName": "Hyeon-Eok SHIN",
+      "ceoRole": "CEO & Founder",
+      "ceoBio": "38+ years in air cargo; former executive at Korean Air & Asiana Airlines Cargo. Architect of the GOODMAN service model.",
+      "heritageEyebrow": "The Heritage",
+      "heritageTitle": "A Decade of Excellence",
+      "teamEyebrow": "The Experts",
+      "teamTitleLine1": "Logistics is a",
+      "teamTitleLine2": "People Business.",
+      "teamLead": "Our advantage is our team. We've brought together the sharpest minds in Korean air freight to ensure your cargo—and your reputation—is in the right hands.",
+      "teamDivision": "Division",
+      "teamExpertise": "Core Expertise",
+      "teamViewProfile": "View Profile →",
+      "valuesTitle": "Our Core Values",
+      "timeline": {
+        "2014": {
+          "milestone": "GOODMAN GLS founded in Seoul",
+          "desc": "Started as a cargo GSSA specializing in airline cargo sales with a vision to redefine the Korean market."
+        },
+        "2015": {
+          "milestone": "First GSA Partnership",
+          "desc": "Became General Sales Agent for major airline, proving the 'Small Giant' model works."
+        },
+        "2018": {
+          "milestone": "MPL & EAN Membership",
+          "desc": "Joined MarcoPoloLine Group and Exclusive Air Network to expand global reach."
+        },
+        "2020": {
+          "milestone": "Project Cargo Division Launch",
+          "desc": "Expanded into heavy-lift and specialized cargo for industrial partners."
+        },
+        "2025": {
+          "milestone": "Digital Platform Renewal",
+          "desc": "Investing in next-gen technology for real-time partner transparency."
+        }
+      },
+      "team": {
+        "lee": {
+          "name": "Lee Chang-hee (이창희)",
+          "title": "Business Development Manager",
+          "department": "GSA/CSA Division",
+          "expertise": "Airline partnerships, Route development"
+        },
+        "kim": {
+          "name": "Kim Min-ji (김민지)",
+          "title": "Operations Director",
+          "department": "Air & Ocean Operations",
+          "expertise": "Supply chain optimization, Customer service"
+        },
+        "park": {
+          "name": "Park Seung-ho (박승호)",
+          "title": "Project Cargo Specialist",
+          "department": "Special Projects",
+          "expertise": "Heavy-lift, Multi-modal logistics"
+        }
+      },
+      "values": {
+        "trust": {
+          "label": "01",
+          "value": "Trust",
+          "desc": "Earned through consistent delivery and total transparency."
+        },
+        "velocity": {
+          "label": "02",
+          "value": "Velocity",
+          "desc": "Speed matters in time-critical logistics. We move faster."
+        },
+        "connectivity": {
+          "label": "03",
+          "value": "Connectivity",
+          "desc": "Global reach through our elite strategic partnerships."
+        }
+      }
+    }
+  },
   "adminQuotes": {
     "title": "Quote Management",
     "totalQuotes": "total quotes",

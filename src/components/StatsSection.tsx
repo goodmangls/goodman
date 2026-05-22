@@ -28,8 +28,9 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
   }, [isInView, target]);
 
   return (
-    <span ref={ref} className="display-xl text-ink tabular-nums">
-      {count}{suffix}
+    <span ref={ref} className="display-xl text-canvas-white tabular-nums">
+      {count}
+      {suffix}
     </span>
   );
 }
@@ -43,21 +44,17 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-canvas py-24">
-      <div className="color-block color-block-lime">
-        <div className="max-w-6xl">
-          <span className="eyebrow block mb-12">Performance in numbers</span>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
-            {stats.map((stat) => (
-              <div key={stat.key} className="flex flex-col items-start">
-                <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                <div className="headline mt-4 opacity-80">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+    <section className="section-surface-obsidian section-spacing">
+      <div className="container-wide">
+        <p className="eyebrow mb-12">Performance in numbers</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          {stats.map((stat) => (
+            <div key={stat.key} className="flex flex-col items-start">
+              <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+              <p className="headline mt-4 text-canvas-white/75">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,0 +1,87 @@
+{
+  "pages": {
+    "company": {
+      "heroEyebrow": "스토리",
+      "heroTitleLine1": "행동으로 쌓은",
+      "heroTitleLine2": "신뢰. 2014년부터.",
+      "heroLead": "규모는 작을 수 있어도, 영향력은 크게 만듭니다. 물류는 사람의 비즈니스라는 원칙 위에 2014년 설립 이후, 신뢰는 주어지는 것이 아니라 쌓아야 한다고 증명해 왔습니다.",
+      "ceoEyebrow": "리더십 메시지",
+      "ceoQuote": "Small Giant, Big Impact. 그것이 우리의 북극성입니다.",
+      "ceoP1": "GOODMAN GLS에 오신 것을 환영합니다. 2014년 설립 이후 우리는 단순한 원칙, 즉 행동을 통한 신뢰 위에 명성을 쌓아 왔습니다.",
+      "ceoP2": "한국을 대표하는 GSSA로서, 글로벌 항공사와 한국 물류 시장을 잇는 관문 역할을 수행합니다.",
+      "ceoP3": "시한이 촉박한 항공 화물과 복잡한 프로젝트 화물에서 수십 년의 경험을 보유한 전문가 팀이, 화물뿐 아니라 고객의 평판까지 책임집니다.",
+      "ceoName": "신현억",
+      "ceoRole": "대표이사 · 창업자",
+      "ceoBio": "항공 화물 업계 38년 이상; 대한항공·아시아나항공 화물 부문 전 임원. GOODMAN 서비스 모델의 설계자.",
+      "heritageEyebrow": "헤리티지",
+      "heritageTitle": "10년의 성과",
+      "teamEyebrow": "전문가 팀",
+      "teamTitleLine1": "물류는",
+      "teamTitleLine2": "사람의 비즈니스입니다.",
+      "teamLead": "우리의 강점은 사람입니다. 한국 항공 화물 분야 최고의 인재가 모여, 고객의 화물과 평판을 안전하게 지킵니다.",
+      "teamDivision": "부서",
+      "teamExpertise": "핵심 역량",
+      "teamViewProfile": "프로필 보기 →",
+      "valuesTitle": "핵심 가치",
+      "timeline": {
+        "2014": {
+          "milestone": "서울에서 GOODMAN GLS 설립",
+          "desc": "한국 시장을 재정의하겠다는 비전으로 항공 화물 GSSA 전문 기업으로 출발했습니다."
+        },
+        "2015": {
+          "milestone": "첫 GSA 파트너십",
+          "desc": "주요 항공사의 General Sales Agent가 되며 'Small Giant' 모델의 가능성을 입증했습니다."
+        },
+        "2018": {
+          "milestone": "MPL & EAN 가입",
+          "desc": "MarcoPoloLine Group과 Exclusive Air Network에 가입해 글로벌 네트워크를 확장했습니다."
+        },
+        "2020": {
+          "milestone": "프로젝트 화물 사업부 출범",
+          "desc": "중량물·특수 화물 등 산업 파트너를 위한 전문 물류로 사업 영역을 넓혔습니다."
+        },
+        "2025": {
+          "milestone": "디지털 플랫폼 리뉴얼",
+          "desc": "파트너에게 실시간 투명성을 제공하는 차세대 기술에 투자하고 있습니다."
+        }
+      },
+      "team": {
+        "lee": {
+          "name": "이창희",
+          "title": "사업개발 매니저",
+          "department": "GSA/CSA 사업부",
+          "expertise": "항공사 파트너십, 노선 개발"
+        },
+        "kim": {
+          "name": "김민지",
+          "title": "운영 이사",
+          "department": "항공·해상 운영",
+          "expertise": "공급망 최적화, 고객 서비스"
+        },
+        "park": {
+          "name": "박승호",
+          "title": "프로젝트 화물 전문가",
+          "department": "특수 프로젝트",
+          "expertise": "중량물, 복합 운송"
+        }
+      },
+      "values": {
+        "trust": {
+          "label": "01",
+          "value": "신뢰",
+          "desc": "일관된 실행과 완전한 투명성으로 쌓습니다."
+        },
+        "velocity": {
+          "label": "02",
+          "value": "속도",
+          "desc": "시한이 중요한 물류에서 우리는 더 빠르게 움직입니다."
+        },
+        "connectivity": {
+          "label": "03",
+          "value": "연결",
+          "desc": "전략적 파트너십을 통한 글로벌 도달 범위."
+        }
+      }
+    }
+  }
+}

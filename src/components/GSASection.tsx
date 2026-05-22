@@ -15,25 +15,27 @@ const partners = [
 
 export default function GSASection() {
   return (
-    <section id="network" className="bg-canvas py-24">
+    <section id="network" className="bg-canvas section-spacing">
       <div className="container-wide">
         <div className="max-w-4xl mb-16">
-          <span className="eyebrow block mb-8">Partnerships</span>
+          <p className="eyebrow mb-6">Partnerships</p>
           <h2 className="display-lg text-ink mb-6">Airlines we represent</h2>
-          <p className="body-lg text-ink/60">
-            Trusted by carriers worldwide to grow their Korean market presence. 
-            From flag carriers to specialty freighters.
+          <p className="body-lg text-muted">
+            Trusted by carriers worldwide to grow their Korean market presence. From flag
+            carriers to specialty freighters.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline border border-hairline overflow-hidden rounded-md">
+        <div className="panel-bordered grid grid-cols-2 md:grid-cols-4 gap-px bg-hairline">
           {partners.map((partner) => (
-            <div 
-              key={partner.code} 
-              className="bg-canvas p-8 flex flex-col justify-center items-center text-center h-[160px] group hover:bg-surface-soft transition-colors"
+            <div
+              key={partner.code}
+              className="bg-canvas p-8 flex flex-col justify-center items-center text-center min-h-[160px] group hover:bg-surface-soft transition-colors"
             >
-              <span className="card-title mb-2 group-hover:scale-110 transition-transform">{partner.code}</span>
-              <span className="caption opacity-50">{partner.name}</span>
+              <span className="card-title mb-2 group-hover:scale-105 transition-transform">
+                {partner.code}
+              </span>
+              <span className="caption text-muted">{partner.name}</span>
             </div>
           ))}
         </div>

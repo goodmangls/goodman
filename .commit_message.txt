@@ -1,0 +1,1 @@
+♿ Company 페이지 DisplayLines·타임라인 중복 수정 및 EN/KO i18n 파일럿 연동

@@ -1,5 +1,5 @@
 # Hyer Aviation — Style Reference
-> monochromatic luxury, sharp contrast
+> monochromatic luxury, sharp contrast — **adapted for GOODMAN GLS** (`src/app/globals.css`)
 
 **Theme:** light
 
@@ -161,6 +161,54 @@ Create a hero section: full-bleed background set by an image of a private jet ag
 Create a feature panel: Canvas White (#ffffff) background. Headline 'Flexible Solutions' in Obsidian (#000d10), HelveticaNowDisplay, 30px, weight 700, line height 1.1, letter-spacing -0.3px. Below, body text 'Stop depending on airlines. Fly on your own terms or join our exclusive shared flights.' in Slate Mist (#8e8e95), HelveticaNowDisplay, 17px, weight 400, line height 1.61. Separate features with a 1px Slate Mist (#8e8e95) horizontal rule that extends the width of the content.
 
 Create a footer: Obsidian (#000d10) background, with all text in Canvas White (#ffffff). Navigation links 'On-demand', 'Private Charter', 'Aircraft Ownership' should use HelveticaNowDisplay, 17px, weight 400, with 13px top/bottom and 34px right margin between them. Include a minimal copyright text in Canvas White (#ffffff) at 17px.
+
+## GOODMAN GLS — Implementation
+
+This repository applies the Hyer reference as a **hybrid** B2B marketing system: full-bleed hero, Obsidian/Canvas alternation, pill CTAs, and divider-based feature lists—while keeping Goodman-specific proof (Stats, airline grid, MPL/EAN, partner hub).
+
+**Source of truth in code:** `src/app/globals.css` (Tailwind v4 `@theme` + utility classes).
+
+### Shipped vs reference
+
+| Topic | Hyer (flyhyer.com) | Goodman GLS (this repo) |
+|-------|-------------------|-------------------------|
+| Display font | HelveticaNowDisplay | **Inter** 400/700 (`layout.tsx`) until licensed webfont |
+| Primary CTA color | Desert Sienna `#bc7155` | Same (`--primary`, `.btn-pill-primary`) |
+| Legacy marketing accent | — | Removed orange `#FF6B35` and pastel `color-block-*` |
+| Hero | Full-bleed imagery + white type | `HeroSection.tsx` + transparent nav on home scroll top |
+| Dark bands | Obsidian sections | `.section-surface-obsidian` (Stats, Services alt rows, Footer, Values) |
+
+### Utility classes
+
+| Class | Role |
+|-------|------|
+| `.display-hero`, `.display-xl`, `.display-lg`, `.display-md`, `.display-sm` | Marketing headlines (scaled below Hyer 187px display) |
+| `.headline`, `.headline-sm`, `.body-lg`, `.body-sm`, `.body` | Body hierarchy |
+| `.eyebrow`, `.caption`, `.text-muted` | Labels and secondary copy (Slate Mist) |
+| `.btn-pill-primary` | Desert Sienna filled CTA |
+| `.btn-pill-secondary` | Obsidian filled (on light surfaces) |
+| `.btn-pill-ghost` | Outline on dark hero |
+| `.section-surface-obsidian` | Dark section surface + muted eyebrow override |
+| `.page-hero` | `/company`, `/services`, `/network` page headers |
+| `.panel-bordered` | Bordered 45px-radius panels (CEO, services, cards) |
+| `.feature-stack` / `.feature-stack-item` | Why GSSA pillars with hairline dividers |
+| `.section-spacing` | 68px vertical rhythm (`--section-gap`) |
+| `.hero-spacing` | Home hero min-height and padding |
+
+### Page map
+
+| Route | Section rhythm (high level) |
+|-------|----------------------------|
+| `/` | Hero → Trust → Obsidian Stats → Why GSSA → Airlines → Obsidian Services showcase → Company → Network → Partner → Contact → Obsidian Footer |
+| `/company` | `page-hero` → CEO panel → Timeline → Team grid → Obsidian Values |
+| `/services` | `page-hero` → sticky quick nav → alternating canvas/Obsidian service panels |
+| `/network` | `page-hero` → MPL/EAN cards → GSSA/CSA → airline grid → Obsidian ECS band |
+
+### Dark mode
+
+`ThemeToggle` flips `--canvas` / `--ink` in `.dark`. Obsidian sections use explicit `text-canvas-white`; verify contrast on Values and Footer after theme switch.
+
+---
 
 ## Similar Brands
 

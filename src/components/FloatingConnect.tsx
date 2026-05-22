@@ -18,7 +18,7 @@ export default function FloatingConnect() {
       {/* Expanded Menu */}
       {isExpanded && (
         <div className="absolute bottom-20 right-0 bg-canvas rounded-md shadow-[0_12px_48px_rgba(0,0,0,0.15)] p-6 w-72 animate-in fade-in slide-in-from-bottom-4 border border-hairline">
-          <span className="eyebrow block mb-4 text-ink/40">Connect</span>
+          <span className="eyebrow block mb-4 text-muted">Connect</span>
           <div className="space-y-1">
             {contacts.map((contact) => (
               <a
@@ -34,9 +34,9 @@ export default function FloatingConnect() {
             ))}
           </div>
           <div className="mt-6 pt-4 border-t border-hairline">
-            <p className="body-sm text-ink/40">
-              Business Development Team <br />
-              Mon-Fri 9:00-18:00 KST
+            <p className="body-sm text-muted">
+              <span className="block">Business Development Team</span>
+              <span className="block">Mon-Fri 9:00-18:00 KST</span>
             </p>
           </div>
         </div>
