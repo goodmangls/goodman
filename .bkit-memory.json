@@ -1,9 +1,8 @@
 {
-  "activeFeature": "simplify-marketing-site",
-  "phase": "do",
-  "matchRate": 98,
-  "archivedTo": "docs/archive/2026-04/website-cargo-gssa-update/",
-  "startedAt": "2026-04-09",
+  "activeFeature": "goodman-gls-contact-hardening",
+  "phase": "design",
+  "matchRate": null,
+  "startedAt": "2026-05-28",
   "history": [
     {
       "phase": "plan",
@@ -14,6 +13,21 @@
       "phase": "design",
       "date": "2026-04-09",
       "document": "docs/02-design/features/website-cargo-gssa-update.design.md"
+    },
+    {
+      "phase": "archived",
+      "date": "2026-04-09",
+      "archivedTo": "docs/archive/2026-04/website-cargo-gssa-update/"
+    },
+    {
+      "phase": "plan",
+      "date": "2026-05-28",
+      "document": "docs/01-plan/features/goodman-gls-contact-hardening.plan.md"
+    },
+    {
+      "phase": "design",
+      "date": "2026-05-28",
+      "document": "docs/02-design/features/goodman-gls-contact-hardening.design.md"
     }
   ]
 }
