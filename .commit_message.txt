@@ -1,1 +1,1 @@
-♿ Company 페이지 DisplayLines·타임라인 중복 수정 및 EN/KO i18n 파일럿 연동
+🐛 fix(build): app/global-error.tsx 추가로 Next 16 prerender useContext null 차단 (build unblock)
