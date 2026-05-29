@@ -168,11 +168,13 @@ This repository applies the Hyer reference as a **hybrid** B2B marketing system:
 
 **Source of truth in code:** `src/app/globals.css` (Tailwind v4 `@theme` + utility classes).
 
+**Companion docs:** see `CLAUDE.md` (project guide) and `AGENTS.md` (mirror for non-Claude agents). Theming wiring (next-themes) lives in `src/components/Providers.tsx`.
+
 ### Shipped vs reference
 
 | Topic | Hyer (flyhyer.com) | Goodman GLS (this repo) |
 |-------|-------------------|-------------------------|
-| Display font | HelveticaNowDisplay | **Inter** 400/700 (`layout.tsx`) until licensed webfont |
+| Display font | HelveticaNowDisplay | **Inter** 400/700 via `next/font/google` in `layout.tsx` (with Outfit + JetBrains Mono available); HelveticaNowDisplay deferred until license |
 | Primary CTA color | Desert Sienna `#bc7155` | Same (`--primary`, `.btn-pill-primary`) |
 | Legacy marketing accent | — | Removed orange `#FF6B35` and pastel `color-block-*` |
 | Hero | Full-bleed imagery + white type | `HeroSection.tsx` + transparent nav on home scroll top |
@@ -206,7 +208,9 @@ This repository applies the Hyer reference as a **hybrid** B2B marketing system:
 
 ### Dark mode
 
-`ThemeToggle` flips `--canvas` / `--ink` in `.dark`. Obsidian sections use explicit `text-canvas-white`; verify contrast on Values and Footer after theme switch.
+`ThemeToggle` (`src/components/ThemeToggle.tsx`) flips between light/dark; provider is `next-themes` configured in `src/components/Providers.tsx` (`attribute="class" defaultTheme="light"`). `.dark` swaps `--canvas` / `--ink`. Obsidian sections use explicit `text-canvas-white`; verify contrast on Values and Footer after theme switch.
+
+> **Note (framework debt)**: A separately-tested *lazy* `ThemeProvider` via `next/dynamic({ ssr: false })` was investigated under `goodman-gls-prerender-debt` to bypass a Next 16 + React 19 `/_global-error` prerender bug, but **was not shipped** — root cause is upstream. `vercel.json` keeps `next build || true` masking until Next 16.3 stable / React 19.3 unblock. Archive: `docs/archive/2026-05/goodman-gls-prerender-debt/`.
 
 ---
 
