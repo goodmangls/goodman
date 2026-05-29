@@ -1,0 +1,187 @@
+# AGENTS.md - GOODMAN GLS
+
+## Project Overview
+
+**GOODMAN GLS** - B2B logistics company website. Core identity is **GSSA (General Sales Agency / Cargo Sales Agency)** for airlines:
+- GSA/CSA for airlines (core business — cargo sales representation in Korea)
+- Freight forwarding services (Air, Ocean, Project Cargo — supplementary)
+- Global network partnerships (MPL, EAN member)
+
+**Tagline**: "Small Giant. Big Impact." - Your Strategic Partner in Korea & Beyond
+
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Run linting
+npm run lint
+
+# Build for production
+npm run build
+```
+
+## Tech Stack
+
+### Frontend (Next.js)
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Next.js | 16.1.1 | App Router framework |
+| React | 19.2.3 | UI library |
+| TypeScript | ^5 | Type safety |
+| Tailwind CSS | v4 | Styling |
+| next-intl | ^4.6.1 | i18n (EN/KO) |
+| react-hook-form + zod | latest | Form validation |
+| framer-motion | latest | Animations |
+
+### Backend (Rails 8 API — `goodman-gls-api/`)
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| Rails | 8.0.4 | API-only framework |
+| Ruby | 3.4.5 | Runtime |
+| PostgreSQL | latest | Database |
+| bcrypt + jwt | latest | Authentication (JWT) |
+| rack-cors | latest | CORS handling |
+| rack-attack | latest | Rate limiting (auth, contact) |
+| Action Mailer + SendGrid | - | Email (verification, contact) |
+
+## Development Commands
+
+### Frontend
+```bash
+npm run dev          # Dev server
+npm run build        # Production build
+npm run lint         # ESLint
+```
+
+### Backend (from goodman-gls-api/)
+```bash
+bundle install           # Install gems
+bin/rails db:prepare     # Create + migrate DB
+bin/rails server         # API on http://localhost:3000
+bundle exec rspec        # RSpec tests
+```
+
+## Project Structure
+
+```
+/                              # Frontend (Next.js)
+  src/
+    app/                       # App Router pages
+      auth/                    # Login, register, verify, password reset
+      portal/                  # Partner portal (protected)
+      company/                 # About page
+      services/                # Services page
+    components/                # React components
+      HeroSection.tsx          # Landing hero with video background
+      WhyGSSASection.tsx       # GSSA value proposition + 4 service pillars
+      StatsSection.tsx         # Animated counter stats (20+yr, 15+ airlines, etc.)
+      GSASection.tsx           # 15 airline partner showcase grid
+      Footer.tsx               # EAN widget + MPL badge + IATA
+    contexts/                  # AuthContext (JWT), LanguageContext, ToastContext
+    lib/
+      apiClient.ts             # Centralized API client (JWT auth, 401 refresh)
+      authStorage.ts           # Token storage (access: memory, refresh: localStorage)
+goodman-gls-api/               # Backend (Rails 8 API-only)
+  app/
+    controllers/api/v1/        # Auth, Quotes, Contact, Companies, Users
+    controllers/concerns/      # JwtAuthenticatable (JWT encode/decode/refresh)
+    models/                    # User, Company, QuoteRequest, ContactMessage
+    mailers/                   # UserMailer, ContactMailer
+  config/
+    routes.rb                  # API routes (/api/v1/*)
+    initializers/cors.rb       # Rack::Cors (CORS_ORIGINS env required in production)
+    initializers/rack_attack.rb # Rate limiting (login 5/min, register 3/min)
+  render.yaml                  # Render deployment config
+```
+
+## Agent OS Documentation
+
+Detailed product documentation is available in `.agent-os/product/`:
+
+- **overview.md** - Product vision, target users, business model
+- **roadmap.md** - Development phases and feature prioritization
+- **tech-stack.md** - Complete technology documentation
+- **decisions.md** - Architecture and product decision records
+- **personas.md** - User personas and journey mapping
+
+## Development Guidelines
+
+### Code Style
+- Use TypeScript for all new code
+- Follow existing component patterns
+- Use `'use client'` directive for client components
+- Keep server components where possible for performance
+
+### Styling
+- Use Tailwind CSS classes
+- Dark sections use `bg-[#070612]` background
+- Orange accent color: `#FF6B35`
+- Use `glass-panel` class for frosted glass effects
+
+### Internationalization
+- Translation files in `/messages/en.json` and `/messages/ko.json`
+- Use `useTranslations` hook from LanguageContext
+- Keep both language files in sync
+
+### Forms
+- Use Zod schemas in `/lib/validations/`
+- Combine with react-hook-form for validation
+- Reuse schemas in both client and API routes
+
+## Environment Variables
+
+### Frontend (Vercel)
+```env
+NEXT_PUBLIC_API_URL=      # Rails API URL (e.g., https://goodman-gls-api.onrender.com)
+```
+
+### Backend (Render)
+```env
+DATABASE_URL=             # PostgreSQL connection string
+SECRET_KEY_BASE=          # JWT signing secret (auto-generated by Render)
+RAILS_MASTER_KEY=         # Rails credentials decryption key
+CORS_ORIGINS=             # Allowed origins (e.g., https://goodman-gls.vercel.app)
+FRONTEND_URL=             # Frontend URL for email links
+SENDGRID_API_KEY=         # SendGrid email API key
+CONTACT_EMAIL_TO=         # Contact form recipient email
+```
+
+## Current Status
+
+### Completed
+- Marketing website with GSSA-first landing page
+- WhyGSSA section (value proposition + 4 service pillars)
+- 15 airline partner showcase (6 GSSA groups)
+- Stats section with animated counters
+- EAN widget + MPL badge in footer
+- Bilingual support (EN/KO)
+- Responsive design with parallax animations
+- Vercel deployment (production)
+- Rails 8 API backend (JWT auth, quotes, contact, companies)
+- Security: rack-attack rate limiting, CORS hardening, role-based access
+- Partner portal (login, dashboard, quote request)
+
+### In Progress / Planned
+- Render backend deployment
+- Shipment tracking
+- Admin portal enhancements
+- RSpec test suite
+
+## Key Files
+
+| File | Purpose |
+|------|---------|
+| `src/app/layout.tsx` | Root layout with fonts and metadata |
+| `src/components/ClientLayout.tsx` | Client-side layout wrapper |
+| `src/contexts/LanguageContext.tsx` | i18n context provider |
+| `src/contexts/AuthContext.tsx` | JWT auth context (login/signup/logout/refresh) |
+| `src/lib/apiClient.ts` | Centralized fetch client with 401 auto-refresh |
+| `src/lib/authStorage.ts` | Token storage (access: memory, refresh: localStorage) |
+| `src/lib/validations/contact.ts` | Contact form Zod schema |
+| `goodman-gls-api/app/controllers/concerns/jwt_authenticatable.rb` | JWT encode/decode/refresh concern |
+| `goodman-gls-api/config/initializers/rack_attack.rb` | Rate limiting rules |
