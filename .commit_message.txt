@@ -1,1 +1,1 @@
-🎨 fix(footer): grid 재설계 — lg:grid-cols-12 + gap-32 overflow 해소, SERVICES 컬럼이 container max-w-1280 안으로 정렬됨 (cols-[2fr_1fr_1fr] + gap-20). 1280/1440/1920 col2.right = gridR 일치, 1920 좌우 breathing ~370px 균형. 모바일 grid-cols-1 영향 없음.
+🛡️ feat(api/contact): Origin/Referer 화이트리스트 + IP sliding-window rate limit (src/lib/api-guards.ts, Vitest 17/17, build 7/7 PASS)
