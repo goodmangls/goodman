@@ -1,1 +1,1 @@
-🛡️ feat(api/contact): Origin/Referer 화이트리스트 + IP sliding-window rate limit (src/lib/api-guards.ts, Vitest 17/17, build 7/7 PASS)
+📁 archive(pdca): 2 cycles → docs/archive/2026-05/ (contact-hardening 96% success + prerender-debt 0% framework-debt)

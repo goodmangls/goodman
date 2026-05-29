@@ -1,7 +1,13 @@
 {
-  "activeFeature": "goodman-gls-contact-hardening",
-  "phase": "do",
-  "matchRate": null,
+  "activeFeature": null,
+  "phase": "archived",
+  "matchRate": 96,
+  "lastArchived": {
+    "feature": "goodman-gls-contact-hardening",
+    "date": "2026-05-29",
+    "archivedTo": "docs/archive/2026-05/goodman-gls-contact-hardening/",
+    "matchRate": 96
+  },
   "startedAt": "2026-05-28",
   "history": [
     {
@@ -39,7 +45,9 @@
         "package.json",
         "src/app/api/contact/route.ts",
         ".env.local.example"
-      ]
+      ],
+      "pr": 2,
+      "mergeCommit": "7cac00f"
     },
     {
       "phase": "plan",
@@ -47,6 +55,96 @@
       "feature": "goodman-gls-prerender-debt",
       "document": "docs/01-plan/features/goodman-gls-prerender-debt.plan.md",
       "note": "Vercel auto-deploy unblock 위한 분리 사이클. contact-hardening 활성 사이클과 병행."
+    },
+    {
+      "phase": "design",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-prerender-debt",
+      "document": "docs/02-design/features/goodman-gls-prerender-debt.design.md",
+      "validatorScore": 90,
+      "note": "옵션 A (next/dynamic ssr:false + head inline script) 1차 path. design-validator 90/100. vercel.json '|| true' 빌드 실패 마스킹 제거 추가 발견."
+    },
+    {
+      "phase": "do",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-prerender-debt",
+      "status": "failed-upstream-blocked",
+      "matrix": "Next 16.2.4/16.2.6/16.3-canary × React 19.1/19.2 × Option A on/off (6 builds)",
+      "rootCause": "Next 16 + React 19 framework prerender 자체 버그 — custom global-error.tsx 무관(내부 default 도 동일 오류). application-level 해결 불가.",
+      "partialFinding": "Option A (lazy ThemeProvider) 는 /company-class 페이지에 효과 있음. React 19.1 환경에서만 검증, React 19.2 + Option A + || true 마스킹 조합은 미시도 (별도 사이클 후보).",
+      "action": "베이스라인 복원, vercel.json '|| true' 유지 (Next 16.3 stable 출시까지 마스킹 필요).",
+      "next": "/pdca analyze 로 매트릭스 정식 문서화"
+    },
+    {
+      "phase": "check",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-prerender-debt",
+      "document": "docs/03-analysis/goodman-gls-prerender-debt.analysis.md",
+      "matchRate": 0,
+      "status": "failed-upstream-blocked",
+      "iterateSkipped": true,
+      "iterateSkipReason": "application-level 해결 불가 — pdca-iterator 가 더 시도할 수 있는 후보 없음. 매트릭스가 결정적.",
+      "next": "/pdca report 로 사이클 정리 → /pdca archive 로 자산 docs/archive/2026-05/ 이관"
+    },
+    {
+      "phase": "report",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-prerender-debt",
+      "document": "docs/04-report/goodman-gls-prerender-debt.report.md",
+      "lines": 253,
+      "sections": 11,
+      "framing": "framework debt 확정 사이클 (실패 아님) — 6-row 매트릭스가 표준 자산"
+    },
+    {
+      "phase": "archived",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-prerender-debt",
+      "archivedTo": "docs/archive/2026-05/goodman-gls-prerender-debt/",
+      "documents": [
+        "goodman-gls-prerender-debt.plan.md",
+        "goodman-gls-prerender-debt.design.md",
+        "goodman-gls-prerender-debt.analysis.md",
+        "goodman-gls-prerender-debt.report.md"
+      ],
+      "indexUpdated": "docs/archive/2026-05/_INDEX.md",
+      "unblockTrigger": "Next 16.3 stable 또는 React 19.3 + /_global-error 통과 시 본 Plan/Design 재활용해 Do 재시도"
+    },
+    {
+      "phase": "check",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-contact-hardening",
+      "document": "docs/03-analysis/goodman-gls-contact-hardening.analysis.md",
+      "matchRate": 96,
+      "summary": "FR/알고리즘/테스트/응답/파일 모두 100% 매칭. -4pp 비코드 감점 (manual curl skip -2 + production env 미등록 -2). iterate 불필요, report 권장.",
+      "next": "/pdca report goodman-gls-contact-hardening → ALLOWED_ORIGINS production 등록 (운영 task)"
+    },
+    {
+      "phase": "report",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-contact-hardening",
+      "document": "docs/04-report/goodman-gls-contact-hardening.report.md",
+      "lines": 426,
+      "sizeKB": 18,
+      "matchRate": 96,
+      "framing": "success cycle — PR #2 squash merged main 7cac00f, Check 96% (≥90%), iterate skipped",
+      "lessonsCount": 5,
+      "followupCandidates": 7,
+      "next": "/pdca archive goodman-gls-contact-hardening → docs/archive/2026-05/ 이관"
+    },
+    {
+      "phase": "archived",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-contact-hardening",
+      "archivedTo": "docs/archive/2026-05/goodman-gls-contact-hardening/",
+      "documents": [
+        "goodman-gls-contact-hardening.plan.md",
+        "goodman-gls-contact-hardening.design.md",
+        "goodman-gls-contact-hardening.analysis.md",
+        "goodman-gls-contact-hardening.report.md"
+      ],
+      "indexUpdated": "docs/archive/2026-05/_INDEX.md",
+      "moveMethod": "git mv (plan/design history 보존), mv (analysis/report 신규)",
+      "followupCandidates": "T1~T7 보고서 §8 참조"
     }
   ]
 }
