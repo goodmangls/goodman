@@ -1,16 +1,27 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { contactFormSchema } from '@/lib/validations/contact';
-
-const apiKey = process.env.RESEND_API_KEY;
-const emailTo = process.env.CONTACT_EMAIL_TO;
-const emailFrom = process.env.CONTACT_EMAIL_FROM;
+import {
+  assertAllowedOrigin,
+  enforceRateLimit,
+  getClientIp,
+} from '@/lib/api-guards';
 
 export async function POST(request: Request) {
-  if (!apiKey || !emailTo || !emailFrom) {
+  const originCheck = assertAllowedOrigin(request);
+  if (!originCheck.ok) {
+    return NextResponse.json({ error: 'Origin not allowed' }, { status: 403 });
+  }
+
+  const ip = getClientIp(request);
+  const rate = enforceRateLimit(ip);
+  if (!rate.ok) {
     return NextResponse.json(
-      { error: 'Email service not configured' },
-      { status: 500 }
+      { error: 'Too many requests', retryAfterSec: rate.retryAfterSec },
+      {
+        status: 429,
+        headers: { 'Retry-After': String(rate.retryAfterSec) },
+      },
     );
   }
 
@@ -25,7 +36,17 @@ export async function POST(request: Request) {
   if (!result.success) {
     return NextResponse.json(
       { error: 'Validation failed', issues: result.error.issues },
-      { status: 400 }
+      { status: 400 },
+    );
+  }
+
+  const apiKey = process.env.RESEND_API_KEY;
+  const emailTo = process.env.CONTACT_EMAIL_TO;
+  const emailFrom = process.env.CONTACT_EMAIL_FROM;
+  if (!apiKey || !emailTo || !emailFrom) {
+    return NextResponse.json(
+      { error: 'Email service not configured' },
+      { status: 500 },
     );
   }
 
@@ -43,7 +64,7 @@ export async function POST(request: Request) {
   if (error) {
     return NextResponse.json(
       { error: 'Failed to send email' },
-      { status: 502 }
+      { status: 502 },
     );
   }
 

@@ -1,6 +1,6 @@
 {
   "activeFeature": "goodman-gls-contact-hardening",
-  "phase": "design",
+  "phase": "do",
   "matchRate": null,
   "startedAt": "2026-05-28",
   "history": [
@@ -28,6 +28,25 @@
       "phase": "design",
       "date": "2026-05-28",
       "document": "docs/02-design/features/goodman-gls-contact-hardening.design.md"
+    },
+    {
+      "phase": "do",
+      "date": "2026-05-29",
+      "files": [
+        "src/lib/api-guards.ts",
+        "src/lib/api-guards.test.ts",
+        "vitest.config.ts",
+        "package.json",
+        "src/app/api/contact/route.ts",
+        ".env.local.example"
+      ]
+    },
+    {
+      "phase": "plan",
+      "date": "2026-05-29",
+      "feature": "goodman-gls-prerender-debt",
+      "document": "docs/01-plan/features/goodman-gls-prerender-debt.plan.md",
+      "note": "Vercel auto-deploy unblock 위한 분리 사이클. contact-hardening 활성 사이클과 병행."
     }
   ]
 }
