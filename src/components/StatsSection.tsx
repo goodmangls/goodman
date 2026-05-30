@@ -46,7 +46,10 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="section-surface-obsidian section-spacing">
+    <section
+      aria-label={t('home.stats.eyebrow')}
+      className="section-surface-obsidian section-spacing"
+    >
       <div className="container-wide">
         <p className="eyebrow mb-12">{t('home.stats.eyebrow')}</p>
 

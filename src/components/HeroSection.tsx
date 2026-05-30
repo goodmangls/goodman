@@ -9,7 +9,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function HeroSection() {
   const { t } = useLanguage();
   return (
-    <section className="relative hero-spacing overflow-hidden">
+    <section
+      aria-labelledby="hero-heading"
+      className="relative hero-spacing overflow-hidden"
+    >
       {/* Full-bleed imagery */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -41,6 +44,7 @@ export default function HeroSection() {
           >
             <DisplayLines
               as="h1"
+              id="hero-heading"
               lines={[t('home.hero.titleLine1'), t('home.hero.titleLine2')]}
               className="display-hero text-canvas-white mb-8"
             />

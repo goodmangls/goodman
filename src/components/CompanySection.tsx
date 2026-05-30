@@ -8,12 +8,17 @@ const valueKeys = ['trust', 'velocity', 'connectivity'];
 export default function CompanySection() {
   const { t } = useLanguage();
   return (
-    <section id="company" className="bg-canvas section-spacing">
+    <section
+      id="company"
+      aria-labelledby="company-heading"
+      className="bg-canvas section-spacing"
+    >
       <div className="container-wide">
         <div className="max-w-3xl mb-16">
           <p className="eyebrow mb-6">{t('home.company.eyebrow')}</p>
           <DisplayLines
             as="h2"
+            id="company-heading"
             lines={[t('home.company.titleLine1'), t('home.company.titleLine2')]}
             className="display-lg text-ink mb-8"
           />

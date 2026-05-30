@@ -8,12 +8,17 @@ const pillarKeys = ['sales', 'capacity', 'intelligence', 'digital'];
 export default function WhyGSSASection() {
   const { t } = useLanguage();
   return (
-    <section id="services" className="bg-canvas section-spacing">
+    <section
+      id="services"
+      aria-labelledby="why-heading"
+      className="bg-canvas section-spacing"
+    >
       <div className="container-wide">
         <div className="max-w-3xl mb-16">
           <p className="eyebrow mb-6">{t('home.why.eyebrow')}</p>
           <DisplayLines
             as="h2"
+            id="why-heading"
             lines={[t('home.why.titleLine1'), t('home.why.titleLine2')]}
             className="display-lg text-ink mb-8"
           />

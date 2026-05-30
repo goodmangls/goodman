@@ -13,7 +13,10 @@ const memberships = [
 export default function TrustBadges() {
   const { t } = useLanguage();
   return (
-    <div className="bg-canvas py-12 border-b border-hairline">
+    <section
+      aria-label={t('home.trust.eyebrow')}
+      className="bg-canvas py-12 border-b border-hairline"
+    >
       <div className="container-wide">
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
           <span className="eyebrow">{t('home.trust.eyebrow')}</span>
@@ -33,6 +36,6 @@ export default function TrustBadges() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

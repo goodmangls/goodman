@@ -8,12 +8,16 @@ const serviceKeys = ['air', 'ocean', 'project', 'aero'];
 export default function ServicesShowcase() {
   const { t } = useLanguage();
   return (
-    <section className="section-surface-obsidian section-spacing">
+    <section
+      aria-labelledby="services-showcase-heading"
+      className="section-surface-obsidian section-spacing"
+    >
       <div className="container-wide">
         <div className="max-w-3xl mb-16">
           <p className="eyebrow mb-6">{t('home.services.eyebrow')}</p>
           <DisplayLines
             as="h2"
+            id="services-showcase-heading"
             lines={[t('home.services.titleLine1'), t('home.services.titleLine2')]}
             className="display-lg text-canvas-white mb-8"
           />

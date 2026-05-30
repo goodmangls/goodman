@@ -29,7 +29,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="section-surface-obsidian pt-32 pb-20 md:pt-40">
+    <footer
+      aria-labelledby="footer-heading"
+      className="section-surface-obsidian pt-32 pb-20 md:pt-40"
+    >
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr] gap-20 lg:gap-20 mb-24">
           <div className="flex flex-col justify-between">
@@ -44,6 +47,7 @@ export default function Footer() {
               </div>
               <DisplayLines
                 as="h2"
+                id="footer-heading"
                 lines={[t('home.footer.titleLine1'), t('home.footer.titleLine2')]}
                 className="display-lg text-canvas-white mb-12 max-w-lg"
               />

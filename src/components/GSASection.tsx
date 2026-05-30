@@ -17,11 +17,15 @@ const partners = [
 export default function GSASection() {
   const { t } = useLanguage();
   return (
-    <section id="network" className="bg-canvas section-spacing">
+    <section
+      id="network"
+      aria-labelledby="gsa-heading"
+      className="bg-canvas section-spacing"
+    >
       <div className="container-wide">
         <div className="max-w-4xl mb-16">
           <p className="eyebrow mb-6">{t('home.gsa.eyebrow')}</p>
-          <h2 className="display-lg text-ink mb-6">{t('home.gsa.title')}</h2>
+          <h2 id="gsa-heading" className="display-lg text-ink mb-6">{t('home.gsa.title')}</h2>
           <p className="body-lg text-muted">
             {t('home.gsa.lead')}
           </p>

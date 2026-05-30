@@ -7,12 +7,16 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function NetworkManifesto() {
   const { t } = useLanguage();
   return (
-    <section className="bg-canvas section-spacing">
+    <section
+      aria-labelledby="network-manifesto-heading"
+      className="bg-canvas section-spacing"
+    >
       <div className="container-wide">
         <div className="section-surface-obsidian rounded-[var(--radius-feature)] p-12 md:p-16 lg:p-20 max-w-4xl">
           <p className="eyebrow mb-8">{t('home.network.eyebrow')}</p>
           <DisplayLines
             as="h2"
+            id="network-manifesto-heading"
             lines={[t('home.network.titleLine1'), t('home.network.titleLine2')]}
             className="display-lg text-canvas-white mb-10"
           />
