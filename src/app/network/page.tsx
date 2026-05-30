@@ -23,7 +23,10 @@ export default function NetworkPage() {
   return (
     <main className="bg-canvas min-h-screen">
       {/* Header */}
-      <section className="page-hero">
+      <section
+        aria-labelledby="network-hero-heading"
+        className="page-hero"
+      >
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -33,6 +36,7 @@ export default function NetworkPage() {
             <span className="eyebrow mb-6">{t('pages.network.heroEyebrow')}</span>
             <DisplayLines
               as="h1"
+              id="network-hero-heading"
               lines={[t('pages.network.heroTitle1'), t('pages.network.heroTitle2')]}
               className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter"
             />
@@ -44,7 +48,10 @@ export default function NetworkPage() {
       </section>
 
       {/* Network Cards */}
-      <section className="section-spacing bg-canvas">
+      <section
+        aria-label={t('pages.network.partnersLabel')}
+        className="section-spacing bg-canvas"
+      >
         <div className="container-wide">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {networks.map((net) => {
@@ -80,11 +87,14 @@ export default function NetworkPage() {
       </section>
 
       {/* GSSA Section - Specialized capability */}
-      <section className="section-spacing bg-canvas">
+      <section
+        aria-labelledby="network-gssa-heading"
+        className="section-spacing bg-canvas"
+      >
         <div className="container-wide">
           <div className="max-w-4xl mb-24">
             <span className="eyebrow mb-6">{t('pages.network.gssaEyebrow')}</span>
-            <h2 className="display-lg text-ink mb-10 leading-none">{t('pages.network.gssaTitle')}</h2>
+            <h2 id="network-gssa-heading" className="display-lg text-ink mb-10 leading-none">{t('pages.network.gssaTitle')}</h2>
             <p className="body-lg text-muted max-w-2xl leading-relaxed">
               {t('pages.network.gssaLead')}
             </p>
@@ -125,9 +135,12 @@ export default function NetworkPage() {
       </section>
 
       {/* Global ecosystem */}
-      <section className="section-spacing bg-canvas">
+      <section
+        aria-labelledby="network-ecosystem-heading"
+        className="section-spacing bg-canvas"
+      >
         <div className="container-wide text-center">
-          <h2 className="display-lg text-ink mb-20 tracking-tighter">{t('pages.network.ecosystemTitle')}</h2>
+          <h2 id="network-ecosystem-heading" className="display-lg text-ink mb-20 tracking-tighter">{t('pages.network.ecosystemTitle')}</h2>
           <div className="max-w-6xl mx-auto">
             <div className="aspect-auto md:aspect-[21/9] section-surface-obsidian rounded-[var(--radius-feature)] p-12 md:p-16 flex items-center justify-center relative">
                {/* Background patterns */}

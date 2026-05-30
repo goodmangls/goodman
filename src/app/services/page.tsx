@@ -35,7 +35,10 @@ export default function ServicesPage() {
   return (
     <main className="bg-canvas min-h-screen">
       {/* Page Hero */}
-      <section className="page-hero">
+      <section
+        aria-labelledby="services-hero-heading"
+        className="page-hero"
+      >
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +46,7 @@ export default function ServicesPage() {
             className="max-w-5xl"
           >
             <span className="eyebrow mb-6">{t('pages.services.heroEyebrow')}</span>
-            <h1 className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter">
+            <h1 id="services-hero-heading" className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter">
               {t('pages.services.heroTitle')}
             </h1>
             <p className="body-lg text-muted max-w-2xl">
@@ -54,7 +57,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Navigation / Quick Links */}
-      <section className="py-6 bg-canvas border-b border-hairline sticky top-16 md:top-16 z-30 backdrop-blur-xl bg-canvas/80">
+      <section
+        aria-label={t('pages.services.quickAccess')}
+        className="py-6 bg-canvas border-b border-hairline sticky top-16 md:top-16 z-30 backdrop-blur-xl bg-canvas/80"
+      >
         <div className="container-wide flex flex-wrap gap-4 md:gap-8 items-center">
           <span className="eyebrow mr-4">{t('pages.services.quickAccess')}</span>
           {services.map((s) => (
@@ -68,7 +74,12 @@ export default function ServicesPage() {
       {/* Services Modular Blocks */}
       <div className="section-spacing space-y-24 md:space-y-32">
         {services.map((service, index) => { const isDark = index % 2 === 1; const main = isDark ? "text-canvas-white" : "text-ink"; const sub = isDark ? "text-canvas-white/75" : "text-muted"; const border = isDark ? "border-canvas-white/20" : "border-hairline"; const dot = isDark ? "bg-canvas-white/50" : "bg-ink/40"; const caseMeta = isDark ? "text-canvas-white/35" : "text-muted"; const caseBtn = isDark ? "text-canvas-white/55 hover:text-canvas-white" : "text-muted hover:text-ink"; return (
-          <section key={service.id} id={service.id} className="container-wide scroll-mt-32">
+          <section
+            key={service.id}
+            id={service.id}
+            aria-labelledby={`services-${service.id}-heading`}
+            className="container-wide scroll-mt-32"
+          >
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +95,7 @@ export default function ServicesPage() {
                          </div>
                          <span className="eyebrow">{service.name}</span>
                       </div>
-                      <h2 className={`display-lg ${main} mb-8 leading-none tracking-tight`}>{service.tagline}</h2>
+                      <h2 id={`services-${service.id}-heading`} className={`display-lg ${main} mb-8 leading-none tracking-tight`}>{service.tagline}</h2>
                       <p className={`body-lg ${sub} mb-12 max-w-xl leading-relaxed`}>{service.overview}</p>
                    </div>
                    
@@ -136,7 +147,10 @@ export default function ServicesPage() {
       </div>
 
       {/* Unified CTA Section */}
-      <section className="section-surface-obsidian section-spacing overflow-hidden relative">
+      <section
+        aria-labelledby="services-cta-heading"
+        className="section-surface-obsidian section-spacing overflow-hidden relative"
+      >
         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="container-wide text-center relative z-10">
           <motion.div
@@ -146,6 +160,7 @@ export default function ServicesPage() {
           >
             <DisplayLines
               as="h2"
+              id="services-cta-heading"
               lines={[t('pages.services.ctaTitle1'), t('pages.services.ctaTitle2')]}
               className="display-xl text-canvas-white mb-12 tracking-tighter leading-none"
             />

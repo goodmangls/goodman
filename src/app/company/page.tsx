@@ -18,7 +18,10 @@ export default function CompanyPage() {
   return (
     <main className="bg-canvas min-h-screen">
       {/* Header */}
-      <section className="page-hero bg-canvas border-b border-hairline">
+      <section
+        aria-labelledby="company-hero-heading"
+        className="page-hero bg-canvas border-b border-hairline"
+      >
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -28,6 +31,7 @@ export default function CompanyPage() {
             <span className="eyebrow mb-6">{t('pages.company.heroEyebrow')}</span>
             <DisplayLines
               as="h1"
+              id="company-hero-heading"
               lines={[t('pages.company.heroTitleLine1'), t('pages.company.heroTitleLine2')]}
               className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter"
             />
@@ -37,9 +41,12 @@ export default function CompanyPage() {
       </section>
 
       {/* CEO Message - Editorial Pink Block */}
-      <section className="section-spacing bg-canvas">
+      <section
+        aria-labelledby="company-ceo-heading"
+        className="section-spacing bg-canvas"
+      >
         <div className="container-wide">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -49,7 +56,7 @@ export default function CompanyPage() {
               <div className="lg:col-span-7 p-10 md:p-16 lg:p-24 border-b lg:border-b-0 lg:border-r border-ink/10 flex flex-col justify-between">
                 <div>
                   <span className="figma-mono text-xs tracking-widest text-ink/40 block mb-16 font-bold uppercase">{t('pages.company.ceoEyebrow')}</span>
-                  <h2 className="display-lg text-ink mb-12 tracking-tight leading-none italic">&ldquo;{t('pages.company.ceoQuote')}&rdquo;</h2>
+                  <h2 id="company-ceo-heading" className="display-lg text-ink mb-12 tracking-tight leading-none italic">&ldquo;{t('pages.company.ceoQuote')}&rdquo;</h2>
                   <div className="space-y-8 body-lg text-ink/80 leading-relaxed max-w-2xl">
                     <p>{t('pages.company.ceoP1')}</p>
                     <p>{t('pages.company.ceoP2')}</p>
@@ -78,12 +85,15 @@ export default function CompanyPage() {
       </section>
 
       {/* Timeline - Heritage Stream */}
-      <section className="section-spacing bg-canvas">
+      <section
+        aria-labelledby="company-heritage-heading"
+        className="section-spacing bg-canvas"
+      >
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-32">
               <span className="eyebrow block mb-6">{t('pages.company.heritageEyebrow')}</span>
-              <h2 className="display-lg text-ink tracking-tighter">{t('pages.company.heritageTitle')}</h2>
+              <h2 id="company-heritage-heading" className="display-lg text-ink tracking-tighter">{t('pages.company.heritageTitle')}</h2>
             </div>
             
             <div className="relative">
@@ -135,12 +145,16 @@ export default function CompanyPage() {
       </section>
 
       {/* Team - Lilac Grid */}
-      <section className="section-spacing bg-color-block-lilac border-y border-hairline">
+      <section
+        aria-labelledby="company-team-heading"
+        className="section-spacing bg-color-block-lilac border-y border-hairline"
+      >
         <div className="container-wide">
           <div className="max-w-4xl mb-24">
             <span className="figma-mono text-sm tracking-widest text-ink/40 block mb-6 uppercase font-bold">{t('pages.company.teamEyebrow')}</span>
             <DisplayLines
               as="h2"
+              id="company-team-heading"
               lines={[t('pages.company.teamTitleLine1'), t('pages.company.teamTitleLine2')]}
               className="display-lg text-ink mb-10 tracking-tight leading-none"
             />
@@ -184,7 +198,10 @@ export default function CompanyPage() {
       </section>
 
       {/* Values - High Contrast Dark */}
-      <section className="section-spacing bg-ink text-canvas overflow-hidden relative">
+      <section
+        aria-labelledby="company-values-heading"
+        className="section-spacing bg-ink text-canvas overflow-hidden relative"
+      >
         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
         <div className="container-wide text-center relative z-10">
           <motion.div
@@ -192,7 +209,7 @@ export default function CompanyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="display-xl mb-32 tracking-tighter leading-none">{t('pages.company.valuesTitle')}</h2>
+            <h2 id="company-values-heading" className="display-xl mb-32 tracking-tighter leading-none">{t('pages.company.valuesTitle')}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto">
               {['trust', 'velocity', 'connectivity'].map((key) => (
