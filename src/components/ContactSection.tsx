@@ -53,13 +53,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-canvas section-spacing">
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="bg-canvas section-spacing"
+    >
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           <div>
             <p className="eyebrow mb-6">{t('home.contact.eyebrow')}</p>
             <DisplayLines
               as="h2"
+              id="contact-heading"
               lines={[t('home.contact.titleLine1'), t('home.contact.titleLine2')]}
               className="display-lg text-ink mb-8"
             />

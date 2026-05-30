@@ -73,6 +73,7 @@ export default function Navigation() {
   return (
     <>
       <nav
+        aria-label="Primary"
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-center transition-all duration-500 ${navSurface}`}
       >
         <div className="container-wide flex items-center justify-between h-full w-full">
