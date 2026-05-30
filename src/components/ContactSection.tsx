@@ -1,10 +1,12 @@
 'use client';
 
 import { contactFormSchema, type ContactFormData } from '@/lib/validations/contact';
+import { useLanguage } from '@/contexts/LanguageContext';
 import DisplayLines from './DisplayLines';
 import { useState } from 'react';
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState<ContactFormData>({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -51,33 +53,35 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-canvas section-spacing">
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="bg-canvas section-spacing"
+    >
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           <div>
-            <p className="eyebrow mb-6">Connect</p>
+            <p className="eyebrow mb-6">{t('contact.eyebrow')}</p>
             <DisplayLines
               as="h2"
-              lines={["Let's talk about", 'your cargo.']}
+              id="contact-heading"
+              lines={[t('contact.headingLine1'), t('contact.headingLine2')]}
               className="display-lg text-ink mb-8"
             />
-            <p className="body-lg text-muted mb-12 max-w-xl">
-              24/7 support for your logistics needs. We represent your brand in Korea with
-              technical precision.
-            </p>
+            <p className="body-lg text-muted mb-12 max-w-xl">{t('contact.lead')}</p>
 
             <div className="feature-stack max-w-md">
               <div className="feature-stack-item">
-                <h4 className="headline text-ink mb-1">Office</h4>
-                <p className="body-default text-muted">Gangseo IT Valley, Seoul, South Korea</p>
+                <h4 className="headline text-ink mb-1">{t('contact.info.officeLabel')}</h4>
+                <p className="body-default text-muted">{t('contact.info.officeValue')}</p>
               </div>
               <div className="feature-stack-item">
-                <h4 className="headline text-ink mb-1">Email</h4>
-                <p className="body-default text-muted">contact@goodmangls.com</p>
+                <h4 className="headline text-ink mb-1">{t('contact.info.emailLabel')}</h4>
+                <p className="body-default text-muted">{t('contact.info.emailValue')}</p>
               </div>
               <div className="feature-stack-item">
-                <h4 className="headline text-ink mb-1">Hours</h4>
-                <p className="body-default text-muted">Mon–Fri 9:00–18:00 KST</p>
+                <h4 className="headline text-ink mb-1">{t('contact.info.hoursLabel')}</h4>
+                <p className="body-default text-muted">{t('contact.info.hoursValue')}</p>
               </div>
             </div>
           </div>
@@ -86,7 +90,7 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="contact-name" className="body-sm font-bold mb-2 block text-ink">
-                  Name
+                  {t('contact.form.nameLabel')}
                 </label>
                 <input
                   type="text"
@@ -95,13 +99,13 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-canvas border border-hairline rounded-[var(--radius-feature)] focus:border-obsidian outline-none transition-colors"
-                  placeholder="Enter your name"
+                  placeholder={t('contact.form.namePlaceholder')}
                 />
                 {errors.name && <p className="mt-2 text-xs text-red-600">{errors.name}</p>}
               </div>
               <div>
                 <label htmlFor="contact-email" className="body-sm font-bold mb-2 block text-ink">
-                  Email
+                  {t('contact.form.emailLabel')}
                 </label>
                 <input
                   type="email"
@@ -110,13 +114,13 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-canvas border border-hairline rounded-[var(--radius-feature)] focus:border-obsidian outline-none transition-colors"
-                  placeholder="Enter your email"
+                  placeholder={t('contact.form.emailPlaceholder')}
                 />
                 {errors.email && <p className="mt-2 text-xs text-red-600">{errors.email}</p>}
               </div>
               <div>
                 <label htmlFor="contact-message" className="body-sm font-bold mb-2 block text-ink">
-                  Message
+                  {t('contact.form.messageLabel')}
                 </label>
                 <textarea
                   id="contact-message"
@@ -125,7 +129,7 @@ export default function ContactSection() {
                   onChange={handleChange}
                   rows={4}
                   className="w-full px-4 py-3 bg-canvas border border-hairline rounded-[var(--radius-feature)] focus:border-obsidian outline-none transition-colors resize-none"
-                  placeholder="Tell us about your requirements"
+                  placeholder={t('contact.form.messagePlaceholder')}
                 />
                 {errors.message && <p className="mt-2 text-xs text-red-600">{errors.message}</p>}
               </div>
@@ -133,12 +137,12 @@ export default function ContactSection() {
               <div className="pt-2">
                 {submitStatus === 'success' && (
                   <div className="mb-6 p-4 bg-canvas border border-hairline rounded-[var(--radius-feature)] text-sm text-ink">
-                    Message sent successfully.
+                    {t('contact.form.successAlert')}
                   </div>
                 )}
                 {submitStatus === 'error' && (
                   <div className="mb-6 p-4 bg-canvas border border-hairline rounded-[var(--radius-feature)] text-sm text-red-600">
-                    Failed to send message. Please try again.
+                    {t('contact.form.errorAlert')}
                   </div>
                 )}
                 <button
@@ -146,7 +150,7 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   className="btn-pill-primary w-full justify-center"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send message'}
+                  {isSubmitting ? t('contact.form.submitSending') : t('contact.form.submitIdle')}
                 </button>
               </div>
             </form>
