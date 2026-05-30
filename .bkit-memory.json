@@ -1,7 +1,7 @@
 {
-  "activeFeature": null,
-  "phase": "archived",
-  "matchRate": 96,
+  "activeFeature": "goodman-gls-nav-i18n",
+  "phase": "design",
+  "matchRate": null,
   "lastArchived": {
     "feature": "goodman-gls-contact-hardening",
     "date": "2026-05-29",
@@ -10,6 +10,26 @@
   },
   "startedAt": "2026-05-28",
   "history": [
+    {
+      "phase": "plan",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "document": "docs/01-plan/features/goodman-gls-nav-i18n.plan.md",
+      "note": "T3 후속 사이클 시작. 보고서 §8 의 '\"Contact Us\" 버튼 중복' 기술이 현재 코드와 불일치 — 실제 부채는 Navigation/ContactSection 의 t() 미사용 + aria-labelledby 부재로 스코프 정정. Open Question 4건 Design 단계 확정 예정."
+    },
+    {
+      "phase": "design",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "document": "docs/02-design/features/goodman-gls-nav-i18n.design.md",
+      "openQuestionsResolved": "Q1 stale 4키 0 사용처 → 삭제 / Q2 문의하기·시작하기 (사용자 결정) / Q3 OOS 유지 (sectional-i18n-rollout 후속) / Q4 suppressHydrationWarning 이미 wired",
+      "addedFinding": "DisplayLines id prop 미지원 → 1줄 prop 추가 명시 (R-3 해소)",
+      "implementationCommits": "A: messages atomic / B: Navigation / C: ContactSection+DisplayLines",
+      "estimate": "~40m do (전체 사이클 1.75h)",
+      "validatorScore": 94,
+      "validatorImprovementsApplied": "DisplayLines id prop 사유 §4.3 추가 / ko baseline 기대치 §2.4 추가 (94→96+ 기대)",
+      "note": "design-validator 94/100 PASS — Plan §10 90+ 기대 충족. Do 진입 준비 완료."
+    },
     {
       "phase": "plan",
       "date": "2026-04-09",
