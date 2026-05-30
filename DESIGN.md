@@ -212,6 +212,15 @@ This repository applies the Hyer reference as a **hybrid** B2B marketing system:
 
 > **Note (framework debt)**: A separately-tested *lazy* `ThemeProvider` via `next/dynamic({ ssr: false })` was investigated under `goodman-gls-prerender-debt` to bypass a Next 16 + React 19 `/_global-error` prerender bug, but **was not shipped** — root cause is upstream. `vercel.json` keeps `next build || true` masking until Next 16.3 stable / React 19.3 unblock. Archive: `docs/archive/2026-05/goodman-gls-prerender-debt/`.
 
+### Korean typography (i18n)
+
+The display scale (`.display-*`, `.headline`) is tuned for Latin (Inter): negative letter-spacing (`-0.02em` ~ `-0.015em`) and sub-1.0 leading (`0.85` ~ `0.91`). Hangul has uniform-width glyphs and 받침, so that tightness reads as cramped and clips between lines. `LanguageContext` sets `<html lang="ko">` when the locale toggles, so `globals.css` scopes overrides with `:lang(ko)` — Korean only:
+
+- `letter-spacing: normal` + `word-break: keep-all` (break on 어절, not mid-cluster) on all display/headline classes
+- relaxed `line-height` per class (hero `1.1`, xl `1.14`, lg `1.18`, md `1.22`, headline `1.3`)
+
+English brand slogans rendered under the Korean locale (e.g. `home.company.titleLine*`, footer tagline) inherit `letter-spacing: normal` here too — acceptable, slightly less condensed than the EN view.
+
 ---
 
 ## Similar Brands

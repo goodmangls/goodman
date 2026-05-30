@@ -168,6 +168,39 @@ body {
   text-transform: uppercase;
 }
 
+/* Korean locale — the display scale is tuned for Latin (Inter): negative
+   tracking + sub-1.0 leading. Hangul has uniform-width glyphs and 받침, so
+   that tightness reads as cramped and clips between lines. LanguageContext
+   sets <html lang="ko">, so :lang(ko) scopes these overrides to Korean only. */
+:lang(ko) .display-hero,
+:lang(ko) .display-xl,
+:lang(ko) .display-lg,
+:lang(ko) .display-md,
+:lang(ko) .headline {
+  letter-spacing: normal;
+  word-break: keep-all;
+}
+
+:lang(ko) .display-hero {
+  line-height: 1.1;
+}
+
+:lang(ko) .display-xl {
+  line-height: 1.14;
+}
+
+:lang(ko) .display-lg {
+  line-height: 1.18;
+}
+
+:lang(ko) .display-md {
+  line-height: 1.22;
+}
+
+:lang(ko) .headline {
+  line-height: 1.3;
+}
+
 .text-muted {
   color: var(--color-slate-mist);
 }
