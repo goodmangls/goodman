@@ -14,6 +14,9 @@ const footerLinks = {
   services: [
     { key: 'air', href: '/services#air' },
     { key: 'ocean', href: '/services#ocean' },
+    { key: 'land', href: '/services#land' },
+    { key: 'customs', href: '/services#customs' },
+    { key: 'warehouse', href: '/services#warehouse' },
     { key: 'project', href: '/services#project' },
   ],
   legal: [

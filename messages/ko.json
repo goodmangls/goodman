@@ -9,11 +9,11 @@
   "home": {
     "hero": {
       "eyebrow": "Small Giant. Big Impact.",
-      "titleLine1": "한국 시장의",
-      "titleLine2": "화물 영업 팀",
-      "lead": "15개 이상 항공사를 대표하는 GSSA. ECS Group을 통한 59개국 네트워크 — 귀사의 화물을 우리 것처럼 판매하는 전담 팀입니다.",
+      "titleLine1": "한국과 세계를 잇는",
+      "titleLine2": "종합물류 파트너",
+      "lead": "항공·해상·육상·통관·창고를 한곳에서. 59개국 글로벌 네트워크와 한국 현지 전문성으로 화물의 전 여정을 책임집니다.",
       "ctaPrimary": "시작하기",
-      "ctaSecondary": "네트워크 보기"
+      "ctaSecondary": "서비스 보기"
     },
     "trust": {
       "eyebrow": "신뢰의 멤버십"
@@ -21,65 +21,75 @@
     "stats": {
       "eyebrow": "숫자로 보는 성과",
       "years": "업력(년)",
-      "airlines": "대표 항공사",
+      "services": "종합물류 서비스",
       "countries": "연결 국가",
       "offices": "국내 사무소"
     },
     "why": {
       "eyebrow": "우리가 하는 일",
-      "titleLine1": "항공사처럼 사고하고,",
-      "titleLine2": "귀사의 팀처럼 움직입니다.",
-      "lead": "GSSA는 단순 중개인이 아닙니다. 우리는 한국에서 귀사의 전담 영업 조직으로서, 귀사의 공급력을 판매하고 브랜드를 관리하며 매출을 우리 사업처럼 키웁니다.",
+      "titleLine1": "하나의 팀이,",
+      "titleLine2": "전 구간을 책임집니다.",
+      "lead": "GOODMAN GLS는 항공·해상·육상 운송부터 통관, 창고·3PL까지 공급망 전 구간을 한 팀에서 설계하고 실행합니다. 복잡한 물류를 단순하게 만듭니다.",
       "pillars": {
         "sales": {
-          "title": "시장에서",
-          "description": "똑똑하게 팔고, 빠르게 움직이며, 일관되게 실행합니다. 현지 팀이 한국의 모든 포워더와 노선을 꿰뚫고 있습니다."
+          "title": "멀티모달 운송",
+          "description": "항공·해상·육상을 최적으로 조합해 비용과 속도의 균형을 맞춥니다."
         },
         "capacity": {
-          "title": "하늘에서",
-          "description": "동적 운임, 수익 최적화, 전략적 공간 배분으로 운항편당 매출을 극대화합니다."
+          "title": "통관·규제",
+          "description": "수출입 통관, 관세 분류, 규제 대응을 전담 처리해 지연 없이 통과시킵니다."
         },
         "intelligence": {
-          "title": "현장에서",
-          "description": "교역 흐름 분석, 시즌 예측, 규제 인텔리전스를 매주 업데이트해 파트너에게 제공합니다."
+          "title": "창고·3PL",
+          "description": "보관, 재고관리, 유통가공, 라스트마일까지 하나의 통합 서비스로 운영합니다."
         },
         "digital": {
-          "title": "클라우드에서",
-          "description": "실시간 대시보드, API 연동, 디지털 부킹 플랫폼을 손끝에서 제공합니다."
+          "title": "디지털 가시성",
+          "description": "실시간 추적, 대시보드, API 연동으로 화물 전 구간을 투명하게 보여드립니다."
         }
       }
     },
     "gsa": {
-      "eyebrow": "파트너십",
-      "title": "우리가 대표하는 항공사",
-      "lead": "전 세계 항공사가 한국 시장 확대를 위해 신뢰하는 파트너. 국적 항공사부터 전문 화물기까지.",
+      "eyebrow": "특화 역량",
+      "title": "항공사 화물 영업 대행 (GSSA)",
+      "lead": "종합물류 역량에 더해, 15개 이상 항공사를 대표하는 GSSA 사업을 운영합니다. 항공사에는 한국 시장의 전담 영업팀을, 포워더에는 안정적인 공급력을 제공합니다.",
       "cta": "파트너 되기"
     },
     "services": {
-      "eyebrow": "역량",
-      "titleLine1": "GSSA를 넘어 —",
-      "titleLine2": "통합 물류 역량",
-      "lead": "항공사 파트너십을 보완하는 항공·해상·프로젝트 화물 전문성. 모든 화물에 속도와 신뢰를 담습니다.",
+      "eyebrow": "종합물류 서비스",
+      "titleLine1": "항공부터 창고까지,",
+      "titleLine2": "원스톱 종합물류",
+      "lead": "화물의 전 여정을 아우르는 6대 핵심 서비스. 모든 화물에 속도와 신뢰를 담습니다.",
       "items": {
         "air": {
           "name": "항공 화물",
           "tagline": "1분이 중요할 때",
-          "description": "주요 항공사 GSA/CSA 전문성을 바탕으로 한 특송·긴급 항공 화물 솔루션."
+          "description": "주요 항공사 직접 계약을 통한 우선 부킹과 특송·긴급 항공 화물 솔루션."
         },
         "ocean": {
           "name": "해상 화물",
           "tagline": "글로벌 도달, 현지 전문성",
-          "description": "전 세계 FCL(만재)·LCL(혼재) 서비스."
+          "description": "전 세계 FCL(만재)·LCL(혼재) 및 특수 컨테이너 서비스."
+        },
+        "land": {
+          "name": "육상 운송",
+          "tagline": "문 앞까지, 빈틈없이",
+          "description": "전국 트럭킹과 내륙 복합운송으로 항공·해상 구간과 끊김 없이 연결합니다."
+        },
+        "customs": {
+          "name": "통관·관세",
+          "tagline": "복잡한 규제를 매끄럽게",
+          "description": "수출입 통관, HS 분류, 관세 최적화, FTA 활용을 처음부터 끝까지 처리합니다."
+        },
+        "warehouse": {
+          "name": "창고·3PL",
+          "tagline": "보관에서 배송까지",
+          "description": "보관, 재고관리, 유통가공, 풀필먼트를 아우르는 통합 3PL 운영."
         },
         "project": {
           "name": "프로젝트 화물",
           "tagline": "복잡함을 단순하게",
           "description": "대형·중량·고가 프로젝트 화물을 위한 전문 처리."
-        },
-        "aero": {
-          "name": "Goodman Aero Solutions",
-          "tagline": "전문성의 완성",
-          "description": "AOG 지원·부품 판매 등 안전한 항공기 운항을 뒷받침하는 토탈 솔루션."
         }
       }
     },
@@ -87,7 +97,7 @@
       "eyebrow": "2014년 설립",
       "titleLine1": "Small Giant.",
       "titleLine2": "Big Impact.",
-      "lead": "전문 GSSA로서 항공 화물 대리는 부업이 아니라 우리의 핵심 정체성입니다. ECS Group의 지원과 기술적 정밀함, 현지 전문성으로 몇 배 규모의 기업에 견줍니다.",
+      "lead": "2014년 설립 이래 GOODMAN GLS는 항공·해상·육상·통관·창고를 아우르는 종합물류 기업으로 성장했습니다. ECS Group의 글로벌 인프라와 현지 전문성으로 몇 배 규모의 기업에 견줍니다.",
       "values": {
         "trust": {
           "title": "신뢰",
@@ -109,7 +119,7 @@
       "eyebrow": "확장을 위한 설계",
       "titleLine1": "몇 배 규모의 기업에",
       "titleLine2": "견주는 역량.",
-      "lead": "59개국에 걸친 세계 최대 GSSA 인프라 ECS Group을 통해, 전문 팀의 민첩함을 유지하면서 다국적 기업의 네트워크를 활용합니다.",
+      "lead": "59개국 글로벌 물류 네트워크와 ECS Group 인프라를 통해, 전문 팀의 민첩함을 유지하면서 다국적 기업 수준의 도달 범위를 제공합니다.",
       "cta": "네트워크 보기"
     },
     "partnerHub": {
@@ -127,7 +137,7 @@
       "eyebrow": "연결",
       "titleLine1": "귀사의 화물,",
       "titleLine2": "이야기해요.",
-      "lead": "물류 수요에 대한 24/7 지원. 기술적 정밀함으로 한국에서 귀사의 브랜드를 대표합니다.",
+      "lead": "물류 수요에 대한 24/7 지원. 항공·해상·육상·통관·창고까지 한 번에 상담하세요.",
       "office": "사무소",
       "officeValue": "강서 IT 밸리, 서울, 대한민국",
       "email": "이메일",
@@ -147,7 +157,7 @@
     "footer": {
       "titleLine1": "The Small Giant.",
       "titleLine2": "Global Impact.",
-      "lead": "2014년부터 물류 대리의 수준을 끌어올립니다. 현지화된 한국 전문성으로 귀사의 글로벌 비전을 위한 인프라를 제공합니다.",
+      "lead": "2014년부터 한국의 종합물류를 책임집니다. 항공·해상·육상·통관·창고를 아우르는 원스톱 솔루션과 글로벌 네트워크를 제공합니다.",
       "cta": "파트너십 시작하기",
       "companyHeading": "회사",
       "servicesHeading": "서비스",
@@ -157,15 +167,151 @@
         "partnerHub": "파트너 허브",
         "air": "항공 화물",
         "ocean": "해상 화물",
+        "land": "육상 운송",
+        "customs": "통관·관세",
+        "warehouse": "창고·3PL",
         "project": "프로젝트 화물",
         "privacy": "개인정보처리방침",
         "terms": "이용약관"
       },
       "copyright": "© 2026 GOODMAN Global Logistics Service. All rights reserved.",
-      "tagline": "한국 화물 GSSA · ECS Group 파트너"
+      "tagline": "종합물류 · 항공사 GSSA · ECS Group 파트너"
     }
   },
   "pages": {
+    "services": {
+      "heroEyebrow": "우리의 역량",
+      "heroTitle": "끝에서 끝까지, 하나의 팀.",
+      "heroLead": "항공·해상부터 육상, 통관, 창고까지 — 가장 까다로운 공급망을 위한 전 영역 물류 서비스를 제공합니다. Small giant, big impact.",
+      "quickAccess": "바로가기",
+      "fieldStory": "현장 성공 사례",
+      "challengeLabel": "과제",
+      "solutionLabel": "우리의 솔루션",
+      "outcomeLabel": "최종 결과",
+      "caseRef": "사례 번호",
+      "readStory": "전체 사례 보기 →",
+      "ctaTitle1": "이제 움직일 시간,",
+      "ctaTitle2": "연결하세요.",
+      "ctaLead": "일회성 특송이든, 전체 3PL 운영이든, 복잡한 다년 프로젝트든 — 우리 팀이 실행할 준비가 되어 있습니다.",
+      "ctaPrimary": "견적 요청",
+      "ctaSecondary": "우리 팀 알아보기 →",
+      "items": {
+        "air": {
+          "name": "항공 화물",
+          "tagline": "1분이 중요할 때",
+          "overview": "시한이 촉박하거나 온도에 민감한 화물에 특화된 항공 화물 사업부입니다. 주요 항공사와의 직접 GSA/CSA 파트너십으로 우선 부킹과 경쟁력 있는 운임을 확보합니다.",
+          "f1": "특송 및 Next Flight Out 서비스",
+          "f2": "정온(온도 관리) 솔루션",
+          "f3": "위험물(DG) 인증",
+          "f4": "전세기 운영",
+          "caseTitle": "반도체 장비",
+          "caseRoute": "서울 → 오스틴",
+          "caseChallenge": "핵심 제조 장비의 72시간 인도 기한",
+          "caseSolution": "전용 포장과 직접 전세기 운영",
+          "caseResult": "48시간 내 무손상 인도"
+        },
+        "ocean": {
+          "name": "해상 화물",
+          "tagline": "글로벌 도달, 현지 전문성",
+          "overview": "FCL, LCL, 특수 컨테이너를 아우르는 풀서비스 해상 운송. 전 세계 주요 항만을 연결합니다.",
+          "f1": "FCL & LCL 서비스",
+          "f2": "리퍼(냉동) 컨테이너",
+          "f3": "초과 규격(OOG) 화물",
+          "f4": "도어 투 도어 배송",
+          "caseTitle": "제조 설비",
+          "caseRoute": "부산 → 함부르크",
+          "caseChallenge": "특수 컨테이너가 필요한 초대형 기계",
+          "caseSolution": "맞춤 고박을 적용한 플랫랙 컨테이너",
+          "caseResult": "안전 운송, 정시 인도, 비용 20% 절감"
+        },
+        "land": {
+          "name": "육상 운송",
+          "tagline": "문 앞까지, 빈틈없이",
+          "overview": "전국 트럭킹과 내륙 복합운송으로 항공·해상 구간과 끊김 없이 연결하며, 완전한 가시성으로 처음과 마지막 구간을 책임집니다.",
+          "f1": "전국 FTL & LTL 트럭킹",
+          "f2": "컨테이너 드레이지 & 내륙 운송",
+          "f3": "크로스도킹 & 환적",
+          "f4": "퍼스트·라스트마일 배송",
+          "caseTitle": "리테일 배송",
+          "caseRoute": "인천 → 전국 물류센터",
+          "caseChallenge": "통관 후 12개 물류센터로 같은 주 내 배송",
+          "caseSolution": "항만 크로스도킹 + 권역별 통합 트럭킹",
+          "caseResult": "12개 센터 전부 일정 내 배송"
+        },
+        "customs": {
+          "name": "통관·관세",
+          "tagline": "복잡한 규제를 매끄럽게",
+          "overview": "선제적 컴플라이언스를 갖춘 허가 기반 수출입 통관. 분류·관세 최적화·통관까지 예측 가능하게, 지연 없이 처리합니다.",
+          "f1": "수출입 통관",
+          "f2": "HS 분류 및 과세가격 산정",
+          "f3": "관세 최적화 & FTA 활용",
+          "f4": "규제·허가 대응",
+          "caseTitle": "FTA 관세 절감",
+          "caseRoute": "EU → 한국",
+          "caseChallenge": "반복 수입 부품에 부과되는 높은 관세",
+          "caseSolution": "한-EU FTA 원산지 검증 및 재분류",
+          "caseResult": "해당 품목 관세 0%로 인하"
+        },
+        "warehouse": {
+          "name": "창고·3PL",
+          "tagline": "보관에서 배송까지",
+          "overview": "보세·일반 창고와 완전한 3PL 운영 — 보관, 재고관리, 유통가공, 주문 풀필먼트를 한곳에서 제공합니다.",
+          "f1": "보세 & 일반 창고",
+          "f2": "재고 및 WMS 관리",
+          "f3": "피킹·패킹 & 유통가공",
+          "f4": "주문 풀필먼트 & 배송",
+          "caseTitle": "이커머스 풀필먼트",
+          "caseRoute": "수도권 풀필먼트",
+          "caseChallenge": "익일 배송 기대 속 성수기 주문 폭증",
+          "caseSolution": "전용 WMS 라인 + 권역 라스트마일 파트너",
+          "caseResult": "성수기 정시 풀필먼트 99.6%"
+        },
+        "project": {
+          "name": "프로젝트 화물",
+          "tagline": "복잡함을 단순하게",
+          "overview": "대형·중량·고가 화물을 위한 전문 프로젝트 물류. 기획부터 최종 설치까지 전 과정을 관리합니다.",
+          "f1": "노선 조사 & 타당성 검토",
+          "f2": "복합 운송",
+          "f3": "중량물 처리 역량",
+          "f4": "현장 프로젝트 관리",
+          "caseTitle": "발전소 터빈",
+          "caseRoute": "한국 → 베트남",
+          "caseChallenge": "복합 운송이 필요한 180톤 터빈",
+          "caseSolution": "해상·바지선·특수 육상 운송 결합",
+          "caseResult": "100% 성공, 2주 조기 완료"
+        }
+      }
+    },
+    "network": {
+      "heroEyebrow": "글로벌 거점",
+      "heroTitle1": "세계로 뻗는,",
+      "heroTitle2": "현지에 깊은.",
+      "heroLead": "엘리트 물류 네트워크와 에이전트 파트너, 전략적 제휴를 통해 59개국 이상과 연결됩니다. 끝에서 끝까지 글로벌 교역을 위한 인프라를 제공합니다.",
+      "memberLabel": "회원사",
+      "mplFull": "MarcoPoloLine Group",
+      "mplDesc": "아시아·태평양 전역에서 품질 서비스와 혁신에 집중하는 프리미엄 물류 네트워크.",
+      "mplF1": "독점 영역 보호",
+      "mplF2": "품질 인증 표준",
+      "mplF3": "고도화된 IT 연동",
+      "eanFull": "Exclusive Air Network",
+      "eanDesc": "서비스 우수성과 혁신에 헌신하는 항공 화물 물류 기업들의 엘리트 네트워크.",
+      "eanF1": "최고 수준의 서비스 표준",
+      "eanF2": "협력적 파트너십",
+      "eanF3": "지속적 개선 지향",
+      "gssaEyebrow": "특화 역량",
+      "gssaTitle": "항공사 화물 영업 대행 (GSSA)",
+      "gssaLead": "종합물류 역량과 함께, 오너-오퍼레이터 마인드로 항공사를 대표합니다. 공급력 보장부터 현지 노선 개발까지 동북아 회랑 전반을 책임집니다.",
+      "gsaTitle": "GSA (General Sales Agent)",
+      "gsaDesc": "특정 시장에서 항공사를 독점 대표하여, 100% 집중과 현지 전문성으로 영업 활동을 수행합니다.",
+      "csaTitle": "CSA (Cargo Sales Agent)",
+      "csaDesc": "전문 화물 영업 대행으로, 물류 파트너에게 공급력 보장과 우대 운임을 제공합니다.",
+      "partnerLabel": "파트너 항공사",
+      "ctaExplore": "파트너십 기회 살펴보기",
+      "ecosystemTitle": "글로벌 에코시스템",
+      "ecsEyebrow": "전략적 ECS 파트너십",
+      "ecsCountLabel": "개국 연결",
+      "ecsLead": "ECS Group과의 전략적 파트너십을 통해, 세계 최대 규모의 화물 네트워크에 대한 접근으로 종합물류 역량을 확장합니다."
+    },
     "company": {
       "heroEyebrow": "스토리",
       "heroTitleLine1": "행동으로 쌓은",
@@ -174,8 +320,8 @@
       "ceoEyebrow": "리더십 메시지",
       "ceoQuote": "Small Giant, Big Impact. 그것이 우리의 북극성입니다.",
       "ceoP1": "GOODMAN GLS에 오신 것을 환영합니다. 2014년 설립 이후 우리는 단순한 원칙, 즉 행동을 통한 신뢰 위에 명성을 쌓아 왔습니다.",
-      "ceoP2": "한국을 대표하는 GSSA로서, 글로벌 항공사와 한국 물류 시장을 잇는 관문 역할을 수행합니다.",
-      "ceoP3": "시한이 촉박한 항공 화물과 복잡한 프로젝트 화물에서 수십 년의 경험을 보유한 전문가 팀이, 화물뿐 아니라 고객의 평판까지 책임집니다.",
+      "ceoP2": "종합물류 기업으로서, 항공·해상·육상·통관·창고를 아우르며 한국과 세계를 하나의 책임 있는 파트너로 연결합니다.",
+      "ceoP3": "모든 운송 수단에 걸쳐 수십 년의 경험을 보유한 전문가 팀이, 화물뿐 아니라 고객의 평판까지 책임집니다.",
       "ceoName": "신현억",
       "ceoRole": "대표이사 · 창업자",
       "ceoBio": "항공 화물 업계 38년 이상; 대한항공·아시아나항공 화물 부문 전 임원. GOODMAN 서비스 모델의 설계자.",

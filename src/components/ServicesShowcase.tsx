@@ -3,7 +3,7 @@
 import DisplayLines from './DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const serviceKeys = ['air', 'ocean', 'project', 'aero'];
+const serviceKeys = ['air', 'ocean', 'land', 'customs', 'warehouse', 'project'];
 
 export default function ServicesShowcase() {
   const { t } = useLanguage();

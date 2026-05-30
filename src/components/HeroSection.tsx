@@ -68,7 +68,7 @@ export default function HeroSection() {
             <Link href="#contact" className="btn-pill-primary">
               {t('home.hero.ctaPrimary')}
             </Link>
-            <Link href="/network" className="btn-pill-ghost">
+            <Link href="/services" className="btn-pill-ghost">
               {t('home.hero.ctaSecondary')}
             </Link>
           </motion.div>

@@ -1,1 +1,1 @@
-🧹 chore(i18n): nav 트리 stale 4키 제거 + en.json 최상위 contact stale 트리 19키 제거
+🚚 content(GLS): GSSA 중심 → 종합물류업 전면 전환 (Hero·서비스 6종·홈/회사/서비스/네트워크 재구성, 한/영 동기, GSSA는 특화 역량으로 강등, 서브페이지 i18n 전환)

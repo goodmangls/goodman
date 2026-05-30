@@ -8,27 +8,9 @@ export default function CompanyPage() {
   const { t } = useLanguage();
 
   const team = [
-    {
-      name: "Lee Chang-hee (이창희)",
-      title: "Business Development Manager",
-      department: "GSA/CSA Division",
-      expertise: "Airline partnerships, Route development",
-      icon: "👔"
-    },
-    {
-      name: "Kim Min-ji (김민지)",
-      title: "Operations Director",
-      department: "Air & Ocean Operations",
-      expertise: "Supply chain optimization, Customer service",
-      icon: "⚡"
-    },
-    {
-      name: "Park Seung-ho (박승호)",
-      title: "Project Cargo Specialist",
-      department: "Special Projects",
-      expertise: "Heavy-lift, Multi-modal logistics",
-      icon: "🏗️"
-    },
+    { key: 'lee', icon: "👔" },
+    { key: 'kim', icon: "⚡" },
+    { key: 'park', icon: "🏗️" },
   ];
 
   const timelineYears = ['2014', '2015', '2018', '2020', '2025'] as const;
@@ -66,18 +48,12 @@ export default function CompanyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12">
               <div className="lg:col-span-7 p-10 md:p-16 lg:p-24 border-b lg:border-b-0 lg:border-r border-ink/10 flex flex-col justify-between">
                 <div>
-                  <span className="figma-mono text-xs tracking-widest text-ink/40 block mb-16 font-bold uppercase">Leadership Insight</span>
-                  <h2 className="display-lg text-ink mb-12 tracking-tight leading-none italic">&ldquo;Small Giant, Big Impact. That&apos;s our North Star.&rdquo;</h2>
+                  <span className="figma-mono text-xs tracking-widest text-ink/40 block mb-16 font-bold uppercase">{t('pages.company.ceoEyebrow')}</span>
+                  <h2 className="display-lg text-ink mb-12 tracking-tight leading-none italic">&ldquo;{t('pages.company.ceoQuote')}&rdquo;</h2>
                   <div className="space-y-8 body-lg text-ink/80 leading-relaxed max-w-2xl">
-                    <p>
-                      Welcome to GOODMAN GLS. Since our founding in 2014, we&apos;ve built our reputation on a simple principle: <strong>trust through action</strong>.
-                    </p>
-                    <p>
-                      As a leading GSSA in Korea, we are strategically positioned as the gateway between global airlines and Korea&apos;s logistics market.
-                    </p>
-                    <p>
-                      Our team of logistics professionals brings decades of combined experience in time-critical air freight and complex project cargo. We understand that every shipment carries not just cargo, but our clients&apos; reputation.
-                    </p>
+                    <p>{t('pages.company.ceoP1')}</p>
+                    <p>{t('pages.company.ceoP2')}</p>
+                    <p>{t('pages.company.ceoP3')}</p>
                   </div>
                 </div>
               </div>
@@ -90,10 +66,10 @@ export default function CompanyPage() {
                       </div>
                    </div>
                 </div>
-                <h4 className="display-sm text-ink leading-tight tracking-tight font-black">Hyeon-Eok SHIN</h4>
-                <p className="figma-mono text-xs tracking-[0.2em] text-ink/50 mt-3 font-bold uppercase">CEO & FOUNDER</p>
+                <h4 className="display-sm text-ink leading-tight tracking-tight font-black">{t('pages.company.ceoName')}</h4>
+                <p className="figma-mono text-xs tracking-[0.2em] text-ink/50 mt-3 font-bold uppercase">{t('pages.company.ceoRole')}</p>
                 <div className="mt-12 pt-12 border-t border-ink/10">
-                  <p className="body-sm text-ink/40 leading-loose">38+ years in air cargo; former executive at Korean Air & Asiana Airlines Cargo. Architect of the GOODMAN service model.</p>
+                  <p className="body-sm text-ink/40 leading-loose">{t('pages.company.ceoBio')}</p>
                 </div>
               </div>
             </div>
@@ -162,14 +138,14 @@ export default function CompanyPage() {
       <section className="section-spacing bg-color-block-lilac border-y border-hairline">
         <div className="container-wide">
           <div className="max-w-4xl mb-24">
-            <span className="figma-mono text-sm tracking-widest text-ink/40 block mb-6 uppercase font-bold">The Experts</span>
+            <span className="figma-mono text-sm tracking-widest text-ink/40 block mb-6 uppercase font-bold">{t('pages.company.teamEyebrow')}</span>
             <DisplayLines
               as="h2"
               lines={[t('pages.company.teamTitleLine1'), t('pages.company.teamTitleLine2')]}
               className="display-lg text-ink mb-10 tracking-tight leading-none"
             />
             <p className="body-lg text-muted max-w-2xl leading-relaxed">
-              Our advantage is our team. We&apos;ve brought together the sharpest minds in Korean air freight to ensure your cargo—and your reputation—is in the right hands.
+              {t('pages.company.teamLead')}
             </p>
           </div>
 
@@ -184,22 +160,22 @@ export default function CompanyPage() {
                   {member.icon}
                 </div>
                 <div className="flex-1">
-                  <h4 className="headline text-ink mb-1">{member.name}</h4>
-                  <p className="figma-mono text-[10px] tracking-[0.2em] text-ink/50 mb-8 uppercase font-bold">{member.title}</p>
+                  <h4 className="headline text-ink mb-1">{t(`pages.company.team.${member.key}.name`)}</h4>
+                  <p className="figma-mono text-[10px] tracking-[0.2em] text-ink/50 mb-8 uppercase font-bold">{t(`pages.company.team.${member.key}.title`)}</p>
                   
                   <div className="space-y-6 pt-8 border-t border-ink/5">
                     <div>
-                      <p className="text-[10px] text-ink/30 figma-mono mb-2 uppercase tracking-widest font-bold">Division</p>
-                      <p className="body-sm text-ink/80 font-medium">{member.department}</p>
+                      <p className="text-[10px] text-ink/30 figma-mono mb-2 uppercase tracking-widest font-bold">{t('pages.company.teamDivision')}</p>
+                      <p className="body-sm text-ink/80 font-medium">{t(`pages.company.team.${member.key}.department`)}</p>
                     </div>
                     <div>
-                      <p className="text-[10px] text-ink/30 figma-mono mb-2 uppercase tracking-widest font-bold">Core Expertise</p>
-                      <p className="body-sm text-ink/80 font-medium">{member.expertise}</p>
+                      <p className="text-[10px] text-ink/30 figma-mono mb-2 uppercase tracking-widest font-bold">{t('pages.company.teamExpertise')}</p>
+                      <p className="body-sm text-ink/80 font-medium">{t(`pages.company.team.${member.key}.expertise`)}</p>
                     </div>
                   </div>
                 </div>
                 <div className="mt-12 pt-8 border-t border-ink/5">
-                   <button className="text-[10px] figma-mono text-ink/40 hover:text-ink transition-colors font-bold uppercase tracking-widest">View Profile →</button>
+                   <button className="text-[10px] figma-mono text-ink/40 hover:text-ink transition-colors font-bold uppercase tracking-widest">{t('pages.company.teamViewProfile')}</button>
                 </div>
               </motion.div>
             ))}
@@ -216,18 +192,14 @@ export default function CompanyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="display-xl mb-32 tracking-tighter leading-none">Our Core Values</h2>
+            <h2 className="display-xl mb-32 tracking-tighter leading-none">{t('pages.company.valuesTitle')}</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-24 max-w-6xl mx-auto">
-              {[
-                { label: "01", value: "Trust", desc: "Earned through consistent delivery and total transparency." },
-                { label: "02", value: "Velocity", desc: "Speed matters in time-critical logistics. We move faster." },
-                { label: "03", value: "Connectivity", desc: "Global reach through our elite strategic partnerships." },
-              ].map((item, index) => (
-                <div key={index} className="text-center group">
-                  <span className="figma-mono text-xs tracking-[0.3em] text-canvas/40 block mb-8 font-black group-hover:text-canvas/60 transition-colors uppercase">{item.label}</span>
-                  <h3 className="display-md text-canvas mb-8 tracking-tight font-black leading-none">{item.value}</h3>
-                  <p className="body-lg text-canvas/60 leading-relaxed max-w-xs mx-auto">{item.desc}</p>
+              {['trust', 'velocity', 'connectivity'].map((key) => (
+                <div key={key} className="text-center group">
+                  <span className="figma-mono text-xs tracking-[0.3em] text-canvas/40 block mb-8 font-black group-hover:text-canvas/60 transition-colors uppercase">{t(`pages.company.values.${key}.label`)}</span>
+                  <h3 className="display-md text-canvas mb-8 tracking-tight font-black leading-none">{t(`pages.company.values.${key}.value`)}</h3>
+                  <p className="body-lg text-canvas/60 leading-relaxed max-w-xs mx-auto">{t(`pages.company.values.${key}.desc`)}</p>
                 </div>
               ))}
             </div>

@@ -40,7 +40,7 @@ export default function StatsSection() {
   const { t } = useLanguage();
   const stats = [
     { value: 10, suffix: '+', key: 'years' },
-    { value: 15, suffix: '+', key: 'airlines' },
+    { value: 6, suffix: '', key: 'services' },
     { value: 59, suffix: '', key: 'countries' },
     { value: 3, suffix: '', key: 'offices' },
   ];

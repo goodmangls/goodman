@@ -9,11 +9,11 @@
   "home": {
     "hero": {
       "eyebrow": "Small Giant. Big Impact.",
-      "titleLine1": "Your cargo sales",
-      "titleLine2": "team in Korea",
-      "lead": "GSSA representation for 15+ airlines. 59 countries via ECS Group — one dedicated team selling your capacity as if it were our own.",
+      "titleLine1": "Your end-to-end",
+      "titleLine2": "logistics partner in Korea",
+      "lead": "Air, ocean, road, customs, and warehousing under one roof. A 59-country network and deep local expertise covering your cargo's entire journey.",
       "ctaPrimary": "Get started",
-      "ctaSecondary": "View network"
+      "ctaSecondary": "Explore services"
     },
     "trust": {
       "eyebrow": "Trusted memberships"
@@ -21,65 +21,75 @@
     "stats": {
       "eyebrow": "Performance in numbers",
       "years": "Years of Experience",
-      "airlines": "Airlines Represented",
+      "services": "Logistics Services",
       "countries": "Countries Connected",
       "offices": "Offices in Korea"
     },
     "why": {
       "eyebrow": "What we do",
-      "titleLine1": "We think like an airline.",
-      "titleLine2": "We act like your team.",
-      "lead": "A GSSA is not a middleman. We are your dedicated commercial team in Korea — selling your capacity, managing your brand, and growing your revenue as if it were our own business.",
+      "titleLine1": "One team,",
+      "titleLine2": "every link of the chain.",
+      "lead": "From air, ocean, and road transport to customs and warehousing/3PL, GOODMAN GLS designs and runs every link of your supply chain with a single accountable team. We make complex logistics simple.",
       "pillars": {
         "sales": {
-          "title": "In the Market",
-          "description": "We sell smart, act fast, and deliver consistently. Our local teams know every forwarder and route in Korea."
+          "title": "Multimodal transport",
+          "description": "We combine air, ocean, and road into the optimal mix — balancing speed and cost for every shipment."
         },
         "capacity": {
-          "title": "In the Air",
-          "description": "Dynamic pricing, yield optimization, and strategic space allocation that maximizes your revenue per flight."
+          "title": "Customs & compliance",
+          "description": "Import/export clearance, tariff classification, and regulatory handling so your cargo moves through without delay."
         },
         "intelligence": {
-          "title": "On the Ground",
-          "description": "Trade flow analysis, seasonal forecasting, and regulatory intelligence updated weekly for our partners."
+          "title": "Warehousing & 3PL",
+          "description": "Storage, inventory management, value-added processing, and last-mile delivery — operated as one integrated service."
         },
         "digital": {
-          "title": "In the Cloud",
-          "description": "Real-time dashboards, API connectivity, and digital booking platforms at your fingertips."
+          "title": "Digital visibility",
+          "description": "Real-time tracking, dashboards, and API connectivity that keep your cargo transparent across its entire journey."
         }
       }
     },
     "gsa": {
-      "eyebrow": "Partnerships",
-      "title": "Airlines we represent",
-      "lead": "Trusted by carriers worldwide to grow their Korean market presence. From flag carriers to specialty freighters.",
+      "eyebrow": "Specialized capability",
+      "title": "Airline cargo representation (GSSA)",
+      "lead": "On top of our integrated logistics, we run a GSSA business representing 15+ airlines — a dedicated commercial team in Korea for carriers, and reliable capacity for forwarders.",
       "cta": "Become a partner"
     },
     "services": {
-      "eyebrow": "Capabilities",
-      "titleLine1": "Beyond GSSA —",
-      "titleLine2": "Full logistics capability",
-      "lead": "Air, ocean, and project cargo expertise to complement our airline partnerships. We deliver velocity and trust in every shipment.",
+      "eyebrow": "Our services",
+      "titleLine1": "Air to warehouse,",
+      "titleLine2": "one-stop logistics",
+      "lead": "Six core services spanning your cargo's entire journey. We deliver velocity and trust in every shipment.",
       "items": {
         "air": {
           "name": "Air Freight",
           "tagline": "When Every Minute Counts",
-          "description": "Express and time-critical air cargo solutions with GSA/CSA expertise for major carriers."
+          "description": "Express and time-critical air cargo with priority booking through direct airline partnerships."
         },
         "ocean": {
           "name": "Ocean Freight",
           "tagline": "Global Reach, Local Expertise",
-          "description": "Full container load (FCL) and less than container load (LCL) services worldwide."
+          "description": "Full container load (FCL), less than container load (LCL), and specialized container services worldwide."
+        },
+        "land": {
+          "name": "Land Transport",
+          "tagline": "Door to Door, Seamlessly",
+          "description": "Nationwide trucking and inland multimodal transport, connected seamlessly to air and ocean legs."
+        },
+        "customs": {
+          "name": "Customs Brokerage",
+          "tagline": "Regulations Made Smooth",
+          "description": "Import/export clearance, HS classification, duty optimization, and FTA utilization handled end to end."
+        },
+        "warehouse": {
+          "name": "Warehousing & 3PL",
+          "tagline": "From Storage to Delivery",
+          "description": "Storage, inventory management, value-added processing, and fulfillment under one 3PL operation."
         },
         "project": {
           "name": "Project Cargo",
           "tagline": "Complex Solutions Made Simple",
           "description": "Specialized handling for oversized, heavy, and high-value project shipments."
-        },
-        "aero": {
-          "name": "Goodman Aero Solutions",
-          "tagline": "Completing Expertise",
-          "description": "Total solutions supporting safe aircraft operations including AOG support and parts sale."
         }
       }
     },
@@ -87,7 +97,7 @@
       "eyebrow": "Established 2014",
       "titleLine1": "Small Giant.",
       "titleLine2": "Big Impact.",
-      "lead": "As a dedicated GSSA, airline cargo representation is our core identity — not a side business. Backed by ECS Group, we rival companies many times our size through technical precision and local expertise.",
+      "lead": "Since 2014, GOODMAN GLS has grown into an integrated logistics company spanning air, ocean, road, customs, and warehousing. Backed by ECS Group, we rival companies many times our size through technical precision and local expertise.",
       "values": {
         "trust": {
           "title": "Trust",
@@ -109,7 +119,7 @@
       "eyebrow": "Built for scale",
       "titleLine1": "We rival enterprises",
       "titleLine2": "many times our size.",
-      "lead": "Through ECS Group — the world’s largest GSSA infrastructure spanning 59 nations — we wield the network of a multinational while preserving the responsiveness of a specialist team.",
+      "lead": "Through a 59-country logistics network and ECS Group infrastructure, we deliver multinational reach while preserving the responsiveness of a specialist team.",
       "cta": "See the network"
     },
     "partnerHub": {
@@ -127,7 +137,7 @@
       "eyebrow": "Connect",
       "titleLine1": "Let's talk about",
       "titleLine2": "your cargo.",
-      "lead": "24/7 support for your logistics needs. We represent your brand in Korea with technical precision.",
+      "lead": "24/7 support for all your logistics needs — air, ocean, road, customs, and warehousing in one conversation.",
       "office": "Office",
       "officeValue": "Gangseo IT Valley, Seoul, South Korea",
       "email": "Email",
@@ -147,7 +157,7 @@
     "footer": {
       "titleLine1": "The Small Giant.",
       "titleLine2": "Global Impact.",
-      "lead": "Elevating logistics representation since 2014. We provide the infrastructure for your global ambitions with localized Korean expertise.",
+      "lead": "Powering Korea's integrated logistics since 2014 — one-stop air, ocean, road, customs, and warehousing backed by a global network.",
       "cta": "Start a Partnership",
       "companyHeading": "Company",
       "servicesHeading": "Services",
@@ -155,14 +165,17 @@
         "about": "About Us",
         "network": "Network",
         "partnerHub": "Partner Hub",
-        "air": "Air Cargo",
+        "air": "Air Freight",
         "ocean": "Ocean Freight",
+        "land": "Land Transport",
+        "customs": "Customs Brokerage",
+        "warehouse": "Warehousing & 3PL",
         "project": "Project Cargo",
         "privacy": "Privacy Policy",
         "terms": "Terms of Service"
       },
       "copyright": "© 2026 GOODMAN Global Logistics Service. All rights reserved.",
-      "tagline": "Korea cargo GSSA · ECS Group partner"
+      "tagline": "Integrated logistics · Airline GSSA · ECS Group partner"
     }
   },
   "company": {
@@ -507,6 +520,139 @@
     "goBack": "Go Back"
   },
   "pages": {
+    "services": {
+      "heroEyebrow": "Our capabilities",
+      "heroTitle": "End-to-end logistics, one team.",
+      "heroLead": "From air and ocean to road, customs, and warehousing, we deliver a full spectrum of logistics services designed for the most demanding supply chains. Small giant, big impact.",
+      "quickAccess": "Quick access",
+      "fieldStory": "Field success story",
+      "challengeLabel": "The challenge",
+      "solutionLabel": "Our solution",
+      "outcomeLabel": "Final outcome",
+      "caseRef": "CASE REF",
+      "readStory": "Read full story →",
+      "ctaTitle1": "Ready to move?",
+      "ctaTitle2": "Let's Connect.",
+      "ctaLead": "Whether it's a one-off express shipment, a full 3PL program, or a complex multi-year project, our team is ready to deliver.",
+      "ctaPrimary": "Request a Quote",
+      "ctaSecondary": "Learn About Our Team →",
+      "items": {
+        "air": {
+          "name": "Air Freight",
+          "tagline": "When Every Minute Counts",
+          "overview": "Our air freight division specializes in time-critical and temperature-sensitive cargo. With direct GSA/CSA partnerships across major airlines, we secure priority booking and competitive rates.",
+          "f1": "Express & Next Flight Out service",
+          "f2": "Temperature-controlled solutions",
+          "f3": "Dangerous goods certified",
+          "f4": "Charter arrangements",
+          "caseTitle": "Semiconductor Equipment",
+          "caseRoute": "Seoul to Austin",
+          "caseChallenge": "72-hour delivery window for critical manufacturing equipment",
+          "caseSolution": "Direct charter arrangement with specialized packaging",
+          "caseResult": "Delivered in 48 hours, zero damage"
+        },
+        "ocean": {
+          "name": "Ocean Freight",
+          "tagline": "Global Reach, Local Expertise",
+          "overview": "Full-service ocean freight including FCL, LCL, and specialized container services. Our network reaches every major port worldwide.",
+          "f1": "FCL & LCL services",
+          "f2": "Reefer containers",
+          "f3": "Out-of-gauge cargo",
+          "f4": "Door-to-door deliveries",
+          "caseTitle": "Manufacturing Equipment",
+          "caseRoute": "Busan to Hamburg",
+          "caseChallenge": "Oversized machinery requiring a specialized container",
+          "caseSolution": "Flat rack container with custom securing arrangements",
+          "caseResult": "Safe transit, on-time, 20% cost savings"
+        },
+        "land": {
+          "name": "Land Transport",
+          "tagline": "Door to Door, Seamlessly",
+          "overview": "Nationwide trucking and inland multimodal transport that connects seamlessly to your air and ocean legs — closing the first and last mile with full visibility.",
+          "f1": "Nationwide FTL & LTL trucking",
+          "f2": "Container drayage & inland haulage",
+          "f3": "Cross-dock & transload",
+          "f4": "First & last-mile delivery",
+          "caseTitle": "Retail Distribution",
+          "caseRoute": "Incheon to nationwide DCs",
+          "caseChallenge": "Same-week delivery to 12 distribution centers after import clearance",
+          "caseSolution": "Cross-dock at port with consolidated regional trucking",
+          "caseResult": "All 12 DCs delivered on schedule"
+        },
+        "customs": {
+          "name": "Customs Brokerage",
+          "tagline": "Regulations Made Smooth",
+          "overview": "Licensed import/export clearance with proactive compliance. We classify, optimize duties, and clear your cargo without surprises or delays.",
+          "f1": "Import & export clearance",
+          "f2": "HS classification & valuation",
+          "f3": "Duty optimization & FTA utilization",
+          "f4": "Regulatory & permit handling",
+          "caseTitle": "FTA Duty Savings",
+          "caseRoute": "EU to Korea",
+          "caseChallenge": "High duties on recurring component imports",
+          "caseSolution": "Korea-EU FTA origin verification and reclassification",
+          "caseResult": "Duty reduced to 0% on qualifying lines"
+        },
+        "warehouse": {
+          "name": "Warehousing & 3PL",
+          "tagline": "From Storage to Delivery",
+          "overview": "Bonded and general warehousing with full 3PL operations — storage, inventory management, value-added processing, and order fulfillment under one roof.",
+          "f1": "Bonded & general warehousing",
+          "f2": "Inventory & WMS management",
+          "f3": "Pick, pack & value-added processing",
+          "f4": "Order fulfillment & distribution",
+          "caseTitle": "E-commerce Fulfillment",
+          "caseRoute": "Seoul metro fulfillment",
+          "caseChallenge": "Peak-season order volume with next-day expectations",
+          "caseSolution": "Dedicated WMS lane with regional last-mile partners",
+          "caseResult": "99.6% on-time fulfillment at peak"
+        },
+        "project": {
+          "name": "Project Cargo",
+          "tagline": "Complex Solutions Made Simple",
+          "overview": "Specialized project logistics for oversized, heavy-lift, and high-value cargo. Full project management from planning to final installation.",
+          "f1": "Route surveys & feasibility studies",
+          "f2": "Multi-modal transportation",
+          "f3": "Heavy-lift capabilities",
+          "f4": "On-site project management",
+          "caseTitle": "Power Plant Turbine",
+          "caseRoute": "Korea to Vietnam",
+          "caseChallenge": "180-ton turbine requiring multi-modal transport",
+          "caseSolution": "Combined sea, river barge, and specialized road transport",
+          "caseResult": "100% success, completed 2 weeks early"
+        }
+      }
+    },
+    "network": {
+      "heroEyebrow": "Global footprint",
+      "heroTitle1": "World Reach.",
+      "heroTitle2": "Local Depth.",
+      "heroLead": "Connected to over 59 countries through elite logistics networks, agent partners, and strategic alliances. We provide the infrastructure for end-to-end global commerce.",
+      "memberLabel": "Member",
+      "mplFull": "MarcoPoloLine Group",
+      "mplDesc": "Premium logistics network focused on quality service and innovation across Asia-Pacific.",
+      "mplF1": "Exclusive territory protection",
+      "mplF2": "Quality certification standards",
+      "mplF3": "Advanced IT integration",
+      "eanFull": "Exclusive Air Network",
+      "eanDesc": "Elite network of air cargo logistics providers committed to service excellence and innovation.",
+      "eanF1": "Best-in-class service standards",
+      "eanF2": "Collaborative partnerships",
+      "eanF3": "Continuous improvement focus",
+      "gssaEyebrow": "Specialized capability",
+      "gssaTitle": "Airline Cargo Representation (GSSA)",
+      "gssaLead": "Alongside our integrated logistics, we represent airlines with an owner-operator mindset — from capacity guarantees to local route development across the Northeast Asian corridor.",
+      "gsaTitle": "GSA (General Sales Agent)",
+      "gsaDesc": "Exclusive representation of airlines in specific markets, handling sales activities with 100% focus and local expertise.",
+      "csaTitle": "CSA (Cargo Sales Agent)",
+      "csaDesc": "Specialized cargo sales representation, providing capacity guarantees and preferential rates for logistics partners.",
+      "partnerLabel": "Partner carrier",
+      "ctaExplore": "Explore Partnership Opportunities",
+      "ecosystemTitle": "Global Ecosystem",
+      "ecsEyebrow": "Strategic ECS partnership",
+      "ecsCountLabel": "nations connected",
+      "ecsLead": "Through our strategic partnership with ECS Group, we extend our integrated logistics with access to one of the world's largest cargo networks."
+    },
     "company": {
       "heroEyebrow": "The Story",
       "heroTitleLine1": "Trust Through",
@@ -515,8 +661,8 @@
       "ceoEyebrow": "Leadership Insight",
       "ceoQuote": "Small Giant, Big Impact. That's our North Star.",
       "ceoP1": "Welcome to GOODMAN GLS. Since our founding in 2014, we've built our reputation on a simple principle: trust through action.",
-      "ceoP2": "As a leading GSSA in Korea, we are strategically positioned as the gateway between global airlines and Korea's logistics market.",
-      "ceoP3": "Our team of logistics professionals brings decades of combined experience in time-critical air freight and complex project cargo. We understand that every shipment carries not just cargo, but our clients' reputation.",
+      "ceoP2": "As an integrated logistics company, we connect Korea to the world — moving cargo across air, ocean, road, customs, and warehousing as a single accountable partner.",
+      "ceoP3": "Our team of logistics professionals brings decades of combined experience across every mode of transport. We understand that every shipment carries not just cargo, but our clients' reputation.",
       "ceoName": "Hyeon-Eok SHIN",
       "ceoRole": "CEO & Founder",
       "ceoBio": "38+ years in air cargo; former executive at Korean Air & Asiana Airlines Cargo. Architect of the GOODMAN service model.",

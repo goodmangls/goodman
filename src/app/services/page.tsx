@@ -3,73 +3,34 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import DisplayLines from '@/components/DisplayLines';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+const serviceConfig = [
+  { id: 'air', icon: '✈️' },
+  { id: 'ocean', icon: '🚢' },
+  { id: 'land', icon: '🚚' },
+  { id: 'customs', icon: '🛃' },
+  { id: 'warehouse', icon: '🏭' },
+  { id: 'project', icon: '📦' },
+];
 
 export default function ServicesPage() {
-  const services = [
-    {
-      name: "Air Freight",
-      id: "air",
-      icon: "✈️",
-      tagline: "When Every Minute Counts",
-      overview: "Our air freight division specializes in time-critical and temperature-sensitive cargo. With GSA/CSA partnerships across major airlines, we offer priority booking and competitive rates.",
-      features: [
-        "Express & Next Flight Out service",
-        "Temperature-controlled solutions",
-        "Dangerous goods certified",
-        "Hand-carry services",
-        "Charter arrangements"
-      ],
-      caseStudy: {
-        title: "Semiconductor Equipment",
-        route: "Seoul to Austin",
-        challenge: "72-hour delivery window for critical manufacturing equipment",
-        solution: "Direct charter arrangement with specialized packaging",
-        result: "Delivered in 48 hours, zero damage"
-      }
+  const { t } = useLanguage();
+
+  const services = serviceConfig.map((s) => ({
+    ...s,
+    name: t(`pages.services.items.${s.id}.name`),
+    tagline: t(`pages.services.items.${s.id}.tagline`),
+    overview: t(`pages.services.items.${s.id}.overview`),
+    features: [1, 2, 3, 4].map((i) => t(`pages.services.items.${s.id}.f${i}`)),
+    caseStudy: {
+      title: t(`pages.services.items.${s.id}.caseTitle`),
+      route: t(`pages.services.items.${s.id}.caseRoute`),
+      challenge: t(`pages.services.items.${s.id}.caseChallenge`),
+      solution: t(`pages.services.items.${s.id}.caseSolution`),
+      result: t(`pages.services.items.${s.id}.caseResult`),
     },
-    {
-      name: "Ocean Freight",
-      id: "ocean",
-      icon: "🚢",
-      tagline: "Global Reach, Local Expertise",
-      overview: "Full-service ocean freight solutions including FCL, LCL, and specialized container services. Our network reaches every major port worldwide.",
-      features: [
-        "FCL & LCL services",
-        "Reefer containers",
-        "Out-of-gauge cargo",
-        "Door-to-door deliveries",
-        "Customs brokerage"
-      ],
-      caseStudy: {
-        title: "Manufacturing Equipment",
-        route: "Busan to Hamburg",
-        challenge: "Oversized machinery requiring specialized container",
-        solution: "Flat rack container with custom securing arrangements",
-        result: "Safe transit, on-time delivery, 20% cost savings"
-      }
-    },
-    {
-      name: "Project Cargo",
-      id: "project",
-      icon: "📦",
-      tagline: "Complex Solutions Made Simple",
-      overview: "Specialized project logistics for oversized, heavy-lift, and high-value cargo. Full project management from planning to final installation.",
-      features: [
-        "Route surveys & feasibility studies",
-        "Multi-modal transportation",
-        "Heavy-lift capabilities",
-        "On-site project management",
-        "Insurance & risk management"
-      ],
-      caseStudy: {
-        title: "Power Plant Turbine",
-        route: "Korea to Vietnam",
-        challenge: "180-ton turbine requiring multi-modal transport",
-        solution: "Combined sea, river barge, and specialized road transport",
-        result: "100% success rate, completed 2 weeks early"
-      }
-    }
-  ];
+  }));
 
   return (
     <main className="bg-canvas min-h-screen">
@@ -81,12 +42,12 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="max-w-5xl"
           >
-            <span className="eyebrow mb-6">Our capabilities</span>
+            <span className="eyebrow mb-6">{t('pages.services.heroEyebrow')}</span>
             <h1 className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter">
-              Logistics at the Speed of Trust.
+              {t('pages.services.heroTitle')}
             </h1>
             <p className="body-lg text-muted max-w-2xl">
-              Beyond GSSA expertise, we deliver a full spectrum of logistics services designed for the most demanding supply chains. Small giant, big impact.
+              {t('pages.services.heroLead')}
             </p>
           </motion.div>
         </div>
@@ -95,7 +56,7 @@ export default function ServicesPage() {
       {/* Services Navigation / Quick Links */}
       <section className="py-6 bg-canvas border-b border-hairline sticky top-16 md:top-16 z-30 backdrop-blur-xl bg-canvas/80">
         <div className="container-wide flex flex-wrap gap-4 md:gap-8 items-center">
-          <span className="eyebrow mr-4">Quick access</span>
+          <span className="eyebrow mr-4">{t('pages.services.quickAccess')}</span>
           {services.map((s) => (
             <a key={s.id} href={`#${s.id}`} className="text-sm font-bold text-ink hover:text-muted transition-colors py-2">
               {s.name}
@@ -140,7 +101,7 @@ export default function ServicesPage() {
                 <div className={`lg:col-span-5 p-10 md:p-16 lg:p-24 ${isDark ? "bg-canvas-white/5" : "bg-surface-soft"} flex flex-col`}>
                    <div className="flex items-center gap-3 mb-16">
                       <div className={`w-2 h-2 rounded-full ${isDark ? "bg-canvas-white" : "bg-ink"} animate-pulse`} />
-                      <span className="eyebrow mb-8">Field success story</span>
+                      <span className="eyebrow mb-8">{t('pages.services.fieldStory')}</span>
                    </div>
                    
                    <div className="flex-1">
@@ -149,23 +110,23 @@ export default function ServicesPage() {
                       
                       <div className="space-y-10">
                          <div>
-                           <p className="eyebrow mb-3">The challenge</p>
+                           <p className="eyebrow mb-3">{t('pages.services.challengeLabel')}</p>
                            <p className={`body-sm ${sub} leading-relaxed italic border-l-2 ${border} pl-6`}>&ldquo;{service.caseStudy.challenge}&rdquo;</p>
                          </div>
                          <div>
-                           <p className="eyebrow mb-3">Our solution</p>
+                           <p className="eyebrow mb-3">{t('pages.services.solutionLabel')}</p>
                            <p className={`body-sm ${sub} leading-relaxed`}>{service.caseStudy.solution}</p>
                          </div>
                          <div className={`p-6 border ${border} rounded-2xl shadow-inner-sm`}>
-                           <p className="eyebrow mb-2">Final outcome</p>
+                           <p className="eyebrow mb-2">{t('pages.services.outcomeLabel')}</p>
                            <p className={`headline-sm ${main} font-bold`}>{service.caseStudy.result}</p>
                          </div>
                       </div>
                    </div>
                    
                    <div className={`mt-12 pt-8 border-t ${border} flex justify-between items-center`}>
-                      <span className={`caption ${caseMeta}`}>CASE REF: {service.id.toUpperCase()}-2026</span>
-                      <button type="button" className={`caption font-bold ${caseBtn} transition-colors`}>Read full story →</button>
+                      <span className={`caption ${caseMeta}`}>{t('pages.services.caseRef')}: {service.id.toUpperCase()}-2026</span>
+                      <button type="button" className={`caption font-bold ${caseBtn} transition-colors`}>{t('pages.services.readStory')}</button>
                    </div>
                 </div>
               </div>
@@ -185,18 +146,18 @@ export default function ServicesPage() {
           >
             <DisplayLines
               as="h2"
-              lines={['Ready to move?', "Let's Connect."]}
+              lines={[t('pages.services.ctaTitle1'), t('pages.services.ctaTitle2')]}
               className="display-xl text-canvas-white mb-12 tracking-tighter leading-none"
             />
             <p className="body-lg text-canvas-white/75 mb-16 max-w-xl mx-auto">
-              Whether it&apos;s a one-off express shipment or a complex multi-year project, our team is ready to deliver.
+              {t('pages.services.ctaLead')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/#contact" className="btn-pill-primary w-full sm:w-auto text-lg py-5 px-10">
-                Request a Quote
+                {t('pages.services.ctaPrimary')}
               </Link>
               <Link href="/company" className="text-canvas-white/60 hover:text-canvas-white transition-colors eyebrow">
-                Learn About Our Team →
+                {t('pages.services.ctaSecondary')}
               </Link>
             </div>
           </motion.div>
