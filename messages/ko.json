@@ -1,4 +1,174 @@
 {
+  "nav": {
+    "home": "홈",
+    "networkSolutions": "네트워크 & 솔루션",
+    "services": "서비스",
+    "partnerHub": "파트너 허브",
+    "company": "회사소개",
+    "network": "네트워크",
+    "contact": "문의",
+    "contactSales": "영업 문의",
+    "getStarted": "시작하기"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Small Giant. Big Impact.",
+      "titleLine1": "한국 시장의",
+      "titleLine2": "화물 영업 팀",
+      "lead": "15개 이상 항공사를 대표하는 GSSA. ECS Group을 통한 59개국 네트워크 — 귀사의 화물을 우리 것처럼 판매하는 전담 팀입니다.",
+      "ctaPrimary": "시작하기",
+      "ctaSecondary": "네트워크 보기"
+    },
+    "trust": {
+      "eyebrow": "신뢰의 멤버십"
+    },
+    "stats": {
+      "eyebrow": "숫자로 보는 성과",
+      "years": "업력(년)",
+      "airlines": "대표 항공사",
+      "countries": "연결 국가",
+      "offices": "국내 사무소"
+    },
+    "why": {
+      "eyebrow": "우리가 하는 일",
+      "titleLine1": "항공사처럼 사고하고,",
+      "titleLine2": "귀사의 팀처럼 움직입니다.",
+      "lead": "GSSA는 단순 중개인이 아닙니다. 우리는 한국에서 귀사의 전담 영업 조직으로서, 귀사의 공급력을 판매하고 브랜드를 관리하며 매출을 우리 사업처럼 키웁니다.",
+      "pillars": {
+        "sales": {
+          "title": "시장에서",
+          "description": "똑똑하게 팔고, 빠르게 움직이며, 일관되게 실행합니다. 현지 팀이 한국의 모든 포워더와 노선을 꿰뚫고 있습니다."
+        },
+        "capacity": {
+          "title": "하늘에서",
+          "description": "동적 운임, 수익 최적화, 전략적 공간 배분으로 운항편당 매출을 극대화합니다."
+        },
+        "intelligence": {
+          "title": "현장에서",
+          "description": "교역 흐름 분석, 시즌 예측, 규제 인텔리전스를 매주 업데이트해 파트너에게 제공합니다."
+        },
+        "digital": {
+          "title": "클라우드에서",
+          "description": "실시간 대시보드, API 연동, 디지털 부킹 플랫폼을 손끝에서 제공합니다."
+        }
+      }
+    },
+    "gsa": {
+      "eyebrow": "파트너십",
+      "title": "우리가 대표하는 항공사",
+      "lead": "전 세계 항공사가 한국 시장 확대를 위해 신뢰하는 파트너. 국적 항공사부터 전문 화물기까지.",
+      "cta": "파트너 되기"
+    },
+    "services": {
+      "eyebrow": "역량",
+      "titleLine1": "GSSA를 넘어 —",
+      "titleLine2": "통합 물류 역량",
+      "lead": "항공사 파트너십을 보완하는 항공·해상·프로젝트 화물 전문성. 모든 화물에 속도와 신뢰를 담습니다.",
+      "items": {
+        "air": {
+          "name": "항공 화물",
+          "tagline": "1분이 중요할 때",
+          "description": "주요 항공사 GSA/CSA 전문성을 바탕으로 한 특송·긴급 항공 화물 솔루션."
+        },
+        "ocean": {
+          "name": "해상 화물",
+          "tagline": "글로벌 도달, 현지 전문성",
+          "description": "전 세계 FCL(만재)·LCL(혼재) 서비스."
+        },
+        "project": {
+          "name": "프로젝트 화물",
+          "tagline": "복잡함을 단순하게",
+          "description": "대형·중량·고가 프로젝트 화물을 위한 전문 처리."
+        },
+        "aero": {
+          "name": "Goodman Aero Solutions",
+          "tagline": "전문성의 완성",
+          "description": "AOG 지원·부품 판매 등 안전한 항공기 운항을 뒷받침하는 토탈 솔루션."
+        }
+      }
+    },
+    "company": {
+      "eyebrow": "2014년 설립",
+      "titleLine1": "Small Giant.",
+      "titleLine2": "Big Impact.",
+      "lead": "전문 GSSA로서 항공 화물 대리는 부업이 아니라 우리의 핵심 정체성입니다. ECS Group의 지원과 기술적 정밀함, 현지 전문성으로 몇 배 규모의 기업에 견줍니다.",
+      "values": {
+        "trust": {
+          "title": "신뢰",
+          "desc": "모든 파트너십의 토대"
+        },
+        "velocity": {
+          "title": "속도",
+          "desc": "비즈니스의 속도에 맞춘 물류"
+        },
+        "connectivity": {
+          "title": "연결",
+          "desc": "글로벌 네트워크, 현지 전문성"
+        }
+      },
+      "quote": "“물류에서 모든 화물은 단순한 짐이 아니라 고객의 신뢰와 평판을 함께 싣습니다.”",
+      "quoteCite": "대표이사 · 창업자"
+    },
+    "network": {
+      "eyebrow": "확장을 위한 설계",
+      "titleLine1": "몇 배 규모의 기업에",
+      "titleLine2": "견주는 역량.",
+      "lead": "59개국에 걸친 세계 최대 GSSA 인프라 ECS Group을 통해, 전문 팀의 민첩함을 유지하면서 다국적 기업의 네트워크를 활용합니다.",
+      "cta": "네트워크 보기"
+    },
+    "partnerHub": {
+      "eyebrow": "전용",
+      "title": "파트너 허브",
+      "lead": "글로벌 네트워크를 위한 전용 리소스. 한국에서 비즈니스를 키우기 위한 기술 인텔리전스와 전략적 인사이트를 제공합니다.",
+      "features": {
+        "agent": "에이전트 존 — 파트너 등록 & 운임 조회",
+        "insights": "마켓 인사이트 — 한국 교역 인텔리전스 리포트",
+        "account": "전담 어카운트 매니지먼트"
+      },
+      "cta": "가입 문의하기"
+    },
+    "contact": {
+      "eyebrow": "연결",
+      "titleLine1": "귀사의 화물,",
+      "titleLine2": "이야기해요.",
+      "lead": "물류 수요에 대한 24/7 지원. 기술적 정밀함으로 한국에서 귀사의 브랜드를 대표합니다.",
+      "office": "사무소",
+      "officeValue": "강서 IT 밸리, 서울, 대한민국",
+      "email": "이메일",
+      "hours": "운영 시간",
+      "hoursValue": "월–금 9:00–18:00 KST",
+      "nameLabel": "이름",
+      "namePlaceholder": "이름을 입력하세요",
+      "emailLabel": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "messageLabel": "메시지",
+      "messagePlaceholder": "요청 사항을 알려주세요",
+      "send": "메시지 보내기",
+      "sending": "전송 중...",
+      "success": "메시지가 성공적으로 전송되었습니다.",
+      "error": "전송에 실패했습니다. 다시 시도해 주세요."
+    },
+    "footer": {
+      "titleLine1": "The Small Giant.",
+      "titleLine2": "Global Impact.",
+      "lead": "2014년부터 물류 대리의 수준을 끌어올립니다. 현지화된 한국 전문성으로 귀사의 글로벌 비전을 위한 인프라를 제공합니다.",
+      "cta": "파트너십 시작하기",
+      "companyHeading": "회사",
+      "servicesHeading": "서비스",
+      "links": {
+        "about": "회사소개",
+        "network": "네트워크",
+        "partnerHub": "파트너 허브",
+        "air": "항공 화물",
+        "ocean": "해상 화물",
+        "project": "프로젝트 화물",
+        "privacy": "개인정보처리방침",
+        "terms": "이용약관"
+      },
+      "copyright": "© 2026 GOODMAN Global Logistics Service. All rights reserved.",
+      "tagline": "한국 화물 GSSA · ECS Group 파트너"
+    }
+  },
   "pages": {
     "company": {
       "heroEyebrow": "스토리",

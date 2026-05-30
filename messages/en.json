@@ -5,7 +5,169 @@
     "services": "Services",
     "partnerHub": "Partner Hub",
     "company": "Company",
-    "contact": "Contact"
+    "network": "Network",
+    "contact": "Contact",
+    "contactSales": "Contact sales",
+    "getStarted": "Get started"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Small Giant. Big Impact.",
+      "titleLine1": "Your cargo sales",
+      "titleLine2": "team in Korea",
+      "lead": "GSSA representation for 15+ airlines. 59 countries via ECS Group — one dedicated team selling your capacity as if it were our own.",
+      "ctaPrimary": "Get started",
+      "ctaSecondary": "View network"
+    },
+    "trust": {
+      "eyebrow": "Trusted memberships"
+    },
+    "stats": {
+      "eyebrow": "Performance in numbers",
+      "years": "Years of Experience",
+      "airlines": "Airlines Represented",
+      "countries": "Countries Connected",
+      "offices": "Offices in Korea"
+    },
+    "why": {
+      "eyebrow": "What we do",
+      "titleLine1": "We think like an airline.",
+      "titleLine2": "We act like your team.",
+      "lead": "A GSSA is not a middleman. We are your dedicated commercial team in Korea — selling your capacity, managing your brand, and growing your revenue as if it were our own business.",
+      "pillars": {
+        "sales": {
+          "title": "In the Market",
+          "description": "We sell smart, act fast, and deliver consistently. Our local teams know every forwarder and route in Korea."
+        },
+        "capacity": {
+          "title": "In the Air",
+          "description": "Dynamic pricing, yield optimization, and strategic space allocation that maximizes your revenue per flight."
+        },
+        "intelligence": {
+          "title": "On the Ground",
+          "description": "Trade flow analysis, seasonal forecasting, and regulatory intelligence updated weekly for our partners."
+        },
+        "digital": {
+          "title": "In the Cloud",
+          "description": "Real-time dashboards, API connectivity, and digital booking platforms at your fingertips."
+        }
+      }
+    },
+    "gsa": {
+      "eyebrow": "Partnerships",
+      "title": "Airlines we represent",
+      "lead": "Trusted by carriers worldwide to grow their Korean market presence. From flag carriers to specialty freighters.",
+      "cta": "Become a partner"
+    },
+    "services": {
+      "eyebrow": "Capabilities",
+      "titleLine1": "Beyond GSSA —",
+      "titleLine2": "Full logistics capability",
+      "lead": "Air, ocean, and project cargo expertise to complement our airline partnerships. We deliver velocity and trust in every shipment.",
+      "items": {
+        "air": {
+          "name": "Air Freight",
+          "tagline": "When Every Minute Counts",
+          "description": "Express and time-critical air cargo solutions with GSA/CSA expertise for major carriers."
+        },
+        "ocean": {
+          "name": "Ocean Freight",
+          "tagline": "Global Reach, Local Expertise",
+          "description": "Full container load (FCL) and less than container load (LCL) services worldwide."
+        },
+        "project": {
+          "name": "Project Cargo",
+          "tagline": "Complex Solutions Made Simple",
+          "description": "Specialized handling for oversized, heavy, and high-value project shipments."
+        },
+        "aero": {
+          "name": "Goodman Aero Solutions",
+          "tagline": "Completing Expertise",
+          "description": "Total solutions supporting safe aircraft operations including AOG support and parts sale."
+        }
+      }
+    },
+    "company": {
+      "eyebrow": "Established 2014",
+      "titleLine1": "Small Giant.",
+      "titleLine2": "Big Impact.",
+      "lead": "As a dedicated GSSA, airline cargo representation is our core identity — not a side business. Backed by ECS Group, we rival companies many times our size through technical precision and local expertise.",
+      "values": {
+        "trust": {
+          "title": "Trust",
+          "desc": "The foundation of every partnership"
+        },
+        "velocity": {
+          "title": "Velocity",
+          "desc": "Logistics at the speed of business"
+        },
+        "connectivity": {
+          "title": "Connectivity",
+          "desc": "Global network, local expertise"
+        }
+      },
+      "quote": "“In logistics, every shipment carries not just cargo, but our clients’ trust and reputation.”",
+      "quoteCite": "CEO & Founder"
+    },
+    "network": {
+      "eyebrow": "Built for scale",
+      "titleLine1": "We rival enterprises",
+      "titleLine2": "many times our size.",
+      "lead": "Through ECS Group — the world’s largest GSSA infrastructure spanning 59 nations — we wield the network of a multinational while preserving the responsiveness of a specialist team.",
+      "cta": "See the network"
+    },
+    "partnerHub": {
+      "eyebrow": "Exclusive",
+      "title": "Partner Hub",
+      "lead": "Exclusive resources for our global network. Access technical intelligence and strategic insights to grow your business in Korea.",
+      "features": {
+        "agent": "Agent Zone — partner registration & tariff access",
+        "insights": "Market insights — Korea trade intelligence reports",
+        "account": "Dedicated account management"
+      },
+      "cta": "Contact us to join"
+    },
+    "contact": {
+      "eyebrow": "Connect",
+      "titleLine1": "Let's talk about",
+      "titleLine2": "your cargo.",
+      "lead": "24/7 support for your logistics needs. We represent your brand in Korea with technical precision.",
+      "office": "Office",
+      "officeValue": "Gangseo IT Valley, Seoul, South Korea",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursValue": "Mon–Fri 9:00–18:00 KST",
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your requirements",
+      "send": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully.",
+      "error": "Failed to send message. Please try again."
+    },
+    "footer": {
+      "titleLine1": "The Small Giant.",
+      "titleLine2": "Global Impact.",
+      "lead": "Elevating logistics representation since 2014. We provide the infrastructure for your global ambitions with localized Korean expertise.",
+      "cta": "Start a Partnership",
+      "companyHeading": "Company",
+      "servicesHeading": "Services",
+      "links": {
+        "about": "About Us",
+        "network": "Network",
+        "partnerHub": "Partner Hub",
+        "air": "Air Cargo",
+        "ocean": "Ocean Freight",
+        "project": "Project Cargo",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      },
+      "copyright": "© 2026 GOODMAN Global Logistics Service. All rights reserved.",
+      "tagline": "Korea cargo GSSA · ECS Group partner"
+    }
   },
   "company": {
     "title": "Small Giant. Big Impact.",

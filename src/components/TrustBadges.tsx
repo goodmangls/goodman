@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const memberships = [
   { name: 'MPL', desc: 'MPL Network' },
@@ -10,11 +11,12 @@ const memberships = [
 ];
 
 export default function TrustBadges() {
+  const { t } = useLanguage();
   return (
     <div className="bg-canvas py-12 border-b border-hairline">
       <div className="container-wide">
         <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
-          <span className="eyebrow">Trusted memberships</span>
+          <span className="eyebrow">{t('home.trust.eyebrow')}</span>
           {memberships.map((member, index) => (
             <motion.div
               key={member.name}

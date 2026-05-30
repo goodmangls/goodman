@@ -9,10 +9,15 @@ import ThemeToggle from './ThemeToggle';
 import { useLanguage, type Locale } from '@/contexts/LanguageContext';
 
 const navItems = [
-  { label: 'Company', href: '/company' },
-  { label: 'Services', href: '/services' },
-  { label: 'Network', href: '/network' },
+  { key: 'company', href: '/company' },
+  { key: 'services', href: '/services' },
+  { key: 'network', href: '/network' },
 ];
+
+const localeLabels: Record<Locale, string> = {
+  en: 'EN',
+  ko: '한국어',
+};
 
 function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
   const { locale, setLocale } = useLanguage();
@@ -31,7 +36,7 @@ function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
           className={`px-2 py-1 rounded transition-colors ${locale === code ? active : base}`}
           aria-pressed={locale === code}
         >
-          {code}
+          {localeLabels[code]}
         </button>
       ))}
     </div>
@@ -39,6 +44,7 @@ function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
 }
 
 export default function Navigation() {
+  const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
@@ -84,8 +90,8 @@ export default function Navigation() {
 
           <div className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
-              <Link key={item.label} href={item.href} className={linkClass}>
-                {item.label}
+              <Link key={item.key} href={item.href} className={linkClass}>
+                {t(`nav.${item.key}`)}
               </Link>
             ))}
           </div>
@@ -100,10 +106,10 @@ export default function Navigation() {
                     : 'btn-pill-sm bg-canvas text-ink border border-hairline hover:bg-surface-soft'
                 }
               >
-                Contact sales
+                {t('nav.contactSales')}
               </Link>
               <Link href="#contact" className="btn-pill-primary">
-                Get started
+                {t('nav.getStarted')}
               </Link>
             </div>
             <LocaleToggle isHeroNav={isHeroNav} />
@@ -145,12 +151,12 @@ export default function Navigation() {
             <div className="flex flex-col gap-6">
               {navItems.map((item) => (
                 <Link
-                  key={item.label}
+                  key={item.key}
                   href={item.href}
                   className="headline text-ink"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </Link>
               ))}
               <hr className="border-hairline" />
@@ -159,14 +165,14 @@ export default function Navigation() {
                 className="btn-pill-primary w-full py-4 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get started
+                {t('nav.getStarted')}
               </Link>
               <Link
                 href="#contact"
                 className="btn-pill-secondary w-full py-4 text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact sales
+                {t('nav.contactSales')}
               </Link>
             </div>
           </motion.div>

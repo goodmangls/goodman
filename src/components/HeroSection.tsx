@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import DisplayLines from './DisplayLines';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   return (
     <section className="relative hero-spacing overflow-hidden">
       {/* Full-bleed imagery */}
@@ -29,7 +31,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="subhead text-canvas-white/90 mb-6 max-w-xl"
           >
-            Small Giant. Big Impact.
+            {t('home.hero.eyebrow')}
           </motion.p>
 
           <motion.div
@@ -39,7 +41,7 @@ export default function HeroSection() {
           >
             <DisplayLines
               as="h1"
-              lines={['Your cargo sales', 'team in Korea']}
+              lines={[t('home.hero.titleLine1'), t('home.hero.titleLine2')]}
               className="display-hero text-canvas-white mb-8"
             />
           </motion.div>
@@ -50,8 +52,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="body-lg text-canvas-white/80 max-w-xl mb-12"
           >
-            GSSA representation for 15+ airlines. 59 countries via ECS Group — one
-            dedicated team selling your capacity as if it were our own.
+            {t('home.hero.lead')}
           </motion.p>
 
           <motion.div
@@ -61,10 +62,10 @@ export default function HeroSection() {
             className="flex flex-wrap items-center gap-4"
           >
             <Link href="#contact" className="btn-pill-primary">
-              Get started
+              {t('home.hero.ctaPrimary')}
             </Link>
             <Link href="/network" className="btn-pill-ghost">
-              View network
+              {t('home.hero.ctaSecondary')}
             </Link>
           </motion.div>
         </div>
