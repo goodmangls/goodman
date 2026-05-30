@@ -1,6 +1,6 @@
 {
   "activeFeature": "goodman-gls-nav-i18n",
-  "phase": "design",
+  "phase": "do",
   "matchRate": null,
   "lastArchived": {
     "feature": "goodman-gls-contact-hardening",
@@ -29,6 +29,19 @@
       "validatorScore": 94,
       "validatorImprovementsApplied": "DisplayLines id prop 사유 §4.3 추가 / ko baseline 기대치 §2.4 추가 (94→96+ 기대)",
       "note": "design-validator 94/100 PASS — Plan §10 90+ 기대 충족. Do 진입 준비 완료."
+    },
+    {
+      "phase": "do",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "branch": "feature/nav-i18n",
+      "commits": [
+        "6ff0c93 — Commit A: messages/en.json + ko.json atomic",
+        "2d9e727 — Commit B: Navigation t() + aria-label=Primary",
+        "539bb92 — Commit C: ContactSection + DisplayLines id prop"
+      ],
+      "verification": "FR-1~FR-6 grep audit all PASS / lint 0 / tsc 0 / vitest 17/17 / build ✓ Compiled (prerender /_global-error 실패는 사전 documented framework debt, vercel.json '|| true' 마스킹으로 deploy 영향 없음)",
+      "next": "/pdca analyze goodman-gls-nav-i18n → gap-detector 매치율 측정 후 report 단계 진입"
     },
     {
       "phase": "plan",
