@@ -1,11 +1,36 @@
 {
   "nav": {
-    "home": "Home",
-    "networkSolutions": "Network & Solutions",
-    "services": "Services",
-    "partnerHub": "Partner Hub",
     "company": "Company",
-    "contact": "Contact"
+    "services": "Services",
+    "network": "Network",
+    "contactSales": "Contact sales",
+    "getStarted": "Get started"
+  },
+  "contact": {
+    "eyebrow": "Connect",
+    "headingLine1": "Let's talk about",
+    "headingLine2": "your cargo.",
+    "lead": "24/7 support for your logistics needs. We represent your brand in Korea with technical precision.",
+    "info": {
+      "officeLabel": "Office",
+      "officeValue": "Gangseo IT Valley, Seoul, South Korea",
+      "emailLabel": "Email",
+      "emailValue": "contact@goodmangls.com",
+      "hoursLabel": "Hours",
+      "hoursValue": "Mon–Fri 9:00–18:00 KST"
+    },
+    "form": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Enter your email",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your requirements",
+      "submitIdle": "Send message",
+      "submitSending": "Sending...",
+      "successAlert": "Message sent successfully.",
+      "errorAlert": "Failed to send message. Please try again."
+    }
   },
   "company": {
     "title": "Small Giant. Big Impact.",
@@ -134,27 +159,6 @@
     "marketInsights": "Market Insights - Korea Trade Intelligence Reports",
     "dedicatedManagement": "Dedicated Account Management",
     "cta": "Access Partner Portal"
-  },
-  "contact": {
-    "title": "Let's Connect",
-    "subtitle": "24/7 Support for Your Logistics Needs",
-    "getInTouch": "Get in Touch",
-    "office": "Office Location",
-    "officeAddress": "Gangseo IT Valley (HQ)",
-    "operationHubs": "Hubs: Incheon, Busan, Guangzhou",
-    "email": "Email",
-    "emailAddress": "contact@goodmangls.com",
-    "officeHours": "Office Hours",
-    "hours": "Mon-Fri 9:00-18:00 KST",
-    "emergency": "Emergency: 24/7 via WhatsApp/WeChat",
-    "quickInquiry": "Quick Inquiry",
-    "namePlaceholder": "Your Name",
-    "emailPlaceholder": "Email",
-    "messagePlaceholder": "Your Message",
-    "sendMessage": "Send Message",
-    "sending": "Sending...",
-    "successMessage": "Message sent successfully! We'll get back to you soon.",
-    "errorMessage": "Failed to send message. Please try again or contact us directly."
   },
   "footer": {
     "tagline": "GOODMAN GLS - Your Strategic Partner in Korea & Beyond",

@@ -1,4 +1,37 @@
 {
+  "nav": {
+    "company": "회사",
+    "services": "서비스",
+    "network": "네트워크",
+    "contactSales": "문의하기",
+    "getStarted": "시작하기"
+  },
+  "contact": {
+    "eyebrow": "연결",
+    "headingLine1": "고객님의 화물에",
+    "headingLine2": "대해 이야기합시다.",
+    "lead": "물류 운영을 위한 24시간 지원. 기술적 정밀성으로 한국에서 고객님의 브랜드를 대변합니다.",
+    "info": {
+      "officeLabel": "사무실",
+      "officeValue": "강서 IT 밸리, 서울",
+      "emailLabel": "이메일",
+      "emailValue": "contact@goodmangls.com",
+      "hoursLabel": "업무 시간",
+      "hoursValue": "월–금 9:00–18:00 KST"
+    },
+    "form": {
+      "nameLabel": "이름",
+      "namePlaceholder": "이름을 입력하세요",
+      "emailLabel": "이메일",
+      "emailPlaceholder": "이메일을 입력하세요",
+      "messageLabel": "메시지",
+      "messagePlaceholder": "필요한 사항을 알려주세요",
+      "submitIdle": "메시지 보내기",
+      "submitSending": "전송 중...",
+      "successAlert": "메시지가 성공적으로 전송되었습니다.",
+      "errorAlert": "메시지 전송에 실패했습니다. 다시 시도해 주세요."
+    }
+  },
   "pages": {
     "company": {
       "heroEyebrow": "스토리",
