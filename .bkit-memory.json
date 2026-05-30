@@ -1,12 +1,15 @@
 {
-  "activeFeature": "goodman-gls-nav-i18n",
-  "phase": "design",
-  "matchRate": null,
+  "activeFeature": null,
+  "phase": "archived",
+  "matchRate": 98,
   "lastArchived": {
-    "feature": "goodman-gls-contact-hardening",
-    "date": "2026-05-29",
-    "archivedTo": "docs/archive/2026-05/goodman-gls-contact-hardening/",
-    "matchRate": 96
+    "feature": "goodman-gls-nav-i18n",
+    "date": "2026-05-30",
+    "archivedTo": "docs/archive/2026-05/goodman-gls-nav-i18n/",
+    "matchRate": 98,
+    "status": "superseded-partial",
+    "supersededBy": "PR #4 bdcb2f0 (광역 11 컴포넌트 i18n)",
+    "uniqueDeliverablesCarriedForward": "nav-i18n-cleanup mini-cycle: aria-labelledby + DisplayLines id prop + nav aria-label + stale 키 제거 + contact 트리 정합화"
   },
   "startedAt": "2026-05-28",
   "history": [
@@ -14,14 +17,14 @@
       "phase": "plan",
       "date": "2026-05-30",
       "feature": "goodman-gls-nav-i18n",
-      "document": "docs/01-plan/features/goodman-gls-nav-i18n.plan.md",
+      "document": "docs/archive/2026-05/goodman-gls-nav-i18n/goodman-gls-nav-i18n.plan.md",
       "note": "T3 후속 사이클 시작. 보고서 §8 의 '\"Contact Us\" 버튼 중복' 기술이 현재 코드와 불일치 — 실제 부채는 Navigation/ContactSection 의 t() 미사용 + aria-labelledby 부재로 스코프 정정. Open Question 4건 Design 단계 확정 예정."
     },
     {
       "phase": "design",
       "date": "2026-05-30",
       "feature": "goodman-gls-nav-i18n",
-      "document": "docs/02-design/features/goodman-gls-nav-i18n.design.md",
+      "document": "docs/archive/2026-05/goodman-gls-nav-i18n/goodman-gls-nav-i18n.design.md",
       "openQuestionsResolved": "Q1 stale 4키 0 사용처 → 삭제 / Q2 문의하기·시작하기 (사용자 결정) / Q3 OOS 유지 (sectional-i18n-rollout 후속) / Q4 suppressHydrationWarning 이미 wired",
       "addedFinding": "DisplayLines id prop 미지원 → 1줄 prop 추가 명시 (R-3 해소)",
       "implementationCommits": "A: messages atomic / B: Navigation / C: ContactSection+DisplayLines",
@@ -29,6 +32,41 @@
       "validatorScore": 94,
       "validatorImprovementsApplied": "DisplayLines id prop 사유 §4.3 추가 / ko baseline 기대치 §2.4 추가 (94→96+ 기대)",
       "note": "design-validator 94/100 PASS — Plan §10 90+ 기대 충족. Do 진입 준비 완료."
+    },
+    {
+      "phase": "do",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "branch": "feature/nav-i18n",
+      "commits": ["6ff0c93 messages atomic", "2d9e727 Navigation t()+aria-label", "539bb92 ContactSection+DisplayLines id", "6d91381 chore phase=do", "664f82c archive (closed branch)"],
+      "verification": "FR-1~FR-6 grep audit PASS / lint 0 / tsc 0 / vitest 17/17 / build ✓ Compiled",
+      "note": "Design 대비 100% 구현 완료 → 그러나 PR open 직후 PR #4 동시 머지로 main 광역 변경 발생."
+    },
+    {
+      "phase": "check",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "document": "docs/archive/2026-05/goodman-gls-nav-i18n/goodman-gls-nav-i18n.analysis.md",
+      "matchRate": 98,
+      "summary": "자체 Design 대비 코드 100%. 비코드 -2pp (browser smoke + Lighthouse manual). iterate skip."
+    },
+    {
+      "phase": "report",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "document": "docs/archive/2026-05/goodman-gls-nav-i18n/goodman-gls-nav-i18n.report.md",
+      "lines": 322,
+      "framing": "v1.0 success → v1.1 supersession-aware (PR #4 충돌 인지)"
+    },
+    {
+      "phase": "archived",
+      "date": "2026-05-30",
+      "feature": "goodman-gls-nav-i18n",
+      "archivedTo": "docs/archive/2026-05/goodman-gls-nav-i18n/",
+      "documents": ["plan.md (git mv)", "design.md (git mv)", "analysis.md v0.2 (supersession 추가)", "report.md v1.1 (supersession 추가)"],
+      "indexUpdated": "docs/archive/2026-05/_INDEX.md",
+      "prStatus": "PR #5 CLOSED (사용자 결정, PR #4 bdcb2f0 머지 충돌)",
+      "carryForward": "nav-i18n-cleanup mini-cycle — 고유 5건 (semantic HTML aria-labelledby + h2 id + DisplayLines id prop + nav aria-label + stale 키/contact 트리 정리)"
     },
     {
       "phase": "plan",
