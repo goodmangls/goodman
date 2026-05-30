@@ -5,6 +5,7 @@
 | goodman-gls-prerender-debt | 0% | 2026-05-29 | failed-upstream-blocked | [plan](goodman-gls-prerender-debt/goodman-gls-prerender-debt.plan.md), [design](goodman-gls-prerender-debt/goodman-gls-prerender-debt.design.md), [analysis](goodman-gls-prerender-debt/goodman-gls-prerender-debt.analysis.md), [report](goodman-gls-prerender-debt/goodman-gls-prerender-debt.report.md) |
 | goodman-gls-contact-hardening | 96% | 2026-05-29 | completed (PR #2 → main 7cac00f) | [plan](goodman-gls-contact-hardening/goodman-gls-contact-hardening.plan.md), [design](goodman-gls-contact-hardening/goodman-gls-contact-hardening.design.md), [analysis](goodman-gls-contact-hardening/goodman-gls-contact-hardening.analysis.md), [report](goodman-gls-contact-hardening/goodman-gls-contact-hardening.report.md) |
 | goodman-gls-nav-i18n | 98% (own Design) | 2026-05-30 | ⚠️ superseded-partial (PR #5 closed, PR #4 `bdcb2f0` 머지 충돌) → nav-i18n-cleanup 분리 사이클 | [plan](goodman-gls-nav-i18n/goodman-gls-nav-i18n.plan.md), [design](goodman-gls-nav-i18n/goodman-gls-nav-i18n.design.md), [analysis](goodman-gls-nav-i18n/goodman-gls-nav-i18n.analysis.md), [report](goodman-gls-nav-i18n/goodman-gls-nav-i18n.report.md) |
+| nav-i18n-cleanup | 97% | 2026-05-30 | completed (main 직접 push: 3a9dfef + 42fffca) | [plan](nav-i18n-cleanup/nav-i18n-cleanup.plan.md), [design](nav-i18n-cleanup/nav-i18n-cleanup.design.md), [analysis](nav-i18n-cleanup/nav-i18n-cleanup.analysis.md), [report](nav-i18n-cleanup/nav-i18n-cleanup.report.md) |
 
 ## Notes
 
@@ -34,5 +35,21 @@
   4. nav stale 키 제거 (`home`/`networkSolutions`/`partnerHub`)
   5. contact 트리 정합화 (PR #4 의 기존 19키 stale 유지)
 - **matchRate**: 98% (자체 Design 대비), 그러나 main 통합 측면 부분 superseded
-- **분리 사이클**: `nav-i18n-cleanup` (다음 mini-cycle) — 위 5건만 깔끔하게 main 에서 처리
+- **분리 사이클**: `nav-i18n-cleanup` (다음 mini-cycle) — 위 5건만 깔끔하게 main 에서 처리 → ✅ 완료 (2026-05-30, matchRate 97%)
 - **자산**: 본 사이클의 Plan/Design 은 i18n + semantic HTML 패턴 reference 로 재사용 가능 (직역 baseline + grep audit ROI + Open Q 4건 해결 패턴)
+
+### nav-i18n-cleanup
+- **Outcome**: success cycle — goodman-gls-nav-i18n superseded-partial 의 carry-forward 5건 완료
+- **Commits**: main 직접 push `3a9dfef` (♿ a11y semantic landmark) + `42fffca` (🧹 i18n stale cleanup) — PR 없음
+- **검증**: FR-1~FR-5 grep audit 7/7 / lint 0 / tsc 0 / vitest 17/17 / build ✓ Compiled 6.1s
+- **matchRate**: 97% (코드 100%, 비코드 -3pp: browser smoke + Lighthouse manual)
+- **반영 내용**:
+  · DisplayLines `id?:string` prop 시그니처 확장 + JSDoc
+  · Navigation `<nav aria-label="Primary">` (route landmark)
+  · ContactSection `<section aria-labelledby="contact-heading">` + h2 `id="contact-heading"`
+  · en.json nav 9→5키 정합화 + 최상위 contact stale 19 leaf 트리 제거
+  · ko.json nav 9→5키 정합화 (최상위 contact 부재 확인)
+- **소요**: ~50m (부모 cycle 패턴 100% 재사용 + Open Q 0)
+- **동시 push 충돌**: PR #6 `9ee9d05` (한글 자간/행간) 동시 머지 → stash + rebase + pop 으로 무손실 처리
+- **lessons**: 5건 (부모 패턴 재사용 / agent 우회 / 동시 충돌 패턴 재발 / soft-delete 회피 / Open Q 0 가속)
+- **후속 사이클 후보**: sectional-aria-labelledby-rollout(P1) / pages-route-i18n(P1) / marketing-copy-ko-review(P2) / next-intl-native-migration(P2) — 부모 cycle 과 동일

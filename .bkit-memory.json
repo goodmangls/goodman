@@ -1,15 +1,16 @@
 {
-  "activeFeature": "nav-i18n-cleanup",
-  "phase": "check",
+  "activeFeature": null,
+  "phase": "archived",
   "matchRate": 97,
   "lastArchived": {
-    "feature": "goodman-gls-nav-i18n",
+    "feature": "nav-i18n-cleanup",
     "date": "2026-05-30",
-    "archivedTo": "docs/archive/2026-05/goodman-gls-nav-i18n/",
-    "matchRate": 98,
-    "status": "superseded-partial",
-    "supersededBy": "PR #4 bdcb2f0 (광역 11 컴포넌트 i18n)",
-    "uniqueDeliverablesCarriedForward": "nav-i18n-cleanup mini-cycle: aria-labelledby + DisplayLines id prop + nav aria-label + stale 키 제거 + contact 트리 정합화"
+    "archivedTo": "docs/archive/2026-05/nav-i18n-cleanup/",
+    "matchRate": 97,
+    "status": "completed",
+    "parent": "goodman-gls-nav-i18n (superseded-partial)",
+    "deliverables": "semantic HTML landmark (nav aria-label + section aria-labelledby) + DisplayLines id prop + h2 id + nav stale 4키 제거 + en.json 최상위 contact 19 leaf 제거",
+    "commits": "main: 3a9dfef + 42fffca (rebased onto PR #6 9ee9d05)"
   },
   "startedAt": "2026-05-28",
   "history": [
@@ -109,6 +110,26 @@
       "summary": "FR/file diff/commit/build 100%. -3pp 비코드 (browser smoke + Lighthouse manual). iterate 불요 — pdca-iterator 처리 카테고리 아님.",
       "method": "gap-detector agent 호출 없이 직접 분석 (메모리 feedback_subagent_file_write_lie + 빠른 사이클 ROI 고려)",
       "next": "/pdca report nav-i18n-cleanup → 완료 보고서"
+    },
+    {
+      "phase": "report",
+      "date": "2026-05-30",
+      "feature": "nav-i18n-cleanup",
+      "document": "docs/04-report/nav-i18n-cleanup.report.md",
+      "matchRate": 97,
+      "method": "report-generator agent 우회 직접 작성 (analyze 단계와 동일 사유)",
+      "lessonsCount": 5,
+      "framing": "success cycle — 부모 cycle (superseded-partial) carry-forward 5건 완료"
+    },
+    {
+      "phase": "archived",
+      "date": "2026-05-30",
+      "feature": "nav-i18n-cleanup",
+      "archivedTo": "docs/archive/2026-05/nav-i18n-cleanup/",
+      "documents": ["plan.md (git mv)", "design.md (git mv)", "analysis.md (mv 신규)", "report.md (mv 신규)"],
+      "indexUpdated": "docs/archive/2026-05/_INDEX.md",
+      "parentLinked": "goodman-gls-nav-i18n (superseded-partial) 옆 보관",
+      "followupCandidates": "sectional-aria-labelledby-rollout(P1) / pages-route-i18n(P1) / marketing-copy-ko-review(P2) / next-intl-native-migration(P2)"
     },
     {
       "phase": "plan",
