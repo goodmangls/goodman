@@ -2,6 +2,7 @@
 
 import { useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -36,23 +37,24 @@ function AnimatedCounter({ target, suffix = '' }: { target: number; suffix?: str
 }
 
 export default function StatsSection() {
+  const { t } = useLanguage();
   const stats = [
-    { value: 10, suffix: '+', label: 'Years of Experience', key: 'years' },
-    { value: 15, suffix: '+', label: 'Airlines Represented', key: 'airlines' },
-    { value: 59, suffix: '', label: 'Countries Connected', key: 'countries' },
-    { value: 3, suffix: '', label: 'Offices in Korea', key: 'offices' },
+    { value: 10, suffix: '+', key: 'years' },
+    { value: 15, suffix: '+', key: 'airlines' },
+    { value: 59, suffix: '', key: 'countries' },
+    { value: 3, suffix: '', key: 'offices' },
   ];
 
   return (
     <section className="section-surface-obsidian section-spacing">
       <div className="container-wide">
-        <p className="eyebrow mb-12">Performance in numbers</p>
+        <p className="eyebrow mb-12">{t('home.stats.eyebrow')}</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {stats.map((stat) => (
             <div key={stat.key} className="flex flex-col items-start">
               <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-              <p className="headline mt-4 text-canvas-white/75">{stat.label}</p>
+              <p className="headline mt-4 text-canvas-white/75">{t(`home.stats.${stat.key}`)}</p>
             </div>
           ))}
         </div>

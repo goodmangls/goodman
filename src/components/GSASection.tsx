@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const partners = [
   { code: 'WS', name: 'WestJet Cargo (GSA)' },
@@ -14,15 +15,15 @@ const partners = [
 ];
 
 export default function GSASection() {
+  const { t } = useLanguage();
   return (
     <section id="network" className="bg-canvas section-spacing">
       <div className="container-wide">
         <div className="max-w-4xl mb-16">
-          <p className="eyebrow mb-6">Partnerships</p>
-          <h2 className="display-lg text-ink mb-6">Airlines we represent</h2>
+          <p className="eyebrow mb-6">{t('home.gsa.eyebrow')}</p>
+          <h2 className="display-lg text-ink mb-6">{t('home.gsa.title')}</h2>
           <p className="body-lg text-muted">
-            Trusted by carriers worldwide to grow their Korean market presence. From flag
-            carriers to specialty freighters.
+            {t('home.gsa.lead')}
           </p>
         </div>
 
@@ -42,7 +43,7 @@ export default function GSASection() {
 
         <div className="mt-16">
           <Link href="#contact" className="btn-pill-primary">
-            Become a partner
+            {t('home.gsa.cta')}
           </Link>
         </div>
       </div>

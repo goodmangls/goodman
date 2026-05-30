@@ -3,25 +3,27 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import DisplayLines from './DisplayLines';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const footerLinks = {
   company: [
-    { label: 'About Us', href: '/company' },
-    { label: 'Network', href: '/network' },
-    { label: 'Partner Hub', href: '/#partner-hub' },
+    { key: 'about', href: '/company' },
+    { key: 'network', href: '/network' },
+    { key: 'partnerHub', href: '/#partner-hub' },
   ],
   services: [
-    { label: 'Air Cargo', href: '/services#air' },
-    { label: 'Ocean Freight', href: '/services#ocean' },
-    { label: 'Project Cargo', href: '/services#project' },
+    { key: 'air', href: '/services#air' },
+    { key: 'ocean', href: '/services#ocean' },
+    { key: 'project', href: '/services#project' },
   ],
   legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
+    { key: 'privacy', href: '#' },
+    { key: 'terms', href: '#' },
   ]
 };
 
 export default function Footer() {
+  const { t } = useLanguage();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -42,18 +44,17 @@ export default function Footer() {
               </div>
               <DisplayLines
                 as="h2"
-                lines={['The Small Giant.', 'Global Impact.']}
+                lines={[t('home.footer.titleLine1'), t('home.footer.titleLine2')]}
                 className="display-lg text-canvas-white mb-12 max-w-lg"
               />
               <p className="body-lg text-canvas-white/70 mb-16 max-w-md">
-                Elevating logistics representation since 2014. We provide the infrastructure
-                for your global ambitions with localized Korean expertise.
+                {t('home.footer.lead')}
               </p>
             </div>
 
             <div className="flex items-center gap-6 mt-12">
               <Link href="/#contact" className="btn-pill-primary">
-                Start a Partnership
+                {t('home.footer.cta')}
               </Link>
               <button
                 type="button"
@@ -67,15 +68,15 @@ export default function Footer() {
           </div>
 
           <div className="lg:pt-4">
-            <span className="caption block mb-8 text-canvas-white/50">Company</span>
+            <span className="caption block mb-8 text-canvas-white/50">{t('home.footer.companyHeading')}</span>
             <ul className="space-y-4">
               {footerLinks.company.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     className="body-sm font-bold text-canvas-white hover:text-canvas-white/70 transition-colors"
                   >
-                    {link.label}
+                    {t(`home.footer.links.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -83,15 +84,15 @@ export default function Footer() {
           </div>
 
           <div className="lg:pt-4">
-            <span className="caption block mb-8 text-canvas-white/50">Services</span>
+            <span className="caption block mb-8 text-canvas-white/50">{t('home.footer.servicesHeading')}</span>
             <ul className="space-y-4">
               {footerLinks.services.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     className="body-sm font-bold text-canvas-white hover:text-canvas-white/70 transition-colors"
                   >
-                    {link.label}
+                    {t(`home.footer.links.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -104,20 +105,20 @@ export default function Footer() {
             <div className="flex flex-wrap gap-x-12 gap-y-6">
               {footerLinks.legal.map((link) => (
                 <Link
-                  key={link.label}
+                  key={link.key}
                   href={link.href}
                   className="body-sm text-canvas-white/50 hover:text-canvas-white font-semibold transition-colors"
                 >
-                  {link.label}
+                  {t(`home.footer.links.${link.key}`)}
                 </Link>
               ))}
             </div>
             <div className="space-y-2">
               <p className="body-sm text-canvas-white/40">
-                © 2026 GOODMAN Global Logistics Service. All rights reserved.
+                {t('home.footer.copyright')}
               </p>
               <p className="caption text-canvas-white/30">
-                Korea cargo GSSA · ECS Group partner
+                {t('home.footer.tagline')}
               </p>
             </div>
           </div>
