@@ -1,1 +1,1 @@
-🚚 content(GLS): GSSA 중심 → 종합물류업 전면 전환 (Hero·서비스 6종·홈/회사/서비스/네트워크 재구성, 한/영 동기, GSSA는 특화 역량으로 강등, 서브페이지 i18n 전환)
+📁 archive(pdca): pages-aria-labelledby-rollout matchRate 95% → docs/archive/2026-05/ (3 라우트 13 sections region landmark, Plan §2 정정 + 사용자 사전 작업 시너지)

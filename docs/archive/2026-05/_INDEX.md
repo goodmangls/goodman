@@ -7,6 +7,7 @@
 | goodman-gls-nav-i18n | 98% (own Design) | 2026-05-30 | ⚠️ superseded-partial (PR #5 closed, PR #4 `bdcb2f0` 머지 충돌) → nav-i18n-cleanup 분리 사이클 | [plan](goodman-gls-nav-i18n/goodman-gls-nav-i18n.plan.md), [design](goodman-gls-nav-i18n/goodman-gls-nav-i18n.design.md), [analysis](goodman-gls-nav-i18n/goodman-gls-nav-i18n.analysis.md), [report](goodman-gls-nav-i18n/goodman-gls-nav-i18n.report.md) |
 | nav-i18n-cleanup | 97% | 2026-05-30 | completed (main 직접 push: 3a9dfef + 42fffca) | [plan](nav-i18n-cleanup/nav-i18n-cleanup.plan.md), [design](nav-i18n-cleanup/nav-i18n-cleanup.design.md), [analysis](nav-i18n-cleanup/nav-i18n-cleanup.analysis.md), [report](nav-i18n-cleanup/nav-i18n-cleanup.report.md) |
 | sectional-aria-labelledby-rollout | 97% | 2026-05-30 | completed (main 직접 push: 242685b 단일 commit) | [plan](sectional-aria-labelledby-rollout/sectional-aria-labelledby-rollout.plan.md), [design](sectional-aria-labelledby-rollout/sectional-aria-labelledby-rollout.design.md), [analysis](sectional-aria-labelledby-rollout/sectional-aria-labelledby-rollout.analysis.md), [report](sectional-aria-labelledby-rollout/sectional-aria-labelledby-rollout.report.md) |
+| pages-aria-labelledby-rollout | 95% | 2026-05-30 | completed (main 직접 push: f99f17f 단일 commit) | [plan](pages-aria-labelledby-rollout/pages-aria-labelledby-rollout.plan.md), [design](pages-aria-labelledby-rollout/pages-aria-labelledby-rollout.design.md), [analysis](pages-aria-labelledby-rollout/pages-aria-labelledby-rollout.analysis.md), [report](pages-aria-labelledby-rollout/pages-aria-labelledby-rollout.report.md) |
 
 ## Notes
 
@@ -38,6 +39,25 @@
 - **matchRate**: 98% (자체 Design 대비), 그러나 main 통합 측면 부분 superseded
 - **분리 사이클**: `nav-i18n-cleanup` (다음 mini-cycle) — 위 5건만 깔끔하게 main 에서 처리 → ✅ 완료 (2026-05-30, matchRate 97%)
 - **자산**: 본 사이클의 Plan/Design 은 i18n + semantic HTML 패턴 reference 로 재사용 가능 (직역 baseline + grep audit ROI + Open Q 4건 해결 패턴)
+
+### pages-aria-labelledby-rollout
+- **Outcome**: success cycle — `sectional-aria-labelledby-rollout` 의 region landmark 패턴을 `/company` `/services` `/network` 3 라우트 13 sections 로 확산
+- **Commit**: main 직접 push `f99f17f` (단일 commit, Q3 채택)
+- **검증**: FR-1~FR-5 grep audit PASS / lint 0 / tsc 0 / vitest 17/17 / build ✓ Compiled 8.0s
+- **matchRate**: 95% (코드 100%, -2pp Plan §2 명명 정정, -3pp 비코드 manual)
+- **3 sub-pattern 적용**:
+  · Pattern A (DisplayLines + id, 4): company-hero / company-team / services-cta / network-hero
+  · Pattern B (inline h-tag + id, 7): company-ceo / company-heritage / company-values / services-hero / services-${service.id}(dynamic) / network-gssa / network-ecosystem
+  · Pattern C (aria-label only, 2): services L57 (reuse pages.services.quickAccess) / network L47 (신규 key partnersLabel)
+- **Heading ID Map**: 11 신규 `-heading` ids + 5 기존 anchor id 보존 (services `id={service.id}`), 부모 cycle 홈 ids 와 충돌 0
+- **신규 message key 1개**: `pages.network.partnersLabel` (en "Partner networks" / ko "파트너 네트워크")
+- **Open Question 4건 self-resolve** (Q1 기존 key 재사용 / Q2 신규 1 key / Q3 단일 commit / Q4 grep static + DOM manual)
+- **Plan §2 정정**: section 4 "timeline" → 실제 "Team" — Do 단계에서 `company-team-heading` 으로 정정 (-2pp)
+- **사용자 사전 작업 시너지**: commit `6fad87d` 가 페이지 i18n 적용 → 본 사이클은 a11y 만 집중 (스코프 절반 축소)
+- **소요**: ~50m (Plan 70m 추정 -20m)
+- **메모리 정책 효과**: 5번째 연속 drift-free push
+- **lessons**: 5건 (부모 패턴 재사용 / 사용자 사전 작업 시너지 / 신규 key 최소화 / Plan 정확성 / 메모리 정책 누적 효과)
+- **후속 사이클 후보**: marketing-copy-ko-review(P2) / next-intl-native-migration(P2)
 
 ### sectional-aria-labelledby-rollout
 - **Outcome**: success cycle — `nav-i18n-cleanup` 의 OOS-1 인 11 컴포넌트 region landmark 일괄 확산

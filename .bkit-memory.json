@@ -1,17 +1,19 @@
 {
   "activeFeature": null,
   "phase": "archived",
-  "matchRate": 97,
+  "matchRate": 95,
   "lastArchived": {
-    "feature": "sectional-aria-labelledby-rollout",
+    "feature": "pages-aria-labelledby-rollout",
     "date": "2026-05-30",
-    "archivedTo": "docs/archive/2026-05/sectional-aria-labelledby-rollout/",
-    "matchRate": 97,
+    "archivedTo": "docs/archive/2026-05/pages-aria-labelledby-rollout/",
+    "matchRate": 95,
     "status": "completed",
-    "parent": "nav-i18n-cleanup (semantic landmark baseline)",
-    "deliverables": "11 컴포넌트 region landmark — Pattern A(DisplayLines×6) + B(직접 h2×2) + C(aria-label×2). 8 신규 -heading id + 5 anchor id 보존",
-    "commit": "main: 242685b 단일 commit (Q3 채택)",
-    "concurrentActivity": "4회 누적 — content/a11y 격리도 인사이트 확보 (fast-forward 공존)"
+    "parent": "sectional-aria-labelledby-rollout (home 11 sections)",
+    "deliverables": "3 라우트 13 sections region landmark — Pattern A(4) + B(7, 1개 dynamic) + C(2, 1 reuse + 1 신규 key). 11 신규 -heading id + 5 anchor id 보존",
+    "commit": "main: f99f17f 단일 commit (Q3 채택)",
+    "newI18nKey": "pages.network.partnersLabel (en+ko)",
+    "userSynergy": "사용자 6fad87d 가 사전 i18n 적용 → 본 사이클 스코프 절반 축소 (a11y only)",
+    "concurrentActivity": "0 (5번째 연속 drift-free push — 메모리 정책 검증)"
   },
   "startedAt": "2026-05-28",
   "history": [
@@ -195,6 +197,69 @@
       "indexUpdated": "docs/archive/2026-05/_INDEX.md",
       "parentLinked": "nav-i18n-cleanup 옆 보관",
       "followupCandidates": "pages-route-i18n(P1, 우선순위 ↑ 사용자 services 확장 시너지) / marketing-copy-ko-review(P2) / next-intl-native-migration(P2)"
+    },
+    {
+      "phase": "plan",
+      "date": "2026-05-30",
+      "feature": "pages-aria-labelledby-rollout",
+      "document": "docs/01-plan/features/pages-aria-labelledby-rollout.plan.md",
+      "parent_pattern": "sectional-aria-labelledby-rollout",
+      "scopeReframing": "원래 pages-route-i18n → 사용자 6fad87d 가 i18n 완료(OBE) → aria-labelledby rollout 으로 정확화 (사용자 결정)",
+      "scope": "13 sections — company 5, services 4 source (map 포함), network 4",
+      "memoryApplied": "feedback_concurrent_push_pattern — git fetch + gh pr list 사전 점검 (drift 0, PR #3 ECC 무관)",
+      "estimate": "~70m total",
+      "openQuestions": 4,
+      "note": "Q1 sticky nav aria-label / Q2 network ECS heading element / Q3 commit 구조 / Q4 map loop 동적 id 검증 — Design 단계 확정 대기"
+    },
+    {
+      "phase": "design",
+      "date": "2026-05-30",
+      "feature": "pages-aria-labelledby-rollout",
+      "document": "docs/02-design/features/pages-aria-labelledby-rollout.design.md",
+      "openQuestionsResolved": "Q1 기존 key 재사용 (pages.services.quickAccess, 신규 key 0) / Q2 network L47 Pattern C 신규 1 key (pages.network.partnersLabel) / Q3 단일 commit (부모 precedent) / Q4 grep static interpolation + DOM manual",
+      "headingIdMap": "11 신규 -heading id + 2 aria-label + 1 신규 message key, namespace 충돌 0",
+      "estimate": "~35m do (Plan 70m → 단축, Open Q 0 + 신규 key 최소)",
+      "note": "13 sections inventory 정확, 부모 cycle 패턴 100% 재사용. Do 진입 준비 완료."
+    },
+    {
+      "phase": "do",
+      "date": "2026-05-30",
+      "feature": "pages-aria-labelledby-rollout",
+      "branch": "main (직접 push)",
+      "commit": "f99f17f ♿ a11y 13 sections region landmark (단일 commit)",
+      "verification": "FR-1~FR-5 grep audit PASS / lint 0 / tsc 0 / vitest 17/17 / build ✓ Compiled 8.0s",
+      "planCorrection": "Plan §2 section 4 명명 'timeline' → 실제 코드 'Team' (company-team-heading 으로 정정 적용)",
+      "concurrentActivity": "0 (5번째 연속 drift-free push)"
+    },
+    {
+      "phase": "check",
+      "date": "2026-05-30",
+      "feature": "pages-aria-labelledby-rollout",
+      "document": "docs/03-analysis/pages-aria-labelledby-rollout.analysis.md",
+      "matchRate": 95,
+      "summary": "FR/commit/build 100%. -2pp Plan §2 정확성 (명명 오류 정정 적용) + -3pp 비코드 manual. iterate 불요.",
+      "method": "gap-detector 우회 직접 분석 (5번째 우회 사례)",
+      "next": "/pdca report pages-aria-labelledby-rollout"
+    },
+    {
+      "phase": "report",
+      "date": "2026-05-30",
+      "feature": "pages-aria-labelledby-rollout",
+      "document": "docs/04-report/pages-aria-labelledby-rollout.report.md",
+      "matchRate": 95,
+      "method": "report-generator 우회 직접 작성 (6번째 우회 사례 — 패턴 확립)",
+      "lessonsCount": 5,
+      "framing": "success cycle — 부모 sectional rollout 의 pages 라우트 확산"
+    },
+    {
+      "phase": "archived",
+      "date": "2026-05-30",
+      "feature": "pages-aria-labelledby-rollout",
+      "archivedTo": "docs/archive/2026-05/pages-aria-labelledby-rollout/",
+      "documents": ["plan.md (mv)", "design.md (mv)", "analysis.md (mv)", "report.md (mv)"],
+      "indexUpdated": "docs/archive/2026-05/_INDEX.md",
+      "parentLinked": "sectional-aria-labelledby-rollout 옆 보관",
+      "followupCandidates": "marketing-copy-ko-review(P2) / next-intl-native-migration(P2)"
     },
     {
       "phase": "plan",
