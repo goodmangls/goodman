@@ -1,4 +1,4 @@
-# GOODMAN GLS — Korea's Leading GSSA
+# GOODMAN GLS — Korea's Integrated Logistics Partner
 
 ![GOODMAN GLS](/public/images/logo/logo-white.svg)
 
@@ -6,7 +6,7 @@
 
 ## About
 
-**GOODMAN GLS** is a leading Korean GSSA (General Sales & Service Agent) specializing in airline cargo sales representation. Founded in 2004, we represent 15+ airlines across 6 GSSA groups, connecting 50+ countries through our MPL and EAN network memberships.
+**GOODMAN GLS** is an integrated logistics company in Korea, delivering air, ocean, and road freight, customs brokerage, and warehousing/3PL under one roof. Founded in 2014, we connect 59 countries through ECS Group and our MPL & EAN network memberships. Alongside our end-to-end logistics, we maintain direct partnerships with 15+ airlines as a specialized capability.
 
 This repository contains the marketing website, partner portal, and Rails API backend.
 
@@ -19,7 +19,8 @@ This repository contains the marketing website, partner portal, and Rails API ba
 |------------|---------|
 | Next.js 16 (App Router) | Framework |
 | React 19 + TypeScript 5 | UI + Type safety |
-| Tailwind CSS v4 | Styling |
+| Tailwind CSS v4 | Styling (`@theme` tokens) |
+| next-intl + LanguageContext | i18n (EN/KO) |
 | Framer Motion | Animations |
 | react-hook-form + Zod | Form validation |
 
@@ -38,13 +39,14 @@ This repository contains the marketing website, partner portal, and Rails API ba
 ## Features
 
 ### Marketing Website
-- GSSA-first landing page with video hero
-- "Why GSSA?" value proposition + 4 service pillars
-- 15 airline partner showcase grid
-- Animated stats counters (20+ years, 15+ airlines, 50+ countries)
+- Integrated-logistics landing page with full-bleed hero
+- Six core services: Air · Ocean · Land · Customs · Warehousing/3PL · Project Cargo
+- Integrated-capabilities section (multimodal, customs, warehousing/3PL, digital visibility)
+- Airline partnerships showcase (15+ carriers) as a specialized capability
+- Animated stats counters (10+ years, 59 countries, 6 services)
 - EAN certification widget + MPL badge
-- Bilingual (EN/KO)
-- Dark premium theme (`#070612` + `#FF6B35`)
+- Bilingual (EN/KO) + light/dark mode
+- Editorial theme — Obsidian `#000d10` / Canvas White `#ffffff` / Desert Sienna `#bc7155` accent (see `DESIGN.md`)
 
 ### Partner Portal
 - JWT authentication (register, login, email verification, password reset)
@@ -71,7 +73,7 @@ This repository contains the marketing website, partner portal, and Rails API ba
 
 ```bash
 # Clone
-git clone https://github.com/jlinsights/goodman.git
+git clone https://github.com/goodmangls/goodman.git
 cd goodman
 
 # Frontend
@@ -124,8 +126,8 @@ npx vercel --prod
 ```
 /                              # Frontend (Next.js)
   src/
-    app/                       # Pages (landing, auth, portal)
-    components/                # HeroSection, WhyGSSA, Stats, GSA, Footer
+    app/                       # Pages (home, company, services, network, auth, portal)
+    components/                # HeroSection, ServicesShowcase, Stats, GSASection, Footer
     contexts/                  # AuthContext, LanguageContext
     lib/                       # apiClient, authStorage, validations
   messages/                    # i18n (en.json, ko.json)
