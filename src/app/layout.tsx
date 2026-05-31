@@ -23,9 +23,9 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GOODMAN GLS - Korea's Cargo GSSA | Airline Cargo Sales Agent",
-  description: "Founded in 2014, Goodman GLS is a leading cargo GSSA in Korea. Strategic partner of ECS Group — the world's largest GSSA network spanning 59 countries.",
-  keywords: "cargo GSSA, GSA, CSA, airline cargo sales agent, Korea GSSA, air cargo, ECS Group, MPL, EAN, WestJet Cargo, ShunFeng Airlines, Air Busan",
+  title: "GOODMAN GLS — Integrated Logistics in Korea | Air, Ocean, Road, Customs & Warehousing",
+  description: "Founded in 2014, GOODMAN GLS is an integrated logistics company in Korea — air, ocean, and road freight, customs brokerage, and warehousing/3PL. Backed by ECS Group's 59-country network.",
+  keywords: "integrated logistics, freight forwarding Korea, air freight, ocean freight, land transport, customs brokerage, warehousing, 3PL, project cargo, Korea logistics, ECS Group, MPL, EAN",
 };
 
 export default function RootLayout({

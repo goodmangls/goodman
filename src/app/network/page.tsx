@@ -100,21 +100,6 @@ export default function NetworkPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-            <div className="p-12 bg-canvas rounded-3xl border border-hairline">
-              <h4 className="headline text-ink mb-6">{t('pages.network.gsaTitle')}</h4>
-              <p className="body-lg text-muted leading-relaxed">
-                {t('pages.network.gsaDesc')}
-              </p>
-            </div>
-            <div className="p-12 bg-canvas rounded-3xl border border-hairline">
-              <h4 className="headline text-ink mb-6">{t('pages.network.csaTitle')}</h4>
-              <p className="body-lg text-muted leading-relaxed">
-                {t('pages.network.csaDesc')}
-              </p>
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {airlines.map((airline, index) => (
               <div key={index} className="p-8 bg-canvas border border-hairline rounded-2xl hover:border-desert-sienna/60 transition-all group">

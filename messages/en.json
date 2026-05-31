@@ -51,8 +51,8 @@
     },
     "gsa": {
       "eyebrow": "Specialized capability",
-      "title": "Airline cargo representation (GSSA)",
-      "lead": "On top of our integrated logistics, we run a GSSA business representing 15+ airlines — a dedicated commercial team in Korea for carriers, and reliable capacity for forwarders.",
+      "title": "Airline Partnerships",
+      "lead": "On top of our integrated logistics, we hold direct partnerships with 15+ airlines — dedicated commercial support in Korea for carriers, and reliable capacity for forwarders.",
       "cta": "Become a partner"
     },
     "services": {
@@ -175,7 +175,7 @@
         "terms": "Terms of Service"
       },
       "copyright": "© 2026 GOODMAN Global Logistics Service. All rights reserved.",
-      "tagline": "Integrated logistics · Airline GSSA · ECS Group partner"
+      "tagline": "Integrated logistics · Airline partnerships · ECS Group partner"
     }
   },
   "company": {
@@ -540,7 +540,7 @@
         "air": {
           "name": "Air Freight",
           "tagline": "When Every Minute Counts",
-          "overview": "Our air freight division specializes in time-critical and temperature-sensitive cargo. With direct GSA/CSA partnerships across major airlines, we secure priority booking and competitive rates.",
+          "overview": "Our air freight division specializes in time-critical and temperature-sensitive cargo. With direct partnerships across major airlines, we secure priority booking and competitive rates.",
           "f1": "Express & Next Flight Out service",
           "f2": "Temperature-controlled solutions",
           "f3": "Dangerous goods certified",
@@ -641,12 +641,8 @@
       "eanF2": "Collaborative partnerships",
       "eanF3": "Continuous improvement focus",
       "gssaEyebrow": "Specialized capability",
-      "gssaTitle": "Airline Cargo Representation (GSSA)",
-      "gssaLead": "Alongside our integrated logistics, we represent airlines with an owner-operator mindset — from capacity guarantees to local route development across the Northeast Asian corridor.",
-      "gsaTitle": "GSA (General Sales Agent)",
-      "gsaDesc": "Exclusive representation of airlines in specific markets, handling sales activities with 100% focus and local expertise.",
-      "csaTitle": "CSA (Cargo Sales Agent)",
-      "csaDesc": "Specialized cargo sales representation, providing capacity guarantees and preferential rates for logistics partners.",
+      "gssaTitle": "Airline Partnerships",
+      "gssaLead": "Alongside our integrated logistics, we hold direct partnerships with 15+ airlines, securing capacity and routes across the Northeast Asian corridor.",
       "partnerLabel": "Partner carrier",
       "ctaExplore": "Explore Partnership Opportunities",
       "ecosystemTitle": "Global Ecosystem",
@@ -680,11 +676,11 @@
       "timeline": {
         "2014": {
           "milestone": "GOODMAN GLS founded in Seoul",
-          "desc": "Started as a cargo GSSA specializing in airline cargo sales with a vision to redefine the Korean market."
+          "desc": "Started in air cargo with a vision to redefine logistics in the Korean market."
         },
         "2015": {
-          "milestone": "First GSA Partnership",
-          "desc": "Became General Sales Agent for major airline, proving the 'Small Giant' model works."
+          "milestone": "First Airline Partnership",
+          "desc": "Secured our first airline representation, proving the 'Small Giant' model works."
         },
         "2018": {
           "milestone": "MPL & EAN Membership",

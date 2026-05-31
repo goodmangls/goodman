@@ -4,14 +4,14 @@ import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const partners = [
-  { code: 'WS', name: 'WestJet Cargo (GSA)' },
-  { code: 'O3', name: 'ShunFeng Airlines (CSA)' },
-  { code: 'BX', name: 'Air Busan (GSA)' },
-  { code: 'M0', name: 'Aero Mongolia (GSA)' },
-  { code: 'SU', name: 'Aeroflot (CSA)' },
-  { code: 'F7', name: 'iFly Airlines (GSA)' },
-  { code: 'ZH', name: 'Shenzhen Airlines (CSA)' },
-  { code: '8Y', name: 'China Post (CSA)' },
+  { code: 'WS', name: 'WestJet Cargo' },
+  { code: 'O3', name: 'ShunFeng Airlines' },
+  { code: 'BX', name: 'Air Busan' },
+  { code: 'M0', name: 'Aero Mongolia' },
+  { code: 'SU', name: 'Aeroflot' },
+  { code: 'F7', name: 'iFly Airlines' },
+  { code: 'ZH', name: 'Shenzhen Airlines' },
+  { code: '8Y', name: 'China Post' },
 ];
 
 export default function GSASection() {

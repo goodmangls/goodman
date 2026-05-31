@@ -1,1 +1,1 @@
-📁 archive(pdca): pages-aria-labelledby-rollout matchRate 95% → docs/archive/2026-05/ (3 라우트 13 sections region landmark, Plan §2 정정 + 사용자 사전 작업 시너지)
+🧹 content(GLS): GSSA 노출 축소(B) — 홈/네트워크 섹션 '항공사 파트너십'으로 일반화, GSA/CSA 정의 카드·항공사명 꼬리표·죽은 키 제거, 푸터 태그라인 정리 (한/영)
