@@ -31,6 +31,17 @@ npm run build        # Production build
 > Next 16 + React 19 prerender 자체 버그 (`/_global-error` useContext null) 회피 — Next 16.3 stable / React 19.3 unblock 까지 유지.
 > 상세: `docs/archive/2026-05/goodman-gls-prerender-debt/`.
 
+## Deploy Configuration
+
+- Platform: Vercel
+- Vercel project dashboard: https://vercel.com/goodman-jways/goodman-gls
+- Deploy workflow: automatic on push to `main`
+- Git remote used for source updates: https://github.com/goodmangls/goodman.git
+- Production app origin for `/api/contact` allowlist: https://goodman-gls.vercel.app
+- Health check: poll production app origin unless a custom domain is introduced
+
+> Do not confuse the Vercel dashboard URL (`vercel.com/goodman-jways/goodman-gls`) with the public app origin (`goodman-gls.vercel.app`). `ALLOWED_ORIGINS` must use the public app origin, not the dashboard URL.
+
 ## Tech Stack
 
 ### Frontend (이 레포)
