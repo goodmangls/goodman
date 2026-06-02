@@ -8,12 +8,27 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Small Giant. Big Impact.",
-      "titleLine1": "한국과 세계를 잇는",
-      "titleLine2": "종합물류 파트너",
-      "lead": "항공·해상·육상·통관·창고를 한곳에서. 59개국 글로벌 네트워크와 한국 현지 전문성으로 화물의 전 여정을 책임집니다.",
-      "ctaPrimary": "시작하기",
-      "ctaSecondary": "서비스 보기"
+      "eyebrow": "Korea-first logistics. Global execution.",
+      "titleLine1": "한국 물류의 전 구간을",
+      "titleLine2": "하나의 팀으로 연결합니다",
+      "lead": "항공·해상·육상·통관·창고·3PL까지, GOODMAN GLS가 한국 출발·도착·경유 화물의 설계와 실행을 한 번에 책임집니다.",
+      "ctaPrimary": "물류 상담하기",
+      "ctaSecondary": "서비스 역량 보기",
+      "proofLabel": "핵심 신뢰 지표",
+      "proof": {
+        "network": {
+          "label": "글로벌 네트워크",
+          "value": "59개국"
+        },
+        "airlines": {
+          "label": "항공사 파트너십",
+          "value": "15+"
+        },
+        "coverage": {
+          "label": "운송 커버리지",
+          "value": "항공·해상·육상"
+        }
+      }
     },
     "trust": {
       "eyebrow": "신뢰의 멤버십"
@@ -26,10 +41,10 @@
       "offices": "국내 사무소"
     },
     "why": {
-      "eyebrow": "우리가 하는 일",
-      "titleLine1": "하나의 팀이,",
-      "titleLine2": "전 구간을 책임집니다.",
-      "lead": "GOODMAN GLS는 항공·해상·육상 운송부터 통관, 창고·3PL까지 공급망 전 구간을 한 팀에서 설계하고 실행합니다. 복잡한 물류를 단순하게 만듭니다.",
+      "eyebrow": "운영 방식",
+      "titleLine1": "예약부터 배송까지,",
+      "titleLine2": "하나의 책임 체계로.",
+      "lead": "GOODMAN GLS는 항공·해상·육상 운송부터 통관, 창고·3PL까지 한국 연계 화물의 공급망 전 구간을 하나의 운영 데스크에서 설계하고 실행합니다. 여러 업체에 나뉘는 인수인계를 줄이고 책임 소재를 분명하게 만듭니다.",
       "pillars": {
         "sales": {
           "title": "멀티모달 운송",

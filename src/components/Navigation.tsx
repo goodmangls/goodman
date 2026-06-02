@@ -16,7 +16,7 @@ const navItems = [
 
 const localeLabels: Record<Locale, string> = {
   en: 'EN',
-  ko: '한국어',
+  ko: 'KO',
 };
 
 function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
@@ -27,7 +27,7 @@ function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
   const active = isHeroNav ? 'text-canvas-white' : 'text-ink';
 
   return (
-    <div className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-widest" role="group" aria-label="Language">
+    <div className="flex items-center gap-1 whitespace-nowrap text-[11px] font-bold uppercase tracking-widest" role="group" aria-label="Language">
       {(['en', 'ko'] as Locale[]).map((code) => (
         <button
           key={code}

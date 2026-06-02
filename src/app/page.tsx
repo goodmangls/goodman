@@ -16,10 +16,10 @@ export default function Home() {
       <TrustBadges />
       <StatsSection />
       <WhyGSSASection />
-      <GSASection />
       <ServicesShowcase />
-      <CompanySection />
+      <GSASection />
       <NetworkManifesto />
+      <CompanySection />
       <PartnerHubSection />
       <ContactSection />
     </main>

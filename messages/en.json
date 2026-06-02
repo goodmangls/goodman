@@ -8,12 +8,27 @@
   },
   "home": {
     "hero": {
-      "eyebrow": "Small Giant. Big Impact.",
-      "titleLine1": "Your end-to-end",
-      "titleLine2": "logistics partner in Korea",
-      "lead": "Air, ocean, road, customs, and warehousing under one roof. A 59-country network and deep local expertise covering your cargo's entire journey.",
-      "ctaPrimary": "Get started",
-      "ctaSecondary": "Explore services"
+      "eyebrow": "Korea-first logistics. Global execution.",
+      "titleLine1": "End-to-end Korea logistics,",
+      "titleLine2": "operated by one team",
+      "lead": "Air, ocean, road, customs, warehousing, and 3PL — GOODMAN GLS designs and executes every move for cargo entering, leaving, or moving through Korea.",
+      "ctaPrimary": "Talk to logistics team",
+      "ctaSecondary": "Explore capabilities",
+      "proofLabel": "Key proof points",
+      "proof": {
+        "network": {
+          "label": "Global network",
+          "value": "59 countries"
+        },
+        "airlines": {
+          "label": "Airline partnerships",
+          "value": "15+"
+        },
+        "coverage": {
+          "label": "Transport coverage",
+          "value": "Air·Ocean·Road"
+        }
+      }
     },
     "trust": {
       "eyebrow": "Trusted memberships"
@@ -26,10 +41,10 @@
       "offices": "Offices in Korea"
     },
     "why": {
-      "eyebrow": "What we do",
-      "titleLine1": "One team,",
-      "titleLine2": "every link of the chain.",
-      "lead": "From air, ocean, and road transport to customs and warehousing/3PL, GOODMAN GLS designs and runs every link of your supply chain with a single accountable team. We make complex logistics simple.",
+      "eyebrow": "Operating model",
+      "titleLine1": "One accountable team,",
+      "titleLine2": "from booking to delivery.",
+      "lead": "GOODMAN GLS brings every link of the supply chain — air, ocean, road, customs, warehousing, and 3PL — into one operating desk for Korea-linked cargo. You get a single accountable partner instead of fragmented handoffs.",
       "pillars": {
         "sales": {
           "title": "Multimodal transport",

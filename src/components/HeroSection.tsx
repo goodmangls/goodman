@@ -6,6 +6,24 @@ import Image from 'next/image';
 import DisplayLines from './DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+const proofItems = [
+  {
+    key: 'network',
+    labelKey: 'home.hero.proof.network.label',
+    valueKey: 'home.hero.proof.network.value',
+  },
+  {
+    key: 'airlines',
+    labelKey: 'home.hero.proof.airlines.label',
+    valueKey: 'home.hero.proof.airlines.value',
+  },
+  {
+    key: 'coverage',
+    labelKey: 'home.hero.proof.coverage.label',
+    valueKey: 'home.hero.proof.coverage.value',
+  },
+] as const;
+
 export default function HeroSection() {
   const { t } = useLanguage();
   return (
@@ -63,7 +81,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-wrap items-center gap-4 mb-12"
           >
             <Link href="#contact" className="btn-pill-primary">
               {t('home.hero.ctaPrimary')}
@@ -72,6 +90,23 @@ export default function HeroSection() {
               {t('home.hero.ctaSecondary')}
             </Link>
           </motion.div>
+
+          <motion.dl
+            aria-label={t('home.hero.proofLabel')}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid max-w-2xl grid-cols-1 gap-px overflow-hidden rounded-[var(--radius-card)] bg-canvas-white/20 sm:grid-cols-3"
+          >
+            {proofItems.map((item) => (
+              <div key={item.key} className="bg-obsidian/60 px-4 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
+                <dt className="caption text-canvas-white/85">{t(item.labelKey)}</dt>
+                <dd className="mt-2 whitespace-nowrap text-2xl font-bold tracking-tight text-canvas-white sm:text-[28px]">
+                  {t(item.valueKey)}
+                </dd>
+              </div>
+            ))}
+          </motion.dl>
         </div>
       </div>
     </section>
