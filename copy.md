@@ -2,7 +2,12 @@
 
 > Competitive benchmarking: ECS Group, Kales Airline Services, PAA Group, Daejoo Air Group
 > Source: EgyptAir Cargo GSSA Proposal (2026-03-26) + competitive analysis
-> Last updated: 2026-04-09
+> Last updated: 2026-06-01
+
+> **⚠️ Identity pivot 2026-05** — 사이트 정체성이 **GSSA → 종합물류업(Integrated Logistics)** 으로 전환됨 (commits `6fad87d`, `a69a197`, `4a6b5f6`).
+> §1 Brand Identity / §2 Hero / §7 Company / §9 Footer / §11 DO·DON'T / §12 Action Items 는 2026-06-01 옵션 B 부분 갱신본.
+> §3·§4·§5·§6·§8·§10 은 옛 GSSA-first 톤이 일부 남아 있음 → 옵션 A 전체 재작성 시 정렬 예정.
+> GSSA/CSA 는 "specialized capability" 로 강등 (15+ airline partners) — 완전 제거가 아님.
 
 ---
 
@@ -99,9 +104,10 @@ CEO → Board of Directors (Jimmy Lee MD, Ken Jeon MD) → 4 Divisions:
 | Element | Current | Recommended |
 |---------|---------|-------------|
 | **Tagline** | "Small Giant. Big Impact." | Keep — strong, memorable, differentiating |
-| **Positioning** | Korea's Leading GSSA | **"Korea's Cargo GSSA. Your Sales Force on the Ground."** |
+| **Positioning** | Korea's Leading GSSA | **"Korea's Integrated Logistics Partner — Air, Ocean, Road, Customs, Warehousing/3PL, Project Cargo."** |
 | **Tone** | Professional, corporate | **Confident, partnership-oriented, action-driven** (like Kales) |
 | **Founded** | 2014 | Emphasize: **"10+ years of Korean market expertise"** |
+| **GSSA mention** | Lead identity | **Specialized capability** — 15+ airline partners, MPL & EAN, ECS Group affiliate (mention as secondary strength, not core) |
 
 ### Competitive Taglines (Reference)
 - **ECS Group**: "Augmented GSSA — More than a GSSA"
@@ -113,7 +119,7 @@ CEO → Board of Directors (Jimmy Lee MD, Ken Jeon MD) → 4 Divisions:
 
 ## 2. Hero Section
 
-### Current
+### Old (pre-pivot, kept for reference)
 ```
 Badge: "Korea's Leading GSSA"
 Headline: "Your Airline's Sales Force in Korea"
@@ -122,22 +128,22 @@ CTA Primary: "Get a Quote"
 CTA Secondary: "Our Airlines"
 ```
 
-### Recommended Update
+### Recommended (post-pivot, 2026-06-01)
 ```
-Badge: "GSSA Specialist Since 2014"
-Headline: "We Sell Your Cargo as If It Were Our Own"
-Subheadline: "5 airlines. 3 offices. One dedicated team in Korea — backed by ECS Group's global network."
-CTA Primary: "Request a Rate"
-CTA Secondary: "Meet Our Airlines"
+Badge: "Korea's Integrated Logistics Partner Since 2014"
+Headline: "Air. Ocean. Road. One Korean partner, six core services."
+Subheadline: "Integrated freight, customs, warehousing/3PL, and project cargo — backed by 59 countries via ECS Group and 15+ airline partnerships as a specialized capability."
+CTA Primary: "Request a Quote"
+CTA Secondary: "Explore Our Services"
 ```
 
-**Rationale**: Kales uses "we sell air cargo products on behalf of our airline partners as if it were our own fleet" — this ownership language is powerful. ECS uses "augmented" to suggest going beyond traditional. Combine both.
+**Rationale**: Lead with **integrated logistics** (현재 사이트 정체성). Six-service breadth is the differentiator vs. GSSA-only competitors. Airline partnerships remain a credibility marker but are framed as a *capability*, not the identity.
 
-### Alternative Headlines (A/B Test)
-1. "Your Cargo Department in Korea" (Kales-inspired)
-2. "Beyond GSSA. We Deliver Results." (ECS-inspired)
-3. "Small Giant. Big Impact." (Brand tagline as hero)
-4. "Where Airlines Meet Korea's Market" (Market-focused)
+### Alternative Headlines (A/B Test, post-pivot)
+1. "One Roof. Six Services. 59 Countries." (Breadth-focused)
+2. "Small Giant. Big Impact." (Brand tagline as hero)
+3. "End-to-End Korean Logistics — Air to Last Mile" (Coverage-focused)
+4. "Where Korean Trade Meets Global Reach" (Market-focused)
 
 ---
 
@@ -168,6 +174,8 @@ CTA Secondary: "Meet Our Airlines"
 ---
 
 ## 4. WhyGSSA Section
+
+> **⚠️ Status (2026-06-01)**: 이 섹션은 옛 GSSA-first 톤. 사이트는 `messages/ko.json` 기준 "특화 역량(Specialized capability) — 항공사 파트너십" 으로 강등 완료. 본 §4 의 헤드라인·4 pillar 는 옵션 A 전체 재작성 시 "Why Goodman — Integrated Logistics" 로 재정의 예정. 현재는 GSSA 단독 페이지(`/network`) 안의 specialized-capability 카드 카피로만 참고할 것.
 
 ### Current Copy (Good — Keep Core)
 ```
@@ -267,14 +275,15 @@ Title: "Combining Tradition & Innovation"
 Subtitle: "Leading Global Trade Since 2014"
 ```
 
-### Recommended
+### Recommended (post-pivot, 2026-06-01)
 ```
 Title: "Small Giant. Big Impact."
-Subtitle: "Korea's GSSA specialist since 2014"
-Description: "As a strategic partner of ECS Group — the world's largest GSSA —
-we combine deep Korean market expertise with a global network spanning
-59 countries and 181 offices. Our MPL and EAN memberships give us
-capabilities that rival companies many times our size."
+Subtitle: "Korea's integrated logistics partner since 2014"
+Description: "From air and ocean freight to customs brokerage, warehousing/3PL,
+and project cargo — we operate Korea's full logistics stack under one roof.
+Backed by ECS Group (59 countries, world's largest GSSA network) and
+strengthened by 15+ airline partnerships as a specialized capability,
+we deliver capabilities that rival companies many times our size."
 ```
 
 ### CEO Quote (Keep — strong)
@@ -308,10 +317,12 @@ Form CTA: "Send Inquiry"
 "Your Strategic Partner in Korea & Beyond"
 ```
 
-### Recommended
+### Recommended (post-pivot, 2026-06-01)
 ```
-"Korea's GSSA. Your Sales Force on the Ground."
+"Korea's Integrated Logistics Partner — Air · Ocean · Road · Customs · 3PL"
 ```
+
+> 옛 추천 `"Korea's GSSA. Your Sales Force on the Ground."` 는 정체성 전환(2026-05)으로 폐기. GSSA 는 본 푸터 외 `/network` specialized-capability 카드에서 별도 노출.
 
 ---
 
@@ -359,18 +370,19 @@ Form CTA: "Send Inquiry"
 ## 11. Key Copy Principles
 
 ### Do
-- Lead with GSSA identity in every section
-- Use ownership language: "we sell YOUR cargo", "YOUR team in Korea"
-- Quantify everything: years, airlines, countries, response time
-- Frame forwarding as complementary, not competing
-- Use action verbs: sell, deliver, grow, optimize, manage
+- **Lead with integrated logistics identity** (air · ocean · road · customs · 3PL · project cargo) — mention GSSA/airline partnerships as a *specialized capability*, not the core identity
+- Use ownership language for the airline-partnership section only: "we sell YOUR cargo", "YOUR team in Korea"
+- Quantify everything: years, services, countries, airline partners, response time
+- Frame forwarding/3PL/customs as the **core stack**; GSSA as complementary credibility
+- Use action verbs: deliver, integrate, grow, optimize, manage, connect
 
 ### Don't
-- Don't call ourselves "freight forwarder" primarily
+- Don't reduce ourselves to "GSSA only" — we are an integrated logistics company with airline GSSA as one of several capabilities (정체성 전환 2026-05)
 - Don't use generic logistics buzzwords without substance
-- Don't compare scale directly with ECS/Kales (they're much larger)
+- Don't compare scale directly with ECS/Kales on airline counts (they're GSSA-focused; we play a broader integrated game)
 - Don't use "Eye of the Storm" or "AI technology" messaging (overused, vague)
 - Don't mix founding dates — use **2014** consistently (confirmed in EgyptAir Proposal)
+- Don't reintroduce "Korea's Cargo GSSA" as the lead positioning — see §1 post-pivot table
 
 ### Tone of Voice
 ```
@@ -385,16 +397,20 @@ Korean expertise with global perspective
 
 ## 12. Immediate Action Items
 
+> **Status note (2026-06-01)**: 정체성 전환(2026-05)으로 4·7번 GSSA pillar 작업은 obsolete. 신규 우선순위는 종합물류 톤 일관성 확보 + i18n 동기화. 4·7은 옵션 A 전체 재작성 사이클에서 다룸.
+
 | Priority | Item | Status |
 |----------|------|--------|
-| 1 | Fix founding date to **2014** across all pages | TODO |
-| 2 | Update airline count from "15+" to **5 (3 GSA + 2 CSA)** across site | TODO |
-| 3 | Update hero headline to ownership language | TODO |
-| 4 | Add ECS Group partnership stats (59 countries, 1,794 experts, EUR 1.2B) | TODO |
-| 5 | Add leadership team section (CEO 38+ yr, COO, Director) | TODO |
-| 6 | Add Korean market data section (ICN 2.95M tons, +9.9% growth) | TODO |
-| 7 | Rename service pillars to "In the Market/Air/Ground/Cloud" | TODO |
-| 8 | Update airline portfolio with actual 5 airlines + route details | TODO |
-| 9 | Add 3 business entities info (GGL, Globe Air Cargo, Goodman Aer Solutions) | TODO |
-| 10 | Add 2-3 testimonial quotes | TODO |
-| 11 | Add Korean export industries section (Semiconductors, Auto, K-Beauty) | TODO |
+| 0 | **Pivot brand identity to Integrated Logistics** (hero/company/footer/services 6종) | DONE 2026-05 (commits `6fad87d`, `a69a197`, `4a6b5f6`) |
+| 1 | Fix founding date to **2014** across all pages | TODO (검증 필요) |
+| 2 | Sync `messages/en.json` GSSA-first 잔여 5건을 `messages/ko.json` 종합물류 톤과 정렬 (lines 183~185, 205, 264, 311) | TODO (a69a197 영어 누락분) |
+| 3 | Update CLAUDE.md companion docs · CHANGELOG · README 톤 정합성 재검증 | TODO (CLAUDE.md 1줄 갱신 완료 2026-06-01) |
+| 4 | ~~Update hero headline to ownership language~~ (옛 GSSA 톤) | OBSOLETE (§2 post-pivot 권장 적용) |
+| 5 | Add ECS Group partnership stats (59 countries, 1,794 experts, EUR 1.2B) | TODO |
+| 6 | Add leadership team section (CEO 38+ yr, COO, Director) | TODO |
+| 7 | Add Korean market data section (ICN 2.95M tons, +9.9% growth) | TODO |
+| 8 | ~~Rename service pillars to "In the Market/Air/Ground/Cloud"~~ (GSSA 4 pillar) | OBSOLETE — 현재는 6 core services |
+| 9 | Update airline portfolio with actual 5 airlines + route details (specialized-capability 카드) | TODO |
+| 10 | Add 3 business entities info (GGL, Globe Air Cargo, Goodman Aer Solutions) | TODO |
+| 11 | Add 2-3 testimonial quotes | TODO |
+| 12 | Add Korean export industries section (Semiconductors, Auto, K-Beauty) | TODO |

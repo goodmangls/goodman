@@ -1,1 +1,1 @@
-📝 docs(README): GSSA 중심 → 종합물류 포지셔닝 재작성 + 사실 정정 (설립 2014, 59개국, 6대 서비스, 테마 토큰, 클론 URL goodmangls/goodman)
+📝 docs(copy): copy.md 종합물류 전환 반영 — positioning/Hero/§ 갱신(2026-06-01 옵션 B), GSSA→specialized capability 강등 표기
