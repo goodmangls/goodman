@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import DisplayLines from '@/components/DisplayLines';
@@ -14,8 +15,30 @@ const serviceConfig = [
   { id: 'project', icon: '📦' },
 ];
 
+const bridgeLogisFeatures = [
+  'instantQuotes',
+  'transparentBreakdown',
+  'verifiedRates',
+] as const;
+
+const bridgeLogisMetrics = [
+  { value: 'UPS · DHL', labelKey: 'carriers' },
+  { value: '190+', labelKey: 'countries' },
+  { value: '1 sec', labelKey: 'quoteTime' },
+] as const;
+
 export default function ServicesPage() {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    if (window.location.hash !== '#bridgelogis') return;
+
+    const frame = window.requestAnimationFrame(() => {
+      document.getElementById('bridgelogis')?.scrollIntoView({ block: 'start' });
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   const services = serviceConfig.map((s) => ({
     ...s,
@@ -68,6 +91,9 @@ export default function ServicesPage() {
               {s.name}
             </a>
           ))}
+          <a href="#bridgelogis" className="text-sm font-bold text-primary hover:text-primary/70 transition-colors py-2">
+            BridgeLogis
+          </a>
         </div>
       </section>
 
@@ -145,6 +171,85 @@ export default function ServicesPage() {
           </section>
         );})}
       </div>
+
+      {/* BridgeLogis Section */}
+      <section
+        id="bridgelogis"
+        aria-labelledby="bridgelogis-heading"
+        className="container-wide section-spacing scroll-mt-32"
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="relative overflow-hidden rounded-[2.5rem] border border-hairline bg-[#0A1628] text-canvas-white shadow-2xl"
+        >
+          <div className="absolute inset-0 opacity-25 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 20% 20%, #38bdf8 0, transparent 28%), radial-gradient(circle at 80% 0%, #FF6B35 0, transparent 24%), linear-gradient(135deg, rgba(255,255,255,0.14), transparent 40%)' }} />
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12">
+            <div className="lg:col-span-7 p-10 md:p-16 lg:p-20 border-b lg:border-b-0 lg:border-r border-canvas-white/15">
+              <span className="eyebrow mb-6 text-canvas-white/70">{t('pages.services.bridgeLogis.eyebrow')}</span>
+              <h2 id="bridgelogis-heading" className="display-lg mb-8 leading-none tracking-tight">
+                {t('pages.services.bridgeLogis.title')}
+              </h2>
+              <p className="body-lg text-canvas-white/75 mb-12 max-w-2xl leading-relaxed">
+                {t('pages.services.bridgeLogis.lead')}
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                {bridgeLogisMetrics.map((metric) => (
+                  <div key={metric.labelKey} className="rounded-3xl border border-canvas-white/15 bg-canvas-white/10 p-6 backdrop-blur-sm">
+                    <p className="text-3xl font-black tracking-tight mb-2">{metric.value}</p>
+                    <p className="caption text-canvas-white/60">{t(`pages.services.bridgeLogis.metrics.${metric.labelKey}`)}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://bridgelogis.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-pill-primary w-full sm:w-auto text-base py-5 px-8 text-center shadow-lg shadow-primary/20"
+                  aria-label={t('pages.services.bridgeLogis.ctaAria')}
+                >
+                  {t('pages.services.bridgeLogis.ctaPrimary')}
+                </a>
+                <Link href="/#contact" className="rounded-full border border-canvas-white/20 px-8 py-5 text-center font-bold text-canvas-white/75 hover:text-canvas-white hover:border-canvas-white/45 transition-colors">
+                  {t('pages.services.bridgeLogis.ctaSecondary')}
+                </Link>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 p-10 md:p-16 lg:p-20 bg-canvas-white/5">
+              <div className="rounded-[2rem] border border-canvas-white/15 bg-canvas-white/10 p-6 mb-10 shadow-inner-sm">
+                <p className="caption text-canvas-white/50 uppercase font-bold mb-4">{t('pages.services.bridgeLogis.previewLabel')}</p>
+                <div className="flex items-center justify-between gap-4 rounded-2xl bg-canvas-white/10 p-4 mb-4">
+                  <span className="body-sm font-bold">ICN → LAX</span>
+                  <span className="caption text-emerald-300">LIVE FSC</span>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between text-sm text-canvas-white/70"><span>UPS</span><span>{t('pages.services.bridgeLogis.compareNow')}</span></div>
+                  <div className="h-2 rounded-full bg-canvas-white/10 overflow-hidden"><div className="h-full w-4/5 rounded-full bg-primary" /></div>
+                  <div className="flex justify-between text-sm text-canvas-white/70"><span>DHL</span><span>{t('pages.services.bridgeLogis.compareNow')}</span></div>
+                  <div className="h-2 rounded-full bg-canvas-white/10 overflow-hidden"><div className="h-full w-3/5 rounded-full bg-sky-400" /></div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {bridgeLogisFeatures.map((feature) => (
+                  <div key={feature} className="flex gap-4">
+                    <div className="mt-1 h-3 w-3 rounded-full bg-primary shadow-[0_0_24px_rgba(255,107,53,0.8)] flex-shrink-0" />
+                    <div>
+                      <h3 className="headline-sm mb-2">{t(`pages.services.bridgeLogis.features.${feature}.title`)}</h3>
+                      <p className="body-sm text-canvas-white/65 leading-relaxed">{t(`pages.services.bridgeLogis.features.${feature}.desc`)}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Unified CTA Section */}
       <section
