@@ -551,6 +551,35 @@
       "ctaLead": "Whether it's a one-off express shipment, a full 3PL program, or a complex multi-year project, our team is ready to deliver.",
       "ctaPrimary": "Request a Quote",
       "ctaSecondary": "Learn About Our Team →",
+      "bridgeLogis": {
+        "eyebrow": "Digital quoting platform by Goodman GLS",
+        "title": "BridgeLogis connects forwarders to instant express freight quotes.",
+        "lead": "BridgeLogis is Goodman GLS' smart quote platform for forwarding partners. Visitors can compare UPS and DHL express freight, calculate Door-to-Door and Door-to-Airport costs, and see exchange rates, FSC, packing, and add-on services in one transparent view.",
+        "ctaPrimary": "Open BridgeLogis and compare rates →",
+        "ctaSecondary": "Ask Goodman GLS for onboarding",
+        "ctaAria": "Open BridgeLogis in a new tab to compare express freight rates",
+        "previewLabel": "Live quote preview",
+        "compareNow": "Compare now",
+        "metrics": {
+          "carriers": "express carrier comparison",
+          "countries": "destination coverage",
+          "quoteTime": "average quote flow"
+        },
+        "features": {
+          "instantQuotes": {
+            "title": "Instant freight quotes",
+            "desc": "Calculate Door-to-Door and Door-to-Airport estimates instantly with carrier-by-carrier comparison for the best available route."
+          },
+          "transparentBreakdown": {
+            "title": "Transparent cost breakdown",
+            "desc": "International freight, fuel surcharge, packing, handling, pickup, and margin are itemized so partners can explain every line with confidence."
+          },
+          "verifiedRates": {
+            "title": "Verified rate structure",
+            "desc": "Built on real carrier rate logic with live exchange-rate and FSC workflows, giving forwarders a practical quoting desk powered by Goodman GLS."
+          }
+        }
+      },
       "items": {
         "air": {
           "name": "Air Freight",
