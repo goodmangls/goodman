@@ -33,7 +33,7 @@ function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
           key={code}
           type="button"
           onClick={() => setLocale(code)}
-          className={`px-2 py-1 rounded transition-colors ${locale === code ? active : base}`}
+          className={`min-h-11 min-w-11 rounded px-3 py-2 transition-colors ${locale === code ? active : base}`}
           aria-pressed={locale === code}
         >
           {localeLabels[code]}
@@ -65,8 +65,8 @@ export default function Navigation() {
       : 'h-20 bg-canvas border-b border-transparent';
 
   const linkClass = isHeroNav
-    ? 'text-[17px] font-bold text-canvas-white/85 hover:text-canvas-white transition-colors'
-    : 'text-[17px] font-bold text-muted hover:text-ink transition-colors';
+    ? 'flex min-h-11 items-center text-[17px] font-bold text-canvas-white/85 hover:text-canvas-white transition-colors'
+    : 'flex min-h-11 items-center text-[17px] font-bold text-muted hover:text-ink transition-colors';
 
   const logoClass = isHeroNav ? 'object-contain object-left brightness-0 invert' : 'object-contain object-left dark:invert';
 
@@ -77,7 +77,7 @@ export default function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-center transition-all duration-500 ${navSurface}`}
       >
         <div className="container-wide flex items-center justify-between h-full w-full">
-          <Link href="/" className="flex items-center gap-2 z-20">
+          <Link href="/" className="flex min-h-11 items-center gap-2 z-20">
             <div className="relative h-8 w-40 transition-all">
               <Image
                 src="/images/logo/logo-black.svg"
@@ -103,8 +103,8 @@ export default function Navigation() {
                 href="#contact"
                 className={
                   isHeroNav
-                    ? 'btn-pill-ghost !py-3 !px-5'
-                    : 'btn-pill-sm bg-canvas text-ink border border-hairline hover:bg-surface-soft'
+                    ? 'btn-pill-ghost !min-h-11 !px-5 !py-3'
+                    : 'btn-pill-sm min-h-11 bg-canvas text-ink border border-hairline hover:bg-surface-soft'
                 }
               >
                 {t('nav.contactSales')}
@@ -122,7 +122,7 @@ export default function Navigation() {
             <ThemeToggle />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 ${isHeroNav ? 'text-canvas-white' : 'text-ink'}`}
+              className={`min-h-11 min-w-11 p-2 ${isHeroNav ? 'text-canvas-white' : 'text-ink'}`}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
               <div className="w-6 h-5 flex flex-col justify-between">
