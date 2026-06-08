@@ -337,6 +337,102 @@ body {
   border-color: var(--color-hairline-soft);
 }
 
+/* Footer network certification cards */
+.network-cert-card {
+  position: relative;
+  width: 100%;
+  min-height: 188px;
+  max-width: 264px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--canvas-white) 14%, transparent);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--desert-sienna) 22%, transparent), transparent 34%),
+    color-mix(in srgb, var(--canvas-white) 6%, transparent);
+  padding: 18px;
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--canvas-white) 10%, transparent);
+}
+
+.network-cert-card--ean {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  background: color-mix(in srgb, var(--canvas-white) 94%, var(--obsidian) 6%);
+}
+
+.network-cert-card--ean #ean-badge-10032,
+.network-cert-card--ean #ean-badge-10032 > * {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.network-cert-card--ean #ean-badge-10032 {
+  min-height: 188px;
+}
+
+.network-cert-kicker {
+  color: color-mix(in srgb, var(--canvas-white) 48%, transparent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.network-cert-title {
+  margin-top: 8px;
+  color: var(--canvas-white);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.network-cert-mark {
+  color: var(--desert-sienna);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.network-cert-body {
+  color: color-mix(in srgb, var(--canvas-white) 72%, transparent);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.network-cert-status {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: color-mix(in srgb, var(--canvas-white) 78%, transparent);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+
+.network-cert-dot {
+  width: 7px;
+  height: 7px;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--desert-sienna);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--desert-sienna) 18%, transparent);
+}
+
+@media (min-width: 640px) {
+  .network-cert-card {
+    width: 236px;
+  }
+}
+
 /* Intercom Messenger — enforce bottom-right (overrides workspace center alignment) */
 .intercom-namespace .intercom-launcher,
 .intercom-namespace .intercom-lightweight-app-launcher {

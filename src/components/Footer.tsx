@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import DisplayLines from './DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -130,15 +131,43 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex items-center gap-12 opacity-40 hover:opacity-70 transition-opacity duration-700">
-            {['IATA', 'MPL', 'EAN'].map((badge) => (
-              <div key={badge} className="flex flex-col items-center gap-3">
-                <span className="caption text-canvas-white/80 tracking-[0.3em]">
-                  {badge}
-                </span>
-                <div className="w-8 h-px bg-canvas-white/30" />
+          <div className="w-full md:w-auto md:max-w-xl space-y-5">
+            <p className="caption text-canvas-white/35 md:text-right tracking-[0.22em]">
+              VERIFIED NETWORKS
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:justify-items-end">
+              <div className="network-cert-card" aria-label="MPL Network membership badge">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="network-cert-kicker">MPL NETWORK</p>
+                    <p className="network-cert-title">GOODMAN GLS</p>
+                  </div>
+                  <span className="network-cert-mark">MPL</span>
+                </div>
+                <div className="mt-5 space-y-2">
+                  <p className="network-cert-body">MarcoPoloLine Group Member</p>
+                  <p className="network-cert-body text-canvas-white/50">Global freight partner network</p>
+                </div>
+                <div className="network-cert-status">
+                  <span className="network-cert-dot" />
+                  VERIFIED NETWORK MEMBER
+                </div>
               </div>
-            ))}
+
+              <div className="network-cert-card network-cert-card--ean" aria-label="EAN Networks certification badge">
+                <div id="ean-badge-10032" />
+              </div>
+            </div>
+            <div className="flex items-center gap-4 md:justify-end text-canvas-white/35">
+              <span className="caption tracking-[0.3em]">IATA</span>
+              <span className="h-px w-8 bg-canvas-white/20" />
+              <span className="caption tracking-[0.3em]">ECS GROUP PARTNER</span>
+            </div>
+            <Script
+              id="ean-networks-widget-10032"
+              src="https://www.ean-network.com/api/widget/10032/embed.js"
+              strategy="afterInteractive"
+            />
           </div>
         </div>
       </div>
