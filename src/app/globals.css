@@ -361,14 +361,24 @@ body {
   background: color-mix(in srgb, var(--canvas-white) 94%, var(--obsidian) 6%);
 }
 
+.network-cert-card--ean,
 .network-cert-card--ean #ean-badge-10032,
+.network-cert-card--ean #ean-badge-10032 *,
 .network-cert-card--ean #ean-badge-10032 > * {
+  box-sizing: border-box !important;
   width: 100% !important;
   max-width: 100% !important;
+  min-width: 0 !important;
 }
 
 .network-cert-card--ean #ean-badge-10032 {
   min-height: 188px;
+}
+
+.network-cert-card--ean a {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  align-items: center !important;
 }
 
 .network-cert-kicker {
