@@ -16,10 +16,12 @@ export default function DisplayLines({
   className,
   id,
 }: DisplayLinesProps) {
+  const accessibleLabel = lines.join(' ');
+
   return (
-    <Tag className={className} id={id}>
+    <Tag className={className} id={id} aria-label={accessibleLabel}>
       {lines.map((line, index) => (
-        <span key={index} className="block">
+        <span key={index} className="block" aria-hidden="true">
           {line}
         </span>
       ))}
