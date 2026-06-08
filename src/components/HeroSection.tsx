@@ -34,17 +34,19 @@ export default function HeroSection() {
       {/* Full-bleed imagery */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?q=80&w=2940&auto=format&fit=crop"
-          alt="Cargo aircraft on approach"
+          src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2940&auto=format&fit=crop"
+          alt="Container yard and integrated logistics routes"
           fill
           className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/50 to-obsidian/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-obsidian/95 via-obsidian/65 to-obsidian/20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_32%,rgba(188,113,85,0.32),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.13)_1px,transparent_1px)] bg-[length:auto,56px_56px] opacity-70" />
       </div>
 
       <div className="container-wide relative z-10 w-full">
+        <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1fr)_380px]">
         <div className="max-w-4xl">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -107,6 +109,42 @@ export default function HeroSection() {
               </div>
             ))}
           </motion.dl>
+        </div>
+
+        <motion.aside
+          aria-label="GOODMAN GLS integrated logistics control tower"
+          initial={{ opacity: 0, x: 24 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
+          className="hidden rounded-[32px] border border-canvas-white/20 bg-obsidian/55 p-6 shadow-2xl shadow-obsidian/40 backdrop-blur-md lg:block"
+        >
+          <div className="mb-8 flex items-center justify-between">
+            <div>
+              <p className="caption text-canvas-white/50">CONTROL TOWER</p>
+              <p className="mt-2 text-2xl font-bold leading-tight text-canvas-white">Korea multimodal flow</p>
+            </div>
+            <span className="rounded-full bg-desert-sienna px-3 py-1 text-xs font-bold text-canvas-white">LIVE</span>
+          </div>
+
+          <div className="relative min-h-[260px] overflow-hidden rounded-[24px] border border-canvas-white/15 bg-canvas-white/5 p-5">
+            <div className="absolute inset-x-7 top-1/2 h-px bg-gradient-to-r from-canvas-white/15 via-desert-sienna to-canvas-white/15" />
+            <div className="absolute bottom-8 left-1/2 top-8 w-px bg-gradient-to-b from-canvas-white/15 via-desert-sienna to-canvas-white/15" />
+            {[
+              ['AIR', 'top-5 left-5'],
+              ['OCEAN', 'top-5 right-5'],
+              ['ROAD', 'bottom-5 left-5'],
+              ['3PL', 'bottom-5 right-5'],
+            ].map(([label, position]) => (
+              <div key={label} className={`absolute ${position} rounded-2xl border border-canvas-white/15 bg-obsidian/70 px-4 py-3`}>
+                <p className="caption text-canvas-white/50">{label}</p>
+                <div className="mt-2 h-1.5 w-16 rounded-full bg-desert-sienna" />
+              </div>
+            ))}
+            <div className="absolute left-1/2 top-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-desert-sienna/70 bg-obsidian text-center shadow-[0_0_36px_rgba(188,113,85,0.35)]">
+              <span className="caption text-canvas-white">ONE DESK</span>
+            </div>
+          </div>
+        </motion.aside>
         </div>
       </div>
     </section>

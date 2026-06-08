@@ -83,8 +83,9 @@ export default function Navigation() {
                 src="/images/logo/logo-black.svg"
                 alt="GOODMAN GLS"
                 fill
-                className={logoClass}
                 priority
+                loading="eager"
+                className={logoClass}
               />
             </div>
           </Link>
