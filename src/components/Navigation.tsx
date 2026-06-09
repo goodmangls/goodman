@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from './ThemeToggle';
 import { useLanguage, type Locale } from '@/contexts/LanguageContext';
@@ -21,10 +21,16 @@ const localeLabels: Record<Locale, string> = {
 
 function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
   const { locale, setLocale } = useLanguage();
+  const router = useRouter();
   const base = isHeroNav
     ? 'text-canvas-white/70 hover:text-canvas-white'
     : 'text-muted hover:text-ink';
   const active = isHeroNav ? 'text-canvas-white' : 'text-ink';
+
+  const switchLocale = (nextLocale: Locale) => {
+    setLocale(nextLocale);
+    router.push(nextLocale === 'ko' ? '/ko' : '/');
+  };
 
   return (
     <div className="flex items-center gap-1 whitespace-nowrap text-[11px] font-bold uppercase tracking-widest" role="group" aria-label="Language">
@@ -32,7 +38,7 @@ function LocaleToggle({ isHeroNav }: { isHeroNav: boolean }) {
         <button
           key={code}
           type="button"
-          onClick={() => setLocale(code)}
+          onClick={() => switchLocale(code)}
           className={`min-h-11 min-w-11 rounded px-3 py-2 transition-colors ${locale === code ? active : base}`}
           aria-pressed={locale === code}
         >

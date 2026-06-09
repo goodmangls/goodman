@@ -9,6 +9,7 @@ import {
   useState,
   type ReactNode,
 } from 'react';
+import { usePathname } from 'next/navigation';
 import { getMessage, messages, type Locale } from '@/lib/i18n-messages';
 
 export type { Locale };
@@ -17,6 +18,9 @@ const STORAGE_KEY = 'goodman-gls-locale';
 
 function getInitialLocale(): Locale {
   if (typeof window === 'undefined') return 'en';
+  if (window.location.pathname === '/ko' || window.location.pathname.startsWith('/ko/')) {
+    return 'ko';
+  }
   const stored = localStorage.getItem(STORAGE_KEY);
   return stored === 'ko' ? 'ko' : 'en';
 }
@@ -30,7 +34,10 @@ type LanguageContextValue = {
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
   const [locale, setLocaleState] = useState<Locale>(getInitialLocale);
+  const pathLocale: Locale = pathname === '/ko' || pathname.startsWith('/ko/') ? 'ko' : 'en';
+  const effectiveLocale = pathLocale ?? locale;
 
   const setLocale = useCallback((next: Locale) => {
     setLocaleState(next);
@@ -39,17 +46,18 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
+    localStorage.setItem(STORAGE_KEY, effectiveLocale);
+    document.documentElement.lang = effectiveLocale;
+  }, [effectiveLocale]);
 
   const t = useCallback(
-    (key: string) => getMessage(messages[locale], key),
-    [locale],
+    (key: string) => getMessage(messages[effectiveLocale], key),
+    [effectiveLocale],
   );
 
   const value = useMemo(
-    () => ({ locale, setLocale, t }),
-    [locale, setLocale, t],
+    () => ({ locale: effectiveLocale, setLocale, t }),
+    [effectiveLocale, setLocale, t],
   );
 
   return (
