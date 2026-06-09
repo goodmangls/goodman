@@ -6,13 +6,18 @@ const root = process.cwd();
 const read = (relativePath: string) => fs.readFileSync(path.join(root, relativePath), 'utf8');
 
 describe('footer network certifications', () => {
-  it('shows IATA membership alongside MPL and EAN in the footer', () => {
+  it('shows balanced MPL, EAN, and IATA membership cards in the footer', () => {
     const footer = read('src/components/Footer.tsx');
+    const css = read('src/app/globals.css');
 
     expect(footer).toContain('MPL NETWORK');
-    expect(footer).toContain('ean-badge-10032');
+    expect(footer).toContain('EAN NETWORKS');
+    expect(footer).toContain('Member No. 10032');
     expect(footer).toContain('IATA MEMBER');
     expect(footer).toContain('17-3 7233 0010');
+    expect(footer).not.toContain('ean-badge-10032');
+    expect(footer).not.toContain('ean-network.com/api/widget/10032/embed.js');
+    expect(css).toContain('.network-cert-mark--ean');
   });
 });
 
