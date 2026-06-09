@@ -131,11 +131,11 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full md:w-auto md:max-w-xl space-y-5">
+          <div className="w-full md:w-auto md:max-w-xl lg:max-w-[820px] space-y-5">
             <p className="caption text-canvas-white/35 md:text-right tracking-[0.22em]">
               VERIFIED NETWORKS
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:justify-items-end">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:justify-items-end">
               <div className="network-cert-card" aria-label="MPL Network membership badge">
                 <div className="flex items-start justify-between gap-6">
                   <div>
@@ -157,9 +157,27 @@ export default function Footer() {
               <div className="network-cert-card network-cert-card--ean" aria-label="EAN Networks certification badge">
                 <div id="ean-badge-10032" />
               </div>
+
+              <div className="network-cert-card network-cert-card--iata" aria-label="IATA membership badge, code 17-3 7233 0010">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="network-cert-kicker">IATA MEMBER</p>
+                    <p className="network-cert-title">GOODMAN GLS</p>
+                  </div>
+                  <span className="network-cert-mark network-cert-mark--iata" aria-hidden="true">IATA</span>
+                </div>
+                <div className="mt-5 space-y-2">
+                  <p className="network-cert-body">International Air Transport Association</p>
+                  <p className="network-cert-body text-canvas-white/50">Code No. 17-3 7233 0010</p>
+                </div>
+                <div className="network-cert-status">
+                  <span className="network-cert-dot" />
+                  VERIFIED AIR CARGO MEMBER
+                </div>
+              </div>
             </div>
             <div className="flex items-center gap-4 md:justify-end text-canvas-white/35">
-              <span className="caption tracking-[0.3em]">IATA</span>
+              <span className="caption tracking-[0.3em]">IATA CODE 17-3 7233 0010</span>
               <span className="h-px w-8 bg-canvas-white/20" />
               <span className="caption tracking-[0.3em]">ECS GROUP PARTNER</span>
             </div>

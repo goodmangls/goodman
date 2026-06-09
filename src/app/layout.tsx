@@ -24,8 +24,8 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "GOODMAN GLS — Integrated Logistics in Korea | Air, Ocean, Road, Customs & Warehousing",
-  description: "Founded in 2014, GOODMAN GLS is an integrated logistics company in Korea — air, ocean, and road freight, customs brokerage, and warehousing/3PL. Backed by ECS Group's 59-country network.",
-  keywords: "integrated logistics, freight forwarding Korea, air freight, ocean freight, land transport, customs brokerage, warehousing, 3PL, project cargo, Korea logistics, ECS Group, MPL, EAN",
+  description: "Founded in 2014, GOODMAN GLS is an integrated logistics company in Korea — air, ocean, and road freight, customs brokerage, and warehousing/3PL. Backed by ECS Group, MPL, EAN, and IATA membership.",
+  keywords: "integrated logistics, freight forwarding Korea, air freight, ocean freight, land transport, customs brokerage, warehousing, 3PL, project cargo, Korea logistics, ECS Group, MPL, EAN, IATA",
 };
 
 export default function RootLayout({

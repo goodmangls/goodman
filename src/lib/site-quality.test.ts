@@ -5,6 +5,17 @@ import path from 'node:path';
 const root = process.cwd();
 const read = (relativePath: string) => fs.readFileSync(path.join(root, relativePath), 'utf8');
 
+describe('footer network certifications', () => {
+  it('shows IATA membership alongside MPL and EAN in the footer', () => {
+    const footer = read('src/components/Footer.tsx');
+
+    expect(footer).toContain('MPL NETWORK');
+    expect(footer).toContain('ean-badge-10032');
+    expect(footer).toContain('IATA MEMBER');
+    expect(footer).toContain('17-3 7233 0010');
+  });
+});
+
 describe('mobile visual quality', () => {
   it('uses a mobile typography override so display headings do not render with cramped line-height', () => {
     const css = read('src/app/globals.css');

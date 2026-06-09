@@ -381,6 +381,12 @@ body {
   background: color-mix(in srgb, var(--canvas-white) 94%, var(--obsidian) 6%);
 }
 
+.network-cert-card--iata {
+  background:
+    radial-gradient(circle at 78% 18%, color-mix(in srgb, #2f80ed 28%, transparent), transparent 34%),
+    linear-gradient(145deg, color-mix(in srgb, var(--canvas-white) 9%, transparent), color-mix(in srgb, var(--canvas-white) 4%, transparent));
+}
+
 .network-cert-card--ean,
 .network-cert-card--ean #ean-badge-10032,
 .network-cert-card--ean #ean-badge-10032 *,
@@ -424,6 +430,24 @@ body {
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1;
+}
+
+.network-cert-mark--iata {
+  display: inline-flex;
+  min-width: 68px;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, #6db7ff 44%, transparent);
+  border-radius: 999px;
+  color: color-mix(in srgb, #9bd1ff 88%, var(--canvas-white) 12%);
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, var(--canvas-white) 16%, transparent),
+    0 10px 30px color-mix(in srgb, #2f80ed 18%, transparent);
 }
 
 .network-cert-body {
