@@ -1,11 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import PageHeroBackground from '@/components/PageHeroBackground';
 import DisplayLines from '@/components/DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getMenuHeroUnsplashImage } from '@/lib/unsplash';
 
 export default function CompanyPage() {
   const { t } = useLanguage();
+  const heroImage = getMenuHeroUnsplashImage('company');
 
   const team = [
     { key: 'lee', icon: "👔" },
@@ -20,8 +23,9 @@ export default function CompanyPage() {
       {/* Header */}
       <section
         aria-labelledby="company-hero-heading"
-        className="page-hero bg-canvas border-b border-hairline"
+        className="page-hero with-menu-hero-bg"
       >
+        <PageHeroBackground image={heroImage} />
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -33,9 +37,9 @@ export default function CompanyPage() {
               as="h1"
               id="company-hero-heading"
               lines={[t('pages.company.heroTitleLine1'), t('pages.company.heroTitleLine2')]}
-              className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter"
+              className="display-xl text-canvas-white mb-10 leading-[0.85] tracking-tighter"
             />
-            <p className="body-lg text-muted max-w-xl">{t('pages.company.heroLead')}</p>
+            <p className="body-lg text-canvas-white/78 max-w-xl">{t('pages.company.heroLead')}</p>
           </motion.div>
         </div>
       </section>

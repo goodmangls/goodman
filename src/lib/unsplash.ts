@@ -1,9 +1,10 @@
 export type UnsplashTopic = 'ocean' | 'air' | 'global' | 'warehouse';
+export type MenuHeroPage = 'company' | 'services' | 'network';
 
 export type UnsplashImage = {
   id: string;
   topic: UnsplashTopic;
-  brandUse: 'approved-hero-candidate' | 'approved-section-candidate';
+  brandUse: 'approved-hero-candidate' | 'approved-menu-hero-candidate' | 'approved-section-candidate';
   selectionNote: string;
   alt: string;
   src: string;
@@ -90,6 +91,57 @@ export const approvedUnsplashImages: UnsplashImage[] = [
     unsplashUrl: `https://unsplash.com/photos/logistics-warehouse?${utm}`,
     downloadLocation: 'https://api.unsplash.com/photos/warehouse-gls-section/download',
   },
+  {
+    id: 'gls-company-menu-global-route',
+    topic: 'global',
+    brandUse: 'approved-menu-hero-candidate',
+    selectionNote: 'Executive global-trade visual for the company story hero with calm premium contrast.',
+    alt: 'Global trade infrastructure at dusk for GOODMAN GLS company profile',
+    src: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?q=84&w=2200&auto=format&fit=crop&crop=entropy',
+    smallSrc: 'https://images.unsplash.com/photo-1488085061387-422e29b40080?q=72&w=960&auto=format&fit=crop&crop=entropy',
+    width: 2400,
+    height: 1600,
+    color: '#202a33',
+    blurHash: 'L35O{Yt700WB~qWBt7Rj4nWB?bof',
+    photographer: 'Unsplash Contributor',
+    photographerUrl: `https://unsplash.com/${utm}`,
+    unsplashUrl: `https://unsplash.com/photos/global-logistics-network?${utm}`,
+    downloadLocation: 'https://api.unsplash.com/photos/gls-company-menu-global-route/download',
+  },
+  {
+    id: 'gls-services-menu-warehouse',
+    topic: 'warehouse',
+    brandUse: 'approved-menu-hero-candidate',
+    selectionNote: 'Sophisticated operational depth for multimodal services without competing with homepage hero.',
+    alt: 'Modern logistics warehouse operations for GOODMAN GLS services',
+    src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=84&w=2200&auto=format&fit=crop&crop=entropy',
+    smallSrc: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=72&w=960&auto=format&fit=crop&crop=entropy',
+    width: 2200,
+    height: 1467,
+    color: '#2c3335',
+    blurHash: 'L15#Rjt700M{~qM{RjRj4nRj?bWB',
+    photographer: 'Unsplash Contributor',
+    photographerUrl: `https://unsplash.com/${utm}`,
+    unsplashUrl: `https://unsplash.com/photos/logistics-warehouse?${utm}`,
+    downloadLocation: 'https://api.unsplash.com/photos/gls-services-menu-warehouse/download',
+  },
+  {
+    id: 'gls-network-menu-ocean-yard',
+    topic: 'ocean',
+    brandUse: 'approved-menu-hero-candidate',
+    selectionNote: 'Container-network image for MPL/EAN partner coverage and global logistics reach.',
+    alt: 'Container yard and ocean freight network for GOODMAN GLS global partners',
+    src: 'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=84&w=2200&auto=format&fit=crop&crop=entropy',
+    smallSrc: 'https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=72&w=960&auto=format&fit=crop&crop=entropy',
+    width: 2940,
+    height: 1960,
+    color: '#1f2d2f',
+    blurHash: 'L25#E?xv00Rj4n%MRjRj00t7~qM{',
+    photographer: 'Unsplash Contributor',
+    photographerUrl: `https://unsplash.com/${utm}`,
+    unsplashUrl: `https://unsplash.com/photos/ocean-freight-logistics?${utm}`,
+    downloadLocation: 'https://api.unsplash.com/photos/gls-network-menu-ocean-yard/download',
+  },
 ];
 
 export function getHeroUnsplashImages(): UnsplashImage[] {
@@ -106,4 +158,23 @@ export function getHeroUnsplashImages(): UnsplashImage[] {
 
     return image;
   });
+}
+
+const menuHeroTopics: Record<MenuHeroPage, UnsplashTopic> = {
+  company: 'global',
+  services: 'warehouse',
+  network: 'ocean',
+};
+
+export function getMenuHeroUnsplashImage(page: MenuHeroPage): UnsplashImage {
+  const topic = menuHeroTopics[page];
+  const image = approvedUnsplashImages.find(
+    (candidate) => candidate.topic === topic && candidate.brandUse === 'approved-menu-hero-candidate',
+  );
+
+  if (!image) {
+    throw new Error(`Missing approved GOODMAN GLS menu hero image for page: ${page}`);
+  }
+
+  return image;
 }

@@ -384,9 +384,62 @@ body {
 }
 
 .page-hero {
+  position: relative;
+  overflow: hidden;
   padding-top: 8rem;
   padding-bottom: 4rem;
   @apply bg-canvas border-b border-hairline;
+}
+
+.page-hero > .container-wide {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero.with-menu-hero-bg {
+  min-height: 28rem;
+  display: flex;
+  align-items: end;
+  @apply border-hairline-soft;
+}
+
+.page-hero.with-menu-hero-bg .eyebrow {
+  color: color-mix(in srgb, var(--canvas-white) 72%, transparent);
+}
+
+.page-hero.with-menu-hero-bg .container-wide > div {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.ks-menu-hero-bg-image {
+  transform: scale(1.02);
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.ks-menu-hero-bg-attribution {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1rem;
+  z-index: 2;
+  color: color-mix(in srgb, var(--canvas-white) 68%, transparent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.ks-menu-hero-bg-attribution a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+@media (max-width: 767px) {
+  .ks-menu-hero-bg-attribution {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
