@@ -3,8 +3,10 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import PageHeroBackground from '@/components/PageHeroBackground';
 import DisplayLines from '@/components/DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getMenuHeroUnsplashImage } from '@/lib/unsplash';
 
 const serviceConfig = [
   { id: 'air', icon: '✈️' },
@@ -29,6 +31,7 @@ const bridgeLogisMetrics = [
 
 export default function ServicesPage() {
   const { t } = useLanguage();
+  const heroImage = getMenuHeroUnsplashImage('services');
 
   useEffect(() => {
     if (window.location.hash !== '#bridgelogis') return;
@@ -60,8 +63,9 @@ export default function ServicesPage() {
       {/* Page Hero */}
       <section
         aria-labelledby="services-hero-heading"
-        className="page-hero"
+        className="page-hero with-menu-hero-bg"
       >
+        <PageHeroBackground image={heroImage} />
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,10 +73,10 @@ export default function ServicesPage() {
             className="max-w-5xl"
           >
             <span className="eyebrow mb-6">{t('pages.services.heroEyebrow')}</span>
-            <h1 id="services-hero-heading" className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter">
+            <h1 id="services-hero-heading" className="display-xl text-canvas-white mb-10 leading-[0.85] tracking-tighter">
               {t('pages.services.heroTitle')}
             </h1>
-            <p className="body-lg text-muted max-w-2xl">
+            <p className="body-lg text-canvas-white/78 max-w-2xl">
               {t('pages.services.heroLead')}
             </p>
           </motion.div>

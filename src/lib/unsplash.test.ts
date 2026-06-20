@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { approvedUnsplashImages, getHeroUnsplashImages } from './unsplash';
+import { approvedUnsplashImages, getHeroUnsplashImages, getMenuHeroUnsplashImage } from './unsplash';
 
 const root = process.cwd();
 const read = (relativePath: string) => fs.readFileSync(path.join(root, relativePath), 'utf8');
@@ -30,6 +30,23 @@ describe('approved Unsplash image pool', () => {
     expect(heroImages.map((image) => image.topic)).toEqual(['ocean', 'air', 'global']);
     expect(heroImages.every((image) => image.brandUse === 'approved-hero-candidate')).toBe(true);
   });
+
+  it('returns optimized approved images for each GLS menu page hero', () => {
+    const menuImages = {
+      company: getMenuHeroUnsplashImage('company'),
+      services: getMenuHeroUnsplashImage('services'),
+      network: getMenuHeroUnsplashImage('network'),
+    };
+
+    expect(Object.values(menuImages).map((image) => image.topic)).toEqual(['global', 'warehouse', 'ocean']);
+
+    for (const image of Object.values(menuImages)) {
+      expect(image.brandUse).toBe('approved-menu-hero-candidate');
+      expect(image.src).toContain('images.unsplash.com');
+      expect(image.unsplashUrl).toContain('utm_source=goodman_gls');
+      expect(image.downloadLocation).toContain('/download');
+    }
+  });
 });
 
 describe('GLS hero Unsplash integration', () => {
@@ -50,5 +67,18 @@ describe('GLS hero Unsplash integration', () => {
     expect(nextConfig).toContain("hostname: 'images.unsplash.com'");
     expect(hero).toContain('priority={index === 0}');
     expect(hero).not.toContain('NEXT_PUBLIC_UNSPLASH_ACCESS_KEY');
+  });
+
+  it('renders page menu heroes through the approved Unsplash background component', () => {
+    const component = read('src/components/PageHeroBackground.tsx');
+    const company = read('src/app/company/page.tsx');
+    const services = read('src/app/services/page.tsx');
+    const network = read('src/app/network/page.tsx');
+
+    expect(component).toContain('ks-menu-hero-bg-image');
+    expect(component).toContain('ks-menu-hero-bg-attribution');
+    expect(component).toContain('Photo:');
+    expect([company, services, network].every((source) => source.includes('PageHeroBackground'))).toBe(true);
+    expect([company, services, network].every((source) => source.includes('getMenuHeroUnsplashImage'))).toBe(true);
   });
 });

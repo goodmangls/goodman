@@ -2,11 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import PageHeroBackground from '@/components/PageHeroBackground';
 import DisplayLines from '@/components/DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getMenuHeroUnsplashImage } from '@/lib/unsplash';
 
 export default function NetworkPage() {
   const { t } = useLanguage();
+  const heroImage = getMenuHeroUnsplashImage('network');
 
   const airlines = [
     { name: "Korean Air Cargo", routes: "Seoul-LAX, Seoul-JFK, Seoul-FRA" },
@@ -25,8 +28,9 @@ export default function NetworkPage() {
       {/* Header */}
       <section
         aria-labelledby="network-hero-heading"
-        className="page-hero"
+        className="page-hero with-menu-hero-bg"
       >
+        <PageHeroBackground image={heroImage} />
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -38,9 +42,9 @@ export default function NetworkPage() {
               as="h1"
               id="network-hero-heading"
               lines={[t('pages.network.heroTitle1'), t('pages.network.heroTitle2')]}
-              className="display-xl text-ink mb-10 leading-[0.85] tracking-tighter"
+              className="display-xl text-canvas-white mb-10 leading-[0.85] tracking-tighter"
             />
-            <p className="body-lg text-muted max-w-2xl">
+            <p className="body-lg text-canvas-white/78 max-w-2xl">
               {t('pages.network.heroLead')}
             </p>
           </motion.div>
