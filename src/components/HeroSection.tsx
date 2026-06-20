@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import DisplayLines from './DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getHeroUnsplashImages } from '@/lib/unsplash';
 
 const proofItems = [
   {
@@ -26,23 +27,43 @@ const proofItems = [
 
 export default function HeroSection() {
   const { t } = useLanguage();
+  const heroImages = getHeroUnsplashImages();
+
   return (
     <section
       aria-labelledby="hero-heading"
       className="relative hero-spacing overflow-hidden"
     >
-      {/* Full-bleed imagery */}
+      {/* Full-bleed approved Unsplash imagery */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2940&auto=format&fit=crop"
-          alt="Container yard and integrated logistics routes"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
+        {heroImages.map((image, index) => (
+          <Image
+            key={image.id}
+            src={image.src}
+            alt={image.alt}
+            fill
+            className="ks-hero-bg-slide object-cover object-center"
+            priority={index === 0}
+            sizes="100vw"
+            data-unsplash-topic={image.topic}
+          />
+        ))}
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian/95 via-obsidian/65 to-obsidian/20" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_32%,rgba(188,113,85,0.32),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.13)_1px,transparent_1px)] bg-[length:auto,56px_56px] opacity-70" />
+        <div className="ks-hero-bg-attribution">
+          {heroImages.map((image, index) => (
+            <span key={image.id} className="ks-hero-bg-credit" style={{ animationDelay: `${index * 6}s` }}>
+              Photo:{' '}
+              <a href={image.photographerUrl} target="_blank" rel="noreferrer">
+                {image.photographer}
+              </a>{' '}
+              on{' '}
+              <a href={image.unsplashUrl} target="_blank" rel="noreferrer">
+                Unsplash
+              </a>
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="container-wide relative z-10 w-full">
