@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 import DisplayLines from './DisplayLines';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -154,8 +153,22 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="network-cert-card network-cert-card--ean" aria-label="EAN Networks certification badge">
-                <div id="ean-badge-10032" />
+              <div className="network-cert-card network-cert-card--ean" aria-label="EAN Networks membership badge, member number 10032">
+                <div className="flex items-start justify-between gap-6">
+                  <div>
+                    <p className="network-cert-kicker">EAN NETWORKS</p>
+                    <p className="network-cert-title">GOODMAN GLS</p>
+                  </div>
+                  <span className="network-cert-mark network-cert-mark--ean" aria-hidden="true">EAN</span>
+                </div>
+                <div className="mt-5 space-y-2">
+                  <p className="network-cert-body">Elite Air Network Member</p>
+                  <p className="network-cert-body text-canvas-white/50">Member No. 10032</p>
+                </div>
+                <div className="network-cert-status">
+                  <span className="network-cert-dot" />
+                  VERIFIED EAN MEMBER
+                </div>
               </div>
 
               <div className="network-cert-card network-cert-card--iata" aria-label="IATA membership badge, code 17-3 7233 0010">
@@ -181,11 +194,6 @@ export default function Footer() {
               <span className="h-px w-8 bg-canvas-white/20" />
               <span className="caption tracking-[0.3em]">ECS GROUP PARTNER</span>
             </div>
-            <Script
-              id="ean-networks-widget-10032"
-              src="https://www.ean-network.com/api/widget/10032/embed.js"
-              strategy="afterInteractive"
-            />
           </div>
         </div>
       </div>
