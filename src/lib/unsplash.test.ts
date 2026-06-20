@@ -39,9 +39,15 @@ describe('approved Unsplash image pool', () => {
     };
 
     expect(Object.values(menuImages).map((image) => image.topic)).toEqual(['global', 'warehouse', 'ocean']);
+    expect(Object.values(menuImages).map((image) => image.id)).toEqual([
+      'gls-company-premium-ocean-vessel',
+      'gls-services-premium-warehouse-depth',
+      'gls-network-premium-container-grid',
+    ]);
 
     for (const image of Object.values(menuImages)) {
       expect(image.brandUse).toBe('approved-menu-hero-candidate');
+      expect(image.selectionNote.toLowerCase()).toContain('premium fixed curation');
       expect(image.src).toContain('images.unsplash.com');
       expect(image.unsplashUrl).toContain('utm_source=goodman_gls');
       expect(image.downloadLocation).toContain('/download');
