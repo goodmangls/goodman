@@ -49,7 +49,7 @@ export default function HeroSection() {
           />
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian/95 via-obsidian/65 to-obsidian/20" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_32%,rgba(188,113,85,0.32),transparent_28%),linear-gradient(135deg,rgba(255,255,255,0.13)_1px,transparent_1px)] bg-[length:auto,56px_56px] opacity-70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_32%,rgba(188,113,85,0.32),transparent_28%),linear-gradient(90deg,transparent_0,transparent_48%,rgba(255,255,255,0.12)_49%,transparent_50%)] bg-[length:auto,72px_72px] opacity-75" />
         <div className="ks-hero-bg-attribution">
           {heroImages.map((image, index) => (
             <span key={image.id} className="ks-hero-bg-credit" style={{ animationDelay: `${index * 6}s` }}>
