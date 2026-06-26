@@ -22,6 +22,32 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'GOODMAN GLS',
+  legalName: 'GOODMAN Global Logistics Service',
+  url: 'https://goodmangls.com',
+  foundingDate: '2014',
+  description:
+    'Korea-based integrated logistics company providing air, ocean, road, customs brokerage, warehousing, 3PL, and project cargo services.',
+  areaServed: ['KR', 'Global'],
+  knowsAbout: [
+    'Air freight',
+    'Ocean freight',
+    'Road transport',
+    'Customs brokerage',
+    'Warehousing',
+    '3PL',
+    'Project cargo',
+  ],
+  memberOf: [
+    { '@type': 'Organization', name: 'MarcoPoloLine Group' },
+    { '@type': 'Organization', name: 'EAN Networks', identifier: 'Member No. 4952' },
+    { '@type': 'Organization', name: 'International Air Transport Association', identifier: '17-3 7233 0010' },
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://goodmangls.com"),
   title: "GOODMAN GLS — Integrated Logistics in Korea | Air, Ocean, Road, Customs & Warehousing",
@@ -51,6 +77,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable} ${mono.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <Suspense>
           <ClientLayout>{children}</ClientLayout>
         </Suspense>

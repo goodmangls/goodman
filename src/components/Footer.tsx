@@ -153,7 +153,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="network-cert-card network-cert-card--ean" aria-label="EAN Networks membership badge, member number 10032">
+              <div className="network-cert-card network-cert-card--ean" aria-label="EAN Networks membership badge, member number 4952">
                 <div className="flex items-start justify-between gap-6">
                   <div>
                     <p className="network-cert-kicker">EAN NETWORKS</p>
@@ -163,7 +163,7 @@ export default function Footer() {
                 </div>
                 <div className="mt-5 space-y-2">
                   <p className="network-cert-body">Elite Air Network Member</p>
-                  <p className="network-cert-body text-canvas-white/50">Member No. 10032</p>
+                  <p className="network-cert-body text-canvas-white/50">Member No. 4952</p>
                 </div>
                 <div className="network-cert-status">
                   <span className="network-cert-dot" />
