@@ -40,8 +40,16 @@ describe('public crawler and credential readiness', () => {
     const layout = read('src/app/layout.tsx');
     const koPage = read('src/app/ko/page.tsx');
     const langSync = read('src/components/HtmlLangSync.tsx');
+    const proxy = read('src/proxy.ts');
 
     expect(layout).toContain('application/ld+json');
+    expect(layout).toContain('headers()');
+    expect(layout).toContain("requestHeaders.get('x-goodman-locale') === 'ko' ? 'ko' : 'en'");
+    expect(layout).toContain('lang={locale}');
+    expect(proxy).toContain('export function proxy');
+    expect(proxy).toContain("requestHeaders.set('x-goodman-locale', locale)");
+    expect(proxy).toContain("pathname === '/ko'");
+    expect(proxy).toContain("startsWith('/ko/')");
     expect(layout).toContain("name: 'EAN Networks'");
     expect(layout).toContain("identifier: 'Member No. 4952'");
     expect(layout).not.toContain('Member No. 10032');
