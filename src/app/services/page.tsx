@@ -24,7 +24,7 @@ const bridgeLogisFeatures = [
 ] as const;
 
 const bridgeLogisMetrics = [
-  { value: 'UPS · DHL', labelKey: 'carriers' },
+  { value: 'UPS / DHL', labelKey: 'carriers' },
   { value: '190+', labelKey: 'countries' },
   { value: '1 sec', labelKey: 'quoteTime' },
 ] as const;
@@ -199,7 +199,7 @@ export default function ServicesPage() {
                 {t('pages.services.bridgeLogis.lead')}
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
                 {bridgeLogisMetrics.map((metric) => (
                   <div key={metric.labelKey} className="rounded-3xl border border-canvas-white/15 bg-canvas-white/10 p-6 backdrop-blur-sm">
                     <p className="text-3xl font-black tracking-tight mb-2">{metric.value}</p>
@@ -207,6 +207,9 @@ export default function ServicesPage() {
                   </div>
                 ))}
               </div>
+              <p className="body-sm text-canvas-white/55 mb-12 max-w-2xl leading-relaxed">
+                {t('pages.services.bridgeLogis.caveat')}
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a

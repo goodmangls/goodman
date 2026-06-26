@@ -213,14 +213,15 @@
       "bridgeLogis": {
         "eyebrow": "GOODMAN GLS가 운영하는 디지털 견적 플랫폼",
         "title": "BridgeLogis는 포워더를 즉시 특송 운임 견적으로 연결합니다.",
-        "lead": "BridgeLogis는 포워딩 파트너를 위한 Goodman GLS의 스마트 견적 플랫폼입니다. 방문자는 UPS와 DHL 국제 특송 운임을 비교하고, Door-to-Door 및 Door-to-Airport 비용을 실시간 환율, FSC, 포장비, 부가서비스까지 한 화면에서 투명하게 확인할 수 있습니다.",
+        "lead": "BridgeLogis는 포워딩 파트너를 위한 Goodman GLS의 스마트 견적 플랫폼입니다. 방문자는 이용 가능한 UPS 및 DHL 국제 특송 운임 옵션을 비교하고, Door-to-Door 및 Door-to-Airport 예상 비용과 실시간 환율, FSC, 포장비, 부가서비스 가정을 한 화면에서 투명하게 확인할 수 있습니다.",
+        "caveat": "캐리어명은 운임 비교를 위한 표기입니다. 최종 서비스 가능 여부, 할증료, 접수 조건, 가격은 각 캐리어의 최신 기준과 Goodman GLS의 최종 견적에 따라 확정됩니다.",
         "ctaPrimary": "BridgeLogis에서 운임 비교하기 →",
         "ctaSecondary": "Goodman GLS 온보딩 문의",
         "ctaAria": "새 탭에서 BridgeLogis를 열어 특송 운임을 비교합니다",
         "previewLabel": "실시간 견적 미리보기",
         "compareNow": "지금 비교",
         "metrics": {
-          "carriers": "특송 캐리어 비교",
+          "carriers": "특송 운임 옵션 비교",
           "countries": "목적지 커버리지",
           "quoteTime": "평균 견적 흐름"
         },

@@ -554,14 +554,15 @@
       "bridgeLogis": {
         "eyebrow": "Digital quoting platform by Goodman GLS",
         "title": "BridgeLogis connects forwarders to instant express freight quotes.",
-        "lead": "BridgeLogis is Goodman GLS' smart quote platform for forwarding partners. Visitors can compare UPS and DHL express freight, calculate Door-to-Door and Door-to-Airport costs, and see exchange rates, FSC, packing, and add-on services in one transparent view.",
+        "lead": "BridgeLogis is Goodman GLS' smart quote platform for forwarding partners. Visitors can compare available UPS and DHL express tariff options, calculate Door-to-Door and Door-to-Airport estimates, and review exchange rates, FSC, packing, and add-on service assumptions in one transparent view.",
+        "caveat": "Carrier names are shown for tariff comparison only. Final service availability, surcharges, acceptance, and pricing remain subject to each carrier's latest rules and Goodman GLS' final quotation.",
         "ctaPrimary": "Open BridgeLogis and compare rates →",
         "ctaSecondary": "Ask Goodman GLS for onboarding",
         "ctaAria": "Open BridgeLogis in a new tab to compare express freight rates",
         "previewLabel": "Live quote preview",
         "compareNow": "Compare now",
         "metrics": {
-          "carriers": "express carrier comparison",
+          "carriers": "express tariff option comparison",
           "countries": "destination coverage",
           "quoteTime": "average quote flow"
         },
